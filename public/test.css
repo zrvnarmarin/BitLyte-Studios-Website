@@ -1,0 +1,17 @@
+.custom-text {
+  color: transparent; /* Transparent text */
+  background-clip: text; /* Background clip to text */
+  -webkit-background-clip: text; /* WebKit-specific property */
+  background-image: linear-gradient(to right, #1A9FFF, #0083E0); /* Gradient from purple to pink */
+}
+
+.linear-gradient-green-text {
+  color: transparent; /* Transparent text */
+  background-clip: text; /* Background clip to text */
+  -webkit-background-clip: text; /* WebKit-specific property */
+  background-image: linear-gradient(to right, #59EE99, #16BB5E); 
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(to right, #e8f5ff, #f9f6fe); 
+}
