@@ -22,3 +22,7 @@
   -webkit-background-clip: text; /* WebKit-specific property */
   background-image: linear-gradient(to right, #C17EF1, #AF5AED); 
 }
+
+.linear-gradient-blue-background {
+  background-image: linear-gradient(to right, #33AAFFB3, #1A9FFFB3);
+}
