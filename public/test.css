@@ -15,3 +15,10 @@
 .linear-gradient-background {
   background-image: linear-gradient(to right, #e8f5ff, #f9f6fe); 
 }
+
+.linear-gradient-purple-text {
+  color: transparent; /* Transparent text */
+  background-clip: text; /* Background clip to text */
+  -webkit-background-clip: text; /* WebKit-specific property */
+  background-image: linear-gradient(to right, #C17EF1, #AF5AED); 
+}

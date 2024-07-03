@@ -9,7 +9,7 @@ export default function HeroSection() {
     return (
         <SectionWrapper>
             <p className="text-lg font-bold text-black uppercase">Digital Agency</p>
-            <h1 className="text-4xl text-primary-brown">
+            <h1 className="text-5xl text-primary-brown font-semibold">
                 <span className="custom-text font-black">
                     We create {" "}
                 </span>
@@ -21,7 +21,9 @@ export default function HeroSection() {
                     Get in touch
                 </button>
             </div>
-            <Image src={HeroImage} alt="hero_image" width={400} height={400} />
+            <div className="bg-red-400 w-full h-full">
+                <Image src={HeroImage} alt="hero_image" className="" />
+            </div>
         </SectionWrapper>
     )
 }

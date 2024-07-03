@@ -69,7 +69,7 @@ export default function ServicesSection() {
             <Image src={ArrowRight} alt="hero_image"  />
             View all services
         </button>
-    </div>
+      </div>
     </SectionWrapper>
   );
 }

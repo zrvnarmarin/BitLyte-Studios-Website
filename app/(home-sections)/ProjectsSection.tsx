@@ -12,7 +12,7 @@ export default function ServicesSection() {
       </h2>
 
       {/* Project cards container */}
-      <div className="w-full flex flex-col gap-12 bg-[#0073AA]/10 px-4 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-8 md:py-14 lg:py-24 xl:py-28 2xl:py-32 3xl:py-72">
+      <div className="w-full flex flex-col gap-16 bg-[#0073AA]/10 px-4 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-8 md:py-14 lg:py-24 xl:py-28 2xl:py-32 3xl:py-72">
         {/* Project card */}
         {projects.map(project =>
             <ProjectCard 
@@ -35,16 +35,16 @@ export const ProjectCard = ({ title, description, serviceCategories, imageSrc } 
         <div className="flex flex-col gap-2">
             <Image src={TestImage} alt="project_image" />
             <h3 className="font-bold text-xl text-primary-brown">{title}</h3>
-            <p className="text-base text-primary-brown font-normal pt-4">{description}</p>
             <ul className="flex flex-wrap items-center pt-4 gap-2">
                 {serviceCategories.map(category =>
-                    <li key={category} className="flex items-center bg-[#0073AA]/30 text-sm text-primary-brown rounded-full px-2 py-1">
+                    <li key={category} className="flex items-center bg-[#0073AA]/30 text-xs text-primary-brown rounded-full px-2 py-1">
                        <p>&#8226; {category}</p>
                     </li>
                 )}
             </ul>
+            <p className="text-base text-primary-brown font-normal">{description}</p>
             <div className="w-full flex pt-4">
-                <button className="flex items-center gap-2 text-primary-brown text-sm rounded-full px-2 py-1 border-[0.5px] border-primary-brown">
+                <button className="flex items-center justify-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
                     <Image src={ArrowRight} alt="hero_image"  />
                     View project
                 </button>
