@@ -1,6 +1,7 @@
 import HeroSection from "./(services-sections)/HeroSection";
 import ServiceCategoriesSection from './(services-sections)/ServiceCategoriesSection'
 import ToolsForBuildingSection from './(services-sections)/ToolsForBuildingSection'
+import OurProcessessSection from './(services-sections)/OurProcessessSection'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <ServiceCategoriesSection />
       <ToolsForBuildingSection />
+      <OurProcessessSection />
     </main>
   );
 }

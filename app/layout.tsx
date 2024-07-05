@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Nunito_Sans } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import NavigationWrapper from "./components/NavigationWrapper";
 
 const nunitoSans = Nunito_Sans({subsets: ['latin']});
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunitoSans.className}>{children}</body>
+      <body className={nunitoSans.className}>
+        <NavigationWrapper />
+        {children}
+      </body>
     </html>
   );
 }

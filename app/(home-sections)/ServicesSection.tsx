@@ -15,11 +15,7 @@ export default function ServicesSection() {
   return (
     <SectionWrapper>
       <h2 className="text-4xl text-primary-brown">
-        Services to {" "}
-        <span className="custom-text font-black">
-            Elevate your digital impact {" "}
-        </span>
-        Services to Elevate your digital impact
+        Our Services {" "}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

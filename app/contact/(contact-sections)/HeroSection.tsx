@@ -1,14 +1,13 @@
 import React from "react";
-import SectionWrapper from "../components/SectionWrapper";
-import '../../public/test.css'
 import Image from "next/image";
-import HeroImage from '../../public/images/home/undraw_collaborators_re_hont 1.svg'
-import ArrowRight from '../../public/images/Rectangle 1.svg'
+import SectionWrapper from "@/app/components/SectionWrapper";
+import HeroImage from '../../../public/images/contact/contac_heroSection.svg'
+import ArrowRight from '../../../public/images/Rectangle 1.svg'
 
 export default function HeroSection() {
     return (
         <SectionWrapper>
-            <p className="text-md font-bold text-black uppercase pt-28">Web And UI design agency</p>
+            <p className="text-lg font-bold text-black uppercase">Digital Agency</p>
             <h1 className="text-5xl text-primary-brown font-semibold">
                 <span className="custom-text font-black">
                     We create {" "}
@@ -18,7 +17,7 @@ export default function HeroSection() {
             <div className="w-full flex">
                 <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
                     <Image src={ArrowRight} alt="hero_image"  />
-                    Get started now
+                    Get in touch
                 </button>
             </div>
             <div className="bg-red-400 w-full h-full">
