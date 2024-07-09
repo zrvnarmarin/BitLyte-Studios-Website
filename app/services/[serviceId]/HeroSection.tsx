@@ -1,19 +1,27 @@
 import React from "react";
 import SectionWrapper from "../../components/SectionWrapper";
-import '../../public/test.css'
+import '../../../public/test.css'
 import Image from "next/image";
 import HeroImage from '../../../public/images/services/undraw_social_networking_re_i1ex 1.svg'
-import ArrowRight from '../../../public/images/Rectangle 1.svg'
+import BackButtonIcon from '../../../public/images/services/BackButton.svg'
+import ArrowRight from '../../../public/images/home/ArrowRight.svg'
 
-export default function HeroSection({ params }: { params: { slug: string } }) {
+export default function HeroSection({ serviceName } : { serviceName: string }) {
     return (
         <SectionWrapper>
-            <p className="text-md font-bold text-black uppercase pt-28">Social Media Management {params.slug}</p>
+            <div className="w-full flex pt-24">
+                <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#2a5371] to-[#0083E0]  rounded-full text-xl">
+                    <Image src={BackButtonIcon} alt="hero_image"  />
+                    Back to services
+                </button>
+            </div>
+            <p className="text-md font-bold text-black uppercase">{serviceName}</p>
             <h1 className="text-5xl text-primary-brown font-semibold">
+                Our {" "}
                 <span className="custom-text font-black">
-                    We create {" "}
+                    Services {" "}
                 </span>
-                simple and effective Marketing & Web solutions
+                tailored just for your needs
             </h1>
             <div className="w-full flex">
                 <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
