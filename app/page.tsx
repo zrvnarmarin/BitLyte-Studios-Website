@@ -7,7 +7,7 @@ import FAQSection from './(home-sections)/FAQSection'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen h-full flex-col items-center bg-[#ffffff]">
+    <main className="flex min-h-screen h-full flex-col items-center bg-[#0b0b0b]">
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />

@@ -15,10 +15,10 @@ export default function Navbar({
 
   return (
     
-      <nav className={`w-full fixed z-30 opacity-95 bg-[#ffffff] ${scrollPosition > 20 ? "opacity-90   backdrop-blur-xl duration-700" : ""} } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-8`}>
+      <nav className={`w-full fixed z-30 opacity-95 bg-[#0b0b0b] ${scrollPosition > 20 ? "opacity-90   backdrop-blur-xl duration-700" : ""} } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 pt-8`}>
         <div className="flex items-center gap-2">
           <LogoIcon />
-          <span className="text-primary-brown text-lg font-bold">
+          <span className="text-[#ffffff] text-lg font-bold">
             BitLyte Studios
           </span>
         </div>

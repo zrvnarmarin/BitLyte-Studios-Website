@@ -8,12 +8,13 @@ import ArrowRight from '../../public/images/Rectangle 1.svg'
 export default function HeroSection() {
     return (
         <SectionWrapper>
-            <p className="text-md font-bold text-black uppercase pt-28">Web And UI design agency</p>
-            <h1 className="text-5xl text-primary-brown font-semibold">
+            <p className="text-sm md:text-md font-bold md:font-bold text-[#ffffff] uppercase pt-2">Success begins here</p>
+            <h1 className="text-5xl text-[#ffffff] font-semibold text-start">
+                Unlock your 
                 <span className="custom-text font-black">
-                    We create {" "}
+                    {" "}digital potential {" "}
                 </span>
-                simple and effective Marketing & Web solutions
+                with us
             </h1>
             <div className="w-full flex">
                 <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
