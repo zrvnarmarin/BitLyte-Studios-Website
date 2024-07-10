@@ -4,6 +4,7 @@ import ProjectsSection from './(home-sections)/ProjectsSection'
 import TestimonialsSection from "./(home-sections)/TestimonialsSection";
 import AchievementsSection from './(home-sections)/AchievementsSection'
 import FAQSection from './(home-sections)/FAQSection'
+import CTASection from "./(home-sections)/CTASection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TestimonialsSection />
       <AchievementsSection />
       <FAQSection />
+      <CTASection />
     </main>
   );
 }

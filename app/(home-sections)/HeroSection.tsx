@@ -4,11 +4,12 @@ import '../../public/test.css'
 import Image from "next/image";
 import HeroImage from '../../public/images/home/undraw_collaborators_re_hont 1.svg'
 import ArrowRight from '../../public/images/Rectangle 1.svg'
+import HeroSectionWrapper from "../components/HeroSectionWrapper";
 
 export default function HeroSection() {
     return (
-        <SectionWrapper>
-            <p className="text-sm md:text-md font-bold md:font-bold text-[#ffffff] uppercase pt-2">Success begins here</p>
+        <HeroSectionWrapper>
+            <p className="text-xs md:text-md font-bold md:font-bold text-[#ffffff] uppercase pt-2">Success begins here</p>
             <h1 className="text-5xl text-[#ffffff] font-semibold text-start">
                 Unlock your 
                 <span className="custom-text font-black">
@@ -16,7 +17,7 @@ export default function HeroSection() {
                 </span>
                 with us
             </h1>
-            <div className="w-full flex">
+            <div className="w-full flex pt-2">
                 <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
                     <Image src={ArrowRight} alt="hero_image"  />
                     Get started now
@@ -25,6 +26,6 @@ export default function HeroSection() {
             <div className="bg-red-400 w-full h-full">
                 <Image src={HeroImage} alt="hero_image" className="" />
             </div>
-        </SectionWrapper>
+        </HeroSectionWrapper>
     )
 }

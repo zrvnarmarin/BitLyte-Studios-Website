@@ -6,13 +6,13 @@ import ArrowRight from '../../public/images/Rectangle 1.svg'
 
 export default function ServicesSection() {
   return (
-    <section className="w-full flex flex-col gap-6 pt-10 sm:pt-12 md:pt-16 lg:pt-28   bg-[#ffffff]">
-      <h2 className="px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 text-4xl text-primary-brown ">
+    <section className="w-full flex flex-col gap-6 pt-10 sm:pt-12 md:pt-16 lg:pt-28 bg-[#0b0b0b]">
+      <h2 className="px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 text-4xl text-[#ffffff] ">
         Our Work
       </h2>
 
       {/* Project cards container */}
-      <div className="w-full flex flex-col gap-16 bg-[#0073AA]/10 px-4 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-8 md:py-14 lg:py-24 xl:py-28 2xl:py-32 3xl:py-72">
+      <div className="w-full flex flex-col gap-24 bg-[#0b0b0b] px-4 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-8 md:py-14 lg:py-24 xl:py-28 2xl:py-32 3xl:py-72">
         {/* Project card */}
         {projects.map(project =>
             <ProjectCard 
@@ -25,7 +25,6 @@ export default function ServicesSection() {
             />
         )}
       </div>
-      
     </section>
   );
 }
@@ -34,16 +33,16 @@ export const ProjectCard = ({ title, description, serviceCategories, imageSrc } 
     return (
         <div className="flex flex-col gap-2">
             <Image src={TestImage} alt="project_image" />
-            <h3 className="font-bold text-xl text-primary-brown">{title}</h3>
-            <ul className="flex flex-wrap items-center pt-4 gap-2">
+            <ul className="flex flex-wrap items-center pt-1 gap-2">
                 {serviceCategories.map(category =>
-                    <li key={category} className="flex items-center bg-[#0073AA]/30 text-xs text-primary-brown rounded-full px-2 py-1">
+                    <li key={category} className="flex items-center bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] text-[10px] text-[#eeeeee] rounded-full px-2 py-1">
                        <p>&#8226; {category}</p>
                     </li>
                 )}
             </ul>
-            <p className="text-base text-primary-brown font-normal">{description}</p>
-            <div className="w-full flex pt-4">
+            <h3 className="w-full text-[#ffffff] font-semibold text-2xl text-start pt-2">{title}</h3>
+            <p className="text-base text-[#eeeeee] font-normal">{description}</p>
+            <div className="w-full flex pt-8">
                 <button className="flex items-center justify-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
                     <Image src={ArrowRight} alt="hero_image"  />
                     View project

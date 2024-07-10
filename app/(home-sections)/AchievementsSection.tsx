@@ -5,7 +5,7 @@ import SectionWrapper from "../components/SectionWrapper";
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
-      <h2 className="text-4xl text-primary-brown">
+      <h2 className="text-4xl text-[#ffffff]">
         Our Achievements
       </h2>
 
@@ -31,7 +31,7 @@ export const AchievementCard = ({ stat, description, colorClasses } : Achievemen
     return (
         <div className={`flex flex-col items-center text-center rounded-lg p-16 ${colorClasses.container}`}>
             <h3 className={`font-bold text-5xl text-${colorClasses.statText}`}>{stat}</h3>
-            <p className="text-base text-primary-brown font-normal text-center">{description}</p>
+            <p className="w-full text-lg text-[#ffffff] font-semibold pt-2">{description}</p>
         </div>
     )
 }
@@ -47,28 +47,28 @@ export const achievements = [
     {
         id: 1,
         stat: '80%',
-        description: 'reduction on onboarding',
+        description: 'Reduction on onboarding',
         colorClasses: {
             statText: 'primary-blue',
-            container: 'bg-gradient-to-r from-[#d1ecff] to-[#f6ecfd]'
+            container: 'bg-gradient-to-r from-[#292929] to-[#ED1AFF]'
         }
     },
     {
         id: 2,
         stat: '7x faster',
-        description: 'vulnerability fixes on GitHub',
+        description: 'Vulnerability fixes on GitHub',
         colorClasses: {
             statText: 'primary-purple',
-            container: 'bg-gradient-to-r from-[#f3e6fc] to-[#f6ecfd]'
+            container: 'bg-gradient-to-r from-[#292929] to-[#FF7A1A]'
         }
     },
     {
         id: 3,
         stat: '22%',
-        description: 'increased development productivity',
+        description: 'Increased development productivity',
         colorClasses: {
             statText: 'primary-green',
-            container: 'bg-gradient-to-r from-[#f2e6fb] to-[#defbeb]'
+            container: 'bg-gradient-to-r from-[#292929] to-[#9FFF1A]'
         }
     },
 ]

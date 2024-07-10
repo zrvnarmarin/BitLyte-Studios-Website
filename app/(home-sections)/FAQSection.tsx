@@ -9,7 +9,7 @@ import '../../public/test.css'
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-4xl text-primary-brown">Frequently Asked Questions</h2>
+      <h2 className="w-full text-4xl text-[#ffffff]">Frequently Asked Questions</h2>
       <Accordion faqArray={homePageFAQ} />
     </SectionWrapper>
   );
@@ -53,10 +53,10 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className="cursor-pointer linear-gradient-background to-[#212121] border-[0.5px] border-[#efe7ff] rounded-lg pl-6 pr-4 py-1"
+      className={`cursor-pointer bg-gradient-to-r from-[#292929] to-[#090909] rounded-lg pl-6 pr-4 py-1`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
-        <h3 className="normal-case md:text-lg text-gray-200 leading-2 font-semibold">
+        <h3 className="w-full text-lg text-[#ffffff] font-semibold ">
           {title}
         </h3>
         {isActive ? (
@@ -69,7 +69,7 @@ function Panel({
           </span>
         )}
       </div>
-      {isActive ? <p className="pl-2 pb-4 text-normal">{answer}</p> : null}
+      {isActive ? <p className="pl-2 pb-4 text-base text-[#eeeeee] font-normal">{answer}</p> : null}
     </div>
   );
 }
