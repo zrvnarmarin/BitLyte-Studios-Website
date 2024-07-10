@@ -4,8 +4,8 @@ import '../../public/test.css'
 import Image from "next/image";
 import ArrowRight from '../../public/images/Rectangle 1.svg'
 import TestimonialExampleImage from '../../public/images/home/TestimonialImage.svg'
-import StarIcon from '../../public/images/home/StarIcon.svg'
 import ButtonNext from '../../public/images/home/ButtonNextTestimonials.svg'
+import '../../public/styles/star.css'
 
 export default function TestimonialsSection() {
     return (
@@ -34,18 +34,20 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Buttons */}
-            <div className="w-full flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#2a2c2f]">
-                {/* Previous button */}
-                {/* <button>
-                    <Image src={ButtonNext} alt="next-button-testimonials" className="rotate-180" />
-                </button> */}
-                {/* Next button */}
-                {/* <button>
-                    <Image src={ButtonNext} alt="next-button-testimonials" />
-                </button> */}
-                <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#59EE99] to-[#17DE6D]"></div>
-                <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#59EE99] to-[#17DE6D]"></div>
-                <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#59EE99] to-[#17DE6D]"></div>
+            <div className="w-flex flex items-center justify-center">
+                <div className="w-fit flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#2a2c2f]">
+                    {/* Previous button */}
+                    {/* <button>
+                        <Image src={ButtonNext} alt="next-button-testimonials" className="rotate-180" />
+                    </button> */}
+                    {/* Next button */}
+                    {/* <button>
+                        <Image src={ButtonNext} alt="next-button-testimonials" />
+                    </button> */}
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#59EE99] to-[#17DE6D]"></div>
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#59EE99] to-[#17DE6D]"></div>
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#59EE99] to-[#17DE6D]"></div>
+                </div>
             </div>
 
             {/* Link to all reviews route */}
@@ -63,13 +65,7 @@ export const TestimonialCard = ({ name, companyName, testimonialText, imageSrc, 
     return (
         <div className="flex items-center">
             <div>
-                <div className="flex items-center gap-2">
-                    <Image src={StarIcon} alt='testimonial image' />
-                    <Image src={StarIcon} alt='testimonial image' />
-                    <Image src={StarIcon} alt='testimonial image' />
-                    <Image src={StarIcon} alt='testimonial image' />
-                    <Image src={StarIcon} alt='testimonial image' />
-                </div>
+                <ReviewStars />
                 <p className="text-base text-[#eeeeee] font-normal pt-4">
                     {testimonialText}
                 </p>
@@ -112,3 +108,15 @@ export const testimonials = [
     //     rating: 5
     // }
 ]
+
+export const ReviewStars = () => {
+    return (
+        <div className="flex items-center gap-1">
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+        </div>
+    )
+}
