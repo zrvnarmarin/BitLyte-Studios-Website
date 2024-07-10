@@ -5,6 +5,7 @@ import TestimonialsSection from "./(home-sections)/TestimonialsSection";
 import AchievementsSection from './(home-sections)/AchievementsSection'
 import FAQSection from './(home-sections)/FAQSection'
 import CTASection from "./(home-sections)/CTASection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AchievementsSection />
       <FAQSection />
       <CTASection />
+      <Footer />
     </main>
   );
 }

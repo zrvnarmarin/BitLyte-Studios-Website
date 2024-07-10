@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import HeroImage from '../../public/images/contact/contac_heroSection.svg'
 import SectionWrapper from "../components/SectionWrapper";
 import '../../public/test.css'
 import ArrowRight from '../../public/images/Rectangle 1.svg'
