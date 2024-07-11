@@ -3,6 +3,8 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Image from "next/image";
+import { LogoIcon, LogoIconBlue, MenuButton } from "./Navbar";
+import { ContactIcon, EmailIcon, socialMediaIcons } from "./Footer";
 
 export default function Sidebar({
   isSideBarOpen,
@@ -22,17 +24,20 @@ export default function Sidebar({
   return (
     <>
       {isSideBarOpen && (
-        <div className="top-0 left-0 bottom-0 bg-[#000000] w-full h-screen sticky z-40">
-          <div className="flex justify-between items-center py-2 px-4">
-            <LogoImage onCloseSidebar={onCloseSidebar} />
-            <button onClick={() => onCloseSidebar()} className="bg-white text-xl text-black">
-              Open/close
-            </button>
+        <div className="flex flex-col top-0 left-0 bottom-0 bg-[#000000] w-full h-screen sticky z-40 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <LogoIcon />
+              <span className="text-[#ffffff] text-lg font-bold">
+                BitLyte Studios
+              </span>
+            </div>
+            <MenuButton />
           </div>
-          <div className="flex flex-col">
-            <NavbarLinksSection onCloseSidebar={onCloseSidebar} />
-            <GetInTouchWithUsSection />
-          </div>
+        <div className="flex flex-col">
+          <NavbarLinksSection onCloseSidebar={onCloseSidebar} />
+          <ContactInfoSection />
+        </div>
         </div>
       )}
     </>
@@ -47,12 +52,15 @@ const NavbarLink = ({
   onCloseSidebar: () => void;
 }) => {
   return (
-    <li className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7">
+    <li className="w-full">
       <Link
         href={`${navbarLink.link}`}
         onClick={() => onCloseSidebar()}
-        className=" font-normal text-white text-lg tracking-wider"
+        className="w-full group flex items-center justify-start gap-4 text-5xl text-[#ffffff] font-semibold text-start"
       >
+        {/* <span className="group-hover:visible invisible">
+          <BlueArrowRight />
+        </span> */}
         {navbarLink.name}
       </Link>
     </li>
@@ -65,7 +73,7 @@ const NavbarLinksSection = ({
   onCloseSidebar: () => void;
 }) => {
   return (
-    <ul className="lg:flex flex flex-col items-end justify-between gap-6 pt-16 py-2 px-4">
+    <ul className="lg:flex flex flex-col items-center justify-between gap-6 pt-16 py-2">
       {navbarLinks.map((link) => (
         <NavbarLink
           key={link.name}
@@ -77,24 +85,27 @@ const NavbarLinksSection = ({
   );
 };
 
-export const GetInTouchWithUsSection = () => {
+export const ContactInfoSection = () => {
   return (
-    <div className="bg-[#111317] mt-16 flex flex-col gap-8 items-end py-2 px-4 w-full">
-      <div className="flex flex-col gap-2">
-        <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
-          Get In Touch With Us
-        </p>
-        <Link
-          href="/"
-          className="text-[#F3F4F6] xs:text-md lg:text-lg xl:text-xl font-normal tracking-wider hover:underline hover:underline-offset-8 hover:decoration-[#1D7349] leading-7"
-        >
-          bitlytestudios.com
-        </Link>
+    <div className="flex flex-col pt-6 gap-8">
+      <div className="w-full flex items-center gap-8 pt-6">
+        {socialMediaIcons.map(socialMediaIcon =>
+          <React.Fragment key={socialMediaIcon.id}>
+            <Link href={socialMediaIcon.href}>
+                {socialMediaIcon.icon()}
+            </Link>
+          </React.Fragment>
+        )}
       </div>
-      <div className="flex flex-col gap-2">
-        <p className="font-normal text-white uppercase text-end text-lg tracking-wider">
-          Follow Us
-        </p>
+      <div className="flex flex-col">
+        <div className="flex items-center gap-2">
+          <ContactIcon />
+          <span className="text-base text-[#ffffff] font-normal">+385015896878</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <EmailIcon />
+          <span className="text-base text-[#ffffff] font-normal">bitlyte-studios@gmail.om</span>
+        </div>
       </div>
     </div>
   );
@@ -135,6 +146,10 @@ export const XButton = () => {
 
 const navbarLinks = [
   {
+    name: "Home",
+    link: "/",
+  },
+  {
     name: "About",
     link: "/about",
   },
@@ -152,3 +167,11 @@ export type NavbarLink = {
   name: string;
   link: string;
 };
+
+export const BlueArrowRight = () => {
+  return (
+    <svg width="27" height="27" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 33H4.56913L22 16.5L11.1605 4.10231e-07L6.44771 0L0 33Z" fill="#1A9FFF"/>
+    </svg>
+  )
+}

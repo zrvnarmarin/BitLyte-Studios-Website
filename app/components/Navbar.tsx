@@ -24,7 +24,7 @@ export default function Navbar({
         </div>
         <ul className="relative hidden lg:flex items-center justify-between gap-10">
           {navbarLinks.map((navbarLink) => (
-            <>
+            <React.Fragment key={navbarLink.name}>
               {navbarLink.dropdown === true ? (
                 <DropdownLink
                   name={navbarLink.name}
@@ -33,7 +33,7 @@ export default function Navbar({
               ) : (
                 <NavbarLink key={navbarLink.name} navbarLink={navbarLink} />
               )}
-            </>
+            </React.Fragment>
           ))}
         </ul>
         <div
@@ -227,12 +227,21 @@ export const LogoIconWhite = () => {
   )
 }
 
+export const LogoIconBlue = () => {
+  return (
+    <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z" fill="#1A9FFF"/>
+        <path d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z" fill="#1A9FFF"/>
+    </svg>
+  )
+}
+
   export const MenuButton = () => {
     return (
         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22.5" cy="22.5" r="20.5" fill="#1A9FFF" stroke="#1A9FFF" stroke-width="4"/>
-            <path d="M10.3846 26.3076H31.1539" stroke="white" stroke-width="4"/>
-            <path d="M13.7692 19.3845H34.5385" stroke="white" stroke-width="4"/>
+            <circle cx="22.5" cy="22.5" r="20.5" fill="#1A9FFF" stroke="#1A9FFF" strokeWidth="4"/>
+            <path d="M10.3846 26.3076H31.1539" stroke="white" strokeWidth="4"/>
+            <path d="M13.7692 19.3845H34.5385" stroke="white" strokeWidth="4"/>
         </svg>
     )
   }
