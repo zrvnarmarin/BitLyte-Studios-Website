@@ -1,5 +1,4 @@
 import React from "react";
-import SectionWrapper from "../components/SectionWrapper";
 import '../../public/test.css'
 import Image from "next/image";
 import HeroImage from '../../public/images/home/undraw_collaborators_re_hont 1.svg'

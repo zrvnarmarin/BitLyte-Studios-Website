@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Style of the CTA section for different route
+ <div className="px-4 py-8 rounded-lg bg-gradient-to-r from-[#292929] to-[#61006A]">
+    <h2 className="text-4xl text-[#ffffff] text-center">
+        Let`s start
+        <p className="text-[#D400E6] font-black">your project</p>
+    </h2>
+    <div className="w-full flex justify-center pt-8">
+        <button className="w-full flex items-center justify-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#ED1AFF] to-[#D400E6] rounded-full text-xl">
+            <Image src={ArrowRight} alt="hero_image"  />
+            Get in touch
+        </button>
+    </div>
+</div>

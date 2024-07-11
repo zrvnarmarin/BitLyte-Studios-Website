@@ -1,28 +1,24 @@
 import React from "react";
 import Image from "next/image";
-import SectionWrapper from "@/app/components/SectionWrapper";
+import HeroSectionWrapper from "@/app/components/HeroSectionWrapper";
 import HeroImage from '../../../public/images/contact/contac_heroSection.svg'
 import ArrowRight from '../../../public/images/Rectangle 1.svg'
+import '../../../public/test.css'
 
 export default function HeroSection() {
     return (
-        <SectionWrapper>
-            <p className="text-lg font-bold text-black uppercase">Digital Agency</p>
-            <h1 className="text-5xl text-primary-brown font-semibold">
+        <HeroSectionWrapper>
+            <p className="text-xs md:text-md font-bold md:font-bold text-[#ffffff] uppercase pt-2">Contact us</p>
+            <h1 className="text-5xl text-[#ffffff] font-semibold text-start">
+                Ready to  
                 <span className="custom-text font-black">
-                    We create {" "}
+                    {" "} elevate {" "}
                 </span>
-                simple and effective Marketing & Web solutions
+                your web presence?
             </h1>
-            <div className="w-full flex">
-                <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
-                    <Image src={ArrowRight} alt="hero_image"  />
-                    Get in touch
-                </button>
-            </div>
-            <div className="bg-red-400 w-full h-full">
+            {/* <div className="bg-red-400 w-full h-full">
                 <Image src={HeroImage} alt="hero_image" className="" />
-            </div>
-        </SectionWrapper>
+            </div> */}
+        </HeroSectionWrapper>
     )
 }
