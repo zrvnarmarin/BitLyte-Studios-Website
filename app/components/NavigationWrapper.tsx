@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import Navbar from "./Navbar";
-import Sidebar from "./NavigationFullScreen";
+import NavigationMenuFullScreen from "./NavigationFullScreen";
 
 export default function NavigationWrapper() {
   const [isSideBarOpen, setIsSideBarOpen] = useState<boolean>(false);
 
-  const openSidebar = () => setIsSideBarOpen(true);
+  const toggleNavigationMenu = () => setIsSideBarOpen(prev => !prev);
 
   return (
     <div>
-      <Sidebar isSideBarOpen={isSideBarOpen} onOpenSidebar={openSidebar} />
-      <Navbar isSideBarOpen={isSideBarOpen} onOpenSidebar={openSidebar} />
+      <NavigationMenuFullScreen isSideBarOpen={isSideBarOpen} toggleNavigation={toggleNavigationMenu} />
+      <Navbar isSideBarOpen={isSideBarOpen} onOpenSidebar={toggleNavigationMenu} />
     </div>
   )
 }

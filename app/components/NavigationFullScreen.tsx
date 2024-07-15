@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import React, { useEffect } from "react";
-import Image from "next/image";
 import { LogoIcon, LogoIconBlue, MenuButton } from "./Navbar";
 import { ContactIcon, EmailIcon, socialMediaIcons } from "./Footer";
 
-export default function Sidebar({
+export default function NavigationMenuFullScreen({
   isSideBarOpen,
-  onCloseSidebar,
+  toggleNavigation,
 }: {
   isSideBarOpen: boolean;
-  onCloseSidebar: () => void;
+  toggleNavigation: () => void;
 }) {
+
   useEffect(() => {
     if (isSideBarOpen) {
       document.body.classList.add("overflow-y-hidden");
@@ -32,10 +32,12 @@ export default function Sidebar({
                 BitLyte Studios
               </span>
             </div>
-            <MenuButton />
+            <button onClick={() => toggleNavigation()}>
+              <MenuButton />
+            </button>
           </div>
         <div className="flex flex-col">
-          <NavbarLinksSection onCloseSidebar={onCloseSidebar} />
+          <NavbarLinksSection onCloseSidebar={toggleNavigation} />
           <ContactInfoSection />
         </div>
         </div>

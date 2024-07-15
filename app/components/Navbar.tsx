@@ -17,7 +17,9 @@ export default function Navbar({
     
       <nav className={`w-full fixed z-30 opacity-95 bg-[#0b0b0b] ${scrollPosition > 20 ? "opacity-90   backdrop-blur-xl duration-700" : ""} } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6`}>
         <div className="flex items-center gap-2">
-          <LogoIcon />
+          <Link href={`/`}>
+            <LogoIcon />
+          </Link>
           <span className="text-[#ffffff] text-lg font-bold">
             BitLyte Studios
           </span>
@@ -40,7 +42,9 @@ export default function Navbar({
           onClick={() => onOpenSidebar()}
           className="text-3xl text-red-300 z-40"
         >
-          <MenuButton />
+          <button className="cursor-pointer">
+            <MenuButton />
+          </button>
         </div>
       </nav>
   );
