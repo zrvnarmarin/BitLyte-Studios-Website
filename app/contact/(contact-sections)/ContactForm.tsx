@@ -14,7 +14,7 @@ export default function ContactForm() {
                         <label htmlFor="full-name" className="w-full text-lg text-[#ffffff] font-semibold ">
                             Full Name
                         </label>
-                        <input id="full-name" type="text" className="focus:outline-none focus:ring focus:ring-violet-400 pl-4 py-3 bg-gradient-to-r from-[#292929] to-[#00111d] border border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal" />
+                        <input id="full-name" type="text" className="focus:outline-none focus:ring focus:ring-violet-900 pl-4 py-3 bg-gradient-to-r from-[#292929] to-[#00111d] border border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal" />
                     </div>
                     <div className="flex flex-col gap-1">
                         <label htmlFor="email" className="w-full text-lg text-[#ffffff] font-semibold ">
