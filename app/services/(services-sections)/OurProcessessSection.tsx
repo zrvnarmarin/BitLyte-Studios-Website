@@ -8,38 +8,50 @@ import '../../../public/test.css'
 export default function OurProcessessSection() {
     return (
         <SectionWrapper>
-            <p className="text-lg font-bold text-black uppercase">How we solve problems</p>
-            <h1 className="text-5xl text-primary-brown font-semibold">
+            {/* <p className="text-xs md:text-md font-bold md:font-bold text-[#ffffff] uppercase pt-2">How we tackle problems</p> */}
+            <h1 className="w-full text-4xl text-[#ffffff]">
                 Our
                 <span className="linear-gradient-purple-text font-black">
                     {" "}Processess {" "}
                 </span>
-                for tackling problems
             </h1>
-            <p className="text-base text-primary-brown font-normal pt-4">
-                We help with web and mobile apps, marketing websites, landing pages and two-sided platforms.
-            </p>
-            <Image src={ToolkitPyramidTestImage} alt="pyramid_image" />
-            <p className="text-base text-primary-brown font-normal pt-4">
-                In our quest to bring your digital vision to life, we arm ourselves with an arsenal of cutting-edge tools and technologies. 
-                Our approach to web development marries innovation with reliability, ensuring that your website isn`t just visually stunning 
-                but also robust, scalable, and user-friendly. Here`s a glimpse into the tools that empower us to create digital magic:
-            </p>
             <div>
-                <h2 className="text-5xl text-primary-brown font-semibold">
+                <h2 className="text-3xl text-[#ffffff] pl-2">
                     <span className="linear-gradient-purple-text font-black">
-                        {" "} 1. {" "}
+                        {" "}  1. {" "}
                     </span>
                     Discovery
                 </h2>
-                <p className="text-base text-primary-brown font-normal pt-4">
+                <p className="text-base text-[#eeeeee] font-normal py-4 text-start pl-2">
                     Through in-depth research, market analysis, and collaborative discussions, 
-                    we unearth key insights that serve as the foundation for our strategy. We listen 
-                    attentively to your aspirations, challenges, and vision, ensuring every decision 
-                    is rooted in a comprehensive understanding of your goals.
+                    we unearth key insights that serve as the foundation for our strategy.
                 </p>
                 <Image src={ProcessesSectionTestImage} alt="pyramid_image" />
             </div>
+
+            {/* Buttons */}
+            <div className="w-flex flex items-center justify-center">
+                <div className="w-fit flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#2a2c2f]">
+                    {/* Previous button */}
+                    {/* <button>
+                        <Image src={ButtonNext} alt="next-button-testimonials" className="rotate-180" />
+                    </button> */}
+                    {/* Next button */}
+                    {/* <button>
+                        <Image src={ButtonNext} alt="next-button-testimonials" />
+                    </button> */}
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#C17EF1] to-[#AF5AED]"></div>
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#C17EF1] to-[#AF5AED]"></div>
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#C17EF1] to-[#AF5AED]"></div>
+                </div>
+            </div>
+
+            <p className="text-base text-[#eeeeee] font-normal py-4 text-center pt-2">
+                <span className="linear-gradient-purple-text font-black">
+                    {" "}  &#x2022; {" "}
+                </span>
+                Our processess can change, depending on client needs
+            </p>
         </SectionWrapper>
     )
 }
