@@ -3,6 +3,7 @@ import ServiceCategoriesSection from './(services-sections)/ServiceCategoriesSec
 import BenefitsSection from './(services-sections)/BenefitsSection'
 import OurProcessessSection from './(services-sections)/OurProcessessSection'
 import CTASection from "./(services-sections)/CTASections";
+import TestimonialsSection from "../components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,12 @@ export default function Home() {
       <ServiceCategoriesSection />
       <BenefitsSection />
       <OurProcessessSection />
+      <TestimonialsSection 
+        headingColor="linear-gradient-purple-text" 
+        buttonColor="bg-gradient-to-r from-[#C17EF1] to-[#AF5AED]" 
+        nextButtonColor="bg-gradient-to-r from-[#C17EF1] to-[#AF5AED]"
+        isCTAButtonVisible={false}
+      />
       <CTASection />
     </main>
   );

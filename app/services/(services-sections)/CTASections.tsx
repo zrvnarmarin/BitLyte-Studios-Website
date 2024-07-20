@@ -8,7 +8,7 @@ export default function CTASection() {
 
   return (
     <SectionWrapper>
-        <div className="px-4 py-8 rounded-lg bg-gradient-to-r from-[#292929] to-[#61006A]">
+        <div className="px-4 py-8 rounded-lg bg-gradient-to-r from-[#131313] to-[#45044d]">
             <h2 className="text-4xl text-[#ffffff] text-center">
                 Let`s start
                 <p className="linear-gradient-purple-text font-black">your project</p>

@@ -17,7 +17,7 @@ export default function Home() {
       <AchievementsSection />
       <FAQSection />
       <CTASection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

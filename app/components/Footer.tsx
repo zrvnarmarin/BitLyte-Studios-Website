@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="relative w-full pt-8 pb-8 mt-12 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72">
+        <footer className="relative w-full pt-8 pb-8 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72">
             <div className="absolute inset-0 w-full h-full">
                 <SVGBackground />
             </div>
