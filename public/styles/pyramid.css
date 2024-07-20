@@ -23,7 +23,7 @@
   .face {
     width: 200px;
     height: 200px;
-    background-image: linear-gradient(to right, #C17EF1, #AF5AED);
+    background-image: linear-gradient(to right, #7f96db, #8ca0dc);
     border: 0.5px solid #292929;
     position: absolute;
     opacity: 0.5;
@@ -65,3 +65,5 @@
       transform: rotate3d(1, 1, 0, 45deg);
     }
   }
+
+
