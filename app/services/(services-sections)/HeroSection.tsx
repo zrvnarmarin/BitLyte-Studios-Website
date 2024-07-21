@@ -1,9 +1,9 @@
 import React from "react";
-import SectionWrapper from "../../components/SectionWrapper";
 import HeroSectionWrapper from '../../components/HeroSectionWrapper'
 import '../../../public/test.css'
 import Image from "next/image";
 import HeroImage from '../../../public/images/services/undraw_services_re_hu5n 1.svg'
+import { LogoForButton } from "../[serviceId]/HeroSection";
 
 export default function HeroSection() {
     return (
@@ -20,6 +20,12 @@ export default function HeroSection() {
             </p>
             <div className="bg-red-400 w-full h-full">
                 <Image src={HeroImage} alt="hero_image" className="" />
+            </div>
+            <div className="w-full flex">
+                <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#7f96db] rounded-full text-xl">
+                    <LogoForButton fillColor="#ffffff" />
+                    Start building
+                </button>
             </div>
         </HeroSectionWrapper>
     )

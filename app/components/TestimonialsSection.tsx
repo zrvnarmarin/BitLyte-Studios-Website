@@ -20,7 +20,7 @@ export default function TestimonialsSection({ headingColor, ratingStarColor, but
             </h1>
 
             {/* Testimonial cards container */}
-            <div className="group w-full flex flex-col gap-8 border-[0.5px] border-[#252525] bg-gradient-to-r from-[#292929] to-[#0b0b0b] rounded-lg p-5">
+            <div className="group w-full flex flex-col gap-8 border-[0.5px] border-[#252525] bg-gradient-to-r from-[#090a0c] to-[#212121] rounded-lg p-5">
             {testimonials.map(testimonial =>
                 <TestimonialCard
                     key={testimonial.id}
