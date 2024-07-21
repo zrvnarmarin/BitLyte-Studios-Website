@@ -11,29 +11,31 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
     return (
         <HeroSectionWrapper>
             <div className="w-full flex">
-                <Link href={`/services`} className="flex items-center gap-2 linear-gradient-dark-orange-text rounded-full text-xl">
-                    <LogoForButton fillColor="e29b4b" />
+                <Link href={`/services`} className="flex items-center gap-2 linear-gradient-purple-text rounded-full text-xl">
+                    <LogoForButton fillColor="#ffffff" />
                     Services
                 </Link>
             </div>
             <h1 className="text-4xl text-[#ffffff] font-semibold text-start">
-                <span className="linear-gradient-dark-orange-text font-black">
+                <span className="linear-gradient-purple-text font-black">
                     {serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} {" "}
                 </span>
             </h1>
+            <div  className={`flex flex-col gap-2 rounded-lg p-4 py-8 bg-gradient-to-r from-[#0b0b0b] to-[#3F5086] border-[0.5px] border-[#252525]`}>
+                {/* Service Card */}
+                <div className="flex flex-col items-center justify-center gap-2">
+                    <GradientSVG />
+                </div>
+            </div>
             <p className="text-base text-[#eeeeee] font-normal pt-2">
                 Capture attention and convert visitors with beautifully designed landing pages tailored to your brand. Our expert team 
-                creates engaging, high-converting landing pages that drive results and enhance your digital marketing efforts. Let us 
-                help you turn clicks into customers with designs that stand out and deliver.
+                creates engaging, high-converting landing pages that drive results and enhance your digital marketing efforts.
             </p>
             <div className="w-full flex">
-                <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#d87a35] to-[#e29b4b]  rounded-full text-xl">
+                <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#7f96db] rounded-full text-xl">
                     <LogoForButton fillColor="#ffffff" />
                     Start building
                 </button>
-            </div>
-            <div className="bg-red-400 w-full h-full">
-                <GradientSVG />
             </div>
         </HeroSectionWrapper>
     )
@@ -52,7 +54,7 @@ export const LogoForButton = ({ fillColor } : ButtonProps) => {
 }
 
 const GradientSVG = () => (
-    <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 64 38.05">
+    <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 64 38.05" width={100} height={100}>
       <defs>
         <style>
           {`
