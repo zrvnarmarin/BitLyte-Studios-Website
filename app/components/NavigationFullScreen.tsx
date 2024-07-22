@@ -161,7 +161,7 @@ const navbarLinks = [
   },
   {
     name: "Services",
-    link: "/about/testimonials",
+    link: "/services",
   }
 ];
 

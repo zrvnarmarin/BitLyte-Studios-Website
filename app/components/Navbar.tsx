@@ -5,48 +5,50 @@ import Link from "next/link";
 import { UseScrollPosition } from "../utils/hooks/UseScrollPosition";
 
 export default function Navbar({
-    onOpenSidebar,
-  }: {
-    isSideBarOpen: boolean;
-    onOpenSidebar: () => void;
-  }) {
-   
+  onOpenSidebar,
+}: {
+  isSideBarOpen: boolean;
+  onOpenSidebar: () => void;
+}) {
   const scrollPosition = UseScrollPosition();
 
   return (
-    
-      <nav className={`w-full fixed z-30 opacity-95 bg-[#0b0b0b] ${scrollPosition > 20 ? "opacity-90   backdrop-blur-xl duration-700" : ""} } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6`}>
-        <div className="flex items-center gap-2">
-          <Link href={`/`}>
-            <LogoIcon />
-          </Link>
-          <span className="text-[#ffffff] text-lg font-bold">
-            BitLyte Studios
-          </span>
-        </div>
-        <ul className="relative hidden lg:flex items-center justify-between gap-10">
-          {navbarLinks.map((navbarLink) => (
-            <React.Fragment key={navbarLink.name}>
-              {navbarLink.dropdown === true ? (
-                <DropdownLink
-                  name={navbarLink.name}
-                  dropdownItems={navbarLink.dropdownItems}
-                />
-              ) : (
-                <NavbarLink key={navbarLink.name} navbarLink={navbarLink} />
-              )}
-            </React.Fragment>
-          ))}
-        </ul>
-        <div
-          onClick={() => onOpenSidebar()}
-          className="text-3xl text-red-300 z-40"
-        >
-          <button className="cursor-pointer">
-            <MenuButton />
-          </button>
-        </div>
-      </nav>
+    <nav
+      className={`w-full fixed z-30 opacity-95 bg-[#0b0b0b] ${
+        scrollPosition > 20 ? "opacity-90   backdrop-blur-xl duration-700" : ""
+      } } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6`}
+    >
+      <div className="flex items-center gap-2">
+        <Link href={`/`}>
+          <LogoIcon />
+        </Link>
+        <span className="text-[#ffffff] text-lg font-bold">
+          BitLyte Studios
+        </span>
+      </div>
+      <ul className="relative hidden lg:flex items-center justify-between gap-10">
+        {navbarLinks.map((navbarLink) => (
+          <React.Fragment key={navbarLink.name}>
+            {navbarLink.dropdown === true ? (
+              <DropdownLink
+                name={navbarLink.name}
+                dropdownItems={navbarLink.dropdownItems}
+              />
+            ) : (
+              <NavbarLink key={navbarLink.name} navbarLink={navbarLink} />
+            )}
+          </React.Fragment>
+        ))}
+      </ul>
+      <div
+        onClick={() => onOpenSidebar()}
+        className="text-3xl text-red-300 z-40"
+      >
+        <button className="cursor-pointer">
+          <MenuButton />
+        </button>
+      </div>
+    </nav>
   );
 }
 
@@ -90,8 +92,8 @@ export const LogoImage = ({
 
 const navbarLinks = [
   {
-    name: "Programs",
-    link: "/programs",
+    name: "About",
+    link: "/about",
     dropdown: false,
   },
   {
@@ -100,24 +102,9 @@ const navbarLinks = [
     dropdown: false,
   },
   {
-    name: "Facilities",
-    link: "/facilities",
+    name: "Contact",
+    link: "/contact",
     dropdown: false,
-  },
-  {
-    name: "About",
-    link: "/about",
-    dropdown: true,
-    dropdownItems: [
-      {
-        name: "Instructors",
-        link: "/instructors",
-      },
-      {
-        name: "Testimonials",
-        link: "/testimonials",
-      },
-    ],
   },
 ];
 
@@ -155,7 +142,9 @@ export function DropdownLink({
       </button>
       {/* 2nd level menu */}
       <ul
-        className={`origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] p-2 rounded-lg shadow-xl ${!open && "hidden"}`}
+        className={`origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-gradient-to-r from-[#101010] to-[#161616] border border-[#292929] p-2 rounded-lg shadow-xl ${
+          !open && "hidden"
+        }`}
       >
         {dropdownItems.map((item, index) => (
           <DropdownLinkElement key={index} name={item.name} link={item.link} />
@@ -190,62 +179,111 @@ export const DropdownLinkElement = ({
 };
 
 export const TestIconTwo = ({
-    width = "2.5em",
-    height = "2.5em",
-    iconFill,
-  }: {
-    width?: string;
-    height?: string;
-    iconFill: string;
-  }) => {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={width}
-        height={height}
-        viewBox="0 0 50 50"
-      >
-        <path
-          fill={iconFill}
-          d="M17.962 44.874a1.007 1.007 0 0 1-.05 1.416l-2.172 2.031a.999.999 0 0 1-1.411-.051L1.68 34.638a1.007 1.007 0 0 1 .051-1.416l2.175-2.028a.998.998 0 0 1 1.411.051zm16.14-25.65a1.007 1.007 0 0 1-.051 1.416l-13.67 12.77a.999.999 0 0 1-1.411-.051l-3.263-3.521a1.007 1.007 0 0 1 .051-1.416l13.667-12.77a.997.997 0 0 1 1.41.051zM22.613 40.527c.374.403.351 1.04-.051 1.416l-2.175 2.03a.998.998 0 0 1-1.411-.051L6.334 30.29a1.007 1.007 0 0 1 .05-1.416l2.171-2.029a.999.999 0 0 1 1.411.051zm21.063-20.814a1.007 1.007 0 0 1-.052 1.416l-2.174 2.03a1 1 0 0 1-1.412-.05L27.394 9.48a1.006 1.006 0 0 1 .05-1.416l2.18-2.035a.997.997 0 0 1 1.41.051zm4.644-4.34a1.009 1.009 0 0 1-.051 1.417l-2.17 2.029a.997.997 0 0 1-1.41-.05L32.047 5.134a1.009 1.009 0 0 1 .05-1.417l2.172-2.033a.995.995 0 0 1 1.409.05z"
-        ></path>
-      </svg>
-    );
-  };
+  width = "2.5em",
+  height = "2.5em",
+  iconFill,
+}: {
+  width?: string;
+  height?: string;
+  iconFill: string;
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 50 50"
+    >
+      <path
+        fill={iconFill}
+        d="M17.962 44.874a1.007 1.007 0 0 1-.05 1.416l-2.172 2.031a.999.999 0 0 1-1.411-.051L1.68 34.638a1.007 1.007 0 0 1 .051-1.416l2.175-2.028a.998.998 0 0 1 1.411.051zm16.14-25.65a1.007 1.007 0 0 1-.051 1.416l-13.67 12.77a.999.999 0 0 1-1.411-.051l-3.263-3.521a1.007 1.007 0 0 1 .051-1.416l13.667-12.77a.997.997 0 0 1 1.41.051zM22.613 40.527c.374.403.351 1.04-.051 1.416l-2.175 2.03a.998.998 0 0 1-1.411-.051L6.334 30.29a1.007 1.007 0 0 1 .05-1.416l2.171-2.029a.999.999 0 0 1 1.411.051zm21.063-20.814a1.007 1.007 0 0 1-.052 1.416l-2.174 2.03a1 1 0 0 1-1.412-.05L27.394 9.48a1.006 1.006 0 0 1 .05-1.416l2.18-2.035a.997.997 0 0 1 1.41.051zm4.644-4.34a1.009 1.009 0 0 1-.051 1.417l-2.17 2.029a.997.997 0 0 1-1.41-.05L32.047 5.134a1.009 1.009 0 0 1 .05-1.417l2.172-2.033a.995.995 0 0 1 1.409.05z"
+      ></path>
+    </svg>
+  );
+};
 
-  export const LogoIcon = () => {
-    return (
-        <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z" fill="#3D3D3D"/>
-            <path d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z" fill="#3D3D3D"/>
-        </svg>
-    )
-  }
+export const LogoIcon = () => {
+  return (
+    <svg
+      width="45"
+      height="40"
+      viewBox="0 0 45 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
+        fill="#3D3D3D"
+      />
+      <path
+        d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z"
+        fill="#3D3D3D"
+      />
+    </svg>
+  );
+};
 
 export const LogoIconWhite = () => {
   return (
-    <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z" fill="#ffffff"/>
-        <path d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z" fill="#ffffff"/>
+    <svg
+      width="45"
+      height="40"
+      viewBox="0 0 45 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
+        fill="#ffffff"
+      />
+      <path
+        d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z"
+        fill="#ffffff"
+      />
     </svg>
-  )
-}
+  );
+};
 
 export const LogoIconBlue = () => {
   return (
-    <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z" fill="#1A9FFF"/>
-        <path d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z" fill="#1A9FFF"/>
+    <svg
+      width="45"
+      height="40"
+      viewBox="0 0 45 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
+        fill="#1A9FFF"
+      />
+      <path
+        d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z"
+        fill="#1A9FFF"
+      />
     </svg>
-  )
-}
+  );
+};
 
-  export const MenuButton = () => {
-    return (
-        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="22.5" cy="22.5" r="20.5" fill="#1A9FFF" stroke="#1A9FFF" strokeWidth="4"/>
-            <path d="M10.3846 26.3076H31.1539" stroke="white" strokeWidth="4"/>
-            <path d="M13.7692 19.3845H34.5385" stroke="white" strokeWidth="4"/>
-        </svg>
-    )
-  }
+export const MenuButton = () => {
+  return (
+    <svg
+      width="45"
+      height="45"
+      viewBox="0 0 45 45"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="22.5"
+        cy="22.5"
+        r="20.5"
+        fill="#1A9FFF"
+        stroke="#1A9FFF"
+        strokeWidth="4"
+      />
+      <path d="M10.3846 26.3076H31.1539" stroke="white" strokeWidth="4" />
+      <path d="M13.7692 19.3845H34.5385" stroke="white" strokeWidth="4" />
+    </svg>
+  );
+};

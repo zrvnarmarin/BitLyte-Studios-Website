@@ -1,111 +1,5 @@
-import React from "react";
-import Link from "next/link";
-import HeroSectionWrapper from "@/app/components/HeroSectionWrapper";
-import "../../../public/test.css";
+// Animated SVG icons for all services with linear gradient colors
 
-export default function HeroSection({ serviceName }: { serviceName: string }) {
-  return (
-    <HeroSectionWrapper>
-      <div className="w-full flex">
-        <Link
-          href={`/services`}
-          className="flex items-center gap-2 linear-gradient-purple-text rounded-full text-xl"
-        >
-          <LogoForButton fillColor="#ffffff" />
-          Services
-        </Link>
-      </div>
-
-      <h1 className="text-4xl text-[#ffffff] font-semibold text-start">
-        <span className="linear-gradient-purple-text font-normal">
-          {serviceName
-            .split("-")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}{" "}
-        </span>
-      </h1>
-      <div
-        className={`flex flex-col gap-2 rounded-lg p-4 py-8 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] border-[0.5px] border-[#252525]`}
-      >
-        {/* Service Card */}
-        <div className="flex flex-col items-center justify-center gap-2">
-          <LandingPageIcon width={100} height={100} />
-        </div>
-      </div>
-      <p className="text-base text-[#eeeeee] font-normal pt-2">
-        Capture attention and convert visitors with beautifully designed landing
-        pages tailored to your brand. Our expert team creates engaging,
-        high-converting landing pages that drive results and enhance your
-        digital marketing efforts.
-      </p>
-      <div className="w-full flex">
-        <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-xl">
-          <LogoForButton fillColor="#ffffff" />
-          Start building
-        </button>
-      </div>
-
-      {/* Desktop version */}
-      <div className="hidden lg:grid grid-cols-2 items-center gap-8">
-        <div className="flex flex-col gap-6">
-          <h1 className="text-7xl text-[#ffffff] font-medium text-start">
-            <span className="font-black">
-              {serviceName
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ")}{" "}
-            </span>
-          </h1>
-          <p className="text-lg text-[#eeeeee] font-normal pt-2">
-            Capture attention and convert visitors with beautifully designed
-            landing pages tailored to your brand. Our expert team creates
-            engaging, high-converting landing pages that drive results and
-            enhance your digital marketing efforts.
-          </p>
-          <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-3xl">
-            <LogoForButton fillColor="#ffffff" />
-            Start building
-          </button>
-        </div>
-        <div className="relative">
-          {/* Blur background */}
-          <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
-          <div className={`flex flex-col gap-2 rounded-lg p-4 py-8 `}>
-            {/* Service Card */}
-            <div className="flex flex-col items-center justify-center gap-2 z-20 rounded-full">
-              <BrandIdentityIcon width={500} height={500} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </HeroSectionWrapper>
-  );
-}
-
-export type ButtonProps = {
-  width: number;
-  height: number;
-  fillColor: string;
-};
-
-export const LogoForButton = ({ width, height, fillColor }: ButtonProps) => {
-  return (
-    <svg
-      width="8"
-      height="10"
-      viewBox="0 0 8 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7.85895 8.70736e-06L6.22674 0.0209734L0.0714852 5.66772L4.01513 11.1848L5.69866 11.1631L7.85895 8.70736e-06Z"
-        fill={fillColor}
-      />
-    </svg>
-  );
-};
-
-// Icons for each service ANIMATED
 export const LandingPageIcon = ({
   width,
   height,
@@ -125,70 +19,70 @@ export const LandingPageIcon = ({
       <defs>
         <style>
           {`
-          .cls-1 {
-            fill-rule: evenodd;
-          }
-
-          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
-            stroke-width: 0px;
-          }
-
-          .cls-1, .cls-9 {
-            fill: #fff;
-          }
-
-          .cls-2 {
-            fill: url(#linear-gradient);
-          }
-
-          .cls-3 {
-            fill: url(#linear-gradient-6);
-          }
-
-          .cls-4 {
-            fill: url(#linear-gradient-11);
-          }
-
-          .cls-11 {
-            opacity: .8;
-          }
-
-          .cls-5 {
-            fill: url(#linear-gradient-2);
-          }
-
-          .cls-6 {
-            fill: url(#linear-gradient-7);
-          }
-
-          .cls-7 {
-            fill: url(#linear-gradient-9);
-          }
-
-          .cls-12 {
-            fill: url(#linear-gradient-3);
-            stroke: url(#linear-gradient-4);
-            stroke-width: .15px;
-          }
-
-          .cls-12, .cls-13 {
-            stroke-miterlimit: 10;
-          }
-
-          .cls-8 {
-            fill: url(#linear-gradient-8);
-          }
-
-          .cls-13 {
-            fill: none;
-            stroke: url(#linear-gradient-5);
-            stroke-width: .16px;
-          }
-
-          .cls-10 {
-            fill: url(#linear-gradient-10);
-          }
-        `}
+            .cls-1 {
+              fill-rule: evenodd;
+            }
+  
+            .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+              stroke-width: 0px;
+            }
+  
+            .cls-1, .cls-9 {
+              fill: #fff;
+            }
+  
+            .cls-2 {
+              fill: url(#linear-gradient);
+            }
+  
+            .cls-3 {
+              fill: url(#linear-gradient-6);
+            }
+  
+            .cls-4 {
+              fill: url(#linear-gradient-11);
+            }
+  
+            .cls-11 {
+              opacity: .8;
+            }
+  
+            .cls-5 {
+              fill: url(#linear-gradient-2);
+            }
+  
+            .cls-6 {
+              fill: url(#linear-gradient-7);
+            }
+  
+            .cls-7 {
+              fill: url(#linear-gradient-9);
+            }
+  
+            .cls-12 {
+              fill: url(#linear-gradient-3);
+              stroke: url(#linear-gradient-4);
+              stroke-width: .15px;
+            }
+  
+            .cls-12, .cls-13 {
+              stroke-miterlimit: 10;
+            }
+  
+            .cls-8 {
+              fill: url(#linear-gradient-8);
+            }
+  
+            .cls-13 {
+              fill: none;
+              stroke: url(#linear-gradient-5);
+              stroke-width: .16px;
+            }
+  
+            .cls-10 {
+              fill: url(#linear-gradient-10);
+            }
+          `}
         </style>
         <linearGradient
           id="linear-gradient"
@@ -445,90 +339,90 @@ export const WebsiteDevelopmentIcon = ({
     <defs>
       <style>
         {`
-          .cls-1 {
-            fill: url(#linear-gradient-12);
-          }
-
-          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19 {
-            stroke-width: 0px;
-          }
-
-          .cls-2 {
-            fill: url(#linear-gradient-17);
-          }
-
-          .cls-3 {
-            fill: url(#linear-gradient-19);
-          }
-
-          .cls-4 {
-            fill: url(#linear-gradient);
-          }
-
-          .cls-5 {
-            fill: url(#linear-gradient-6);
-          }
-
-          .cls-6 {
-            fill: url(#linear-gradient-15);
-          }
-
-          .cls-7 {
-            fill: url(#linear-gradient-11);
-          }
-
-          .cls-8 {
-            fill: url(#linear-gradient-5);
-          }
-
-          .cls-20 {
-            opacity: .8;
-          }
-
-          .cls-9 {
-            fill: url(#linear-gradient-13);
-          }
-
-          .cls-10 {
-            fill: url(#linear-gradient-16);
-          }
-
-          .cls-11 {
-            fill: url(#linear-gradient-14);
-          }
-
-          .cls-12 {
-            fill: url(#linear-gradient-2);
-          }
-
-          .cls-13 {
-            fill: url(#linear-gradient-7);
-          }
-
-          .cls-14 {
-            fill: url(#linear-gradient-3);
-          }
-
-          .cls-15 {
-            fill: url(#linear-gradient-9);
-          }
-
-          .cls-16 {
-            fill: url(#linear-gradient-8);
-          }
-
-          .cls-17 {
-            fill: url(#linear-gradient-18);
-          }
-
-          .cls-18 {
-            fill: url(#linear-gradient-10);
-          }
-
-          .cls-19 {
-            fill: url(#linear-gradient-4);
-          }
-        `}
+            .cls-1 {
+              fill: url(#linear-gradient-12);
+            }
+  
+            .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19 {
+              stroke-width: 0px;
+            }
+  
+            .cls-2 {
+              fill: url(#linear-gradient-17);
+            }
+  
+            .cls-3 {
+              fill: url(#linear-gradient-19);
+            }
+  
+            .cls-4 {
+              fill: url(#linear-gradient);
+            }
+  
+            .cls-5 {
+              fill: url(#linear-gradient-6);
+            }
+  
+            .cls-6 {
+              fill: url(#linear-gradient-15);
+            }
+  
+            .cls-7 {
+              fill: url(#linear-gradient-11);
+            }
+  
+            .cls-8 {
+              fill: url(#linear-gradient-5);
+            }
+  
+            .cls-20 {
+              opacity: .8;
+            }
+  
+            .cls-9 {
+              fill: url(#linear-gradient-13);
+            }
+  
+            .cls-10 {
+              fill: url(#linear-gradient-16);
+            }
+  
+            .cls-11 {
+              fill: url(#linear-gradient-14);
+            }
+  
+            .cls-12 {
+              fill: url(#linear-gradient-2);
+            }
+  
+            .cls-13 {
+              fill: url(#linear-gradient-7);
+            }
+  
+            .cls-14 {
+              fill: url(#linear-gradient-3);
+            }
+  
+            .cls-15 {
+              fill: url(#linear-gradient-9);
+            }
+  
+            .cls-16 {
+              fill: url(#linear-gradient-8);
+            }
+  
+            .cls-17 {
+              fill: url(#linear-gradient-18);
+            }
+  
+            .cls-18 {
+              fill: url(#linear-gradient-10);
+            }
+  
+            .cls-19 {
+              fill: url(#linear-gradient-4);
+            }
+          `}
       </style>
       <linearGradient
         id="linear-gradient"
@@ -1052,18 +946,18 @@ export const FrontendDevelopmentIcon = ({
     <defs>
       <style>
         {`
-          .cls-1 {
-            fill: url(#linear-gradient);
-          }
-          
-          .cls-2 {
-            fill: url(#linear-gradient-2);
-          }
-          
-          .cls-3 {
-            fill: url(#linear-gradient-3);
-          }
-        `}
+            .cls-1 {
+              fill: url(#linear-gradient);
+            }
+            
+            .cls-2 {
+              fill: url(#linear-gradient-2);
+            }
+            
+            .cls-3 {
+              fill: url(#linear-gradient-3);
+            }
+          `}
       </style>
       <linearGradient
         id="linear-gradient"
@@ -1140,101 +1034,101 @@ export const CopywritingIcon = ({
     <defs>
       <style>
         {`
-          .cls-1 {
-            fill: url(#animated-gradient-12);
-          }
-
-          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20 {
-            stroke-width: 0px;
-          }
-
-          .cls-2 {
-            fill: url(#animated-gradient-17);
-          }
-
-          .cls-3 {
-            fill: url(#animated-gradient-19);
-          }
-
-          .cls-4 {
-            fill: url(#animated-gradient);
-          }
-
-          .cls-5 {
-            fill: url(#animated-gradient-6);
-          }
-
-          .cls-6 {
-            fill: url(#animated-gradient-15);
-          }
-
-          .cls-7 {
-            fill: url(#animated-gradient-11);
-          }
-
-          .cls-8 {
-            fill: url(#animated-gradient-5);
-          }
-
-          .cls-21 {
-            opacity: .8;
-          }
-
-          .cls-9 {
-            fill: url(#animated-gradient-13);
-          }
-
-          .cls-10 {
-            fill: url(#animated-gradient-16);
-          }
-
-          .cls-11 {
-            fill: url(#animated-gradient-14);
-          }
-
-          .cls-12 {
-            fill: url(#animated-gradient-2);
-          }
-
-          .cls-13 {
-            fill: url(#animated-gradient-7);
-          }
-
-          .cls-14 {
-            fill: url(#animated-gradient-3);
-          }
-
-          .cls-15 {
-            fill: url(#animated-gradient-9);
-          }
-
-          .cls-16 {
-            fill: url(#animated-gradient-8);
-          }
-
-          .cls-17 {
-            fill: url(#animated-gradient-18);
-          }
-
-          .cls-18 {
-            fill: #fff;
-          }
-
-          .cls-19 {
-            fill: url(#animated-gradient-10);
-          }
-
-          .cls-20 {
-            fill: url(#animated-gradient-4);
-          }
-
-          .cls-22 {
-            fill: none;
-            stroke: #444041;
-            stroke-miterlimit: 10;
-            stroke-width: .21px;
-          }
-        `}
+            .cls-1 {
+              fill: url(#animated-gradient-12);
+            }
+  
+            .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20 {
+              stroke-width: 0px;
+            }
+  
+            .cls-2 {
+              fill: url(#animated-gradient-17);
+            }
+  
+            .cls-3 {
+              fill: url(#animated-gradient-19);
+            }
+  
+            .cls-4 {
+              fill: url(#animated-gradient);
+            }
+  
+            .cls-5 {
+              fill: url(#animated-gradient-6);
+            }
+  
+            .cls-6 {
+              fill: url(#animated-gradient-15);
+            }
+  
+            .cls-7 {
+              fill: url(#animated-gradient-11);
+            }
+  
+            .cls-8 {
+              fill: url(#animated-gradient-5);
+            }
+  
+            .cls-21 {
+              opacity: .8;
+            }
+  
+            .cls-9 {
+              fill: url(#animated-gradient-13);
+            }
+  
+            .cls-10 {
+              fill: url(#animated-gradient-16);
+            }
+  
+            .cls-11 {
+              fill: url(#animated-gradient-14);
+            }
+  
+            .cls-12 {
+              fill: url(#animated-gradient-2);
+            }
+  
+            .cls-13 {
+              fill: url(#animated-gradient-7);
+            }
+  
+            .cls-14 {
+              fill: url(#animated-gradient-3);
+            }
+  
+            .cls-15 {
+              fill: url(#animated-gradient-9);
+            }
+  
+            .cls-16 {
+              fill: url(#animated-gradient-8);
+            }
+  
+            .cls-17 {
+              fill: url(#animated-gradient-18);
+            }
+  
+            .cls-18 {
+              fill: #fff;
+            }
+  
+            .cls-19 {
+              fill: url(#animated-gradient-10);
+            }
+  
+            .cls-20 {
+              fill: url(#animated-gradient-4);
+            }
+  
+            .cls-22 {
+              fill: none;
+              stroke: #444041;
+              stroke-miterlimit: 10;
+              stroke-width: .21px;
+            }
+          `}
       </style>
       <linearGradient
         id="animated-gradient"
@@ -1671,18 +1565,18 @@ export const BrandIdentityIcon = ({
     <defs>
       <style>
         {`
-          .cls-1 {
-            fill: url(#linear-gradient);
-          }
-
-          .cls-1, .cls-2 {
-            stroke-width: 0px;
-          }
-
-          .cls-2 {
-            fill: #fff;
-          }
-        `}
+            .cls-1 {
+              fill: url(#linear-gradient);
+            }
+  
+            .cls-1, .cls-2 {
+              stroke-width: 0px;
+            }
+  
+            .cls-2 {
+              fill: #fff;
+            }
+          `}
       </style>
       <linearGradient
         id="linear-gradient"
