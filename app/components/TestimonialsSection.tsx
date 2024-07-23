@@ -20,7 +20,8 @@ export default function TestimonialsSection({ headingColor, ratingStarColor, but
             </h1>
 
             {/* Testimonial cards container */}
-            <div className="group w-full flex flex-col gap-8 border-[0.5px] border-[#252525] bg-gradient-to-r from-[#090a0c] to-[#212121] rounded-lg p-5">
+            <div className="group flex flex-col gap-8 border-[0.5px] border-[#252525] rounded-lg p-5 overflow-hidden">
+            <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#2e3c64] z-10 blur-[630px]"></div>
             {testimonials.map(testimonial =>
                 <TestimonialCard
                     key={testimonial.id}
@@ -69,8 +70,9 @@ export default function TestimonialsSection({ headingColor, ratingStarColor, but
 
 export const TestimonialCard = ({ name, companyName, testimonialText, imageSrc, rating } : TestimonialCardProps) => {
     return (
-        <div className="flex items-center">
-            <div>
+        <div className="overflow-hidden relative flex items-center justify-center">
+            <div className="w-full h-full absolute bottom-0 right-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[430px]"></div>
+            <div className="z-20">
                 <p className="text-base text-[#eeeeee] font-normal">
                     {testimonialText}
                 </p>
@@ -100,7 +102,7 @@ export const testimonials = [
         id: 1,
         name: 'Nick Forest',
         companyName: 'CEO Of WordPress',
-        testimonialText: 'I was shockinlgy surprise by the delivery of BitLyte agency. They were super correct and did the job just perfectly!',
+        testimonialText: 'I worked with Igor for 2 projects already, and he has been such an amazing designer and developer specialized in Webflow. He is always fast and attentive. Not only did he excel at implementing all the desired changes, he was also efficient in his communication when it came to best practices and design/development recommendations. He is my to-go person for anything Webflow related, and he is someone you can truly trust to deliver high quality work. I highly recommend hiring him if you are looking to get any Webflow work done! ',
         imageSrc: TestimonialExampleImage,
         rating: 5
     },

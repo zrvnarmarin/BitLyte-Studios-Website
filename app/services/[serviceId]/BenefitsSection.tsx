@@ -37,6 +37,7 @@ export default function BenefitsSection() {
               key={card.id}
               title={card.title}
               description={card.description}
+              icon={card.icon}
             />
           ))}
         </ul>
@@ -48,16 +49,18 @@ export default function BenefitsSection() {
 export const BenefitCard = ({
   title,
   description,
+  icon
 }: {
   title: string;
   description: string;
+  icon: () => React.JSX.Element
 }) => {
   return (
     <li
       className={`overflow-hidden relative group flex flex-col gap-4 rounded-lg p-5 cursor-pointer border-[0.5px] border-[#252525]`}
     >
       <div className="w-full flex justify-center">
-        <HighBrandAwareness />
+        {icon}
       </div>
       {/* Blur background */}
       <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[330px]"></div>
@@ -75,421 +78,6 @@ export const BenefitCard = ({
     </li>
   );
 };
-
-export const businessBenefits: BusinessBenefitsCardType[] = [
-  {
-    id: 1,
-    icon: UniqueSellingPointIconOne,
-    imageSrc: LogoImage,
-    title: "Boosted Engagment",
-    description:
-      "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
-    gradient: "bg-gradient-to-r from-[#292929] to-[#ED1AFF]",
-  },
-  {
-    id: 2,
-    icon: UniqueSellingPointIconOne,
-    imageSrc: LogoImage,
-    title: "Enhanced User Experience",
-    description:
-      "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
-    gradient: "bg-gradient-to-r from-[#292929] to-[#FF7A1A]",
-  },
-  {
-    id: 3,
-    icon: UniqueSellingPointIconOne,
-    imageSrc: LogoImage,
-    title: "Targeted Messaging",
-    description:
-      "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts.",
-    gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
-  },
-];
-
-export type BusinessBenefitsCardType = {
-  id: number;
-  title: string;
-  description: string;
-  imageSrc: StaticImageData;
-  icon: () => JSX.Element;
-  gradient: string;
-};
-
-const allServicesArray = [
-  {
-    id: 1,
-    name: "Landing Page",
-    benefits: [
-      {
-        id: 1,
-        title: "Increased Conversion Rates",
-        description:
-          "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates",
-      },
-      {
-        id: 2,
-        title: "Clear Value Proposition",
-        description:
-          "A service landing page allows you to clearly communicate your unique value proposition and differentiate your services from competitors. This helps in capturing the interest of potential customers and persuading them to take action",
-      },
-      {
-        id: 3,
-        title: "Targeted Messaging",
-        description:
-          "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts",
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "Website Development",
-    benefits: [
-      {
-        id: 1,
-        title: "Brand Consistency",
-        description:
-          "Professional development ensures that your website aligns with your brand identity, including colors, fonts, and messaging. Consistent branding across your site helps reinforce your brand`s image and values.",
-      },
-      {
-        id: 2,
-        title: "Higher Conversion Rates",
-        description:
-          "Well-designed websites are optimized for conversions. Features such as clear calls to action, effective landing pages, and streamlined checkout processes can significantly increase the likelihood of turning visitors into customers",
-      },
-      {
-        id: 3,
-        title: "Increased Credibility and Trust",
-        description:
-          "A professionally designed website with high-quality content and design elements boosts your brand`s credibility. A polished, functional site reassures visitors that your business is legitimate and trustworthy",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Frontend Development",
-    benefits: [
-      {
-        id: 1,
-        title: "Brand Consistency",
-        description:
-          "Professional development ensures that your website aligns with your brand identity, including colors, fonts, and messaging. Consistent branding across your site helps reinforce your brand`s image and values.",
-      },
-      {
-        id: 2,
-        title: "Higher Conversion Rates",
-        description:
-          "Well-designed websites are optimized for conversions. Features such as clear calls to action, effective landing pages, and streamlined checkout processes can significantly increase the likelihood of turning visitors into customers",
-      },
-      {
-        id: 3,
-        title: "Increased Credibility and Trust",
-        description:
-          "A professionally designed website with high-quality content and design elements boosts your brand`s credibility. A polished, functional site reassures visitors that your business is legitimate and trustworthy",
-      },
-    ],
-  },
-];
-
-// export const LandingPageIcon = () => {
-//   return (
-//     <svg
-//       id="Layer_1"
-//       data-name="Layer 1"
-//       viewBox="0 0 63.97 41.71"
-//       width={200}
-//       height={200}
-//     >
-//       <defs>
-//         <style>
-//           {`
-//           .cls-1 {
-//             fill-rule: evenodd;
-//           }
-
-//           .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
-//             stroke-width: 0px;
-//           }
-
-//           .cls-1, .cls-9 {
-//             fill: #fff;
-//           }
-
-//           .cls-2 {
-//             fill: url(#linear-gradient);
-//           }
-
-//           .cls-3 {
-//             fill: url(#linear-gradient-6);
-//           }
-
-//           .cls-4 {
-//             fill: url(#linear-gradient-11);
-//           }
-
-//           .cls-11 {
-//             opacity: .8;
-//           }
-
-//           .cls-5 {
-//             fill: url(#linear-gradient-2);
-//           }
-
-//           .cls-6 {
-//             fill: url(#linear-gradient-7);
-//           }
-
-//           .cls-7 {
-//             fill: url(#linear-gradient-9);
-//           }
-
-//           .cls-12 {
-//             fill: url(#linear-gradient-3);
-//             stroke: url(#linear-gradient-4);
-//             stroke-width: .15px;
-//           }
-
-//           .cls-12, .cls-13 {
-//             stroke-miterlimit: 10;
-//           }
-
-//           .cls-8 {
-//             fill: url(#linear-gradient-8);
-//           }
-
-//           .cls-13 {
-//             fill: none;
-//             stroke: url(#linear-gradient-5);
-//             stroke-width: .16px;
-//           }
-
-//           .cls-10 {
-//             fill: url(#linear-gradient-10);
-//           }
-//         `}
-//         </style>
-//         <linearGradient
-//           id="linear-gradient"
-//           x1="8.14"
-//           y1="23.16"
-//           x2="55.83"
-//           y2="46.41"
-//           gradientUnits="userSpaceOnUse"
-//         >
-//           <stop offset="0" stopColor="#3cf2de" stopOpacity=".8" />
-//           <stop
-//             offset=".15"
-//             stopColor="rgba(67, 231, 224, .82)"
-//             stopOpacity=".82"
-//           />
-//           <stop
-//             offset=".38"
-//             stopColor="rgba(86, 203, 231, .88)"
-//             stopOpacity=".88"
-//           />
-//           <stop
-//             offset=".67"
-//             stopColor="rgba(117, 156, 243, .97)"
-//             stopOpacity=".97"
-//           />
-//           <stop offset=".77" stopColor="#818cf8" />
-//         </linearGradient>
-//         <linearGradient
-//           id="linear-gradient-2"
-//           x1="14.01"
-//           y1="28.81"
-//           x2="49.76"
-//           y2="46.24"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-3"
-//           x1=".08"
-//           y1="3.43"
-//           x2="63.89"
-//           y2="3.43"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-4"
-//           x1="0"
-//           y1="3.43"
-//           x2="63.96"
-//           y2="3.43"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-5"
-//           x1="0"
-//           y1="24.21"
-//           x2="63.97"
-//           y2="24.21"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-6"
-//           x1="39.43"
-//           y1="23.33"
-//           x2="57.64"
-//           y2="32.2"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-7"
-//           x1="39.43"
-//           y1="19.71"
-//           x2="57.64"
-//           y2="28.59"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-8"
-//           x1="39.43"
-//           y1="16.1"
-//           x2="57.64"
-//           y2="24.98"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-9"
-//           x1="39.43"
-//           y1="12.49"
-//           x2="57.64"
-//           y2="21.36"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-10"
-//           x1="39.43"
-//           y1="8.87"
-//           x2="57.64"
-//           y2="17.75"
-//           xlinkHref="#linear-gradient"
-//         />
-//         <linearGradient
-//           id="linear-gradient-11"
-//           x1="3.96"
-//           y1="13.57"
-//           x2="32.49"
-//           y2="27.47"
-//           xlinkHref="#linear-gradient"
-//         />
-//       </defs>
-//       <g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-2"
-//             x="2.55"
-//             y="34.17"
-//             width="58.87"
-//             height="1.24"
-//             rx=".62"
-//             ry=".62"
-//           />
-//         </g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-5"
-//             x="9.86"
-//             y="36.87"
-//             width="44.06"
-//             height="1.31"
-//             rx=".6"
-//             ry=".6"
-//           />
-//         </g>
-//       </g>
-//       <path
-//         className="cls-12"
-//         d="M63.89,2.05v4.74H.08V2.05C.08.97,1.07.08,2.27.08h59.42c1.21,0,2.19.89,2.19,1.97Z"
-//       />
-//       <path
-//         className="cls-13"
-//         d="M63.89,6.79v32.58c0,1.25-.99,2.26-2.19,2.26H2.27c-1.21,0-2.19-1.01-2.19-2.26V6.79h63.81Z"
-//       />
-//       <g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-3"
-//             x="37.44"
-//             y="26.82"
-//             width="22.19"
-//             height="1.88"
-//             rx=".76"
-//             ry=".76"
-//           />
-//         </g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-6"
-//             x="37.44"
-//             y="23.21"
-//             width="22.19"
-//             height="1.88"
-//             rx=".76"
-//             ry=".76"
-//           />
-//         </g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-8"
-//             x="37.44"
-//             y="19.6"
-//             width="22.19"
-//             height="1.88"
-//             rx=".76"
-//             ry=".76"
-//           />
-//         </g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-7"
-//             x="37.44"
-//             y="15.98"
-//             width="22.19"
-//             height="1.88"
-//             rx=".76"
-//             ry=".76"
-//           />
-//         </g>
-//         <g className="cls-11">
-//           <rect
-//             className="cls-10"
-//             x="37.44"
-//             y="12.37"
-//             width="22.19"
-//             height="1.88"
-//             rx=".76"
-//             ry=".76"
-//           />
-//         </g>
-//       </g>
-//       <g className="cls-11">
-//         <rect
-//           className="cls-4"
-//           x="4.35"
-//           y="10.22"
-//           width="27.75"
-//           height="20.61"
-//           rx="3.32"
-//           ry="3.32"
-//         />
-//       </g>
-//       <g>
-//         <path
-//           className="cls-1"
-//           d="M13.99,14.25L4.34,30.86h19.92S14.6,14.25,14.6,14.25c-.13-.23-.47-.23-.6,0Z"
-//         />
-//         <path
-//           className="cls-1"
-//           d="M24.44,20.23l-3.49,4.94,3.31,5.68h7.86s-7.11-10.62-7.11-10.62c-.13-.2-.42-.2-.56,0Z"
-//         />
-//         <ellipse className="cls-9" cx="22.29" cy="14.59" rx="1.71" ry="1.78" />
-//       </g>
-//     </svg>
-//   );
-// };
-
-// Benefits
 
 export const BoostedEngagement = () => {
   return (
@@ -1281,3 +869,413 @@ export const HighBrandAwareness = () => (
     <rect x="15" y="35" width="2" height="2" fill="url(#animatedGradient)" />
   </svg>
 );
+
+export const LandingPageIcon = () => {
+  return (
+    <svg
+      id="Layer_1"
+      data-name="Layer 1"
+      viewBox="0 0 63.97 41.71"
+      width={200}
+      height={200}
+    >
+      <defs>
+        <style>
+          {`
+          .cls-1 {
+            fill-rule: evenodd;
+          }
+
+          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+            stroke-width: 0px;
+          }
+
+          .cls-1, .cls-9 {
+            fill: #fff;
+          }
+
+          .cls-2 {
+            fill: url(#linear-gradient);
+          }
+
+          .cls-3 {
+            fill: url(#linear-gradient-6);
+          }
+
+          .cls-4 {
+            fill: url(#linear-gradient-11);
+          }
+
+          .cls-11 {
+            opacity: .8;
+          }
+
+          .cls-5 {
+            fill: url(#linear-gradient-2);
+          }
+
+          .cls-6 {
+            fill: url(#linear-gradient-7);
+          }
+
+          .cls-7 {
+            fill: url(#linear-gradient-9);
+          }
+
+          .cls-12 {
+            fill: url(#linear-gradient-3);
+            stroke: url(#linear-gradient-4);
+            stroke-width: .15px;
+          }
+
+          .cls-12, .cls-13 {
+            stroke-miterlimit: 10;
+          }
+
+          .cls-8 {
+            fill: url(#linear-gradient-8);
+          }
+
+          .cls-13 {
+            fill: none;
+            stroke: url(#linear-gradient-5);
+            stroke-width: .16px;
+          }
+
+          .cls-10 {
+            fill: url(#linear-gradient-10);
+          }
+        `}
+        </style>
+        <linearGradient
+          id="linear-gradient"
+          x1="8.14"
+          y1="23.16"
+          x2="55.83"
+          y2="46.41"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#3cf2de" stopOpacity=".8" />
+          <stop
+            offset=".15"
+            stopColor="rgba(67, 231, 224, .82)"
+            stopOpacity=".82"
+          />
+          <stop
+            offset=".38"
+            stopColor="rgba(86, 203, 231, .88)"
+            stopOpacity=".88"
+          />
+          <stop
+            offset=".67"
+            stopColor="rgba(117, 156, 243, .97)"
+            stopOpacity=".97"
+          />
+          <stop offset=".77" stopColor="#818cf8" />
+        </linearGradient>
+        <linearGradient
+          id="linear-gradient-2"
+          x1="14.01"
+          y1="28.81"
+          x2="49.76"
+          y2="46.24"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-3"
+          x1=".08"
+          y1="3.43"
+          x2="63.89"
+          y2="3.43"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-4"
+          x1="0"
+          y1="3.43"
+          x2="63.96"
+          y2="3.43"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-5"
+          x1="0"
+          y1="24.21"
+          x2="63.97"
+          y2="24.21"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-6"
+          x1="39.43"
+          y1="23.33"
+          x2="57.64"
+          y2="32.2"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-7"
+          x1="39.43"
+          y1="19.71"
+          x2="57.64"
+          y2="28.59"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-8"
+          x1="39.43"
+          y1="16.1"
+          x2="57.64"
+          y2="24.98"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-9"
+          x1="39.43"
+          y1="12.49"
+          x2="57.64"
+          y2="21.36"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-10"
+          x1="39.43"
+          y1="8.87"
+          x2="57.64"
+          y2="17.75"
+          xlinkHref="#linear-gradient"
+        />
+        <linearGradient
+          id="linear-gradient-11"
+          x1="3.96"
+          y1="13.57"
+          x2="32.49"
+          y2="27.47"
+          xlinkHref="#linear-gradient"
+        />
+      </defs>
+      <g>
+        <g className="cls-11">
+          <rect
+            className="cls-2"
+            x="2.55"
+            y="34.17"
+            width="58.87"
+            height="1.24"
+            rx=".62"
+            ry=".62"
+          />
+        </g>
+        <g className="cls-11">
+          <rect
+            className="cls-5"
+            x="9.86"
+            y="36.87"
+            width="44.06"
+            height="1.31"
+            rx=".6"
+            ry=".6"
+          />
+        </g>
+      </g>
+      <path
+        className="cls-12"
+        d="M63.89,2.05v4.74H.08V2.05C.08.97,1.07.08,2.27.08h59.42c1.21,0,2.19.89,2.19,1.97Z"
+      />
+      <path
+        className="cls-13"
+        d="M63.89,6.79v32.58c0,1.25-.99,2.26-2.19,2.26H2.27c-1.21,0-2.19-1.01-2.19-2.26V6.79h63.81Z"
+      />
+      <g>
+        <g className="cls-11">
+          <rect
+            className="cls-3"
+            x="37.44"
+            y="26.82"
+            width="22.19"
+            height="1.88"
+            rx=".76"
+            ry=".76"
+          />
+        </g>
+        <g className="cls-11">
+          <rect
+            className="cls-6"
+            x="37.44"
+            y="23.21"
+            width="22.19"
+            height="1.88"
+            rx=".76"
+            ry=".76"
+          />
+        </g>
+        <g className="cls-11">
+          <rect
+            className="cls-8"
+            x="37.44"
+            y="19.6"
+            width="22.19"
+            height="1.88"
+            rx=".76"
+            ry=".76"
+          />
+        </g>
+        <g className="cls-11">
+          <rect
+            className="cls-7"
+            x="37.44"
+            y="15.98"
+            width="22.19"
+            height="1.88"
+            rx=".76"
+            ry=".76"
+          />
+        </g>
+        <g className="cls-11">
+          <rect
+            className="cls-10"
+            x="37.44"
+            y="12.37"
+            width="22.19"
+            height="1.88"
+            rx=".76"
+            ry=".76"
+          />
+        </g>
+      </g>
+      <g className="cls-11">
+        <rect
+          className="cls-4"
+          x="4.35"
+          y="10.22"
+          width="27.75"
+          height="20.61"
+          rx="3.32"
+          ry="3.32"
+        />
+      </g>
+      <g>
+        <path
+          className="cls-1"
+          d="M13.99,14.25L4.34,30.86h19.92S14.6,14.25,14.6,14.25c-.13-.23-.47-.23-.6,0Z"
+        />
+        <path
+          className="cls-1"
+          d="M24.44,20.23l-3.49,4.94,3.31,5.68h7.86s-7.11-10.62-7.11-10.62c-.13-.2-.42-.2-.56,0Z"
+        />
+        <ellipse className="cls-9" cx="22.29" cy="14.59" rx="1.71" ry="1.78" />
+      </g>
+    </svg>
+  );
+};
+
+export const businessBenefits: BusinessBenefitsCardType[] = [
+  {
+    id: 1,
+    icon: <IncomeGrowth />,
+    title: "Boosted Engagment",
+    description:
+      "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
+    gradient: "bg-gradient-to-r from-[#292929] to-[#ED1AFF]",
+  },
+  {
+    id: 2,
+    icon: <TargetedAudience />,
+    title: "Enhanced User Experience",
+    description:
+      "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
+    gradient: "bg-gradient-to-r from-[#292929] to-[#FF7A1A]",
+  },
+  {
+    id: 3,
+    icon: <BoostedEngagement />,
+    title: "Targeted Messaging",
+    description:
+      "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts.",
+    gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
+  },
+];
+
+export type BusinessBenefitsCardType = {
+  id: number;
+  title: string;
+  description: string;
+  icon: () => JSX.Element;
+  gradient: string;
+};
+
+const allServicesArray = [
+  {
+    id: 1,
+    name: "Landing Page",
+    benefits: [
+      {
+        id: 1,
+        title: "Increased Conversion Rates",
+        description:
+          "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates",
+      },
+      {
+        id: 2,
+        title: "Clear Value Proposition",
+        description:
+          "A service landing page allows you to clearly communicate your unique value proposition and differentiate your services from competitors. This helps in capturing the interest of potential customers and persuading them to take action",
+      },
+      {
+        id: 3,
+        title: "Targeted Messaging",
+        description:
+          "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Website Development",
+    benefits: [
+      {
+        id: 1,
+        title: "Brand Consistency",
+        description:
+          "Professional development ensures that your website aligns with your brand identity, including colors, fonts, and messaging. Consistent branding across your site helps reinforce your brand`s image and values.",
+      },
+      {
+        id: 2,
+        title: "Higher Conversion Rates",
+        description:
+          "Well-designed websites are optimized for conversions. Features such as clear calls to action, effective landing pages, and streamlined checkout processes can significantly increase the likelihood of turning visitors into customers",
+      },
+      {
+        id: 3,
+        title: "Increased Credibility and Trust",
+        description:
+          "A professionally designed website with high-quality content and design elements boosts your brand`s credibility. A polished, functional site reassures visitors that your business is legitimate and trustworthy",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Frontend Development",
+    benefits: [
+      {
+        id: 1,
+        title: "Brand Consistency",
+        description:
+          "Professional development ensures that your website aligns with your brand identity, including colors, fonts, and messaging. Consistent branding across your site helps reinforce your brand`s image and values.",
+      },
+      {
+        id: 2,
+        title: "Higher Conversion Rates",
+        description:
+          "Well-designed websites are optimized for conversions. Features such as clear calls to action, effective landing pages, and streamlined checkout processes can significantly increase the likelihood of turning visitors into customers",
+      },
+      {
+        id: 3,
+        title: "Increased Credibility and Trust",
+        description:
+          "A professionally designed website with high-quality content and design elements boosts your brand`s credibility. A polished, functional site reassures visitors that your business is legitimate and trustworthy",
+      },
+    ],
+  },
+];
+

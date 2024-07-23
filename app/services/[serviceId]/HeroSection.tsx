@@ -6,12 +6,13 @@ import "../../../public/test.css";
 export default function HeroSection({ serviceName }: { serviceName: string }) {
   return (
     <HeroSectionWrapper>
-      <div className="w-full flex">
+      {/* Mobile version */}
+      {/* <div className="w-full flex">
         <Link
           href={`/services`}
           className="flex items-center gap-2 linear-gradient-purple-text rounded-full text-xl"
         >
-          <LogoForButton fillColor="#ffffff" />
+          <LogoForButton fillColor="#ffffff" width={8} height={10} />
           Services
         </Link>
       </div>
@@ -27,7 +28,6 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
       <div
         className={`flex flex-col gap-2 rounded-lg p-4 py-8 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] border-[0.5px] border-[#252525]`}
       >
-        {/* Service Card */}
         <div className="flex flex-col items-center justify-center gap-2">
           <LandingPageIcon width={100} height={100} />
         </div>
@@ -40,16 +40,16 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
       </p>
       <div className="w-full flex">
         <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-xl">
-          <LogoForButton fillColor="#ffffff" />
+          <LogoForButton fillColor="#ffffff" width={8} height={10} />
           Start building
         </button>
-      </div>
+      </div> */}
 
       {/* Desktop version */}
       <div className="hidden lg:grid grid-cols-2 items-center gap-8">
         <div className="flex flex-col gap-6">
           <h1 className="text-7xl text-[#ffffff] font-medium text-start">
-            <span className="font-black">
+            <span className="font-bold">
               {serviceName
                 .split("-")
                 .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -62,10 +62,12 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
             engaging, high-converting landing pages that drive results and
             enhance your digital marketing efforts.
           </p>
-          <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-3xl">
-            <LogoForButton fillColor="#ffffff" />
-            Start building
-          </button>
+          <Link href={`/contact`}>
+            <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-4xl">
+              <LogoForButton fillColor="#ffffff" width={18} height={20} />
+              Start building
+            </button>
+          </Link>
         </div>
         <div className="relative">
           {/* Blur background */}
@@ -73,7 +75,7 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
           <div className={`flex flex-col gap-2 rounded-lg p-4 py-8 `}>
             {/* Service Card */}
             <div className="flex flex-col items-center justify-center gap-2 z-20 rounded-full">
-              <BrandIdentityIcon width={500} height={500} />
+              <CopywritingIcon width={500} height={500} />
             </div>
           </div>
         </div>
@@ -91,8 +93,8 @@ export type ButtonProps = {
 export const LogoForButton = ({ width, height, fillColor }: ButtonProps) => {
   return (
     <svg
-      width="8"
-      height="10"
+      width={width}
+      height={height}
       viewBox="0 0 8 12"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
