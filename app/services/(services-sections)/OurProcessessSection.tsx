@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import ToolkitPyramidTestImage from '../../../public/images/services/ServiceToolkitPyriamid.svg'
-import ProcessesSectionTestImage from '../../../public/images/services/ProcessesSectionTestImage.svg'
 import SectionWrapper from "../../components/SectionWrapper";
 import '../../../public/test.css'
+import StepsImage from '../../../public/stepsIkonja.jpeg'
 
 export default function OurProcessessSection() {
     return (
@@ -25,7 +24,9 @@ export default function OurProcessessSection() {
                 Through in-depth research, market analysis, and collaborative discussions, 
                 we unearth key insights that serve as the foundation for our strategy.
             </div>
-            <Image src={ProcessesSectionTestImage} alt="pyramid_image" />
+            <div className="grid grid-cols-2">
+                <Image src={StepsImage} alt="hahha" />
+            </div>
 
             {/* Buttons */}
             <div className="w-flex flex items-center justify-center">
@@ -36,8 +37,6 @@ export default function OurProcessessSection() {
                     <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#7f96db] to-[#8ca0dc]"></div>
                 </div>
             </div>
-
-            
         </SectionWrapper>
     )
 }
