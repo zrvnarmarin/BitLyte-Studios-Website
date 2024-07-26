@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import '../../../public/test.css'
-import StepsImage from '../../../public/stepsIkonja.jpeg'
+import StepsImage from '../../../public/OurProcesses.jpeg'
 
 export default function OurProcessessSection() {
     return (
