@@ -30,9 +30,10 @@ export default function OurProcessessSection() {
         discussions, we unearth key insights that serve as the foundation for
         our strategy.
       </div>
+
+      {/* Mobile image grid */}
       <div className="grid grid-cols-1">
-        <Image src={StepsImage} alt="hahha" />
-        {processesSteps.map((step) => (
+        {processesSteps.slice(0,2).map((step) => (
           <ProcessStepCard
             key={step.id}
             id={step.id}
@@ -41,6 +42,8 @@ export default function OurProcessessSection() {
             description={step.description}
           />
         ))}
+
+        {/* Desktop image grid */}
       </div>
 
       {/* Buttons */}
@@ -58,8 +61,18 @@ export default function OurProcessessSection() {
 
 export const ProcessStepCard = ({ id, imageSrc, title, description } : ProcessessStepType) => {
     return (
-        <div>
-            
+        <div className="flex flex-col gap-6">
+            {/* Image container */}
+            <div className="w-full flex items-center justify-center">
+                <Image src={imageSrc} alt="step_image" />
+            </div>
+
+            {/* Data */}
+            <div>
+                <p>{id}.</p>
+                <p>{title}</p>
+                <p>{description}</p>
+            </div>
         </div>
     )
 }

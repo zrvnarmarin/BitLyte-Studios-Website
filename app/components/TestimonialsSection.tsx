@@ -23,8 +23,8 @@ export default function TestimonialsSection({
       </h1>
 
       {/* Testimonial cards container */}
-      <div className="w-full lg:w-4/5 group flex flex-col justify-center items-center gap-8 border-[0.5px] border-[#252525] rounded-lg p-5 overflow-hidden">
-        <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#2e3c64] z-10 blur-[630px]"></div>
+      <div className="relative w-full lg:w-4/5 group flex flex-col justify-center items-center gap-8 border-[0.5px] border-[#252525] rounded-lg p-5 overflow-hidden">
+      <div className="w-full h-full absolute bottom-0 right-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[430px]"></div>
         {testimonials.map((testimonial) => (
           <TestimonialCard
             key={testimonial.id}
@@ -75,8 +75,8 @@ export const TestimonialCard = ({
   imageSrc,
 }: TestimonialCardProps) => {
   return (
-    <div className="overflow-hidden relative flex items-center justify-center bg-primary-purple">
-      <div className="w-full h-full absolute bottom-0 right-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[430px]"></div>
+    <div className="overflow-hidden relative flex items-center justify-center">
+      
       <div className="z-20">
         <p className="text-base text-[#eeeeee] font-normal">
           {testimonialText}

@@ -11,21 +11,23 @@ export default function ServiceCategoriesSection() {
         <SectionWrapper>
             {/* Service categories container */}
             {serviceCategories.map(serviceCategory =>
-                <div key={serviceCategory.serviceCategoryTitle} className="flex flex-col gap-8 pb-4">
+                <React.Fragment key={serviceCategory.id}>
                     <h2 className="w-full text-4xl text-[#ffffff]">
                         {serviceCategory.serviceCategoryTitle}
                     </h2>
-                    {serviceCategory.services.map(service =>
-                    <Link href={`/services/${service.categoryTitle}`} key={service.id} className={`flex flex-col gap-2 rounded-lg p-4 py-8 ${serviceCategory.gradient} border-[0.5px] border-[#252525]`}>
-                        {/* Service Card */}
-                        <div className="flex flex-col items-center justify-center gap-2">
-                            <Image src={LandingPageIcon} alt="service_category_test_icon" />
-                            <h3 className="text-[#ffffff] font-semibold text-2xl text-center">{service.categoryTitle}</h3>
-                            <p className="text-base text-[#eeeeee] font-normal pt-4 text-center">{service.categoryDescription}</p>
-                        </div>
-                    </Link>
-                    )}
-                </div>
+                    <div key={serviceCategory.serviceCategoryTitle} className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-4">
+                        {serviceCategory.services.map(service =>
+                        <Link href={`/services/${service.categoryTitle}`} key={service.id} className={`flex flex-col gap-2 rounded-lg p-4 py-8 ${serviceCategory.gradient} border-[0.5px] border-[#252525]`}>
+                            {/* Service Card */}
+                            <div className="flex flex-col items-center justify-center gap-2">
+                                <Image src={LandingPageIcon} alt="service_category_test_icon" />
+                                <h3 className="w-full text-[#ffffff] font-semibold text-2xl text-center ">{service.categoryTitle}</h3>
+                                <p className="text-base text-[#eeeeee] font-normal pt-4 text-center">{service.categoryDescription}</p>
+                            </div>
+                        </Link>
+                        )}
+                    </div>
+                </React.Fragment>
             )}
         </SectionWrapper>
     )
@@ -34,8 +36,9 @@ export default function ServiceCategoriesSection() {
 export const serviceCategories = [
     {
         //bg-gradient-to-r from-[#00A993] to-[#3B4EB5] - stari
+        id: 1,
         serviceCategoryTitle: 'Web development',
-        gradient: 'bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9]',
+        gradient: 'bg-gradient-to-r from-[#0b0b0b] to-[#242E4D]',
         services: [
             {
                 id: 1,
@@ -58,8 +61,9 @@ export const serviceCategories = [
         ]
     },
     {
+        id: 2,
         serviceCategoryTitle: 'Digital Marketing',
-        gradient: 'bg-gradient-to-r from-[#0b0b0b] to-[#005C9D]',
+        gradient: 'bg-gradient-to-r from-[#0b0b0b] to-[#003961]',
         services: [
             {
                 id: 1,
@@ -82,8 +86,9 @@ export const serviceCategories = [
         ]
     },
     {
+        id: 3,
         serviceCategoryTitle: 'Design',
-        gradient: 'bg-gradient-to-r from-[#0b0b0b] to-[#00929E]',
+        gradient: 'bg-gradient-to-r from-[#0b0b0b] to-[#004C52]',
         services: [
             {
                 id: 1,
