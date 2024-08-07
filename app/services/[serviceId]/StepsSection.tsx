@@ -245,18 +245,18 @@ export const LogoLeftPart = () => {
   );
 };
 
-export const LogoRightPart = () => {
+export const LogoRightPart = ({ width, height } : { width: number, height: number }) => {
   return (
     <svg
-      width="200"
-      height="200"
+      width={width}
+      height={height}
       viewBox="0 0 45 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M20.7832 35.1431H25.6281L44.111 17.5716L32.6173 0L27.6201 0L20.7832 35.1431Z"
-        fill="url(#gradient2)"
+        fill="#5775D0"
       />
     </svg>
   );

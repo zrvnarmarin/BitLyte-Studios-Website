@@ -9,7 +9,6 @@ import "../../public/styles/star.css";
 
 export default function TestimonialsSection({
   headingColor,
-  ratingStarColor,
   buttonColor,
   nextButtonColor,
   isCTAButtonVisible = false,
