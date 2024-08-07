@@ -169,11 +169,11 @@ export type StepsCardType = {
   blurBackground?: string;
 };
 
-export const Logo = () => {
+export const Logo = ({ width, height } : { width: number, height: number }) => {
   return (
     <svg
-      width="200"
-      height="200"
+      width={width}
+      height={height}
       viewBox="0 0 45 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -6,11 +6,13 @@ import AchievementsSection from './(home-sections)/AchievementsSection'
 import FAQSection from './(home-sections)/FAQSection'
 import CTASection from "./(home-sections)/CTASection";
 import Footer from "./components/Footer";
+import WhyUsSection from "./(home-sections)/WhyUsSection";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen h-full flex-col items-center bg-[#0b0b0b]">
       <HeroSection />
+      <WhyUsSection />
       <ServicesSection />
       <ProjectsSection />
       <TestimonialsSection />
