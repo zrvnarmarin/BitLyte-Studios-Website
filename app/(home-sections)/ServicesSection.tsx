@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState, Fragment } from "react";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "../components/SectionWrapper";
 import FacilityCardImageThree from "../../public/images/Rectangle 1.svg";
 import ArrowRight from "../../public/images/Rectangle 1.svg";
 import "../../public/test.css";
 import Link from "next/link";
+import "../../public/styles/twoWayArrow.css";
 
 export default function ServicesSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <SectionWrapper>
       <h2 className="w-full text-5xl text-[#ffffff]">Our Services</h2>
@@ -18,19 +17,27 @@ export default function ServicesSection() {
       {/* Blur background */}
       {/* <div className="w-16 h-16 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[30px]"></div> */}
 
-      <div className="w-full flex flex-row items-center gap-6">
+      <div className="w-full flex flex-row items-center gap-6 pt-12">
         {facilityCardData.map((service) => (
           <div key={service.id} className="w-full flex flex-col gap-6">
             <div
-              className={`overflow-hidden relative w-full flex flex-col items-center justify-center rounded-full p-4 py-8 cursor-pointer bg-[#0b0b0b] border-[0.5px] border-[#1A9FFF]`}
+              className={`overflow-hidden relative w-full flex flex-col items-center justify-center rounded-full p-4 py-8 bg-[#0b0b0b] border-[0.5px] border-[#252525]`}
             >
               {/* Blur background */}
-              <div className="w-72 h-72 absolute inset-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[930px]"></div>
+              <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[130px]"></div>
               <div className="flex flex-row items-center justify-center gap-1">
                 <h3 className="flex items-center gap-2 text-[#ffffff] font-semibold text-3xl z-20 text-center">
-                  <span className="custom-text">&#x2022;</span>
                   {service.title}
                 </h3>
+              </div>
+            </div>
+
+            {/* Animated arrow */}
+            <div className="w-full flex items-center justify-center -rotate-90  pb-12">
+              <div className="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
 
@@ -39,12 +46,14 @@ export default function ServicesSection() {
               <Link
                 href={`/services/${s}`}
                 key={s}
-                className="flex flex-col gap-6"
+                className="group flex flex-col gap-6 relative overflow-hidden rounded-full bg-gradient-to-r from-[#131313] to-[#00243e]"
               >
-                <p className="bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center w-full text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-8 py-4">
+                <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-normal text-xl z-20 rounded-full border-[0.5px] border-[#252525] px-8 py-4">
                   {s}
-                  {/* <RightArrow /> */}
-                </p>
+                  <div className="group-hover:visible hidden">
+                    <RightArrow />
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
@@ -147,7 +156,7 @@ export const facilityCardData: ServiceCardType[] = [
   },
 ];
 
-const RightArrow = ({ strokeWidth = 0.5, color = '#ffffff' }) => (
+const RightArrow = ({ strokeWidth = 0.1, color = "#252525" }) => (
   <svg
     width="20px"
     height="20px"
@@ -158,7 +167,13 @@ const RightArrow = ({ strokeWidth = 0.5, color = '#ffffff' }) => (
   >
     <title>right-arrow</title>
     <desc>Created with Sketch.</desc>
-    <g id="icons" stroke="none" strokeWidth={strokeWidth} fill="none" fillRule="evenodd">
+    <g
+      id="icons"
+      stroke="none"
+      strokeWidth={strokeWidth}
+      fill="none"
+      fillRule="evenodd"
+    >
       <g
         id="ui-gambling-website-lined-icnos-casinoshunter"
         transform="translate(-1511.000000, -158.000000)"

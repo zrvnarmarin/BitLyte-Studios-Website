@@ -10,7 +10,7 @@ export default function WhyUsSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-5xl text-[#ffffff] z-20">Why Choose Us</h2>
-      <div className="relative flex items-center justify-between gap-6 rounded-lg p-12 ">
+      <div className="relative flex items-center justify-between gap-6 rounded-lg pt-12">
 
         {/* Blur background */}
         <div className="w-64 h-64 absolute inset-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[930px]"></div>
@@ -25,8 +25,8 @@ export default function WhyUsSection() {
             {/* Reason Card */}
             <div className="relative flex flex-col items-center justify-center gap-2 z-20">
               {/* Blur background */}
-              <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[830px]"></div>
-              <div className="flex items-center ">
+              <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[230px]"></div>
+              <div className="flex items-center z-30">
                 <UniqueSellingPointIconThree />
               </div>
               <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center z-20">
