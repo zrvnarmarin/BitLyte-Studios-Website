@@ -2,19 +2,16 @@ import React from "react";
 import Image from "next/image";
 import TestImage from "../../public/images/home/undraw_collaborators_re_hont 1.svg";
 import "../../public/test.css";
-import ArrowRight from "../../public/images/Rectangle 1.svg";
 import SectionWrapper from "../components/SectionWrapper";
 
-export default function ServicesSection() {
+export default function ProjectsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff] z-20">Our Work</h2>
+      <h2 className="w-full text-5xl text-[#ffffff] z-20 pb-12">Our Work</h2>
 
-      {/* Project cards container */}
       <div className="w-full flex flex-col gap-24 bg-[#0b0b0b] ">
-        {/* Project card */}
-        {projects.map((project) => (
-          <ProjectCard
+      {projects.map((project) => (
+          <ProjectCardDesktop
             key={project.id}
             id={project.id}
             title={project.title}
@@ -23,49 +20,17 @@ export default function ServicesSection() {
             imageSrc={project.serviceCategories}
           />
         ))}
-      </div>
+      </div> 
 
-      <ProjectCardDesktop
+      {/* <ProjectCardDesktop
+        id={3}
         title="Apartmenify"
         description="This is the application about apartment rental on the seaside"
         serviceCategories={["Web Design", "Social Media", "Strategy"]}
-      />
+      /> */}
     </SectionWrapper>
   );
 }
-
-export const ProjectCard = ({
-  title,
-  description,
-  serviceCategories,
-  imageSrc,
-}: ProjectCardProps) => {
-  return (
-    <div className="flex flex-col gap-2">
-      <Image src={TestImage} alt="project_image" />
-      <ul className="flex flex-wrap items-center pt-1 gap-2">
-        {serviceCategories.map((category) => (
-          <li
-            key={category}
-            className="flex items-center bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] text-[10px] text-[#eeeeee] rounded-full px-2 py-1"
-          >
-            <p>&#8226; {category}</p>
-          </li>
-        ))}
-      </ul>
-      <h3 className="w-full text-[#ffffff] font-semibold text-2xl text-start pt-2">
-        {title}
-      </h3>
-      <p className="text-base text-[#eeeeee] font-normal">{description}</p>
-      <div className="w-full flex pt-8">
-        <button className="flex items-center justify-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
-          <Image src={ArrowRight} alt="hero_image" />
-          View project
-        </button>
-      </div>
-    </div>
-  );
-};
 
 export const ProjectCardDesktop = ({
   title,
@@ -74,12 +39,11 @@ export const ProjectCardDesktop = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-row gap-2 rounded-lg p-8 border-[0.5px] border-[#252525]">
+    <div className="relative overflow-hidden flex flex-row gap-6 rounded-l-full rounded-tb-full border-[0.5px] border-[#252525] ">
+      {/* Blur background */}
+      <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
 
-        {/* Blur background */}
-        <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[830px]"></div>
-
-      <div className="relative w-full overflow-hidden  flex items-center bg-[#ffffff] rounded-lg border-[0.5px] border-[#252525]">
+      <div className="relative w-full overflow-hidden flex items-center bg-[#ffffff] z-20">
         <Image
           src={TestImage}
           alt="project_image"
@@ -89,23 +53,27 @@ export const ProjectCardDesktop = ({
         />
       </div>
 
-      <div className="w-full">
-        <h3 className="w-full text-4xl text-center font-bold text-[#ffffff]">
+      <div className="flex flex-col gap-6 w-full z-20 p-8">
+        <h3 className="w-full text-4xl text-center font-semibold text-[#ffffff]">
           {title}
         </h3>
-        {/* <ul className="flex flex-wrap items-center pt-1 gap-2">
-          {serviceCategories.map((category) => (
-            <li
-              key={category}
-              className="flex items-center bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] text-[10px] text-[#eeeeee] rounded-full px-2 py-1"
-            >
-              <p>&#8226; {category}</p>
-            </li>
-          ))}
-        </ul> */}
-        <p className="text-base text-[#eeeeee] font-normal">Our client, MYSO, or Million Yield Structuring Opportunities, is a Web3 finance platform changing the game with DeFi. They deliver innovative decentralized web apps with an unparalleled user experience, security, and impact potential.</p>
-        <button className="flex items-center justify-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]  rounded-full text-xl">
-          <Image src={ArrowRight} alt="hero_image" />
+        <p className="text-base text-[#eeeeee] font-normal">
+          Our client, MYSO, or Million Yield Structuring Opportunities, is a
+          Web3 finance platform changing the game with DeFi. They deliver
+          innovative decentralized web apps with an unparalleled user
+          experience, security, and impact potential.
+        </p>
+        <div className="flex flex-col">
+          <p className="text-lg text-[#eeeeee] font-black">Project objectives:</p>
+          <p className="text-base text-[#eeeeee] font-normal">
+            Our client, MYSO, or Million Yield Structuring Opportunities, is a
+            Web3 finance platform changing the game with DeFi. They deliver
+            innovative decentralized web apps with an unparalleled user
+            experience, security, and impact potential.
+          </p>
+        </div>
+        <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center text-[#000000] font-normal text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] px-8 py-4">
+          <LogoArrowRight fillColor="#000000" />
           View project
         </button>
       </div>
@@ -132,9 +100,30 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Foodify",
-    description: "Foodify is our biggest apartment food tool app to this date",
+    title: "Lease Lounge",
+    description: "Rentalio is the rental management tool which we build in collaboration with great team.",
     serviceCategories: ["Web Design", "Social Media", "Strategy"],
     imageSrc: TestImage,
   },
 ];
+
+export const LogoArrowRight = ({
+  fillColor = "#ffffff",
+}: {
+  fillColor?: string;
+}) => {
+  return ( // Add this line
+    <svg
+      width="12"
+      height="18"
+      viewBox="0 0 12 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 18H2.49225L12 9L6.08756 2.23762e-07L3.51694 0L0 18Z"
+        fill={fillColor} // Updated to use fillColor
+      />
+    </svg>
+  ); // Add this line
+};
