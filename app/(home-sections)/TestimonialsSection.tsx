@@ -6,6 +6,7 @@ import ArrowRight from "../../public/images/Rectangle 1.svg";
 import TestimonialExampleImage from "../../public/images/home/TestimonialImage.svg";
 import ButtonNext from "../../public/images/home/ButtonNextTestimonials.svg";
 import "../../public/styles/star.css";
+import { LeftArrow, RightArrow } from "./ServicesSection";
 
 export default function TestimonialsSection() {
   return (
@@ -13,45 +14,50 @@ export default function TestimonialsSection() {
       <h2 className="w-full text-5xl text-[#ffffff] z-20 pb-12">
         What our clients say
       </h2>
+      <div className="flex items-center justify-between">
+        <button className="relative overflow-hidden rounded-full p-4 border-[0.5px] border-[#252525]">
+          {/* RightArrow with a higher z-index */}
+          <div className="relative z-20">
+            <LeftArrow />
+          </div>
+          {/* Blur background */}
+          <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[20px]"></div>
+        </button>
 
-      {/* Testimonial cards container */}
-      <div className="w-full flex flex-col gap-8 pt-8">
-        {testimonials.map((testimonial) => (
-          <TestimonialCard
-            key={testimonial.id}
-            id={testimonial.id}
-            name={testimonial.name}
-            companyName={testimonial.companyName}
-            testimonialText={testimonial.testimonialText}
-            imageSrc={testimonial.imageSrc}
-            rating={testimonial.rating}
-          />
-        ))}
+        {/* Testimonial cards container */}
+        <div className="relative w-full flex flex-col justify-center items-center gap-8 pt-8">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard
+              key={testimonial.id}
+              id={testimonial.id}
+              name={testimonial.name}
+              companyName={testimonial.companyName}
+              testimonialText={testimonial.testimonialText}
+              imageSrc={testimonial.imageSrc}
+              rating={testimonial.rating}
+            />
+          ))}
+        </div>
+
+        <button className="relative overflow-hidden rounded-full p-4 border-[0.5px] border-[#252525]">
+          {/* RightArrow with a higher z-index */}
+          <div className="relative z-20">
+            <RightArrow />
+          </div>
+          {/* Blur background */}
+          <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[20px]"></div>
+        </button>
       </div>
 
       {/* Buttons */}
       <div className="w-flex flex items-center justify-center">
-        <div className="w-fit flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#2a2c2f]">
-          {/* Previous button */}
-          {/* <button>
-                        <Image src={ButtonNext} alt="next-button-testimonials" className="rotate-180" />
-                    </button> */}
-          {/* Next button */}
-          {/* <button>
-                        <Image src={ButtonNext} alt="next-button-testimonials" />
-                    </button> */}
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]"></div>
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]"></div>
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#1A9FFF] to-[#0083E0]"></div>
+        <div className="relative overflow-hidden w-fit flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#252525]">
+          {/* Blur background */}
+          <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[130px]"></div>
+          <div className="h-2 w-2 rounded-full bg-[#ffffff] z-20"></div>
+          <div className="h-2 w-2 rounded-full bg-[#ffffff] z-20"></div>
+          <div className="h-2 w-2 rounded-full bg-[#ffffff] z-20"></div>
         </div>
-      </div>
-
-      {/* Link to all reviews route */}
-      <div className="w-full flex">
-        <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#59EE99] to-[#17DE6D]  rounded-full text-xl">
-          <Image src={ArrowRight} alt="hero_image" />
-          View all rewievs
-        </button>
       </div>
     </SectionWrapper>
   );
@@ -65,27 +71,27 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden flex items-center border-[0.5px] border-[#252525] p-4">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center border-[0.5px] border-[#252525] p-4 w-2/3">
       {/* Blur background */}
-      <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[130px]"></div>
-      
-      <div className="z-20">
-        <p className="text-base text-[#eeeeee] font-normal pt-4">
+      <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
+
+      {/* Testimonial */}
+      <div className="flex flex-col z-20">
+        <p className="text-base text-[#eeeeee] font-normal text-center py-4 pb-6 px-8 z-20">
           {testimonialText}
         </p>
-        <div className="flex items-center justify-start gap-2 pt-4">
+        <div className="flex items-center justify-center gap-2 pt-4">
           <Image src={imageSrc} alt="testimonial image" />
           <p className="flex flex-col items-center">
-            <span className="w-full text-lg text-[#ffffff] font-semibold ">
+            <span className="w-full text-xl text-[#eeeeee] font-bold">
               {name}
             </span>
-            <span className="w-full text-xs text-[#eeeeee] font-normal ">
+            <span className="w-full text-base text-[#eeeeee] font-normal ">
               {companyName}
             </span>
           </p>
         </div>
       </div>
-      
     </div>
   );
 };
