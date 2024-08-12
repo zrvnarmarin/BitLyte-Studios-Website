@@ -63,7 +63,7 @@ export const ProjectCardDesktop = ({
           innovative decentralized web apps with an unparalleled user
           experience, security, and impact potential.
         </p>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2 pb-2">
           <p className="text-lg text-[#eeeeee] font-black">Project objectives:</p>
           <p className="text-base text-[#eeeeee] font-normal">
             Our client, MYSO, or Million Yield Structuring Opportunities, is a
@@ -72,10 +72,12 @@ export const ProjectCardDesktop = ({
             experience, security, and impact potential.
           </p>
         </div>
-        <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center text-[#000000] font-normal text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] px-8 py-4">
-          <LogoArrowRight fillColor="#000000" />
-          View project
-        </button>
+        <div className="w-full flex items-center justify-start">
+          <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center text-[#000000] font-normal text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] px-8 py-4">
+            <LogoArrowRight fillColor="#000000" />
+            View project
+          </button>
+        </div>
       </div>
     </div>
   );

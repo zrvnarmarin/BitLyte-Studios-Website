@@ -77,10 +77,10 @@ export const TestimonialCard = ({
 
       {/* Testimonial */}
       <div className="flex flex-col z-20">
-        <p className="text-base text-[#eeeeee] font-normal text-center py-4 pb-6 px-8 z-20">
+        <p className="text-base text-[#eeeeee] font-normal text-start py-4 pb-6 px-8 z-20">
           {testimonialText}
         </p>
-        <div className="flex items-center justify-center gap-2 pt-4">
+        <div className="flex items-center justify-start gap-2 pt-2 px-8">
           <Image src={imageSrc} alt="testimonial image" />
           <p className="flex flex-col items-center">
             <span className="w-full text-xl text-[#eeeeee] font-bold">

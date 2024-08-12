@@ -26,9 +26,7 @@ export default function AfterProposalSection() {
           {/* <div
           className={`w-24 h-24 absolute inset-0 bg-gradient-to-r from-[#000000] to-[#653ED0] z-10 blur-[100px]`}
         ></div> */}
-          <div className="absolute inset-0 flex items-center justify-center z-10">
-            <Logo />
-          </div>
+          
         </div>
       </div>
 

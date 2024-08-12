@@ -132,7 +132,7 @@ export const facilityCardData: ServiceCardType[] = [
     title: "Digital Marketing",
     description: "Choose something for yourself and have fun",
     gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
-    services: ["Copywriting", "Social Media Management", "Ad Campaigns"],
+    services: ["Copywriting", "Social Media Management", "Meta Recruitment Campaigns"],
   },
   {
     id: 1,
