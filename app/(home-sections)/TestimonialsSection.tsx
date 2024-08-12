@@ -2,9 +2,7 @@ import React from "react";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
 import Image from "next/image";
-import ArrowRight from "../../public/images/Rectangle 1.svg";
 import TestimonialExampleImage from "../../public/images/home/TestimonialImage.svg";
-import ButtonNext from "../../public/images/home/ButtonNextTestimonials.svg";
 import "../../public/styles/star.css";
 import { LeftArrow, RightArrow } from "./ServicesSection";
 
@@ -55,10 +53,9 @@ export default function TestimonialsSection() {
 
       </div>
 
-      <div className="w-full pt-24">
+      <div className="w-full pt-8">
         <div className="h-[0.1px] w-full bg-[#313131]"></div>
       </div>
-
     </SectionWrapper>
   );
 }

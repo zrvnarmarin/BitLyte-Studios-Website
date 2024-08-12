@@ -40,7 +40,7 @@ export default function AchievementsSection() {
         </div>
 
         <div className="w-full flex items-center justify-center">
-          <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#090909] border-[#0f3856] border-[0.5px] rounded-lg w-2/3">
+          <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#090909] border-[#252525] border-[0.5px] rounded-lg w-2/3">
             {/* Blur background */}
             <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#3679aa] to-[#002139] z-10 blur-[130px]"></div>
 
@@ -81,7 +81,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden flex flex-col items-center rounded-lg p-16 border-[0.5px] border-[#252525]`}
+      className={`w-full relative overflow-hidden flex flex-col items-center rounded-lg p-16 border-[0.5px] border-[#3c3916]`}
     >
       {/* Blur background */}
       <div

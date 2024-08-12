@@ -1,10 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
-import Link from "next/link";
-import { IncomeGrowth } from "../services/[serviceId]/BenefitsSection";
-import { UniqueSellingPointIconThree } from "./ServicesSection";
 
 export default function WhyUsSection() {
   return (
@@ -96,7 +92,6 @@ export const CollaborativeApproachIcon = () => (
     </g>
   </svg>
 );
-
 
 export const TransparentCommunicationIcon = () => (
   <svg 
