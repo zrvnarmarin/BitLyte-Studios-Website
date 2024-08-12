@@ -76,7 +76,7 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg flex flex-row items-center  border-[0.5px] border-[#252525] px-24 py-24">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-20 py-20">
       {/* Blur background */}
       <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
       
@@ -85,7 +85,7 @@ export const TestimonialCard = ({
         <div className="w-full flex items-center justify-center pb-6">
           <QuotesIcon />
         </div>
-        <p className="w-full text-4xl text-[#ffffff] font-light leading-snug text-center z-20">
+        <p className="w-full text-3xl text-[#ffffff] font-light leading-snug text-center z-20">
           {testimonialText}
         </p>
         <div className="flex items-center justify-center gap-2 pt-12">
