@@ -4,7 +4,12 @@ import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import Image from "next/image";
 import ArrowRight from "../../../public/images/Rectangle 1.svg";
 import { Logo } from "@/app/services/[serviceId]/StepsSection";
-import { EmailIcon, ContactIcon } from "@/app/components/Footer";
+import {
+  EmailIcon,
+  ContactIcon,
+  socialMediaIcons,
+} from "@/app/components/Footer";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -57,6 +62,21 @@ export default function HeroSection() {
                 icon={contactInfo.icon}
               />
             ))}
+          </div>
+
+          {/* Social media icons */}
+          <div className="flex flex-col pt-6 gap-2 relative overflow-hidden">
+            <div className="w-full flex items-center justify-center gap-8 ">
+              <div className="w-full bg-[#252525] h-[0.5px]"></div>
+              {socialMediaIcons.map((socialMediaIcon) => (
+                <React.Fragment key={socialMediaIcon.id}>
+                  <Link href={socialMediaIcon.href}>
+                    {socialMediaIcon.icon()}
+                  </Link>
+                </React.Fragment>
+              ))}
+              <div className="w-full bg-[#252525] h-[0.5px]"></div>
+            </div>
           </div>
         </div>
 
