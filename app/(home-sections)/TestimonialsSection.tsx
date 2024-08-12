@@ -11,8 +11,8 @@ import { LeftArrow, RightArrow } from "./ServicesSection";
 export default function TestimonialsSection() {
   return (
     <SectionWrapper>
-      <div className="flex items-center justify-between">
-        <h2 className="w-full text-5xl text-[#ffffff] z-20 pb-12">
+      <div className="flex items-center justify-between pb-12">
+        <h2 className="w-full text-5xl text-[#ffffff] z-20 ">
           What our clients say
         </h2>
 
@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
       <div className="flex items-center justify-between">
 
         {/* Testimonial cards container */}
-        <div className="relative w-full flex flex-col justify-center items-center gap-8 pt-8">
+        <div className="relative w-full flex flex-col justify-center items-center gap-8">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.id}
@@ -55,15 +55,10 @@ export default function TestimonialsSection() {
 
       </div>
 
-      {/* Buttons */}
-      {/* <div className="w-flex flex items-center justify-center">
-        <div className="relative overflow-hidden w-fit flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#252525]">
-          <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[130px]"></div>
-          <div className="h-2 w-2 rounded-full bg-[#ffffff] z-20"></div>
-          <div className="h-2 w-2 rounded-full bg-[#ffffff] z-20"></div>
-          <div className="h-2 w-2 rounded-full bg-[#ffffff] z-20"></div>
-        </div>
-      </div> */}
+      <div className="w-full pt-16">
+        <div className="h-[0.1px] w-full bg-[#313131]"></div>
+      </div>
+
     </SectionWrapper>
   );
 }

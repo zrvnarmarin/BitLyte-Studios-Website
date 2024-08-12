@@ -13,14 +13,14 @@ export default function AchievementsSection() {
 
       <div className="w-full relative  grid grid-cols-2 items-center gap-6">
         <div className="flex flex-col gap-2">
-          <h3 className="w-full text-2xl text-start font-light text-[#ffffff] z-20">
+          <h3 className="w-full text-3xl text-start font-light text-[#ffffff] z-20">
             We helped business increase sales by{" "}
             <span className="custom-text">27%</span> in the first month working
             with us
           </h3>
           <div className="flex flex-row gap-4 items-center z-20 pt-10">
             <BulletPoint />
-            <p className="text-md text-start font-light text-[#ffffff]">
+            <p className="text-xl text-start font-light text-[#ffffff]">
               We`re constantly tracking the performance of our services. We`ll
               use internal testing to track increased exposure and other
               critical metrics. It`s also the best way to provide concrete
@@ -29,7 +29,7 @@ export default function AchievementsSection() {
           </div>
           <div className="flex flex-row gap-4 items-center z-20 pt-4">
             <BulletPoint />
-            <p className="text-md text-start font-light text-[#ffffff]">
+            <p className="text-xl text-start font-light text-[#ffffff]">
               In addition to tracking exposure and critical metrics, we also
               focus on gathering actionable insights from user feedback and
               performance data. This approach allows us to refine our offerings
@@ -81,7 +81,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden flex flex-col items-center text-center rounded-lg p-16 border-[0.5px] border-[#252525]`}
+      className={`w-full relative overflow-hidden flex flex-col items-center rounded-lg p-16 border-[0.5px] border-[#252525]`}
     >
       {/* Blur background */}
       <div
@@ -91,7 +91,7 @@ export const AchievementCard = ({
       <h3 className={`font-semibold text-7xl text-center text-[#ffffff] z-20`}>
         {stat}
       </h3>
-      <p className="w-full text-base text-[#eeeeee] font-normal pt-6 z-20">
+      <p className="w-full text-2xl text-center font-normal text-[#ffffff] pt-6 z-20">
         {description}
       </p>
     </div>
@@ -109,7 +109,7 @@ export const achievements = [
   {
     id: 1,
     stat: "80%",
-    description: "Reduction on onboarding",
+    description: "Reduction on latest onboarding",
     colorClasses: {
       container: "bg-gradient-to-r from-[#1A9FFF] to-[#0086E6]",
     },

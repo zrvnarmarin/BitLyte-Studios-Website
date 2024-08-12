@@ -15,8 +15,8 @@ export default function Home() {
       <WhyUsSection />
       <ServicesSection />
       <ProjectsSection />
-      <TestimonialsSection />
       <AchievementsSection />
+      <TestimonialsSection />
       <FAQSection />
       <CTASection />
       {/* <Footer /> */}

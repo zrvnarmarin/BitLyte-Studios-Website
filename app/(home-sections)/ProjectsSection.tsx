@@ -53,19 +53,19 @@ export const ProjectCardDesktop = ({
         />
       </div>
 
-      <div className="flex flex-col gap-6 w-full z-20 p-8">
-        <h3 className="w-full text-4xl text-center font-semibold text-[#ffffff]">
+      <div className="flex flex-col gap-8 w-full z-20 p-8">
+        <h3 className="w-full text-4xl text-center font-bold text-[#ffffff] pt-6">
           {title}
         </h3>
-        <p className="text-base text-[#eeeeee] font-normal">
+        <p className="text-xl text-start font-light text-[#ffffff]">
           Our client, MYSO, or Million Yield Structuring Opportunities, is a
           Web3 finance platform changing the game with DeFi. They deliver
           innovative decentralized web apps with an unparalleled user
           experience, security, and impact potential.
         </p>
         <div className="flex flex-col gap-2 pb-2">
-          <p className="text-lg text-[#eeeeee] font-black">Project objectives:</p>
-          <p className="text-base text-[#eeeeee] font-normal">
+          <p className="text-xl text-[#eeeeee] font-black">Project objectives:</p>
+          <p className="text-xl text-start font-light text-[#ffffff]">
             Our client, MYSO, or Million Yield Structuring Opportunities, is a
             Web3 finance platform changing the game with DeFi. They deliver
             innovative decentralized web apps with an unparalleled user
