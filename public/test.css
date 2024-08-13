@@ -20,7 +20,7 @@
   color: transparent; /* Transparent text */
   background-clip: text; /* Background clip to text */
   -webkit-background-clip: text; /* WebKit-specific property */
-  background-image: linear-gradient(to right, #7f96db, #8ca0dc); 
+  background-image: linear-gradient(to right, #7f96db, #5775D0); 
 }
 
 .linear-gradient-blue-background {
