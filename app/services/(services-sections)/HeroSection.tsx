@@ -33,7 +33,7 @@ export default function HeroSection() {
             e-commerce shops
           </p>
           <Link href={`/contact`}>
-            <button className="w-fit flex items-center gap-2 mt-4 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-4xl">
+            <button className="w-fit flex items-center gap-2 mt-6 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-4xl">
               <LogoForButton fillColor="#ffffff" width={18} height={20} />
               Start building
             </button>

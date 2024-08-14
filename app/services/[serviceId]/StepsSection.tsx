@@ -6,7 +6,7 @@ export default function StepsSection() {
   return (
     <SectionWrapper>
 
-      <p className="w-full text-start text-4xl text-[#ffffff]">
+      <p className="w-full text-start text-5xl text-[#ffffff]">
         See all the steps
         <span className="linear-gradient-purple-text"> we take </span> to make
         your{" "}

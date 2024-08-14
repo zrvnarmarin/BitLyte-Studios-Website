@@ -17,47 +17,41 @@ export default function OurProcessessSection() {
 
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff]">
-        Our <span className="linear-gradient-purple-text">Processess </span>
-      </h2>
+      <h2 className="w-full text-5xl text-[#ffffff] z-20">Our Process</h2>
 
-      <p className="text-lg text-[#eeeeee] font-normal pt-2">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
-        aspernatur cupiditate quod excepturi, iste unde.
-      </p>
-
-      {/* Centered image of the selected step */}
       {selectedStep && (
-        <div className="w-full flex justify-center mt-8 mb-6">
+        <div className="w-full flex justify-center items-start mt-8 mb-6">
           <Image
             src={selectedStep.imageSrc}
             alt={`Image for step ${selectedStep.id}`}
-            className="w-full max-w-[1200px]"
+            className="w-full max-w-[900px]"
           />
         </div>
       )}
-
-      {/* All steps */}
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-6 overflow-x-auto lg:overflow-hidden">
+      {/* Centered image of the selected step */}
+      <div className="grid grid-cols-4 gap-6 pt-12">
+        {/* All steps */}
         {processesSteps.map((step) => (
           <div
             key={step.id}
             className={`relative overflow-hidden flex-1 px-5 py-10 cursor-pointer rounded-lg border-[0.5px] border-[#252525] ${
-              selectedStep?.id === step.id ? "bg-[#2a2c2f]" : ""
+              selectedStep?.id === step.id ? "" : ""
             }`}
             onClick={() => setSelectedStep(step)}
           >
             {/* Blur background */}
-            <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#3B4EB5] z-10 blur-[330px]"></div>
-            <div className="flex items-center justify-between">
-              <p className="text-3xl text-[#ffffff] text-center">
-                {step.title}
-              </p>
-              <span className="linear-gradient-purple-text font-black text-3xl">
+            <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[230px]"></div>
+
+            <div className="w-full flex items-center justify-around z-20">
+              <span className="linear-gradient-purple-text font-black text-7xl z-0 mr-4">
                 {step.id}
               </span>
+              <span className="text-[#ffffff] font-semibold text-3xl z-30">
+                {step.title}
+              </span>
             </div>
-            <p className="text-lg text-[#eeeeee] font-normal pt-6">
+
+            <p className="text-xl font-light text-[#ffffff] text-start pt-6 z-30">
               {step.description}
             </p>
           </div>
@@ -107,33 +101,25 @@ const processesSteps: ProcessessStepType[] = [
     id: 1,
     imageSrc: FirstStepImage,
     title: "Discovery & Strategy",
-    description: `This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.`,
+    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 2,
     imageSrc: SecondStepImage,
     title: "Planning Visuals",
-    description: `This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.`,
+    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 3,
     imageSrc: ThirdStepImage,
     title: "Coding & Testing",
-    description: `This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.`,
+    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 4,
     imageSrc: FourthStepImage,
     title: "Testing & Launching",
-    description: `This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.
-      This is some description for the step image which will be shown on the page.`,
+    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
 ];
 
@@ -143,3 +129,6 @@ export type ProcessessStepType = {
   title: string;
   description: string;
 };
+
+// Requirements and gathering - https://www.svgrepo.com/svg/26760/education-form - 1. step
+//

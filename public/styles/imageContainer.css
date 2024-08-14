@@ -1,0 +1,18 @@
+.container {
+  width: 600px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  border: 2px solid #333; /* Optional: for visual clarity */
+  position: relative; /* Allows absolute positioning of child elements */
+  overflow: hidden; /* Ensures content does not overflow */
+}
+
+/* Image styling */
+.container image {
+  position: absolute; /* Positioning within the container */
+  top: 50%; /* Center image vertically */
+  left: 50%; /* Center image horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to truly center */
+  max-width: 100%; /* Ensure image does not exceed container width */
+  max-height: 100%; /* Ensure image does not exceed container height */
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
+}

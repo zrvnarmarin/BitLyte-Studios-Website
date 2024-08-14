@@ -10,6 +10,7 @@ export default function AchievementsSection() {
       <h2 className="w-full text-5xl text-[#ffffff] z-20 pb-12">
         Our Achievements
       </h2>
+      {/* <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div> */}
 
       <div className="w-full relative  grid grid-cols-2 items-center gap-6">
         <div className="flex flex-col gap-2">
@@ -40,9 +41,10 @@ export default function AchievementsSection() {
         </div>
 
         <div className="w-full flex items-center justify-center">
-          <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#090909] border-[#252525] border-[0.5px] rounded-lg w-2/3">
+          <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg w-2/3">
             {/* Blur background */}
-            <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#3679aa] to-[#002139] z-10 blur-[130px]"></div>
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
 
             <div className=" w-fit p-12 rounded-lg flex flex-col items-center justify-center gap-6">
               <h2 className="w-full text-5xl text-[#ffffff] text-center z-20">
@@ -59,6 +61,7 @@ export default function AchievementsSection() {
 
       {/* Achievements cards container */}
       <div className="w-full flex flex-col lg:flex-row gap-4 pt-24">
+
         {/* Achievement card */}
         {achievements.map((achievement) => (
           <AchievementCard
@@ -81,12 +84,9 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden flex flex-col items-center rounded-lg p-16 border-[0.5px] border-[#3c3916]`}
+      className={`w-full relative overflow-hidden flex flex-col items-center rounded-lg p-16 z-30 border-[0.5px] border-[#0d293d]`}
     >
-      {/* Blur background */}
-      <div
-        className={`w-96 h-96 absolute right-0 bottom-0 ${colorClasses.container} z-10 blur-[130px]`}
-      ></div>
+      <div className="w-48 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
 
       <h3 className={`font-semibold text-7xl text-center text-[#ffffff] z-20`}>
         {stat}

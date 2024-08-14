@@ -68,9 +68,11 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-20 py-20">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-20 py-20 border-[0.5px] border-[#0d293d]">
       {/* Blur background */}
-      <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
+      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
+      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
+
       
       {/* Testimonial */}
       <div className="flex flex-col z-20">

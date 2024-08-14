@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import ServiceCategoryTestIcon from "../../../public/images/services/ServiceCategoryTest.svg";
 import "../../../public/test.css";
@@ -9,7 +8,7 @@ import {
   FrontendDevelopmentIcon,
   BrandIdentityIcon,
   CopywritingIcon,
-  WebsiteDevelopmentIcon
+  WebsiteDevelopmentIcon,
 } from "@/public/icons/ServiceIcons";
 
 export default function ServiceCategoriesSection() {
@@ -23,7 +22,7 @@ export default function ServiceCategoriesSection() {
           </h2>
           <div
             key={serviceCategory.serviceCategoryTitle}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-4"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-10 pt-12"
           >
             {serviceCategory.services.map((service) => (
               <Link
@@ -35,11 +34,11 @@ export default function ServiceCategoriesSection() {
                 <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#3B4EB5] z-10 blur-[330px]"></div>
                 {/* Service Card */}
                 <div className="flex flex-col items-center justify-center gap-2 z-20">
-                  {service.icon({ width: 300, height: 300 })}
+                  {service.icon({ width: 200, height: 200 })}
                   <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center ">
                     {service.categoryTitle}
                   </h3>
-                  <p className="text-base text-[#eeeeee] font-normal pt-4 text-center">
+                  <p className="text-xl font-light text-[#ffffff] text-center pt-4 z-20">
                     {service.categoryDescription}
                   </p>
                 </div>
@@ -73,7 +72,7 @@ export const serviceCategories = [
         categoryTitle: "Website Development",
         categoryDescription:
           "Scaling your business with beautiful multi-page website that serves as a market for your businesses products",
-          icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
       {
         id: 3,
@@ -81,7 +80,7 @@ export const serviceCategories = [
         categoryTitle: "Frontend Development",
         categoryDescription:
           "Building performant, functional and beautiful user interfaces that connects to your backend",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
     ],
   },
@@ -98,7 +97,7 @@ export const serviceCategories = [
         categoryTitle: "Copywriting",
         categoryDescription:
           "Creating engrossing stories that your audience finds relatable and that encourage interaction and conversions",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
       {
         id: 2,
@@ -106,15 +105,15 @@ export const serviceCategories = [
         categoryTitle: "Social Media Management",
         categoryDescription:
           "With well-managed social media initiatives, you can ignite your online presence and build community and brand loyalty",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
       {
         id: 3,
         imageSrc: ServiceCategoryTestIcon,
-        categoryTitle: "Meta Recruitment Campaigns",
+        categoryTitle: "Meta Hiring Campaigns",
         categoryDescription:
           "Reach the right audience at the right time to maximize return on investment through tailored advertising campaigns",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
     ],
   },
@@ -131,7 +130,7 @@ export const serviceCategories = [
         categoryTitle: "UI/UX Design",
         categoryDescription:
           "Create intuitive interfaces that facilitate smooth user experiences, increasing user engagement and satisfaction",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
       {
         id: 2,
@@ -139,7 +138,7 @@ export const serviceCategories = [
         categoryTitle: "Brand Identity",
         categoryDescription:
           "Create a unique brand identity that appeals to your target market and makes you stand out",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
       {
         id: 3,
@@ -147,7 +146,7 @@ export const serviceCategories = [
         categoryTitle: "Logo Design",
         categoryDescription:
           "Create a distinctive and memorable logo that embodies your brand identity to make a lasting first impression",
-        icon: BrandIdentityIcon
+        icon: BrandIdentityIcon,
       },
     ],
   },

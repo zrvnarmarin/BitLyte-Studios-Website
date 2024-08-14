@@ -16,7 +16,7 @@ export default function BenefitsSection() {
 
   return (
     <SectionWrapper>
-      <p className="w-full text-start text-3xl text-[#ffffff]">
+      <p className="w-full text-start text-5xl text-[#ffffff]">
         Explore how landing page
         <span className="linear-gradient-purple-text">
           {" "}
@@ -31,7 +31,7 @@ export default function BenefitsSection() {
 
       {/* Right side */}
       <div className="">
-        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 relative pt-16">
           {businessBenefits.map((card, index) => (
             <BenefitCard
               key={card.id}
@@ -67,11 +67,11 @@ export const BenefitCard = ({
 
       <div className="flex flex-col items-center justify-center gap-1 z-20">
         <div className="w-full flex items-center gap-2">
-          <h3 className="w-full text-[#ffffff] font-semibold text-2xl text-center ">
+          <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center ">
             {title}
           </h3>
         </div>
-        <p className="text-base text-[#eeeeee] font-normal text-center pt-2">
+        <p className="text-xl font-light text-[#ffffff] text-center pt-6 z-20">
           {description}
         </p>
       </div>

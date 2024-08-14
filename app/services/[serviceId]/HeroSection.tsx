@@ -48,22 +48,28 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
       {/* Desktop version */}
       <div className="hidden lg:grid grid-cols-2 items-center gap-8">
         <div className="flex flex-col gap-6">
-          <h1 className="text-7xl text-[#ffffff] font-medium text-start">
-            <span className="font-bold">
-              {serviceName
+          <Link href={`/services`} className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] mt-8 flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+            <span className="flex items-center gap-2">
+              <LeftArrowIcon /> Services
+            </span>
+          </Link>
+          <h1 className="text-8xl text-[#ffffff] font-bold text-start z-30">
+          {serviceName
                 .split("-")
                 .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(" ")}{" "}
+            <span className="linear-gradient-purple-text font-black">
+            
             </span>
           </h1>
-          <p className="text-lg text-[#eeeeee] font-normal pt-2">
-            Capture attention and convert visitors with beautifully designed
-            landing pages tailored to your brand. Our expert team creates
-            engaging, high-converting landing pages that drive results and
-            enhance your digital marketing efforts.
+          <p className="text-xl font-light text-[#ffffff] pt-2">
+            We create unique and highly converting digital experiences, tailored
+            to meet your specific business needs. Our expertise spans a wide
+            range of digital solutions, including custom-designed websites,
+            e-commerce shops
           </p>
           <Link href={`/contact`}>
-            <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-4xl">
+            <button className="w-fit flex items-center gap-2 mt-6 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-4xl">
               <LogoForButton fillColor="#ffffff" width={18} height={20} />
               Start building
             </button>
@@ -75,7 +81,7 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
           <div className={`flex flex-col gap-2 rounded-lg p-4 py-8 `}>
             {/* Service Card */}
             <div className="flex flex-col items-center justify-center gap-2 z-20 rounded-full">
-              <CopywritingIcon width={500} height={500} />
+              <BrandIdentityIcon width={500} height={500} />
             </div>
           </div>
         </div>
@@ -83,6 +89,58 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
     </HeroSectionWrapper>
   );
 }
+
+const LogoIconWhite = () => {
+  return (
+    <svg
+      width="20"
+      height="15"
+      viewBox="0 0 45 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
+        fill="#ffffff"
+      />
+      <path
+        d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z"
+        fill="#ffffff"
+      />
+    </svg>
+  );
+};
+
+export const LeftArrowIcon = ({ width = 15, height = 15 } : { width?: number, height?: number }) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 -6.5 36 36"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000000"
+      stroke="#000000"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+      <g id="SVGRepo_iconCarrier">
+        <title>left-arrow</title>
+        <desc>Created with Sketch.</desc>
+        <g id="icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-342.000000, -159.000000)" fill="#ffffff" fillRule="nonzero">
+            <g id="square-filled" transform="translate(50.000000, 120.000000)">
+              <path
+                d="M317.108012,39.2902857 L327.649804,49.7417043 L327.708994,49.7959169 C327.889141,49.9745543 327.986143,50.2044182 328,50.4382227 L328,50.5617773 C327.986143,50.7955818 327.889141,51.0254457 327.708994,51.2040831 L327.6571,51.2479803 L317.108012,61.7097143 C316.717694,62.0967619 316.084865,62.0967619 315.694547,61.7097143 C315.30423,61.3226668 315.30423,60.6951387 315.694547,60.3080911 L324.702666,51.3738496 L292.99947,51.3746291 C292.447478,51.3746291 292,50.9308997 292,50.3835318 C292,49.8361639 292.447478,49.3924345 292.99947,49.3924345 L324.46779,49.3916551 L315.694547,40.6919089 C315.30423,40.3048613 315.30423,39.6773332 315.694547,39.2902857 C316.084865,38.9032381 316.717694,38.9032381 317.108012,39.2902857 Z M327.115357,50.382693 L316.401279,61.0089027 L327.002151,50.5002046 L327.002252,50.4963719 L326.943142,50.442585 L326.882737,50.382693 L327.115357,50.382693 Z"
+                id="left-arrow"
+                transform="translate(310.000000, 50.500000) scale(-1, 1) translate(-310.000000, -50.500000)"
+              />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+};
 
 export type ButtonProps = {
   width: number;

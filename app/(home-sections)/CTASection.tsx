@@ -12,7 +12,7 @@ import { LogoForButton } from "../services/[serviceId]/HeroSection";
 export default function CTASection() {
   return (
     <SectionWrapper>
-      <div className="relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#090909] border-[#0f3856] border-[0.5px] rounded-lg ">
+      <div className="relative overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#090909] border-[#0d293d] border-[0.5px] rounded-lg ">
         {/* Blur background */}
         <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
 

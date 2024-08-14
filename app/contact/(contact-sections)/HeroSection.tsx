@@ -15,9 +15,9 @@ export default function HeroSection() {
   return (
     <HeroSectionWrapper>
       <div>
-        <h1 className="text-8xl text-[#ffffff] font-medium text-center z-30 pt-16">
+        <h1 className="text-8xl text-[#ffffff] font-black text-center z-30 pt-16">
           Let`s Build
-          <span className="custom-text font-black"> Together! </span>
+          <span className="custom-text font-black"> Together </span>
         </h1>
       </div>
 
@@ -34,7 +34,7 @@ export default function HeroSection() {
           </div>
 
           <div className="relative z-20 flex flex-col items-center gap-4">
-            <p className="w-full text-3xl text-center font-bold text-[#ffffff]">
+            <p className="w-full text-[#ffffff] font-semibold text-3xl text-center">
               BitLyte Studios is here to make your dream project come to life.
             </p>
             <br />
@@ -90,7 +90,7 @@ export default function HeroSection() {
             <Logo width={400} height={400} />
           </div>
 
-          <h2 className="w-full text-4xl text-[#ffffff] font-bold pb-4">
+          <h2 className="w-full text-[#ffffff] font-semibold text-center text-3xl pb-4">
             Talk to us about{" "}
             <span className="text-[#1A9FFF] font-bold">your project</span>
           </h2>
