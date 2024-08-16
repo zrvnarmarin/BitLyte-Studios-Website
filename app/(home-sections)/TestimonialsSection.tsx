@@ -3,7 +3,6 @@ import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
 import Image from "next/image";
 import TestimonialExampleImage from "../../public/images/home/TestimonialImage.svg";
-import "../../public/styles/star.css";
 import { LeftArrow, RightArrow } from "./ServicesSection";
 
 export default function TestimonialsSection() {

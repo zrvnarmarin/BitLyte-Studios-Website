@@ -5,7 +5,6 @@ import Image from "next/image";
 import ArrowRight from "../../public/images/Rectangle 1.svg";
 import TestimonialExampleImage from "../../public/images/home/TestimonialImage.svg";
 import ButtonNext from "../../public/images/home/ButtonNextTestimonials.svg";
-import "../../public/styles/star.css";
 
 export default function TestimonialsSection({
   headingColor,
