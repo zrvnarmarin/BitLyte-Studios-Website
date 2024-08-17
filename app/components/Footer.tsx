@@ -4,142 +4,91 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full pt-8 pb-8 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 overflow-hidden">
+    <footer className="relative w-full mt-12 py-16 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.5px] border-[#252525] overflow-hidden">
+      <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
+      <div className="w-48 h-48 absolute right-32 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
+
       <div className="absolute inset-0 w-full h-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-          <rect fill="#0B0B0B" />
-          <defs>
-            <radialGradient
-              id="a"
-              cx="500"
-              cy="500"
-              r="33.8%"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stop-color="#0B0B0B" />
-              <stop offset="1" stop-color="#0B0B0B" />
-            </radialGradient>
-            <radialGradient
-              id="b"
-              cx="500"
-              cy="500"
-              r="53.8%"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stop-color="#0B0B0B" stop-opacity="1" />
-              <stop offset="1" stop-color="#0B0B0B" stop-opacity="0" />
-            </radialGradient>
-          </defs>
-          <rect fill="url(#a)" width="1000" height="1000" />
-          <g
-            fill="none"
-            stroke="#003053"
-            stroke-width="10"
-            stroke-miterlimit="10"
-            stroke-opacity="0.06"
-          >
-            <rect x="12.5" y="12.5" width="975" height="975" />
-            <rect x="25" y="25" width="950" height="950" />
-            <rect x="37.5" y="37.5" width="925" height="925" />
-            <rect x="50" y="50" width="900" height="900" />
-            <rect x="62.5" y="62.5" width="875" height="875" />
-            <rect x="75" y="75" width="850" height="850" />
-            <rect x="87.5" y="87.5" width="825" height="825" />
-            <rect x="100" y="100" width="800" height="800" />
-            <rect x="112.5" y="112.5" width="775" height="775" />
-            <rect x="125" y="125" width="750" height="750" />
-            <rect x="137.5" y="137.5" width="725" height="725" />
-            <rect x="150" y="150" width="700" height="700" />
-            <rect x="162.5" y="162.5" width="675" height="675" />
-            <rect x="175" y="175" width="650" height="650" />
-            <rect x="187.5" y="187.5" width="625" height="625" />
-            <rect x="200" y="200" width="600" height="600" />
-            <rect x="212.5" y="212.5" width="575" height="575" />
-            <rect x="225" y="225" width="550" height="550" />
-            <rect x="237.5" y="237.5" width="525" height="525" />
-            <rect x="250" y="250" width="500" height="500" />
-            <rect x="262.5" y="262.5" width="475" height="475" />
-            <rect x="275" y="275" width="450" height="450" />
-            <rect x="287.5" y="287.5" width="425" height="425" />
-            <rect x="300" y="300" width="400" height="400" />
-            <rect x="312.5" y="312.5" width="375" height="375" />
-            <rect x="325" y="325" width="350" height="350" />
-            <rect x="337.5" y="337.5" width="325" height="325" />
-            <rect x="350" y="350" width="300" height="300" />
-            <rect x="362.5" y="362.5" width="275" height="275" />
-            <rect x="375" y="375" width="250" height="250" />
-            <rect x="387.5" y="387.5" width="225" height="225" />
-            <rect x="400" y="400" width="200" height="200" />
-            <rect x="412.5" y="412.5" width="175" height="175" />
-            <rect x="425" y="425" width="150" height="150" />
-            <rect x="437.5" y="437.5" width="125" height="125" />
-            <rect x="450" y="450" width="100" height="100" />
-            <rect x="462.5" y="462.5" width="75" height="75" />
-            <rect x="475" y="475" width="50" height="50" />
-            <rect x="487.5" y="487.5" width="25" height="25" />
-          </g>
-          <rect fill-opacity="0.06" fill="url(#b)" width="1000" height="1000" />{" "}
-        </svg>
+        {/* <svg
+          className="w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1600 900"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <rect fill="#0b0b0b"  />
+          <polygon fill="#327fcc" points="957 450 539 900 1396 900" />
+          <polygon fill="#020739" points="957 450 872.9 900 1396 900" />
+          <polygon fill="#2865ab" points="-60 900 398 662 816 900" />
+          <polygon fill="#050634" points="337 900 398 662 816 900" />
+          <polygon fill="#1f4d8b" points="1203 546 1552 900 876 900" />
+          <polygon fill="#06042f" points="1203 546 1552 900 1162 900" />
+          <polygon fill="#15366c" points="641 695 886 900 367 900" />
+          <polygon fill="#06032a" points="587 900 641 695 886 900" />
+          <polygon fill="#0b204f" points="1710 900 1401 632 1096 900" />
+          <polygon fill="#060226" points="1710 900 1401 632 1365 900" />
+          <polygon fill="#060733" points="1210 900 971 687 725 900" />
+          <polygon fill="#040121" points="943 900 1210 900 971 687" />
+        </svg> */}
       </div>
       <div className="relative z-10 w-full flex flex-col items-start gap-2">
+
         {/* Logo */}
         <Link href="/">
           <div className="flex flex-col md:flex-row items- md:items-center gap-2">
-            <LogoIconWhite />
+            <LogoIconWhite width={95} height={95} />
             <div className="flex flex-col items-start gap-2 md:gap-0">
-              <span className="text-[#ffffff] text-lg font-bold">
+              <span className="text-[#ffffff] text-3xl font-semibold">
                 BitLyte Studios
               </span>
-              <span className="text-xs md:text-md font-bold text-[#dddddd] uppercase">
+              <span className="text-base md:text-lg font-semibold text-[#dddddd] uppercase">
                 Zagreb, Croatia
               </span>
             </div>
           </div>
         </Link>
 
-        {/* Quick links */}
         <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col pt-6 gap-2">
-            <p className="text-xs md:text-md font-bold text-[#dddddd] uppercase">
-              Browse
-            </p>
-            {quickLinkRoutes.map((routeLink) => (
-              <React.Fragment key={routeLink.id}>
-                <Link href={routeLink.href}>
-                  <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-light">
-                    {routeLink.title}
-                  </p>
-                </Link>
-              </React.Fragment>
-            ))}
-          </div>
-          {/* Social media links */}
-          <div className="flex flex-col pt-6 gap-2">
-            <p className="text-xs md:text-md font-bold text-[#dddddd] uppercase">
-              Contact info
-            </p>
-            <div className="flex items-center gap-2">
-              <ContactIcon />
-              <span className="text-base text-[#ffffff] font-normal">
-                +385015896878
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <EmailIcon />
-              <span className="text-base text-[#ffffff] font-normal">
-                bitlyte-studios@gmail.om
-              </span>
-            </div>
-            <div className="w-full flex items-center gap-8 pt-6">
-              {socialMediaIcons.map((socialMediaIcon) => (
-                <React.Fragment key={socialMediaIcon.id}>
-                  <Link href={socialMediaIcon.href}>
-                    {socialMediaIcon.icon()}
+            {/* Quick links */}
+            <div className="flex flex-col pt-6 gap-2">
+              <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">Browse</p>
+              {quickLinkRoutes.map((routeLink) => (
+                <React.Fragment key={routeLink.id}>
+                  <Link href={routeLink.href}>
+                    <p className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                      {routeLink.title}
+                    </p>
                   </Link>
                 </React.Fragment>
               ))}
             </div>
-          </div>
+
+            {/* Social media links */}
+            <div className="flex flex-col pt-6 gap-2">
+              <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+                Contact info
+              </p>
+              <div className="flex items-center gap-2">
+                <ContactIcon />
+                <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                  +385015896878
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <EmailIcon />
+                <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                  bitlyte-studios@gmail.om
+                </span>
+              </div>
+              <div className="w-full flex items-center gap-8 pt-6">
+                {socialMediaIcons.map((socialMediaIcon) => (
+                  <React.Fragment key={socialMediaIcon.id}>
+                    <Link href={socialMediaIcon.href}>
+                      {socialMediaIcon.icon()}
+                    </Link>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
         </div>
 
         {/* Copyright and author */}

@@ -85,11 +85,11 @@ export const LogoIcon = () => {
   );
 };
 
-export const LogoIconWhite = () => {
+export const LogoIconWhite = ({ width = 45, height = 45 } : { width?: number, height?: number }) => {
   return (
     <svg
-      width="45"
-      height="40"
+      width={width}
+      height={height}
       viewBox="0 0 45 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunitoSans.className}>
+      <body className={`${nunitoSans.className} bg-[#0b0b0b]`}>
         <NavigationWrapper />
         {children}
         <Footer />
