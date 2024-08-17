@@ -16,7 +16,7 @@ export default function HeroSection() {
     <HeroSectionWrapper>
       <div>
         <h1 className="text-7xl text-[#ffffff] font-medium text-center z-30 pt-16">
-          Build Your Dreams
+          Shape Your Future And Build Your Dreams
           <span className="custom-text font-black"> Together </span>
         </h1>
       </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { LogoIcon, LogoIconBlue, MenuButton } from "./Navbar";
+import { LogoIcon, MenuButton } from "./Navbar";
 import { ContactIcon, EmailIcon, socialMediaIcons } from "./Footer";
 
 export default function NavigationMenuFullScreen({

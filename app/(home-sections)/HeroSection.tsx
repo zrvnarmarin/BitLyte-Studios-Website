@@ -20,15 +20,12 @@ export default function HeroSection() {
       {/* Services */}
       <ul className="relative w-full flex items-center justify-center gap-6 z-30">
         <li className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-          <span>&#x2022;</span>
           <span>Digital Marketing</span>
         </li>
         <li className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-          <span>&#x2022;</span>
           <span>Web Development</span>
         </li>
         <li className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-          <span>&#x2022;</span>
           <span>Digital Design</span>
         </li>
       </ul>
