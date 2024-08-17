@@ -4,15 +4,9 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../../public/test.css";
-import {
-  facilityCardData,
-  UniqueSellingPointIconOne,
-} from "@/app/(home-sections)/ServicesSection";
 import { useState } from "react";
-import LogoImage from "../../../public/images/Rectangle 1.svg";
 
 export default function BenefitsSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <SectionWrapper>

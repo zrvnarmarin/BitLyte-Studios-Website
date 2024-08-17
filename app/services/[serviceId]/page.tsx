@@ -2,7 +2,7 @@ import HeroSection from "./HeroSection";
 import BenefitsSection from "./BenefitsSection";
 import StepsSection from "./StepsSection";
 import FAQSection from "@/app/(home-sections)/FAQSection";
-import TestimonialsSection from "@/app/components/TestimonialsSection";
+import TestimonialsSection from "@/app/(home-sections)/TestimonialsSection";
 import SimilarServicesSection from "./SimilarServicesSection";
 import CTASection from "./CTASection";
 
@@ -12,12 +12,7 @@ export default function Home({ params }: { params: { serviceId: string } }) {
         <HeroSection serviceName={params.serviceId} />
         <BenefitsSection />
         <StepsSection />
-        <TestimonialsSection
-          headingColor="linear-gradient-purple-text" 
-          buttonColor="bg-gradient-to-r from-[#C17EF1] to-[#AF5AED]" 
-          nextButtonColor="bg-gradient-to-r from-[#7f96db] to-[#8ca0dc]"
-          isCTAButtonVisible={false} 
-        />
+        <TestimonialsSection />
         <SimilarServicesSection />
         <FAQSection />
         <CTASection />

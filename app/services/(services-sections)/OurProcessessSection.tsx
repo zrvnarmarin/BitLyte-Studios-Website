@@ -18,7 +18,8 @@ export default function OurProcessessSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-5xl text-[#ffffff] z-20">Our Process</h2>
-
+      {/* ovjde pronaci slike i sa svakim novim korakom, prethodna slika se spaja sa novom od tog koraka - pogledaj enterwell 
+kako je napravio steps sekciju!! tako i ti */}
       {selectedStep && (
         <div className="w-full flex justify-center items-start mt-8 mb-6">
           <Image

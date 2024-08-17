@@ -1,8 +1,5 @@
 import React from "react";
 import "../../public/test.css";
-import Image from "next/image";
-import HeroImage from "../../public/images/home/undraw_collaborators_re_hont 1.svg";
-import ArrowRight from "../../public/images/Rectangle 1.svg";
 import HeroSectionWrapper from "../components/HeroSectionWrapper";
 import { LogoForButton } from "../services/[serviceId]/HeroSection";
 import Link from "next/link";
