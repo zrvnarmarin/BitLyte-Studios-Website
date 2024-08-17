@@ -52,9 +52,9 @@ export default function TestimonialsSection() {
 
       </div>
 
-      <div className="w-full pt-8">
+      {/* <div className="w-full pt-8">
         <div className="h-[0.1px] w-full bg-[#313131]"></div>
-      </div>
+      </div> */}
     </SectionWrapper>
   );
 }
