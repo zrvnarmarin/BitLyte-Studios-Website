@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import { serviceCategories } from "../(services-sections)/ServiceCategoriesSection";
 import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
@@ -8,29 +7,6 @@ export default function SimilarServicesSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-5xl text-[#ffffff]">Our Services</h2>
-      {/* {serviceCategories.slice(0, 1).map((serviceCategory) => (
-        <div
-          key={serviceCategory.serviceCategoryTitle}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4"
-        >
-          {serviceCategory.services.map((service) => (
-            <div
-              key={service.id}
-              className={`flex flex-col gap-2 rounded-lg p-4 py-8 ${serviceCategory.gradient} border-[0.5px] border-[#252525]`}
-            >
-              <div className="flex flex-col items-center justify-center gap-2">
-                <Image src={LandingPageIcon} alt="service_category_test_icon" />
-                <h3 className="text-[#ffffff] font-semibold text-2xl text-center">
-                  {service.categoryTitle}
-                </h3>
-                <p className="text-base text-[#eeeeee] font-normal pt-4 text-center">
-                  {service.categoryDescription}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      ))} */}
 
       <div className="grid grid-cols-3 gap-6 p-2 ">
         <OtherServiceCard CTAText="Design your high converting landing page" />
@@ -55,10 +31,6 @@ export default function SimilarServicesSection() {
         <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" />
         <OtherServiceCard CTAText="Elevate your brand with gradphic ilustrations" />
         <OtherServiceCard CTAText="Change your brand awareness and get more recognition" />
-
-
-        
-
         
       </div>
     </SectionWrapper>
