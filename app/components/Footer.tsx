@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="relative w-full mt-12 py-16 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.5px] border-[#252525] overflow-hidden">
+      
       <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
       <div className="w-48 h-48 absolute right-32 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
 

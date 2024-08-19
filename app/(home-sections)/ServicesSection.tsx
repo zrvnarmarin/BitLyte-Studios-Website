@@ -19,36 +19,37 @@ export default function ServicesSection() {
 
       <div className="w-full flex flex-row items-center gap-6 pt-12">
         {facilityCardData.map((service) => (
-          <div key={service.id} className="w-full flex flex-col gap-6">
+          <div key={service.id} className="relative w-full flex flex-col gap-4 rounded-lg px-4 p-4 bg-gradient-to-t from-[#0C3B5D] to-[#090909]">
             <div
-              className={`overflow-hidden relative w-full flex flex-col items-center justify-center rounded-full p-4 py-8 bg-[#0b0b0b] border-[0.5px] border-[#252525]`}
+              className={`overflow-hidden relative w-full flex flex-col items-center justify-center rounded-lg p-4 py-8`}
             >
-              {/* Blur background */}
-              <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[130px]"></div>
-              <div className="flex flex-row items-center justify-center gap-1">
-                <h3 className="flex items-center gap-2 text-[#ffffff] font-semibold text-3xl z-20 text-center">
-                  {service.title}
+              <div className="flex flex-row items-center justify-center gap-1 w-full">
+                <h3 className="flex items-center gap-2 text-3xl text-[#eeeeee] font-bold z-20 text-center">
+                <span className="custom-text font-black text-4xl z-0 mr-4">
+                0{service.id}
+              </span>{service.title}
                 </h3>
               </div>
+
             </div>
 
             {/* Animated arrow */}
-            <div className="w-full flex items-center justify-center -rotate-90  pb-12">
+            {/* <div className="w-full flex items-center justify-center -rotate-90  pb-12">
               <div className="arrow">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-            </div>
+            </div> */}
 
             {/* Category services */}
             {service.services.map((s) => (
               <Link
                 href={`/services/${s}`}
                 key={s}
-                className="group flex flex-col gap-6 relative overflow-hidden rounded-full bg-gradient-to-r from-[#131313] to-[#00243e]"
+                className="group flex flex-col gap-6 relative overflow-hidden rounded-lg "
               >
-                <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-normal text-xl z-20 rounded-full border-[0.5px] border-[#252525] px-8 py-4">
+                <div className="hover:bg-[#e3e3e3] hover:text-[#000000] border-[0.5px] border-[#000000] flex gap-2 items-center justify-center w-full text-xl font-light text-[#ffffff] z-20 rounded-lg  px-8 py-12">
                   {s}
                   <div className="group-hover:visible hidden">
                     <RightArrow />
@@ -132,10 +133,10 @@ export const facilityCardData: ServiceCardType[] = [
     title: "Digital Marketing",
     description: "Choose something for yourself and have fun",
     gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
-    services: ["Copywriting", "Social Media Management", "Meta Recruitment Campaigns"],
+    services: ["Copywriting", "Social Media Management", "Recruitment Campaigns"],
   },
   {
-    id: 1,
+    id: 2,
     icon: UniqueSellingPointIconOne,
     imageSrc: FacilityCardImageThree,
     title: "Web Development",
