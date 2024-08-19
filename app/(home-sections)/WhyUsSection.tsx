@@ -5,8 +5,10 @@ import "../../public/test.css";
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff] z-20">Why Choose Us</h2>
-      <div className="relative flex items-center justify-between gap-6 rounded-lg pt-12">
+      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+        Why Choose Us
+      </h2>
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
         {/* Blur background */}
         <div className="w-64 h-64 absolute inset-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[930px]"></div>
 
@@ -24,10 +26,10 @@ export default function WhyUsSection() {
                 {/* Render the icon component */}
                 {React.createElement(reason.icon)}
               </div>
-              <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center z-20">
+              <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
                 {reason.title}
               </h3>
-              <p className="text-xl font-light text-[#ffffff] text-center pt-4 z-20">
+              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-4 z-20">
                 {reason.description}
               </p>
             </div>
@@ -38,8 +40,6 @@ export default function WhyUsSection() {
   );
 }
 
-
-
 export const SupportAndPartnershipIcon = () => (
   <svg
     width="90px"
@@ -49,7 +49,6 @@ export const SupportAndPartnershipIcon = () => (
     fill="#55b8ff"
     stroke="#55b8ff"
   >
-    <title>partners-solid</title>
     <g id="Layer_2" data-name="Layer 2">
       <g id="Q3_icons" data-name="Q3 icons">
         <g>
@@ -94,26 +93,21 @@ export const CollaborativeApproachIcon = () => (
 );
 
 export const TransparentCommunicationIcon = () => (
-  <svg 
-    fill="#55b8ff" 
-    width="90px" 
-    height="90px" 
-    viewBox="0 0 256 240" 
+  <svg
+    fill="#55b8ff"
+    width="90px"
+    height="90px"
+    viewBox="0 0 256 240"
     stroke="#55b8ff"
   >
     <g id="SVGRepo_iconCarrier">
-      <path d="M84.635,20.256c18.383,0,33.286,14.903,33.286,33.286s-14.903,33.286-33.286,33.286S51.349,71.925,51.349,53.542 S66.251,20.256,84.635,20.256z M31.002,145.011c0-2.499,1.606-4.194,4.194-4.194s4.194,1.606,4.194,4.194v92.986h91.469v-92.986 c0-2.499,1.606-4.194,4.194-4.194c2.499,0,4.194,1.606,4.194,4.194v92.986h29.092V136.623c0-22.934-18.74-41.585-41.585-41.585 h-8.388l-24.451,38.015l-2.945-28.467l4.016-9.638H76.96l4.016,9.638l-3.123,28.645L53.401,95.038h-9.816 C20.651,95.038,2,113.778,2,136.623v101.375h29.092v-92.986H31.002z M204.71,2c-27.189,0-49.29,22.061-49.29,49.21 c0,27.189,22.101,49.29,49.29,49.29S254,78.399,254,51.21C253.921,24.061,231.82,2,204.71,2z M204.71,90.761 c-21.823,0-39.551-17.728-39.551-39.551s17.728-39.551,39.551-39.551s39.551,17.728,39.551,39.551 C244.023,73.033,226.294,90.761,204.71,90.761z M229.276,41.591c-0.914-1.511-2.822-2.544-5.008-1.431l-17.45,7.791v-20.63 c0-1.113-0.398-2.107-1.113-2.862l-0.04-0.04c-0.715-0.636-1.55-0.914-2.544-0.914c-1.908,0-3.895,1.431-3.895,3.816v26.99 c0,1.471,0.835,2.862,2.146,3.577c0.676,0.318,1.272,0.477,1.828,0.477c0.596,0,1.272-0.199,1.908-0.477l22.538-10.772 c0.994-0.517,1.709-1.352,2.027-2.345C229.912,43.737,229.792,42.585,229.276,41.591L229.276,41.591z"/>
+      <path d="M84.635,20.256c18.383,0,33.286,14.903,33.286,33.286s-14.903,33.286-33.286,33.286S51.349,71.925,51.349,53.542 S66.251,20.256,84.635,20.256z M31.002,145.011c0-2.499,1.606-4.194,4.194-4.194s4.194,1.606,4.194,4.194v92.986h91.469v-92.986 c0-2.499,1.606-4.194,4.194-4.194c2.499,0,4.194,1.606,4.194,4.194v92.986h29.092V136.623c0-22.934-18.74-41.585-41.585-41.585 h-8.388l-24.451,38.015l-2.945-28.467l4.016-9.638H76.96l4.016,9.638l-3.123,28.645L53.401,95.038h-9.816 C20.651,95.038,2,113.778,2,136.623v101.375h29.092v-92.986H31.002z M204.71,2c-27.189,0-49.29,22.061-49.29,49.21 c0,27.189,22.101,49.29,49.29,49.29S254,78.399,254,51.21C253.921,24.061,231.82,2,204.71,2z M204.71,90.761 c-21.823,0-39.551-17.728-39.551-39.551s17.728-39.551,39.551-39.551s39.551,17.728,39.551,39.551 C244.023,73.033,226.294,90.761,204.71,90.761z M229.276,41.591c-0.914-1.511-2.822-2.544-5.008-1.431l-17.45,7.791v-20.63 c0-1.113-0.398-2.107-1.113-2.862l-0.04-0.04c-0.715-0.636-1.55-0.914-2.544-0.914c-1.908,0-3.895,1.431-3.895,3.816v26.99 c0,1.471,0.835,2.862,2.146,3.577c0.676,0.318,1.272,0.477,1.828,0.477c0.596,0,1.272-0.199,1.908-0.477l22.538-10.772 c0.994-0.517,1.709-1.352,2.027-2.345C229.912,43.737,229.792,42.585,229.276,41.591L229.276,41.591z" />
     </g>
   </svg>
 );
 
 export const HighlySkilledProffesional = () => (
-  <svg
-    width="90px"
-    height="90px"
-    viewBox="0 0 24 24"
-    fill="#55b8ff"
-  >
+  <svg width="90px" height="90px" viewBox="0 0 24 24" fill="#55b8ff">
     <title>controlxpert</title>
     <rect width="24" height="24" fill="none" />
     <g>

@@ -33,7 +33,7 @@ export default function HeroSection() {
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/contact`}>
-          <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#57b7fc] to-[#27A5FF] rounded-full font-medium text-2xl sm:text-2xl md:text-3xl">
+          <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#57b7fc] to-[#27A5FF] rounded-full font-medium text-xl xs:text-2xl sm:text-2xl md:text-3xl">
             <LogoForButton fillColor="#ffffff" width={18} height={20} />
             Start Building
           </button>
