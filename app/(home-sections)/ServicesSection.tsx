@@ -21,10 +21,10 @@ export default function ServicesSection() {
         {facilityCardData.map((service) => (
           <div
             key={service.id}
-            className="relative w-full flex flex-col gap-4 rounded-lg px-4 p-4 bg-gradient-to-t from-[#0C3B5D] to-[#090909]"
+            className="relative w-full flex flex-col gap-4 rounded-lg px-4 p-4 bg-gradient-to-t from-[#0C3B5D] to-[#090909] border-[#0d293d] border-[0.5px]"
           >
             <div
-              className={`overflow-hidden relative w-full flex flex-col items-center justify-center rounded-lg p-4 py-8`}
+              className={`overflow-hidden relative w-full flex flex-col items-center justify-center p-4 py-8`}
             >
               <div className="flex flex-row items-center justify-center gap-1 w-full">
                 <h3 className="flex items-center gap-2 text-3xl text-[#eeeeee] font-bold z-20 text-center">
@@ -52,7 +52,7 @@ export default function ServicesSection() {
                 key={s}
                 className="group flex flex-col gap-6 relative overflow-hidden rounded-lg "
               >
-                <div className="hover:bg-[#e3e3e3] hover:text-[#000000] border-[0.5px] border-[#000000] flex gap-2 items-center justify-center w-full text-2xl font-bold text-[#ffffff] z-20 rounded-lg  px-8 py-12">
+                <div className="hover:bg-[#e3e3e3] hover:text-[#000000] border-[0.5px] border-[#000000] flex gap-2 items-center justify-center w-full text-2xl font-bold text-[#ffffff] z-20 rounded-lg  px-8 py-10">
                   {s}
                   <div className="group-hover:visible hidden">
                     <RightArrow />

@@ -15,28 +15,28 @@ export default function Navbar({
   return (
     <nav
       className={`w-full fixed z-50 opacity-95 bg-[#0b0b0b] ${
-        scrollPosition > 20 ? "opacity-90   backdrop-blur-xl duration-700" : ""
-      } } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6`}
+        scrollPosition > 20 ? "opacity-90 backdrop-blur-xl duration-700" : ""
+      } } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 md:py-6`}
     >
-        <Link href={`/`}>
-          <div className="flex items-center gap-2">
-            <LogoIcon />
-            <span className="text-[#ffffff] text-lg font-bold">
-              BitLyte Studios
-            </span>
-          </div>
-        </Link>
+      <Link href={`/`}>
+        <div className="flex items-center gap-2">
+          <LogoIcon />
+          <span className="text-[#ffffff] text-lg font-bold">
+            BitLyte Studios
+          </span>
+        </div>
+      </Link>
 
       <div className="flex flex-row items-center gap-2">
-        <div className="text-3xl text-red-300 z-40">
+        {/* <div className="text-3xl text-red-300 z-40">
           <Link
             href={`/contact`}
             className="w-fit hover:bg-[#ffffff] flex gap-2 items-center justify-center text-[#ffffff] hover:text-[#252525] font-normal text-lg z-20 rounded-full py-2 px-6"
           >
-            {/* <LogoArrowRight fillColor="#ffffff" /> */}
+            <LogoArrowRight fillColor="#ffffff" />
             Contact Us
           </Link>
-        </div>
+        </div> */}
         <div
           onClick={() => onOpenSidebar()}
           className="flex items-center justify-center z-40"
@@ -46,7 +46,6 @@ export default function Navbar({
           </button>
         </div>
       </div>
-
     </nav>
   );
 }
@@ -85,7 +84,13 @@ export const LogoIcon = () => {
   );
 };
 
-export const LogoIconWhite = ({ width = 45, height = 45 } : { width?: number, height?: number }) => {
+export const LogoIconWhite = ({
+  width = 45,
+  height = 45,
+}: {
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       width={width}
