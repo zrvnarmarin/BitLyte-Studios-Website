@@ -9,7 +9,7 @@ import "../../public/test.css";
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff] z-20 pb-12">
+      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
         Frequently Asked Questions
       </h2>
       <Accordion faqArray={homePageFAQ} />
@@ -25,7 +25,7 @@ export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
   };
 
   return (
-    <div className="w-full flex flex-col gap-2 z-20">
+    <div className="w-full flex flex-col gap-2 z-20 pt-4 sm:pt-8 md:pt-12">
       {faqArray.map((accordion, index) => (
         <Panel
           key={accordion.id}
@@ -58,7 +58,7 @@ function Panel({
       className={`cursor-pointer bg-gradient-to-r from-[#292929] to-[#090909] rounded-lg pl-6 pr-4 py-6`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
-        <h3 className="w-full text-2xl text-[#ffffff] font-semibold ">
+        <h3 className="w-full text-xl sm:text-2xl text-[#ffffff] font-semibold ">
           {title}
         </h3>
         {isActive ? (
@@ -72,7 +72,7 @@ function Panel({
         )}
       </div>
       {isActive ? (
-        <p className="pl-2 pb-4 text-lg text-[#dddddd] font-normal">
+        <p className="pl-2 pb-4 text-lg sm:text-xl font-light text-[#ffffff]">
           {answer}
         </p>
       ) : null}

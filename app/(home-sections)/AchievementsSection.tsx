@@ -11,7 +11,7 @@ export default function AchievementsSection() {
         Our Achievements
       </h2>
       {/* <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div> */}
-      
+
       {/* Achievements cards container */}
       <div className="w-full flex flex-col lg:flex-row gap-4 pt-4 sm:pt-8 md:pt-12">
         {/* Achievement card */}
@@ -31,6 +31,11 @@ export default function AchievementsSection() {
 
       <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
         <div className="flex flex-col gap-6">
+          <h3 className="w-full text-2xl xs:text-3xl text-start font-medium xs:font-light text-[#ffffff] z-20 pb-6">
+            We helped business increase sales by{" "}
+            <span className="custom-text">27%</span> in the first month working
+            with us
+          </h3>
           {/* Cards section */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="relative overflow-hidden flex flex-row itsms-center gap-4 border-[0.5px] border-[#252525] rounded-lg p-6">
@@ -113,7 +118,6 @@ export default function AchievementsSection() {
           </div>
         </div>
       </div>
-
     </SectionWrapper>
   );
 }
