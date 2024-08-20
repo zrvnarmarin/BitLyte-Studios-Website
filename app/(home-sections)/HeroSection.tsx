@@ -8,7 +8,7 @@ import { Logo } from "../services/[serviceId]/StepsSection";
 export default function HeroSection() {
   return (
     <HeroSectionWrapper>
-      <p className="text-sm sm:text-base md:text-xl text-center font-bold text-[#ffffff] uppercase  z-30">
+      <p className="text-sm sm:text-base md:text-xl text-center font-bold text-[#ffffff] uppercase pb-2 z-30">
         Success begins here
       </p>
       <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">

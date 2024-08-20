@@ -14,31 +14,45 @@ export default function WhyUsSection() {
 
         {/* Card container */}
         {whyUsData.map((reason) => (
-          <div
+          <WhyUsCard
             key={reason.id}
-            className="overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20"
-          >
-            {/* Reason Card */}
-            <div className="relative flex flex-col items-center justify-center gap-2 z-20">
-              {/* Blur background */}
-              <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[230px]"></div>
-              <div className="flex items-center z-30">
-                {/* Render the icon component */}
-                {React.createElement(reason.icon)}
-              </div>
-              <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
-                {reason.title}
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-4 z-20">
-                {reason.description}
-              </p>
-            </div>
-          </div>
+            title={reason.title}
+            description={reason.description}
+            icon={reason.icon}
+          />
         ))}
       </div>
     </SectionWrapper>
   );
 }
+
+export type WhyUsCardType = {
+  title: string;
+  description: string;
+  icon: any;
+};
+
+export const WhyUsCard = ({ title, description, icon }: WhyUsCardType) => {
+  return (
+    <div className="overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
+      {/* Reason Card */}
+      <div className="relative flex flex-col items-center justify-center gap-2 z-20">
+        {/* Blur background */}
+        <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[230px]"></div>
+        <div className="flex items-center z-30">
+          {/* Render the icon component */}
+          {React.createElement(icon)}
+        </div>
+        <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
+          {title}
+        </h3>
+        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-4 z-20">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export const SupportAndPartnershipIcon = () => (
   <svg
