@@ -6,12 +6,12 @@ import TestimonialsSection from "../(home-sections)/TestimonialsSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen h-full flex-col items-center bg-[#ffffff]">
+    <main className="flex min-h-screen h-full flex-col items-center bg-[#0b0b0b]">
       <HeroSection />
-      <ServiceCategoriesSection />
+      {/* <ServiceCategoriesSection />
       <OurProcessessSection />
       <TestimonialsSection />
-      <CTASection />
+      <CTASection /> */}
     </main>
   );
 }
