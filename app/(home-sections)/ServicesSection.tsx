@@ -33,10 +33,11 @@ export const ServiceCategoryCard = ({
   id,
   title,
   services,
-}: ServiceCardType
-) => {
+}: ServiceCardType) => {
   return (
-    <div className="relative w-full flex flex-col gap-4 rounded-lg px-4 p-4 bg-gradient-to-t from-[#0C3B5D] to-[#090909] border-[#0c102d] border-[0.5px]">
+    <div className="relative overflow-hidden w-full flex flex-col gap-4 rounded-lg px-4 p-4  border-[#0c102d] border-[0.5px] z-20">
+      <div className="w-32 h-32 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
       <div
         className={`overflow-hidden relative w-full flex flex-col items-center justify-center p-4 py-8`}
       >
@@ -57,6 +58,8 @@ export const ServiceCategoryCard = ({
           key={service}
           className="group flex flex-col gap-6 relative overflow-hidden rounded-lg"
         >
+          <div className="w-72 h-72 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
           <div className="hover:bg-[#e3e3e3] hover:text-[#000000] border-[1px] border-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 rounded-lg px-8 py-8">
             {service}
           </div>

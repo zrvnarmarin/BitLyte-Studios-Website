@@ -7,61 +7,13 @@ import { LogoArrowRight } from "./ProjectsSection";
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff] z-20 pb-12">
+      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
         Our Achievements
       </h2>
       {/* <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div> */}
-
-      <div className="w-full relative  grid grid-cols-2 items-center gap-6">
-        <div className="flex flex-col gap-2">
-          <h3 className="w-full text-3xl text-start font-light text-[#ffffff] z-20">
-            We helped business increase sales by{" "}
-            <span className="custom-text">27%</span> in the first month working
-            with us
-          </h3>
-          <div className="flex flex-row gap-4 items-center z-20 pt-10">
-            <BulletPoint />
-            <p className="text-xl text-start font-light text-[#ffffff]">
-              We`re constantly tracking the performance of our services. We`ll
-              use internal testing to track increased exposure and other
-              critical metrics. It`s also the best way to provide concrete
-              evidence of our impact.
-            </p>
-          </div>
-          <div className="flex flex-row gap-4 items-center z-20 pt-4">
-            <BulletPoint />
-            <p className="text-xl text-start font-light text-[#ffffff]">
-              In addition to tracking exposure and critical metrics, we also
-              focus on gathering actionable insights from user feedback and
-              performance data. This approach allows us to refine our offerings
-              continually, ensuring that we deliver tangible results and
-              consistently provide value to our clients.
-            </p>
-          </div>
-        </div>
-
-        <div className="w-full flex items-center justify-center">
-          <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg w-2/3">
-            {/* Blur background */}
-            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-
-
-            <div className=" w-fit p-12 rounded-lg flex flex-col items-center justify-center gap-6">
-              <h2 className="w-full text-5xl text-[#ffffff] text-center z-20">
-                <p className="custom-text font-black">Get to know us</p> better
-              </h2>
-              <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center text-[#000000] font-normal text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] py-2 px-6">
-                <LogoArrowRight fillColor="#000000" />
-                Get to know us
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      
       {/* Achievements cards container */}
-      <div className="w-full flex flex-col lg:flex-row gap-4 pt-24">
-
+      <div className="w-full flex flex-col lg:flex-row gap-4 pt-4 sm:pt-8 md:pt-12">
         {/* Achievement card */}
         {achievements.map((achievement) => (
           <AchievementCard
@@ -73,6 +25,95 @@ export default function AchievementsSection() {
           />
         ))}
       </div>
+
+      {/* Divider line */}
+      <div className="w-full h-[0.5px] bg-[#252525] mt-4 sm:mt-8 md:mt-12" />
+
+      <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+        <div className="flex flex-col gap-6">
+          {/* Cards section */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="relative overflow-hidden flex flex-row itsms-center gap-4 border-[0.5px] border-[#252525] rounded-lg p-6">
+              <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
+              <div className="z-20">
+                <SupportAndPartnershipIcon />
+              </div>
+              <div className="flex flex-col items-start gap-0 justify-start z-20">
+                <p className="text-[#ffffff] font-medium text-xl lg:text-xl text-center">
+                  Tracking Alfa
+                </p>
+                <p className="text-md text-start font-light text-[#ffffff]">
+                  On-site
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden flex flex-row itsms-center gap-4 border-[0.5px] border-[#252525] rounded-lg p-6">
+              <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
+              <div className="z-20">
+                <SupportAndPartnershipIcon />
+              </div>
+              <div className="flex flex-col items-start gap-0 justify-start z-20">
+                <p className="text-[#ffffff] font-medium text-xl lg:text-xl text-center">
+                  Tracking Alfa
+                </p>
+                <p className="text-md text-start font-light text-[#ffffff]">
+                  On-site
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Text window */}
+          <div className="relative overflow-hidden flex flex-col gap-8 xs:gap-6 border-[0.5px] border-[#252525] rounded-lg px-8 py-12">
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
+            <h3 className="w-full text-2xl xs:text-3xl text-center font-medium xs:font-light text-[#ffffff] z-20 pb-6">
+              We helped business increase sales by{" "}
+              <span className="custom-text">27%</span> in the first month
+              working with us
+            </h3>
+            <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20">
+              <span className="custom-text text-3xl sm:text-4xl">&#10003;</span>
+              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                We`re constantly tracking the performance of our services. We`ll
+                use internal testing to track increased exposure and other
+                critical metrics. It`s also the best way to provide concrete
+                evidence of our impact.
+              </p>
+            </div>
+            <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20">
+              <span className="custom-text text-3xl sm:text-4xl">&#10003;</span>
+              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                We`re constantly tracking the performance of our services. We`ll
+                use internal testing to track increased exposure and other
+                critical metrics. It`s also the best way to provide concrete
+                evidence of our impact.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Get to know us better section */}
+        <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg">
+          {/* Blur background */}
+          <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
+          <div className=" w-full px-6 py-10 xs:p-10 sm:p-12 lg:p-16 rounded-lg flex flex-col items-center justify-center gap-8 lg:gap-12">
+            <h2 className="w-full text-4xl leading-none text-center font-medium xs:font-light sm:text-5xl text-[#ffffff] z-20">
+              <p className="custom-text font-black">Get to know us</p> better
+            </h2>
+            <div className="w-full flex items-center justify-center">
+              <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center font-normal lg:font-medium text-[#111111] text-lg md:text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] py-2 md:py-3 px-6 md:px-10">
+                <LogoArrowRight fillColor="#333333" />
+                View Full Case
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </SectionWrapper>
   );
 }
@@ -88,10 +129,12 @@ export const AchievementCard = ({
     >
       <div className="w-48 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
 
-      <h3 className={`font-semibold text-7xl text-center text-[#ffffff] z-20`}>
+      <h3
+        className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
+      >
         {stat}
       </h3>
-      <p className="w-full text-2xl text-center font-normal text-[#ffffff] pt-6 z-20">
+      <p className="w-full text-lg sm:text-2xl text-center font-normal text-[#ffffff] pt-6 z-20">
         {description}
       </p>
     </div>
@@ -173,3 +216,29 @@ export const BulletPoint = () => {
     </svg>
   );
 };
+
+const SupportAndPartnershipIcon = ({
+  width = 50,
+  height = 50,
+}: {
+  width: number;
+  height: number;
+}) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 48 48"
+    fill="#55b8ff"
+    stroke="#55b8ff"
+  >
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Q3_icons" data-name="Q3 icons">
+        <g>
+          <path d="M18.4,13.8A5.9,5.9,0,0,1,23,12.1a7.6,7.6,0,0,1,5.2,2.2c2.9,2.8,3.4,7.2,1,9.7a2.1,2.1,0,0,0,0,2.9,2.4,2.4,0,0,0,1.4.5,1.8,1.8,0,0,0,1.4-.6c3.2-3.3,3.5-8.2,1.3-12.3H34a6.1,6.1,0,0,0,4.5-1.9,6.3,6.3,0,0,0-.2-8.9A6.5,6.5,0,0,0,34,2a6.6,6.6,0,0,0-4.6,1.9,6.3,6.3,0,0,0-1.6,5.3,11.2,11.2,0,0,0-4.7-1.1,9.5,9.5,0,0,0-7.6,3,2,2,0,1,0,2.9,2.7Z" />
+          <path d="M21.4,38.4C18,37.5,16,33.6,17,29.7s4.5-6.6,7.9-5.7a2,2,0,0,0,2.4-1.5,1.9,1.9,0,0,0-1.4-2.4,10.4,10.4,0,0,0-11.3,5.1,6.3,6.3,0,0,0-4.3-3.6l-1.4-.2a6.3,6.3,0,0,0-6.1,4.8,6.2,6.2,0,0,0,4.6,7.6l1.5.2a6.2,6.2,0,0,0,3.9-1.4,10.5,10.5,0,0,0,7.7,9.7h.4a2,2,0,0,0,2-1.5A1.9,1.9,0,0,0,21.4,38.4Z" />
+          <path d="M40.5,33.9a11.9,11.9,0,0,0,3.3-3.4A9.8,9.8,0,0,0,45,22.4,2,2,0,0,0,42.5,21a2,2,0,0,0-1.3,2.5,5.6,5.6,0,0,1-.8,4.8,8.2,8.2,0,0,1-4.5,3.4C32,32.9,28,31,27,27.7a2,2,0,0,0-2.5-1.4,2,2,0,0,0-1.4,2.5A10.5,10.5,0,0,0,33.2,36a6.3,6.3,0,0,0,5,10,5.7,5.7,0,0,0,1.8-.3,6.3,6.3,0,0,0,.5-11.8Z" />
+        </g>
+      </g>
+    </g>
+  </svg>
+);

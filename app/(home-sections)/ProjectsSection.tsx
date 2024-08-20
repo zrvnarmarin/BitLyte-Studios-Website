@@ -12,8 +12,6 @@ export default function ProjectsSection() {
         Our Work
       </h2>
 
-      
-
       <div className="w-full flex flex-col gap-24 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
         {projects.map((project, index) => (
           <ProjectCardDesktop
