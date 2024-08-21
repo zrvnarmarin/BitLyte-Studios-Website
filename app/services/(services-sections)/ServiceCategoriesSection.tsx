@@ -26,7 +26,7 @@ export default function ServiceCategoriesSection() {
           >
             {serviceCategory.services.map((service) => (
               <Link
-                href={`/services/${service.categoryTitle}`}
+                href={`/services/${service.categoryTitle.trim().replace(/\s+/g, "-").toLowerCase()}`}
                 key={service.id}
                 className={`overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8  border-[0.5px] border-[#252525]`}
               >

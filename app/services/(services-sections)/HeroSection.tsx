@@ -13,9 +13,9 @@ export default function HeroSection() {
     <HeroSectionWrapper>
       {/* Desktop version */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
-        <div className="order-2 lg:order-1 flex flex-col gap-6">
-        <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
-          
+        <div className="order-2 lg:order-1 flex flex-col gap-8">
+          <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
+
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-left z-20">
             Transform
             <span className="linear-gradient-purple-text font-black">
@@ -25,7 +25,7 @@ export default function HeroSection() {
             To Breathtaking Reality
           </h1>
 
-          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left pt-2 z-20">
+          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
             We create unique and highly converting digital experiences, tailored
             to meet your specific business needs. Our expertise spans a wide
             range of digital solutions, including custom-designed websites

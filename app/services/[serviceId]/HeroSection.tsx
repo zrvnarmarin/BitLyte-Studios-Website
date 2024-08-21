@@ -1,115 +1,51 @@
 import React from "react";
-import Link from "next/link";
 import HeroSectionWrapper from "@/app/components/HeroSectionWrapper";
-import "../../../public/test.css";
+import Image from "next/image";
+import Link from "next/link";
+// import { CopywritingIcon, BrandIdentityIcon } from "../[serviceId]/HeroSection";
+import TestIkona from "../../../public/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
 
 export default function HeroSection({ serviceName }: { serviceName: string }) {
   return (
     <HeroSectionWrapper>
-      {/* Mobile version */}
-      {/* <div className="w-full flex">
-        <Link
-          href={`/services`}
-          className="flex items-center gap-2 linear-gradient-purple-text rounded-full text-xl"
-        >
-          <LogoForButton fillColor="#ffffff" width={8} height={10} />
-          Services
-        </Link>
-      </div>
-
-      <h1 className="text-4xl text-[#ffffff] font-semibold text-start">
-        <span className="linear-gradient-purple-text font-normal">
-          {serviceName
-            .split("-")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}{" "}
-        </span>
-      </h1>
-      <div
-        className={`flex flex-col gap-2 rounded-lg p-4 py-8 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] border-[0.5px] border-[#252525]`}
-      >
-        <div className="flex flex-col items-center justify-center gap-2">
-          <LandingPageIcon width={100} height={100} />
-        </div>
-      </div>
-      <p className="text-base text-[#eeeeee] font-normal pt-2">
-        Capture attention and convert visitors with beautifully designed landing
-        pages tailored to your brand. Our expert team creates engaging,
-        high-converting landing pages that drive results and enhance your
-        digital marketing efforts.
-      </p>
-      <div className="w-full flex">
-        <button className="flex items-center gap-2 py-2 px-6 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-xl">
-          <LogoForButton fillColor="#ffffff" width={8} height={10} />
-          Start building
-        </button>
-      </div> */}
-
       {/* Desktop version */}
-      <div className="hidden lg:grid grid-cols-2 items-center gap-8">
-        <div className="flex flex-col gap-6">
-          <Link href={`/services`} className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] mt-8 flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-            <span className="flex items-center gap-2">
-              <LeftArrowIcon /> Services
-            </span>
-          </Link>
-          <h1 className="text-8xl text-[#ffffff] font-bold text-start z-30">
-          {serviceName
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ")}{" "}
-            <span className="linear-gradient-purple-text font-black">
-            
-            </span>
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+        <div className="order-2 lg:order-1 flex flex-col gap-8">
+          <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
+
+          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-left z-20">
+            {serviceName.replace(/-/g, " ").split(" ").map(word =>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")}
           </h1>
-          <p className="text-xl font-light text-[#ffffff] pt-2">
+
+          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
             We create unique and highly converting digital experiences, tailored
             to meet your specific business needs. Our expertise spans a wide
-            range of digital solutions, including custom-designed websites,
-            e-commerce shops
+            range of digital solutions, including custom-designed websites
           </p>
-          <Link href={`/contact`}>
-            <button className="w-fit flex items-center gap-2 mt-6 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full text-4xl">
-              <LogoForButton fillColor="#ffffff" width={18} height={20} />
-              Start building
-            </button>
-          </Link>
-        </div>
-        <div className="relative">
-          {/* Blur background */}
-          <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
-          <div className={`flex flex-col gap-2 rounded-lg p-4 py-8 `}>
-            {/* Service Card */}
-            <div className="flex flex-col items-center justify-center gap-2 z-20 rounded-full">
-              <BrandIdentityIcon width={500} height={500} />
-            </div>
+
+          <div className="w-full flex items-center justify-center lg:justify-start z-20">
+            <Link href={`/contact`}>
+              <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full font-medium text-xl xs:text-2xl sm:text-2xl md:text-3xl">
+                <LogoForButton fillColor="#ffffff" width={18} height={20} />
+                Start building
+              </button>
+            </Link>
           </div>
+        </div>
+
+        <div className="order-1 lg:order-2 relative flex items-center justify-center">
+          {/* Image container */}
+          <div className="hidden sm:block w-80 h-80 absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
+          <Image
+            src={TestIkona}
+            alt="t"
+            className="w-full h-full max-w-[274px] xs:max-w-[294px] sm:max-w-[314px] lg:max-w-[444px] 2xl:max-w-[474px] z-20"
+          />
         </div>
       </div>
     </HeroSectionWrapper>
   );
 }
-
-const LogoIconWhite = () => {
-  return (
-    <svg
-      width="20"
-      height="15"
-      viewBox="0 0 45 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
-        fill="#ffffff"
-      />
-      <path
-        d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z"
-        fill="#ffffff"
-      />
-    </svg>
-  );
-};
 
 export const LeftArrowIcon = ({ width = 15, height = 15 } : { width?: number, height?: number }) => {
   return (
@@ -164,6 +100,45 @@ export const LogoForButton = ({ width, height, fillColor }: ButtonProps) => {
     </svg>
   );
 };
+
+export function formatString(input: string): string {
+  // Step 1: Trim any leading/trailing whitespace
+  const trimmedInput: string = input.trim();
+
+  // Step 2: Replace hyphens with spaces
+  const hyphenReplaced: string = trimmedInput.replace(/-/g, " ");
+
+  // Step 3: Remove any non-letter characters (excluding spaces)
+  const cleanedInput: string = hyphenReplaced.replace(/[^a-zA-Z\s]/g, "");
+
+  // Step 4: Collapse multiple spaces into a single space
+  const normalizedInput: string = cleanedInput.replace(/\s+/g, " ");
+
+  // Step 5: Capitalize each word
+  const capitalizedInput: string = normalizedInput
+    .split(" ") // Split the string by spaces
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+    .join(" "); // Join the words with a space
+
+  return capitalizedInput;
+}
+
+// Example usage:
+try {
+  const formattedString: string = formatString("brand-identity");
+  console.log(formattedString); // Output: "Brand Identity"
+} catch (error: unknown) {
+  if (error instanceof Error) {
+    console.error(error.message);
+  } else {
+    console.error("An unknown error occurred.");
+  }
+}
+
+
+
+
+
 
 // Icons for each service ANIMATED
 export const LandingPageIcon = ({
