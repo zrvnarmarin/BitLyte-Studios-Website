@@ -11,11 +11,11 @@ export default function Home({ params }: { params: { serviceId: string } }) {
       <main className="flex min-h-screen h-full flex-col items-center bg-[#0b0b0b]">
         <HeroSection serviceName={params.serviceId} />
         <BenefitsSection />
-        <StepsSection />
+        {/* <StepsSection />
         <TestimonialsSection />
         <SimilarServicesSection />
         <FAQSection />
-        <CTASection />
+        <CTASection /> */}
       </main>
     );
   }
