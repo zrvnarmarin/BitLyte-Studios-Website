@@ -17,12 +17,12 @@ export default function ServiceCategoriesSection() {
       {/* Service categories container */}
       {serviceCategories.map((serviceCategory) => (
         <React.Fragment key={serviceCategory.id}>
-          <h2 className="w-full text-5xl text-[#ffffff]">
+          <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal">
             {serviceCategory.serviceCategoryTitle}
           </h2>
           <div
             key={serviceCategory.serviceCategoryTitle}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-10 pt-12"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-6 py-4 sm:py-8 md:py-12 "
           >
             {serviceCategory.services.map((service) => (
               <Link
@@ -33,12 +33,12 @@ export default function ServiceCategoriesSection() {
                 {/* Blur background */}
                 <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#3B4EB5] z-10 blur-[330px]"></div>
                 {/* Service Card */}
-                <div className="flex flex-col items-center justify-center gap-2 z-20">
-                  {service.icon({ width: 200, height: 200 })}
-                  <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center ">
+                <div className="flex flex-col items-center justify-center gap-4 z-20">
+                  {service.icon({ width: 180, height: 180 })}
+                  <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
                     {service.categoryTitle}
                   </h3>
-                  <p className="text-xl font-light text-[#ffffff] text-center pt-4 z-20">
+                  <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-4 z-20">
                     {service.categoryDescription}
                   </p>
                 </div>
