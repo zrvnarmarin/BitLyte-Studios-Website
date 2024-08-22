@@ -73,6 +73,7 @@ export default function AchievementsSection() {
           {/* Text window */}
           <div className="relative overflow-hidden flex flex-col gap-8 xs:gap-6 border-[0.5px] border-[#252525] rounded-lg px-8 py-12">
             <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
             <h3 className="w-full text-2xl xs:text-3xl text-center font-medium xs:font-light text-[#ffffff] z-20 pb-6">
               We helped business increase sales by{" "}

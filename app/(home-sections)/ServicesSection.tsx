@@ -58,6 +58,7 @@ export const ServiceCategoryCard = ({
           key={service}
           className="group flex flex-col gap-6 relative overflow-hidden rounded-lg"
         >
+          {/* Blur background */}
           <div className="w-72 h-72 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
           <div className="hover:bg-[#e3e3e3] hover:text-[#000000] border-[1px] border-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 rounded-lg px-8 py-8">

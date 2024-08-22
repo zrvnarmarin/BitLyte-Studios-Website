@@ -5,11 +5,11 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 export default function AfterProposalSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff] z-20">
+      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
         What are the next steps?
       </h2>
 
-      <div className="grid grid-cols-3 gap-6 pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
         {afterProposalSteps.map((step) => (
           <ProcessStepCard
             id={step.id}
@@ -18,6 +18,9 @@ export default function AfterProposalSection() {
           />
         ))}
       </div>
+
+      {/* Divider line */}
+      {/* <div className="w-full h-[0.5px] bg-[#252525] mt-4 sm:mt-8 md:mt-12" /> */}
     </SectionWrapper>
   );
 }
@@ -32,18 +35,18 @@ export const ProcessStepCard = ({
       className={`relative overflow-hidden flex-1 px-10 py-10 cursor-pointer rounded-lg border-[0.5px] border-[#252525]`}
     >
       {/* Blur background */}
-      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[230px]"></div>
+      <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
       <div className="w-full flex items-center justify-start z-20">
-        <span className="linear-gradient-purple-text font-black text-7xl z-0 mr-4">
+        <span className="custom-text font-black text-7xl z-0 mr-4">
           {id}
         </span>
-        <span className="text-[#ffffff] font-semibold text-3xl z-30">
+        <span className="text-[#ffffff] font-semibold text-3xl z-20">
           {title}
         </span>
       </div>
 
-      <p className="text-xl font-light text-[#ffffff] text-start pt-6 z-30">
+      <p className="text-xl font-light text-[#ffffff] text-start pt-6 z-20">
         {description}
       </p>
     </div>

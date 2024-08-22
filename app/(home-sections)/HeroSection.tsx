@@ -51,23 +51,3 @@ export default function HeroSection() {
   );
 }
 
-// const LogoIconWhite = () => {
-//   return (
-//     <svg
-//       width="20"
-//       height="15"
-//       viewBox="0 0 45 40"
-//       fill="none"
-//       xmlns="http://www.w3.org/2000/svg"
-//     >
-//       <path
-//         d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
-//         fill="#ffffff"
-//       />
-//       <path
-//         d="M20.783 35.1431H25.6279L44.1108 17.5716L32.6171 4.36873e-07L27.6199 0L20.783 35.1431Z"
-//         fill="#ffffff"
-//       />
-//     </svg>
-//   );
-// };
