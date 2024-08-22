@@ -13,7 +13,7 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
         <div className="order-2 lg:order-1 flex flex-col gap-8">
           <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
 
-          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-left z-20">
+          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium sm:font-bold text-center lg:text-left z-20">
             {serviceName.replace(/-/g, " ").split(" ").map(word =>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")}
           </h1>
 

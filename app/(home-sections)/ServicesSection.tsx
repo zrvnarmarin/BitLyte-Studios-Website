@@ -97,10 +97,20 @@ export const serviceCategoriesData: ServiceCardType[] = [
   },
 ];
 
-export const RightArrow = ({ strokeWidth = 0.1, color = "#ffffff" }) => (
+export const RightArrow = ({
+  strokeWidth = 0.1,
+  color = "#ffffff",
+  width = 30,
+  height = 30,
+}: {
+  strokeWidth?: number;
+  color?: string;
+  width?: number;
+  height?: number;
+}) => (
   <svg
-    width="30px"
-    height="30px"
+    width={width}
+    height={height}
     viewBox="0 -6.5 38 38"
     xmlns="http://www.w3.org/2000/svg"
     fill={color}

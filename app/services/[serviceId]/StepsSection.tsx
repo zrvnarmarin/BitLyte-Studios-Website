@@ -1,34 +1,36 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
-import { FrontendDevelopmentIcon } from "./HeroSection";
+import { RightArrow } from "./../../(home-sections)/ServicesSection";
 
 export default function StepsSection() {
   return (
     <SectionWrapper>
-
-      <p className="w-full text-start text-5xl text-[#ffffff]">
+      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center md:text-start z-20">
         See all the steps
         <span className="linear-gradient-purple-text"> we take </span> to make
         your{" "}
         <span className="linear-gradient-purple-text"> project shine </span>
       </p>
-
-      <div className="flex flex-col items-start justify-start gap-16 pt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
         {steps.map((step) => (
-          <StepCard key={step.id}  />
+          <StepCard key={step.id} />
         ))}
       </div>
-
     </SectionWrapper>
   );
 }
 
-export const StepCard = ({ id, title, description, blurBackground } : StepsCardType) => {
+export const StepCard = ({
+  id,
+  title,
+  description,
+  blurBackground,
+}: StepsCardType) => {
   return (
-    <div className="w-full flex flex-rows items-center gap-16">
+    <div className="w-full flex flex-col md:flex-col lg:flex-row items-center gap-16">
       {/* Logo and title with id */}
       <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee] font-normal py-8 text-start px-5 rounded-lg">
-        <span className="text-3xl text-[#ffffff] pl-2 z-20 text-center">
+        <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] pl-2 z-20 text-center">
           <span className="linear-gradient-purple-text font-black">{1}. </span>
           Discovery
         </span>
@@ -41,25 +43,28 @@ export const StepCard = ({ id, title, description, blurBackground } : StepsCardT
       </div>
 
       {/* Gradient line */}
-      <div className="flex flex-0  gap-2 w-full h-full bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-lg">
+      <div className="hidden xl:flex flex-0 gap-2 w-full h-full bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-lg">
         <span className="h-24 w-4rounded-lg"></span>
       </div>
 
       {/* Steps */}
-      <div className="relative  flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee]  font-normal  text-start ">
+      <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee]  font-normal  text-start ">
         <div
-          className={`w-24 h-24 absolute inset-0 bg-gradient-to-r from-[#000000] to-[#653ED0] z-10 blur-[100px]`}
+          className={`w-32 h-32 absolute inset-0 bg-gradient-to-r from-[#000000] to-[#653ED0] z-10 blur-[100px]`}
         ></div>
-        <p className="text-base text-[#eeeeee] font-normal z-20 rounded-full  px-4 py-2">
+        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
           Planning phase is when we discover your product and research the
-          market 
+          market
         </p>
-        <div className="flex flex-col gap-2">
-          <p className="hover:bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center w-full text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-            Planning
+        <div className="flex flex-col gap-2 z-20">
+          <p className="hover:bg-gradient-to-r from-[#7f96db] to-[#5775D0] cursor-pointer flex gap-2 items-center justify-center w-full text-base text-[#ffffff] font-semibold z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+            Planning{" "}
+            <span>
+              <RightArrow width={12} height={12} />
+            </span>
           </p>
-          <p className="hover:bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center w-full text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-            Planning
+          <p className="hover:bg-gradient-to-r from-[#7f96db] to-[#5775D0] flex gap-2 items-center justify-center w-full text-base text-[#eeeeee] font-semibold z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+            Planning +
           </p>
         </div>
       </div>
@@ -103,34 +108,6 @@ export const BulletPoint = () => {
   );
 };
 
-export const StepsCard = ({
-  id,
-  title,
-  description,
-  blurBackground,
-}: {
-  id: number;
-  title: string;
-  description: string;
-  blurBackground: string;
-}) => {
-  return (
-    <div className="relative overflow-hidden flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee] border-[0.5px] border-[#252525] font-normal py-8 text-start px-5 rounded-lg">
-      <span className="text-3xl text-[#ffffff] pl-2 z-20 text-center">
-        <span className="linear-gradient-purple-text font-black"> {id}. </span>
-        {title}
-      </span>
-      <div
-        className={`w-24 h-24 absolute right-0 bottom-0 bg-gradient-to-r from-[#000000] ${blurBackground} z-10 blur-[100px]`}
-      ></div>
-      <p className="text-base text-[#eeeeee] font-normal z-20">{description}</p>
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <Logo />
-      </div>
-    </div>
-  );
-};
-
 export const steps: StepsCardType[] = [
   {
     id: 1,
@@ -169,7 +146,7 @@ export type StepsCardType = {
   blurBackground?: string;
 };
 
-export const Logo = ({ width, height } : { width: number, height: number }) => {
+export const Logo = ({ width, height }: { width: number; height: number }) => {
   return (
     <svg
       width={width}
@@ -245,7 +222,13 @@ export const LogoLeftPart = () => {
   );
 };
 
-export const LogoRightPart = ({ width, height } : { width: number, height: number }) => {
+export const LogoRightPart = ({
+  width,
+  height,
+}: {
+  width: number;
+  height: number;
+}) => {
   return (
     <svg
       width={width}
