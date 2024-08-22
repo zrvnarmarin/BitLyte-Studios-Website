@@ -45,7 +45,7 @@ export const ProjectCardDesktop = ({
 }: ProjectCardProps ) => {
   return (
     <div
-      className={`relative overflow-hidden flex flex-col xl:flex-row rounded-lg gap-6 border-[0.5px] border-[#252525]`}
+      className={`relative overflow-hidden items-center flex flex-col xl:flex-row rounded-lg gap-6 border-[0.5px] border-[#252525]`}
     >
       {/* Blur background */}
       <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
@@ -62,7 +62,7 @@ export const ProjectCardDesktop = ({
       </div>
 
       {/* Project info */}
-      <div className="flex flex-col gap-8 w-full z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 xl:px-6 xl:py-14">
+      <div className="flex flex-col gap-6 w-full z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 xl:px-6 xl:py-10">
         <h3 className="w-full text-2xl xs:text-3xl xl:text-4xl text-start font-bold text-[#ffffff] ">
           {title}
         </h3>
@@ -71,18 +71,7 @@ export const ProjectCardDesktop = ({
         </p>
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-xl text-[#eeeeee] font-black">
-            Challenge:
-          </p>
-          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
-            Our client, MYSO, or Million Yield Structuring Opportunities, is a
-            Web3 finance platform changing the game with DeFi. They deliver
-            innovative decentralized web apps with an unparalleled user
-            experience, security, and impact potential.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2 pb-2">
-          <p className="text-xl text-[#eeeeee] font-black">
-            Result:
+            Project Briefing:
           </p>
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
             Our client, MYSO, or Million Yield Structuring Opportunities, is a
