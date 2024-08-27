@@ -1,7 +1,7 @@
 import React from "react";
 import '../../../public/test.css'
 import Image from "next/image";
-import HeroImage from '../../../public/images/home/undraw_collaborators_re_hont 1.svg'
+import HeroImage from '../../../public/images/services/undraw_social_networking_re_i1ex 1.svg'
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 
 export default function HeroSection() {

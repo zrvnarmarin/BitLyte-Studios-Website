@@ -13,7 +13,7 @@ export default function HeroSection() {
     <HeroSectionWrapper>
       {/* Desktop version */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
-        <div className="order-2 lg:order-1 flex flex-col gap-8">
+        <div className="order-2 lg:order-1 flex flex-col gap-6">
           <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
 
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-left z-20">
@@ -31,7 +31,7 @@ export default function HeroSection() {
             range of digital solutions, including custom-designed websites
           </p>
 
-          <div className="w-full flex items-center justify-center lg:justify-start z-20">
+          <div className="w-full flex items-center justify-center lg:justify-start z-20 pt-2">
             <Link href={`/contact`}>
               <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-full font-medium text-xl xs:text-2xl sm:text-2xl md:text-3xl">
                 <LogoForButton fillColor="#ffffff" width={18} height={20} />

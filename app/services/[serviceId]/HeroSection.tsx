@@ -101,6 +101,25 @@ export const LogoForButton = ({ width, height, fillColor }: ButtonProps) => {
   );
 };
 
+export const LogoForButtonRotated = ({ width, height, fillColor }: ButtonProps) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 8 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      transform="rotate(180)"
+    >
+      <path
+        d="M7.85895 8.70736e-06L6.22674 0.0209734L0.0714852 5.66772L4.01513 11.1848L5.69866 11.1631L7.85895 8.70736e-06Z"
+        fill={fillColor}
+      />
+    </svg>
+  );
+};
+
+
 export function formatString(input: string): string {
   // Step 1: Trim any leading/trailing whitespace
   const trimmedInput: string = input.trim();

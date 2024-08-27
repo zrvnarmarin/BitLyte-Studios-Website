@@ -19,9 +19,9 @@ export default function Navbar({
       } } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 md:py-6`}
     >
       <Link href={`/`}>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:gap-4">
           <LogoIcon />
-          <span className="text-[#ffffff] text-lg font-bold">
+          <span className="text-[#ffffff] text-lg sm:text-xl lg:text-2xl font-bold">
             BitLyte Studios
           </span>
         </div>

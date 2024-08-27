@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import TestImage from "../../public/images/home/undraw_collaborators_re_hont 1.svg";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import Link from "next/link";
+import TestImage from '../../public/apartment.jpg'
 
 export default function ProjectsSection() {
   return (
@@ -42,37 +42,34 @@ export const ProjectCardDesktop = ({
   description,
   serviceCategories,
   imageSrc,
-}: ProjectCardProps ) => {
+}: ProjectCardProps) => {
   return (
-    <div
-      className={`relative overflow-hidden items-center flex flex-col xl:flex-row rounded-lg gap-6 border-[0.5px] border-[#252525]`}
-    >
+    <div className="relative overflow-hidden flex flex-col xl:flex-row rounded-lg gap-6 border-[0.5px] border-[#252525]">
       {/* Blur background */}
       <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
 
       {/* Project image */}
-      <div className="relative w-full overflow-hidden flex items-center bg-[#ffffff] z-20">
+      <div className="relative w-full xl:w-1/2 flex items-center bg-[#ffffff] z-20">
         <Image
           src={imageSrc}
           alt="project_image"
-          width={600}
-          height={450}
-          className="w-full"
+          layout="fill" // Makes the image fill the container
+          className="absolute inset-0 object-cover"
         />
+        {/* Blue transparent gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A9FFF] opacity-60 z-30"></div>
       </div>
 
       {/* Project info */}
-      <div className="flex flex-col gap-6 w-full z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 xl:px-6 xl:py-10">
-        <h3 className="w-full text-2xl xs:text-3xl xl:text-4xl text-start font-bold text-[#ffffff] ">
+      <div className="flex flex-col gap-6 w-full xl:w-1/2 z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 xl:px-6 xl:py-10">
+        <h3 className="w-full text-2xl xs:text-3xl xl:text-4xl text-start font-bold text-[#ffffff]">
           {title}
         </h3>
         <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
           {description}
         </p>
         <div className="flex flex-col gap-2 pb-2">
-          <p className="text-xl text-[#eeeeee] font-black">
-            Project Briefing:
-          </p>
+          <p className="text-xl text-[#eeeeee] font-black">Project Briefing:</p>
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
             Our client, MYSO, or Million Yield Structuring Opportunities, is a
             Web3 finance platform changing the game with DeFi. They deliver
@@ -90,6 +87,7 @@ export const ProjectCardDesktop = ({
     </div>
   );
 };
+
 
 export type ProjectCardProps = {
   id: number;

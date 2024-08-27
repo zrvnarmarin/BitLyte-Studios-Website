@@ -8,7 +8,7 @@ import "../../../public/test.css";
 export default function BenefitsSection() {
   return (
     <SectionWrapper>
-      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center md:text-start z-20">
+      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-end md:text-start z-20">
         Explore how landing page
         <span className="linear-gradient-purple-text">
           {" "}

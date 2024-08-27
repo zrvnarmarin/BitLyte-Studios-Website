@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import '../../../public/test.css'
-import AdvantageTestIcon from '../../../public/images/about-us/AdvantageTestIcon.svg'
+import AdvantageTestIcon from '../../../public/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg'
 
 export default function AdvantagesSection() {
     return (

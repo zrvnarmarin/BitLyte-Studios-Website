@@ -35,8 +35,8 @@ export const ServiceCategoryCard = ({
   services,
 }: ServiceCardType) => {
   return (
-    <div className="relative overflow-hidden w-full flex flex-col gap-4 rounded-lg px-4 p-4  border-[#0c102d] border-[0.5px] z-20">
-      <div className="w-32 h-32 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+    <div className="relative overflow-hidden w-full flex flex-col gap-4 rounded-lg  p-4 px-4 border-[#0c102d] border-[0.5px] z-20">
+      <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
       <div
         className={`overflow-hidden relative w-full flex flex-col items-center justify-center p-4 py-8`}

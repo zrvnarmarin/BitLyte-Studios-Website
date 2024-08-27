@@ -27,15 +27,15 @@ export default function AchievementsSection() {
       </div>
 
       {/* Divider line */}
-      <div className="w-full h-[0.5px] bg-[#252525] mt-4 sm:mt-8 md:mt-12" />
+      <div className="w-full h-[0.5px] bg-[#252525] " />
 
-      <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+      <h3 className="w-full text-2xl xs:text-3xl text-center font-medium xs:font-light text-[#ffffff] z-20 py-4 sm:py-8 md:py-12">
+        We helped business increase sales by{" "}
+        <span className="custom-text">27%</span> in the first month working with
+        us
+      </h3>
+      <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 ">
         <div className="flex flex-col gap-6">
-          <h3 className="w-full text-2xl xs:text-3xl text-start font-medium xs:font-light text-[#ffffff] z-20 pb-6">
-            We helped business increase sales by{" "}
-            <span className="custom-text">27%</span> in the first month working
-            with us
-          </h3>
           {/* Cards section */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="relative overflow-hidden flex flex-row itsms-center gap-4 border-[0.5px] border-[#252525] rounded-lg p-6">
@@ -102,7 +102,7 @@ export default function AchievementsSection() {
         </div>
 
         {/* Get to know us better section */}
-        <div className="relative  flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg">
+        <div className="sticky top-32 flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg">
           {/* Blur background */}
           <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 

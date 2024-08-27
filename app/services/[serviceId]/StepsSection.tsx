@@ -63,8 +63,11 @@ export const StepCard = ({
               <RightArrow width={12} height={12} />
             </span>
           </p>
-          <p className="hover:bg-gradient-to-r from-[#7f96db] to-[#5775D0] flex gap-2 items-center justify-center w-full text-base text-[#eeeeee] font-semibold z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-            Planning +
+          <p className="hover:bg-gradient-to-r from-[#7f96db] to-[#5775D0] cursor-pointer flex gap-2 items-center justify-center w-full text-base text-[#ffffff] font-semibold z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+            Planning{" "}
+            <span>
+              <RightArrow width={12} height={12} />
+            </span>
           </p>
         </div>
       </div>

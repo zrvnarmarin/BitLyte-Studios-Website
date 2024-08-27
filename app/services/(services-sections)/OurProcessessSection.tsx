@@ -4,11 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
-import FirstStepImage from "../../../public/images/services/processesImages/Step1.svg";
-import SecondStepImage from "../../../public/images/services/processesImages/Step2.svg";
-import ThirdStepImage from "../../../public/images/services/processesImages/Step3.svg";
-import FourthStepImage from "../../../public/images/services/processesImages/Step4.svg";
-import "../../../public/test.css";
 
 export default function OurProcessessSection() {
   const [selectedStep, setSelectedStep] = useState<ProcessessStepType | null>(
@@ -20,7 +15,7 @@ export default function OurProcessessSection() {
       <h2 className="w-full text-5xl text-[#ffffff] z-20">Our Process</h2>
       {/* ovjde pronaci slike i sa svakim novim korakom, prethodna slika se spaja sa novom od tog koraka - pogledaj enterwell 
 kako je napravio steps sekciju!! tako i ti */}
-      {selectedStep && (
+      {/* {selectedStep && (
         <div className="w-full flex justify-center items-start mt-8 mb-6">
           <Image
             src={selectedStep.imageSrc}
@@ -28,14 +23,14 @@ kako je napravio steps sekciju!! tako i ti */}
             className="w-full max-w-[900px]"
           />
         </div>
-      )}
+      )} */}
       {/* Centered image of the selected step */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-12">
         {/* All steps */}
         {processesSteps.map((step) => (
           <div
             key={step.id}
-            className={`relative overflow-hidden flex-1 px-5 py-10 cursor-pointer rounded-lg border-[0.5px] border-[#252525] ${
+            className={`relative overflow-hidden flex-1 px-5 py-10 rounded-lg border-[0.5px] border-[#252525] ${
               selectedStep?.id === step.id ? "" : ""
             }`}
             onClick={() => setSelectedStep(step)}
@@ -81,9 +76,9 @@ export const ProcessStepCard = ({
   return (
     <div className="flex flex-col gap-6">
       {/* Image container */}
-      <div className="w-full flex items-center justify-center">
+      {/* <div className="w-full flex items-center justify-center">
         <Image src={imageSrc} alt="step_image" />
-      </div>
+      </div> */}
 
       {/* Data */}
       <div className="relative">
@@ -100,25 +95,25 @@ export const ProcessStepCard = ({
 const processesSteps: ProcessessStepType[] = [
   {
     id: 1,
-    imageSrc: FirstStepImage,
+    // imageSrc: FirstStepImage,
     title: "Discovery & Strategy",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 2,
-    imageSrc: SecondStepImage,
+    // imageSrc: SecondStepImage,
     title: "Planning Visuals",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 3,
-    imageSrc: ThirdStepImage,
+    // imageSrc: ThirdStepImage,
     title: "Coding & Testing",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 4,
-    imageSrc: FourthStepImage,
+    // imageSrc: FourthStepImage,
     title: "Testing & Launching",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
@@ -126,7 +121,7 @@ const processesSteps: ProcessessStepType[] = [
 
 export type ProcessessStepType = {
   id: number;
-  imageSrc: any;
+  // imageSrc: any;
   title: string;
   description: string;
 };

@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import '../../../public/test.css';
 import Image from "next/image";
-import TestimonialExampleImage from "../../../public/images/home/TestimonialImage.svg";
+// import TestimonialExampleImage from "../../../public/images/home/TestimonialImage.svg";
 import { LeftArrow, RightArrow } from "@/app/(home-sections)/ServicesSection";
 
 export default function TestimonialsSection() {
@@ -79,7 +79,7 @@ export const TestimonialCard = ({
           {testimonialText}
         </p>
         <div className="flex items-center justify-center gap-2 pt-12">
-          <Image src={imageSrc} alt="testimonial image" />
+          {/* <Image src={imageSrc} alt="testimonial image" /> */}
           <p className="flex flex-col items-center gap-0">
             <span className="w-full font-medium text-xl lg:text-xl  text-[#ffffff]">
               {name}
@@ -111,7 +111,7 @@ export const testimonials = [
     companyName: "CEO Of WordPress",
     testimonialText:
       "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow. ",
-    imageSrc: TestimonialExampleImage,
+    // imageSrc: TestimonialExampleImage,
     rating: 5,
   },
   // {

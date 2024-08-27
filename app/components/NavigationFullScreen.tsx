@@ -26,12 +26,12 @@ export default function NavigationMenuFullScreen({
       {isSideBarOpen && (
         <div className="flex flex-col top-0 left-0 bottom-0 bg-[#000000] w-full h-screen sticky z-40 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6">
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
+            <Link href={`/`} className="flex items-center gap-2 lg:gap-4">
               <LogoIcon />
-              <span className="text-[#ffffff] text-lg font-bold">
+              <span className="text-[#ffffff] text-lg sm:text-xl lg:text-2xl font-bold">
                 BitLyte Studios
               </span>
-            </div>
+            </Link>
             <button onClick={() => toggleNavigation()}>
               <MenuButton />
             </button>
@@ -156,12 +156,12 @@ const navbarLinks = [
     link: "/about",
   },
   {
-    name: "Contact",
-    link: "/contact",
-  },
-  {
     name: "Services",
     link: "/services",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
   }
 ];
 
