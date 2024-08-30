@@ -7,7 +7,7 @@ import SectionWrapper from "../../components/SectionWrapper";
 import LandingPageIcon from "../../../public/icons/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg";
 import WebsiteDevelopmentIcon from "../../../public/icons/BitLyte_Studios_ikona_Website_Design_64x64px.svg";
 import FrontendDevelopmentIcon from "../../../public/icons/BitLyte_Studios_ikona_Web_Development_64x64px.svg";
-import CopywritingIcon from "../../../public/icons/BitLyte_Studios_ikona_Copywriting_64x64px.svg";
+import CopywritingIcon from "../../../public/icons/BitLyte_Studios_ikona_Copywriting(prepravljena)_64x64px.svg";
 import SocialMediaManagementIcon from "../../../public/icons/BitLyte_Studios_ikona_Social_Media_Assets_64x64px.svg";
 import MetaHiringCampaignsIcon from "../../../public/icons/BitLyte_Studios_ikona_Ad_Campaigns_64x64px.svg";
 import UiuxDesignIcon from "../../../public/icons/BitLyte_Studios_ikona_UI_UX_Design_64x64px.svg";

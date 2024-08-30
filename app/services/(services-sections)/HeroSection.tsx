@@ -6,7 +6,7 @@ import HeroImage from "../../../public/images/services/undraw_services_re_hu5n 1
 import { LogoForButton } from "../[serviceId]/HeroSection";
 import Link from "next/link";
 import { CopywritingIcon, BrandIdentityIcon } from "../[serviceId]/HeroSection";
-import TestIkona from "../../../public/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
+import TestIkona from "../../../public/icons/BitLyte_Studios_ikona_Web_Services_64x64px.svg";
 
 export default function HeroSection() {
   return (
