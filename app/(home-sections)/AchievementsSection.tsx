@@ -101,14 +101,14 @@ export default function AchievementsSection() {
           </div>
         </div>
 
-        {/* Get to know us better section */}
-        <div className="sticky top-32 flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg">
+        {/* Get to know us better section - add sticky top-32 class for gradient thing */}
+        <div className="w-full h-full sticky top-32 overflow-hidden flex items-center justify-center bg-gradient-to-r from-[#292929] to-[#000000] border-[#0d293d] border-[0.5px] rounded-lg">
           {/* Blur background */}
           <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
           <div className=" w-full px-6 py-10 xs:p-10 sm:p-12 lg:p-16 rounded-lg flex flex-col items-center justify-center gap-8 lg:gap-12">
             <h2 className="w-full text-4xl leading-none text-center font-medium xs:font-light sm:text-5xl text-[#ffffff] z-20">
-              <p className="custom-text font-black">Get to know us</p> better
+              <p className="custom-text font-black text-6xl">Get to know us</p> better
             </h2>
             <div className="w-full flex items-center justify-center">
               <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center font-normal lg:font-medium text-[#111111] text-lg md:text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] py-2 md:py-3 px-6 md:px-10">
