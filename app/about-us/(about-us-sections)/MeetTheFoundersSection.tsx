@@ -48,7 +48,7 @@ export default function MeetTheFoundersSection() {
             <div className="w-full flex items-center justify-center">
               <button className="w-fit flex gap-4 items-center justify-center text-2xl text-[#ffffff] font-semibold z-20">
                 Learn More
-                <span><RightArrow width={25} height={25} /></span>
+                <RightArrow width={25} height={25} />
               </button>
             </div>
           </div>
