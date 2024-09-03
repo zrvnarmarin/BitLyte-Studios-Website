@@ -18,14 +18,16 @@ export default function HeroSection() {
       </h1>
 
       {/* Services */}
-      <ul className="hidden xs:flex xs:flex-wrap relative w-full items-center justify-center gap-6 z-30">
-        <li className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+      <ul className="hidden xs:flex xs:flex-wrap relative w-full items-center justify-center z-30">
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Digital Marketing</span>
         </li>
-        <li className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Web Development</span>
         </li>
-        <li className="w-fit bg-gradient-to-r from-[#0b0b0b] to-[#131313] flex gap-2 items-center justify-center text-base text-[#eeeeee] font-normal z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
+        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Digital Design</span>
         </li>
       </ul>
@@ -50,4 +52,3 @@ export default function HeroSection() {
     </HeroSectionWrapper>
   );
 }
-

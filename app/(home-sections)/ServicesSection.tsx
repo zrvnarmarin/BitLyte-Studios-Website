@@ -16,7 +16,7 @@ export default function ServicesSection() {
       {/* <div className="w-16 h-16 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[30px]"></div> */}
 
       {/* Service categories cards */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="w-full flex flex-col items-center gap-6 pt-4 sm:pt-8 md:pt-12">
         {serviceCategoriesData.map((serviceCategory) => (
           <ServiceCategoryCard
             id={serviceCategory.id}
@@ -35,37 +35,40 @@ export const ServiceCategoryCard = ({
   services,
 }: ServiceCardType) => {
   return (
-    <div className="relative overflow-hidden w-full flex flex-col gap-4 rounded-lg  p-4 px-4 border-[#0c102d] border-[0.5px] z-20">
-      <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+    <div className="group relative overflow-hidden w-full grid grid-cols-2 justify-between gap-4 rounded-lg bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] py- border-[0.5px] border-[#252525] z-20">
 
       <div
-        className={`overflow-hidden relative w-full flex flex-col items-center justify-center p-4 py-8`}
+        className={`overflow-hidden relative w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
-        <div className="flex flex-row items-center justify-center gap-1 w-full">
-          <h3 className="flex flex-col items-center gap-2 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
-            <span className="custom-text font-black text-2xl xs:text-4xl z-0 mr-4">
+        <div className="flex flex-row items-center justify-start gap-1 w-full">
+          <h3 className="flex flex-row items-center gap-16 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
+            <span className="custom-text font-black text-2xl xs:text-4xl z-20">
               0{id}
             </span>
             {title}
+            <span className="group-hover:scale-105 group-hover:duration-900">
+              <RightArrow />
+            </span>
           </h3>
         </div>
       </div>
 
       {/* Category services */}
-      {services.map((service: string) => (
-        <Link
-          href={`/services/${service}`}
-          key={service}
-          className="group flex flex-col gap-6 relative overflow-hidden rounded-lg"
-        >
-          {/* Blur background */}
-          <div className="w-72 h-72 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-
-          <div className="hover:bg-[#e3e3e3] hover:text-[#000000] border-[1px] border-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 rounded-lg px-8 py-8">
-            {service}
-          </div>
-        </Link>
-      ))}
+      <div className="flex flex-row items-center justify-center gap-">
+        {services.map((service: string) => (
+          <Link
+            href={`/services/${service}`}
+            key={service}
+            className="group flex flex-col gap-6 relative overflow-hidden border-x-[0.5px] border-[#252525]"
+          >
+            {/* Blur background */}
+            <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
+              {service}
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

@@ -153,7 +153,7 @@ const navbarLinks = [
   },
   {
     name: "About",
-    link: "/about",
+    link: "/about-us",
   },
   {
     name: "Services",

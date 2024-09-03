@@ -27,7 +27,7 @@ export default function ProjectsSection() {
 
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/projects`}>
-          <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] hover:text-[#111111] border-[0.5px] border-[#ffffff] hover:bg-[#ffffff] rounded-full font-normal text-xl xs:text-2xl sm:text-2xl">
+          <button className="w-fit flex items-center gap-2 py-4 px-12 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] hover:text-[#111111] border-[0.5px] border-[#0a2030] hover:bg-[#ffffff] rounded-full font-normal text-xl xs:text-2xl sm:text-2xl">
           <LogoArrowRight fillColor="#ffffff" width={11} height={17} />
             See More Projects
           </button>
@@ -44,9 +44,8 @@ export const ProjectCardDesktop = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-col xl:flex-row rounded-lg gap-6 border-[0.5px] border-[#252525]">
+    <div className="relative overflow-hidden flex flex-col xl:flex-row rounded-lg gap-6 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]">
       {/* Blur background */}
-      <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#002139] z-10 blur-[130px]"></div>
 
       {/* Project image */}
       <div className="relative w-full xl:w-1/2 flex items-center bg-[#ffffff] z-20">

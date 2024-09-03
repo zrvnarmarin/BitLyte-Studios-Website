@@ -199,10 +199,14 @@ export const Logo = ({ width, height }: { width: number; height: number }) => {
       <path
         d="M23.3278 4.85669H18.4829L0 22.4283L11.4937 39.9998H16.4909L23.3278 4.85669Z"
         fill="url(#gradient1)"
+        stroke="#5775D0"
+        strokeWidth="0.01"
       />
       <path
         d="M20.7832 35.1431H25.6281L44.111 17.5716L32.6173 0L27.6201 0L20.7832 35.1431Z"
         fill="url(#gradient2)"
+        stroke="#5775D0"
+        strokeWidth="0.01"
       />
     </svg>
   );
