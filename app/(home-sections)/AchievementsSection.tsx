@@ -48,9 +48,6 @@ export default function AchievementsSection() {
         </p>
       </div>
 
-      {/* Divider line */}
-      {/* <div className="w-full h-[0.5px] bg-[#252525] " /> */}
-
       <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
         <div className="flex flex-col gap-6">
           {/* Cards section */}
@@ -113,7 +110,6 @@ export default function AchievementsSection() {
             </button>
           </Link>
         </div>
-
       </div>
     </SectionWrapper>
   );

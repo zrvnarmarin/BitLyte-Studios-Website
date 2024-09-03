@@ -152,6 +152,7 @@ export type StepsCardType = {
 export const Logo = ({ width, height }: { width: number; height: number }) => {
   return (
     <svg
+    className="z-30"
       width={width}
       height={height}
       viewBox="0 0 45 40"

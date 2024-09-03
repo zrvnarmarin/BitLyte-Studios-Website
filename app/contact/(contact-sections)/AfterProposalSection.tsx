@@ -32,10 +32,9 @@ export const ProcessStepCard = ({
 }: AfterProposalCardType) => {
   return (
     <div
-      className={`relative overflow-hidden flex-1 px-10 py-10 cursor-pointer rounded-lg border-[0.5px] border-[#252525]`}
+      className={`relative overflow-hidden flex-1 px-10 py-10 cursor-pointer rounded-lg bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]`}
     >
       {/* Blur background */}
-      <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
       <div className="w-full flex items-center justify-start z-20">
         <span className="custom-text font-black text-7xl z-0 mr-4">
