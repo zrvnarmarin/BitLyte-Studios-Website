@@ -7,23 +7,33 @@ import Link from "next/link";
 export default function SimilarServicesSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">Our Services</h2>
+      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+        Our Services
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
         <OtherServiceCard CTAText="Design your high converting landing page" />
 
-        <Link href={`/services/visual-identity`} className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden bg-gradient-to-r from-[#7f96db] to-[#5775D0] text-[#ffffff] px-5 py-10 px-8 rounded-lg">
+        <Link
+          href={`/services/visual-identity`}
+          className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg"
+        >
+          {/* Blur background */}
+          <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[30px]"></div>
+
           <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center z-20">
             Advance your brand visuals and conversion
           </h3>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 z-20">
             <div className="hidden sm:flex items-center justify-center">
               <HighBrandAwareness />
             </div>
             <div className="w-full flex items-center justify-center">
               <button className="w-fit flex gap-4 items-center justify-center text-2xl text-[#ffffff] font-semibold z-20">
                 Learn More
-                <span><RightArrow width={25} height={25} /></span>
+                <span>
+                  <RightArrow width={25} height={25} />
+                </span>
               </button>
             </div>
           </div>
@@ -32,25 +42,28 @@ export default function SimilarServicesSection() {
         <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" />
         <OtherServiceCard CTAText="Elevate your brand with gradphic ilustrations" />
         <OtherServiceCard CTAText="Change your brand awareness and get more recognition" />
-        
       </div>
     </SectionWrapper>
   );
 }
 
-export const OtherServiceCard = ({ CTAText } : { CTAText: string }) => {
+export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
   return (
-    <Link href={`/services/visual-identity`} className="flex flex-col gap-8 relative overflow-hidden text-[#ffffff] px-5 py-10 rounded-lg border-[0.5px] border-[#252525]">
+    <Link
+      href={`/services/visual-identity`}
+      className="flex flex-col gap-8 relative overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] px-5 py-10 rounded-lg border-[0.5px] border-[#252525]"
+    >
       <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
         {CTAText}
       </h3>
       <div className="w-full flex items-center justify-center">
         <button className="w-fit flex gap-4 items-center justify-center text-[#cccccc] font-medium text-xl xs:text-2xl z-20">
           Learn More
-          <span><RightArrow width={25} height={25} color="#dddddd" /></span>
+          <span>
+            <RightArrow width={25} height={25} color="#dddddd" />
+          </span>
         </button>
       </div>
-      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[230px]"></div>
     </Link>
   );
 };

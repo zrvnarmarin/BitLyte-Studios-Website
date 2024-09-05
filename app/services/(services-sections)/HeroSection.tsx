@@ -39,7 +39,7 @@ export default function HeroSection() {
 
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
           {/* Image container */}
-          <div className="hidden sm:block w-64 h-64 absolute right-32 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
+          <div className="hidden sm:block w-72 h-72 absolute right-32 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
           <WebServicesIcon />
         </div>
       </div>
@@ -64,6 +64,7 @@ export const WebServicesIcon = ({
       fill="#5775D0"
       stroke="#5775D0"
       strokeWidth="0.1"
+      transform="scale(-1, 1)"  // Flips the icon horizontally
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g

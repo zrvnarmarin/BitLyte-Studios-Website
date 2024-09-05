@@ -5,11 +5,10 @@ import { RightArrow } from "./../../(home-sections)/ServicesSection";
 export default function StepsSection() {
   return (
     <SectionWrapper>
-      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center md:text-start z-20">
+      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20">
         See all the steps
-        <span className="linear-gradient-purple-text"> we take </span> to make
-        your{" "}
-        <span className="linear-gradient-purple-text"> project shine </span>
+        <span className="custom-text"> we take </span> to make your{" "}
+        <span className="custom-text"> project shine </span>
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
         {steps.map((step) => (
@@ -27,50 +26,67 @@ export const StepCard = ({
   blurBackground,
 }: StepsCardType) => {
   return (
-    <div className="w-full flex flex-col md:flex-col lg:flex-row items-center gap-16">
+    <div className="w-full flex flex-col md:flex-col lg:flex-row items-center gap-6">
       {/* Logo and title with id */}
-      <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee] font-normal py-8 text-start px-5 rounded-lg">
+      <div className="relative flex flex-col gap-4 text-base text-[#eeeeee] font-normal py-8 text-start px-5 rounded-lg z-20">
         <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] pl-2 z-20 text-center">
-          <span className="linear-gradient-purple-text font-black">{1}. </span>
+          <span className="custom-text font-black">{1}. </span>
           Discovery
         </span>
-        {/* <div
-          className={`w-24 h-24 absolute inset-0 bg-gradient-to-r from-[#000000] to-[#653ED0] z-10 blur-[100px]`}
-        ></div> */}
+        <div className="hidden sm:block w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
+
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <Logo />
         </div>
       </div>
 
-      {/* Gradient line */}
-      <div className="hidden xl:flex flex-0 gap-2 w-full h-full bg-gradient-to-r from-[#7f96db] to-[#5775D0] rounded-lg">
-        <span className="h-24 w-4rounded-lg"></span>
+      {/* Steps */}
+      <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee]  font-normal  text-start ">
+        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#95d3ff] font-bold text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+          <span className="custom-text">Planning</span>
+        </div>
+        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
+          <span className="custom-text">&#x2022;</span> Planning phase is when
+          we discover your product and research the market
+        </p>
       </div>
 
       {/* Steps */}
       <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee]  font-normal  text-start ">
-        <div
-          className={`w-32 h-32 absolute inset-0 bg-gradient-to-r from-[#000000] to-[#653ED0] z-10 blur-[100px]`}
-        ></div>
-        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
-          Planning phase is when we discover your product and research the
-          market
-        </p>
-        <div className="flex flex-col gap-2 z-20">
-          <p className="hover:bg-gradient-to-r from-[#7f96db] to-[#5775D0] cursor-pointer flex gap-2 items-center justify-center w-full text-base text-[#ffffff] font-semibold z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-            Planning{" "}
-            <span>
-              <RightArrow width={12} height={12} />
-            </span>
-          </p>
-          <p className="hover:bg-gradient-to-r from-[#7f96db] to-[#5775D0] cursor-pointer flex gap-2 items-center justify-center w-full text-base text-[#ffffff] font-semibold z-20 rounded-full border-[0.5px] border-[#252525] px-4 py-2">
-            Planning{" "}
-            <span>
-              <RightArrow width={12} height={12} />
-            </span>
-          </p>
-        </div>
+        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
       </div>
+
+      <div className="flex flex-col gap-2">
+        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#95d3ff] font-bold text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+          <span className="custom-text">Planning</span>
+        </div>
+        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
+          <span className="custom-text">&#x2022;</span> Planning phase is when
+          we discover your product and research the market
+        </p>
+      </div>
+
+      {/* descriptions section */}
+      {/* <div className="flex flex-col  relative gap-2 w-full h-full  rounded-lg">
+        <div className="absolute w-64 h-64 md:w-32 md:h-32 left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
+        <div className="grid grid-cols-2 place-items-center gap-6">
+          
+          
+          <div className="flex flex-col gap-2">
+            <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+              <span>Planning</span>
+            </div>
+            <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
+              <span className="custom-text">&#x2022;</span> Planning phase is
+              when we discover your product and research the market
+            </p>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 };
@@ -152,7 +168,7 @@ export type StepsCardType = {
 export const Logo = ({ width, height }: { width: number; height: number }) => {
   return (
     <svg
-    className="z-30"
+      className="z-30"
       width={width}
       height={height}
       viewBox="0 0 45 40"

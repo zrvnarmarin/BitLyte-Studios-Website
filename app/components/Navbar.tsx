@@ -14,8 +14,8 @@ export default function Navbar({
 
   return (
     <nav
-      className={`w-full fixed z-50 opacity-95 bg-[#0b0b0b] ${
-        scrollPosition > 20 ? "opacity-90 backdrop-blur-xl duration-700" : ""
+      className={`w-full fixed z-50 opacity-95  ${
+        scrollPosition > 20 ? "opacity-90 bg-[#0b0b0b] backdrop-blur-xl duration-700" : ""
       } } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 md:py-6`}
     >
       <Link href={`/`}>

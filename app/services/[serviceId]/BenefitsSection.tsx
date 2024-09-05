@@ -8,14 +8,14 @@ import "../../../public/test.css";
 export default function BenefitsSection() {
   return (
     <SectionWrapper>
-      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-end md:text-start z-20">
+      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20">
         Explore how landing page
-        <span className="linear-gradient-purple-text">
+        <span className="custom-text">
           {" "}
           boosts conversions{" "}
         </span>{" "}
         and makes your{" "}
-        <span className="linear-gradient-purple-text">
+        <span className="custom-text">
           {" "}
           product more impactful{" "}
         </span>
@@ -49,11 +49,9 @@ export const BenefitCard = ({
 }) => {
   return (
     <li
-      className={`overflow-hidden relative group flex flex-col gap-4 rounded-lg p-5 border-[0.5px] border-[#252525]`}
+      className={`overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] relative group flex flex-col gap-4 rounded-lg p-5 border-[0.5px] border-[#252525]`}
     >
       <div className="w-full flex justify-center">{icon}</div>
-      {/* Blur background */}
-      <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[330px]"></div>
 
       <div className="flex flex-col items-center justify-center gap-1 z-20">
         <div className="w-full flex items-center gap-2">

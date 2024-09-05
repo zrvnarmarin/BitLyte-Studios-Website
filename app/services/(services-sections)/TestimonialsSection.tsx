@@ -65,10 +65,12 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-20 border-[0.5px] border-[#1d263f]">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-20 border-[0.5px] border-[#1a4869]">
       {/* Blur background */}
-      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[230px]"></div>
-      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[230px]"></div>
+      {/* Blur background */}
+      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+
 
       {/* Testimonial */}
       <div className="flex flex-col z-20">
@@ -124,7 +126,7 @@ export const testimonials = [
   // }
 ];
 
-export const QuotesIcon = ({ width = 54, height = 54 }) => (
+export const QuotesIcon = ({ width = 64, height = 64 }) => (
   <svg
     fill="#ffffff"
     width={width}
