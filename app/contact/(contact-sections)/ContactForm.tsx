@@ -7,12 +7,12 @@ import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
 export default function ContactForm() {
   return (
     // Form container
-    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0d293d]">
+    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg bg-grad border.5px] border-[#252525]">
       {/* Blur background */}
-      <div className="w-72 h-72 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0095ff] z-10 blur-[330px]"></div>
+      {/* <div className="w-72 h-72 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0095ff] z-10 blur-[330px]"></div> */}
 
-      {/* Logo behind */}
-      <div className="absolute inset-0 flex items-center justify-center z-10">
+      <div className="absolute inset-0 flex items-center justify-center z-20 xs:pt-24 sm:pt-0 md:pt-0">
+        <div className="hidden sm:block w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
         <Logo width={400} height={400} />
       </div>
 
@@ -49,7 +49,7 @@ export default function ContactForm() {
           <input
             id="email"
             type="text"
-            className="focus:outline-none focus:ring focus:ring-violet-400 pl-4 py-3 bg-gradient-to-r from-[#292929] to-[#00111d] border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"
+            className="focus:outline-none focus:ring focus:ring-violet-400 opacity-80 pl-4 py-3 bg-gradient-to-r from-[#292929] to-[#00111d] border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"
           />
         </div>
 
@@ -64,7 +64,7 @@ export default function ContactForm() {
           <textarea
             id="project-message"
             rows={10}
-            className="focus:outline-none focus:ring focus:ring-violet-400 pl-4 py-3 bg-gradient-to-r from-[#292929] to-[#00111d] border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"
+            className="focus:outline-none focus:ring focus:ring-violet-400 pl-4 py-3 opacity-95 bg-gradient-to-r from-[#292929] to-[#00111d] border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"
           />
         </div>
 

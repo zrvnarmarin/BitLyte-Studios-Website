@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
               <LeftArrow />
             </div>
             {/* Blur background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[20px]"></div>
+            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
           </button>
           <button className="relative overflow-hidden rounded-full p-4 border-[0.5px] border-[#252525]">
             {/* RightArrow with a higher z-index */}
@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
               <RightArrow />
             </div>
             {/* Blur background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[20px]"></div>
+            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
           </button>
         </div>
       </div>

@@ -46,8 +46,8 @@ export const StepCard = ({
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#95d3ff] font-bold text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-          <span className="custom-text">Planning</span>
+        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+          <span className="">Planning</span>
         </div>
         <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
           <span className="custom-text">&#x2022;</span> Planning phase is when
@@ -61,8 +61,8 @@ export const StepCard = ({
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#95d3ff] font-bold text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-          <span className="custom-text">Planning</span>
+        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+          <span className="">Planning</span>
         </div>
         <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
           <span className="custom-text">&#x2022;</span> Planning phase is when
