@@ -36,9 +36,7 @@ export default function HeroSection() {
           </div> */}
 
           {/* Company`s promises */}
-          <div className="relative overflow-hidden border-[0.5px] border-[#0d293d] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
-            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="w-64 h-64 absolute right-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+          <div className="relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
 
             <div className="relative z-20 flex items-center justify-center pb-4 rounded-full">
               <Image src={DifferenceImage} width={100} height={100} alt="jj" />
@@ -78,7 +76,7 @@ export default function HeroSection() {
           {/* Social media icons */}
           <div className="flex flex-col pt-6 gap-2 relative overflow-hidden">
             <div className="w-full flex items-center justify-center gap-8 ">
-              <div className="w-full bg-[#252525] h-[0.5px]"></div>
+              <div className="w-full bg-[#0d293d] h-[0.5px]"></div>
               {socialMediaIcons.map((socialMediaIcon) => (
                 <React.Fragment key={socialMediaIcon.id}>
                   <Link href={socialMediaIcon.href}>
@@ -86,7 +84,7 @@ export default function HeroSection() {
                   </Link>
                 </React.Fragment>
               ))}
-              <div className="w-full bg-[#252525] h-[0.5px]"></div>
+              <div className="w-full bg-[#0d293d] h-[0.5px]"></div>
             </div>
           </div>
         </div>
@@ -103,9 +101,9 @@ export const ContactInfoCard = ({
   description,
 }: ContactInfoType) => {
   return (
-    <div className="overflow-hidden relative flex flex-col gap-2 rounded-lg py-6 border-[0.1px] border-[#0d293d] z-20">
+    <div className="overflow-hidden relative flex flex-col gap-2 rounded-lg py-6 border-[0.5px] border-[#0d293d] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] z-20">
       {/* Blur background */}
-      <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+      {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
 
       <div className="relative flex flex-col items-center justify-center gap-2 z-20">
         {/* Blur background */}
