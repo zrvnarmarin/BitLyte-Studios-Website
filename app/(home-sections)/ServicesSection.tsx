@@ -35,8 +35,7 @@ export const ServiceCategoryCard = ({
   services,
 }: ServiceCardType) => {
   return (
-    <div className="group relative overflow-hidden w-full grid grid-cols-2 justify-between gap-4 rounded-lg bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] py- border-[0.5px] border-[#252525] z-20">
-
+    <div className="group relative overflow-hidden w-full grid grid-cols-2 justify-between gap-4 rounded-lg border-[0.5px] border-[#252525] z-20">
       <div
         className={`overflow-hidden relative w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
@@ -46,24 +45,22 @@ export const ServiceCategoryCard = ({
               0{id}
             </span>
             {title}
-            <span className="group-hover:scale-105 group-hover:duration-900">
-              <RightArrow />
-            </span>
+            <span className="group-hover:scale-105 group-hover:duration-900"></span>
           </h3>
         </div>
       </div>
 
       {/* Category services */}
-      <div className="flex flex-row items-center justify-center gap-">
+      <div className="flex flex-row items-center justify-center">
         {services.map((service: string) => (
           <Link
             href={`/services/${service}`}
             key={service}
-            className="group flex flex-col gap-6 relative overflow-hidden border-x-[0.5px] border-[#252525]"
+            className="group h-full w-full flex  gap-6 relative overflow-hidden border-[0.5px] border-[#1a4869] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b]"
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
+            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-lg xs:text-xl font-light text-[#ffffff] text-center z-20 px-8 py-8">
               {service}
             </div>
           </Link>
