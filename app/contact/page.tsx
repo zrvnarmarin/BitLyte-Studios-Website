@@ -2,6 +2,7 @@ import HeroSection from './(contact-sections)/HeroSection'
 import ContactForm from './(contact-sections)/ContactForm';
 import AfterProposalSection from './(contact-sections)/AfterProposalSection';
 import QueryCallSection from './(contact-sections)/QueryCallSection';
+import CTASection from './../components/CTASection';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <HeroSection />
       {/* <ContactForm /> */}
       <AfterProposalSection />
-      <QueryCallSection />
+      <CTASection />
     </main>
   );
 }

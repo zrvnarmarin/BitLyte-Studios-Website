@@ -1,8 +1,8 @@
 import HeroSection from "./(services-sections)/HeroSection";
 import ServiceCategoriesSection from "./(services-sections)/ServiceCategoriesSection";
 import OurProcessessSection from "./(services-sections)/OurProcessessSection";
-import CTASection from "./(services-sections)/CTASections";
-import TestimonialsSection from "./(services-sections)/TestimonialsSection";
+import CTASection from "../components/CTASection";
+import TestimonialsSection from "../components/TestimonialsSection";
 
 export default function Home() {
   return (

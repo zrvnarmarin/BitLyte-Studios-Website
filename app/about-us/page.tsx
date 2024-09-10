@@ -2,6 +2,7 @@ import HeroSection from './(about-us-sections)/HeroSection'
 import MeetTheFoundersSection from './(about-us-sections)/MeetTheFoundersSection'
 import AdvantagesSection from './(about-us-sections)/AdvantagesSection'
 import ServicesSection from '../(home-sections)/ServicesSection';
+import CTASection from '../components/CTASection';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <MeetTheFoundersSection />
       <AdvantagesSection />
       <ServicesSection />
+      <CTASection />
     </main>
   );
 }

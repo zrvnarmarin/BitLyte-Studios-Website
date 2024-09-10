@@ -55,7 +55,7 @@ export default function AchievementsSection() {
             <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
               <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
-              <div className="z-20">
+              <div className="w-full flex justify-center z-20">
                 <SupportAndPartnershipIcon width={100} height={100} />
               </div>
               <div className="flex flex-col items-center gap-0 justify-start z-20 px-">

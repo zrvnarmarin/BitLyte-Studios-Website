@@ -1,8 +1,8 @@
 import HeroSection from "./HeroSection";
 import BenefitsSection from "./BenefitsSection";
 import StepsSection from "./StepsSection";
-import FAQSection from "@/app/(home-sections)/FAQSection";
-import TestimonialsSection from "../(services-sections)/TestimonialsSection";
+import FAQSection from "@/app/components/FAQSection";
+import TestimonialsSection from "@/app/components/TestimonialsSection";
 import SimilarServicesSection from "./SimilarServicesSection";
 import CTASection from "./CTASection";
 

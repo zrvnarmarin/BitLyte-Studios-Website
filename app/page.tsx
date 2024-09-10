@@ -1,10 +1,10 @@
 import HeroSection from "./(home-sections)/HeroSection";
 import ServicesSection from './(home-sections)/ServicesSection'
 import ProjectsSection from './(home-sections)/ProjectsSection'
-import TestimonialsSection from "./(home-sections)/TestimonialsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 import AchievementsSection from './(home-sections)/AchievementsSection'
-import FAQSection from './(home-sections)/FAQSection'
-import CTASection from "./(home-sections)/CTASection";
+import FAQSection from './components/FAQSection'
+import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import WhyUsSection from "./(home-sections)/WhyUsSection";
 

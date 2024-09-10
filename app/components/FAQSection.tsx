@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import SectionWrapper from "../components/SectionWrapper";
-import ArrowRight from "../../public/images/home/ArrowRight.svg";
+import SectionWrapper from "./SectionWrapper";
 import "../../public/test.css";
 
 export default function FAQSection() {
