@@ -13,9 +13,18 @@ export default function AboutUsSection() {
         </h2>
 
         <div className="grid grid-cols-2 grid-rows-3 gap-6 mb-12">
-
           <div className="row-span-2 relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+
+            <HighlySkilledProffesional />
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+              Kindness
+            </p>
+            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+              Lorem ipsum dolor sit This is something which quite similary
+              resembles to something else
+            </p>
+
             <HighlySkilledProffesional />
             <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
               Kindness
@@ -26,12 +35,13 @@ export default function AboutUsSection() {
             </p>
           </div>
 
-          <div className=" relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+          <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <HighlySkilledProffesional />
             <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
               Kindness
             </p>
+
             <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
               Lorem ipsum dolor sit This is something which quite similary
               resembles to something else
@@ -41,9 +51,19 @@ export default function AboutUsSection() {
           <div className="row-span-2 relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
             <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <HighlySkilledProffesional />
-            <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-              <span>Direct Communication</span>
-            </li>
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+              Kindness
+            </p>
+
+            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+              Lorem ipsum dolor sit This is something which quite similary
+              resembles to something else
+            </p>
+
+            <HighlySkilledProffesional />
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+              Kindness
+            </p>
             <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
               Lorem ipsum dolor sit This is something which quite similary
               resembles to something else
@@ -51,11 +71,12 @@ export default function AboutUsSection() {
           </div>
 
           <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <HighlySkilledProffesional />
-            <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-              <span>Direct Communication</span>
-            </li>
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+              Kindness
+            </p>
+
             <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
               Lorem ipsum dolor sit This is something which quite similary
               resembles to something else
@@ -63,11 +84,12 @@ export default function AboutUsSection() {
           </div>
 
           <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <HighlySkilledProffesional />
-            <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-              <span>Direct Communication</span>
-            </li>
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+              Kindness
+            </p>
+
             <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
               Lorem ipsum dolor sit This is something which quite similary
               resembles to something else
@@ -75,18 +97,18 @@ export default function AboutUsSection() {
           </div>
 
           <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <HighlySkilledProffesional />
-            <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-              <span>Direct Communication</span>
-            </li>
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+              Kindness
+            </p>
+
             <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
               Lorem ipsum dolor sit This is something which quite similary
               resembles to something else
             </p>
           </div>
         </div>
-
       </div>
     </SectionWrapper>
   );
