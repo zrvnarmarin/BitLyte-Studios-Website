@@ -16,7 +16,9 @@ export default function ServicesSection() {
       {/* <div className="w-16 h-16 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[30px]"></div> */}
 
       {/* Service categories cards */}
-      <div className="w-full flex flex-col items-center gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="relative w-full flex flex-col items-center gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
         {serviceCategoriesData.map((serviceCategory) => (
           <ServiceCategoryCard
             id={serviceCategory.id}
@@ -35,7 +37,10 @@ export const ServiceCategoryCard = ({
   services,
 }: ServiceCardType) => {
   return (
-    <div className="group relative overflow-hidden w-full grid grid-cols-2 justify-between gap-4 rounded-lg border-[0.5px] border-[#252525] z-20">
+    <div className="group relative overflow-hidden w-full grid grid-cols-2 justify-between gap-4 rounded-lg border-[0.5px] border-[#1a4869] z-20">
+      {/* Vidjdti da li ovo ostaviti ili izbrisati */}
+      {/* <div className="w-48 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+
       <div
         className={`overflow-hidden relative w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
@@ -56,11 +61,11 @@ export const ServiceCategoryCard = ({
           <Link
             href={`/services/${service}`}
             key={service}
-            className="group h-full w-full flex  gap-6 relative overflow-hidden border-[0.5px] border-[#1a4869] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b]"
+            className="group h-full w-full flex  gap-6 relative overflow-hidden border-[0.5px] border-l-[#1a4869] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b]"
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-lg xs:text-xl font-light text-[#ffffff] text-center z-20 px-8 py-8">
+            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
               {service}
             </div>
           </Link>
@@ -94,7 +99,7 @@ export const serviceCategoriesData: ServiceCardType[] = [
   {
     id: 3,
     title: "Digital Design",
-    services: ["UI/UX Design", "Brand Identity", "Logo Design"],
+    services: ["UI/UX Design", "Brand Identity & Visual", "Logo Design"],
   },
 ];
 
