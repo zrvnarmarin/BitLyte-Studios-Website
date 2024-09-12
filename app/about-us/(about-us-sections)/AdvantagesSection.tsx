@@ -13,101 +13,62 @@ export default function AboutUsSection() {
         </h2>
 
         <div className="grid grid-cols-2 grid-rows-3 gap-6 mb-12">
-          <div className="row-span-2 relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
+          <div className="row-span-2 relative overflow-hidden flex flex-col gap-6 justify-between flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
             <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
+            <div className="flex flex-col">
+              <HighlySkilledProffesional />
+              <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+                Kindness
+              </p>
+              <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+                Lorem ipsum dolor sit This is something which quite similary
+                resembles to something else
+              </p>
+            </div>
 
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
+            <span className="w-full h-0.5 border-[0.5px] border-[#0a2030]"></span>
+
+            <div className="flex flex-col">
+              <HighlySkilledProffesional />
+              <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+                Kindness
+              </p>
+              <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+                Lorem ipsum dolor sit This is something which quite similary
+                resembles to something else
+              </p>
+            </div>
           </div>
 
-          <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
+          <div className="row-span-2 relative overflow-hidden flex flex-col gap-6 justify-between flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
             <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
 
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
+            <div className="flex flex-col">
+              <HighlySkilledProffesional />
+              <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+                Kindness
+              </p>
+              <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+                Lorem ipsum dolor sit This is something which quite similary
+                resembles to something else
+              </p>
+            </div>
+
+            <span className="w-full h-0.5 border-[0.5px] border-[#0a2030]"></span>
+
+            <div className="flex flex-col">
+              <HighlySkilledProffesional />
+              <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+                Kindness
+              </p>
+              <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+                Lorem ipsum dolor sit This is something which quite similary
+                resembles to something else
+              </p>
+            </div>
           </div>
-
-          <div className="row-span-2 relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
-
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
-          </div>
-
-          <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
-          </div>
-
-          <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
-          </div>
-
-          <div className="relative overflow-hidden flex-1 p-8 rounded-lg border-[0.5px] border-[#252525]">
-            <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <HighlySkilledProffesional />
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-              Kindness
-            </p>
-
-            <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
-              Lorem ipsum dolor sit This is something which quite similary
-              resembles to something else
-            </p>
-          </div>
+          
         </div>
       </div>
     </SectionWrapper>
