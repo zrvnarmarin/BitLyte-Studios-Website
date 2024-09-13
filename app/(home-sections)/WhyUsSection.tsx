@@ -104,12 +104,12 @@ export const CollaborativeApproachIcon = () => (
     </g>
   </svg>
 );
-
-export const TransparentCommunicationIcon = () => (
+''
+export const TransparentCommunicationIcon = ({ width = 90, height = 90 } : { width?: number, height?: number }) => (
   <svg
     fill="#55b8ff"
-    width="90px"
-    height="90px"
+    width={width}
+    height={height}
     viewBox="0 0 256 240"
     stroke="#55b8ff"
   >

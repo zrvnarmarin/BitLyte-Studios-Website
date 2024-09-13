@@ -45,7 +45,7 @@ export const BenefitCard = ({
 }: {
   title: string;
   description: string;
-  icon: () => React.JSX.Element;
+  icon?: () => React.JSX.Element;
 }) => {
   return (
     <li

@@ -37,6 +37,7 @@ export default function AchievementsSection() {
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>
           <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         </h3>
         <p className="relative w-full text-lg xs:text-xl sm:text-2xl text-[#ffffff] font-normal text-center xs:font-normal z-20 px-56">
           We helped businesses increase sales by{" "}
@@ -44,7 +45,6 @@ export default function AchievementsSection() {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni eum
           dolores voluptatem harum labore atque explicabo alias velit beatae
           asperiores!
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         </p>
       </div>
 
