@@ -2,18 +2,15 @@ import React from "react";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
-import { UseScrollPosition } from "./../../utils/hooks/UseScrollPosition";
-import TestImage from "../../../public/img11.jpg";
 import TestHumanImage from "../../../public/images/agency-image.png";
+import Link from "next/link";
+import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
 
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <div className="relative overflow-hidden flex flex-col gap-6 items-start">
-        {/* <div className="w-64 h-64 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-        <div className="w-64 h-64 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-        <div className="w-64 h-64 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-        <div className="w-64 h-64 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+      <div className="relative overflow- flex flex-col gap-6 items-start">
+        <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
         <div className="grid grid-cols-2 gap-6 items-center">
           <div className="flex flex-col gap-2">
@@ -33,10 +30,7 @@ export default function WhyUsSection() {
               take pride in my ability to explain technical concepts in simple
               terms. Whether I'm developing a new website from scratch or
               optimizing an existing site for search engines, I always strive
-              for excellence in both form and function. With a dedication to
-              quality and a commitment to staying on top of the latest trends
-              and technologies, I am confident in my ability to deliver
-              exceptional results that exceed my clients' expectations.
+              for excellence in both form and function.
             </p>
           </div>
           <Image
@@ -62,94 +56,44 @@ export default function WhyUsSection() {
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
-          <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-            <TeamworkAndCollaborationIcon />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-                Innovation And Creativity
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
-                We embrace the power of creativity to innovate and find fresh,
-                original solutions for our clients, pushing the boundaries of
-                digital possibilities.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-            <IntegrityAndHonestyIcon />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-                Integrity And Honesty
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
-                We embrace the power of creativity to innovate and find fresh,
-                original solutions for our clients, pushing the boundaries of
-                digital possibilities.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-            <DemonstratingLeadershipIcon />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-                Demonstrate Leadership
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
-                We embrace the power of creativity to innovate and find fresh,
-                original solutions for our clients, pushing the boundaries of
-                digital possibilities.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-            <ContinuousLearningIcon />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-                Continous Learning
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
-                We embrace the power of creativity to innovate and find fresh,
-                original solutions for our clients, pushing the boundaries of
-                digital possibilities.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-            <InnovationAndCreativityIcon />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-                Innovation And Creativity
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
-                We embrace the power of creativity to innovate and find fresh,
-                original solutions for our clients, pushing the boundaries of
-                digital possibilities.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-            <UserCentricIcon />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
-                Client-Centric Focus First
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
-                We embrace the power of creativity to innovate and find fresh,
-                original solutions for our clients, pushing the boundaries of
-                digital possibilities.
-              </p>
-            </div>
-          </div>
+          {values.map((value) => (
+            <ValueCard
+              key={value.id}
+              title={value.title}
+              description={value.description}
+              icon={value.icon}
+            />
+          ))}
         </div>
+      </div>
+
+      <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
+        <Link href={`/services`}>
+          <button className="w-fit flex items-center gap-2 py-4 px-12 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] hover:text-[#111111] border-[0.5px] border-[#0a2030] hover:bg-[#ffffff] rounded-full font-normal text-xl xs:text-2xl sm:text-2xl">
+            <LogoArrowRight fillColor="#ffffff" width={11} height={17} />
+            Discover Our Services
+          </button>
+        </Link>
       </div>
     </SectionWrapper>
   );
 }
+
+export const ValueCard = ({ title, description, icon } : ValueType) => {
+  return (
+    <div className="flex flex-row gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
+      {icon()}
+      <div className="flex flex-col gap-2">
+        <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+          {title}
+        </h3>
+        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export const UserCentricIcon = () => {
   return (
@@ -410,3 +354,55 @@ export const TeamworkAndCollaborationIcon = () => {
     </svg>
   );
 };
+
+export type ValueType = {
+  id: number;
+  title: string;
+  description: string;
+  icon: () => React.FC;
+};
+
+const values: ValueType[] = [
+  {
+    id: 1,
+    title: "Innovation And Creativity",
+    description:
+      "We embrace new ideas and encourage creative thinking to drive growth and success.",
+    icon: InnovationAndCreativityIcon,
+  },
+  {
+    id: 2,
+    title: "Integrity And Honesty",
+    description:
+      "We adhere to the highest ethical standards and act with transparency in all our dealings.",
+    icon: IntegrityAndHonestyIcon,
+  },
+  {
+    id: 3,
+    title: "Demonstrate Leadership",
+    description:
+      "We lead by example, inspiring and guiding others to achieve their full potential.",
+    icon: DemonstratingLeadershipIcon,
+  },
+  {
+    id: 4,
+    title: "Continuous Learning",
+    description:
+      "We are committed to lifelong learning and personal development to stay ahead in a changing world.",
+    icon: ContinuousLearningIcon,
+  },
+  {
+    id: 5,
+    title: "Client Centric Focus",
+    description:
+      "Our clients are at the heart of everything we do; we strive to exceed their expectations.",
+    icon: UserCentricIcon,
+  },
+  {
+    id: 6,
+    title: "Teamwork And Collaboration",
+    description:
+      "We work together, leveraging diverse skills and perspectives to achieve shared goals.",
+    icon: TeamworkAndCollaborationIcon,
+  },
+];
