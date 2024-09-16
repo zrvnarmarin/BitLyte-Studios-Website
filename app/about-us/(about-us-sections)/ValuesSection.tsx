@@ -9,21 +9,6 @@ import TestHumanImage from "../../../public/images/agency-image.png";
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
-        {/* Blur background */}
-        <div className="w-64 h-64 absolute inset-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[930px]"></div>
-
-        {/* Card container */}
-        {/* {whyUsData.map((reason) => (
-          <WhyUsCard
-            key={reason.id}
-            title={reason.title}
-            description={reason.description}
-            icon={reason.icon}
-          />
-        ))} */}
-      </div>
-
       <div className="relative overflow-hidden flex flex-col gap-6 items-start">
         {/* <div className="w-64 h-64 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
         <div className="w-64 h-64 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
@@ -63,6 +48,7 @@ export default function WhyUsSection() {
           />
         </div>
 
+        {/* Big paragraph */}
         <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-40 py-4 sm:py-8 md:py-6 px-36">
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>. Your product`s achievements
@@ -72,10 +58,12 @@ export default function WhyUsSection() {
           <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         </h3>
 
-        <div className="grid grid-cols-2 gap-6">
+        {/* Values section */}
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
           <div className="flex flex-row gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
-           <TeamworkAndCollaborationIcon />
+            <TeamworkAndCollaborationIcon />
             <div className="flex flex-col gap-2">
               <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
                 Innovation And Creativity
@@ -367,7 +355,6 @@ export const TeamworkAndCollaborationIcon = () => {
       width={70}
       viewBox="0 0 472.615 472.615"
       className="flex-shrink-0"
-
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
