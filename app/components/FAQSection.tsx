@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
 import "../../public/test.css";
 
@@ -54,7 +53,7 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className={`cursor-pointer bg-gradient-to-r from-[#292929] to-[#090909] rounded-lg pl-6 pr-4 py-6`}
+      className={`cursor-pointer border-b-[0.5px] border-[#252525] pl-6 pr-4 py-6`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
         <h3 className="w-full text-xl sm:text-2xl text-[#ffffff] font-semibold ">
