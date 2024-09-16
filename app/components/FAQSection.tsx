@@ -23,7 +23,7 @@ export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
   };
 
   return (
-    <div className="w-full flex flex-col gap-2 z-20 pt-4 sm:pt-8 md:pt-12">
+    <div className="w-full flex flex-col z-20 pt-4 sm:pt-8 md:pt-12">
       {faqArray.map((accordion, index) => (
         <Panel
           key={accordion.id}
@@ -56,7 +56,7 @@ function Panel({
       className={`cursor-pointer border-b-[0.5px] border-[#252525] pl-6 pr-4 py-6`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
-        <h3 className="w-full text-xl sm:text-2xl text-[#ffffff] font-semibold ">
+        <h3 className="w-full text-xl sm:text-2xl text-[#ffffff] font-semibold">
           {title}
         </h3>
         {isActive ? (
@@ -70,7 +70,7 @@ function Panel({
         )}
       </div>
       {isActive ? (
-        <p className="pl-2 pb-4 text-lg sm:text-xl font-light text-[#ffffff]">
+        <p className="pl-2 py-4 text-lg sm:text-xl font-light text-[#ffffff]">
           {answer}
         </p>
       ) : null}
