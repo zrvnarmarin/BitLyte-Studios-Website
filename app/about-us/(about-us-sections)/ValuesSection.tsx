@@ -13,7 +13,9 @@ export default function WhyUsSection() {
         <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
         <div className="grid grid-cols-2 gap-6 items-center">
-          <div className="flex flex-col gap-2">
+          <div className="relative  flex flex-col gap-2">
+            <span className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
+
             <h2 className="w-full  text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
               Our <span className="custom-text font-black">Values</span>
             </h2>
@@ -79,7 +81,7 @@ export default function WhyUsSection() {
   );
 }
 
-export const ValueCard = ({ title, description, icon } : ValueType) => {
+export const ValueCard = ({ title, description, icon }: ValueType) => {
   return (
     <div className="flex flex-row gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
       {icon()}

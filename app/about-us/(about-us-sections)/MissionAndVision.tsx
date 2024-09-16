@@ -11,7 +11,7 @@ export default function MissionAndVision() {
         our success. Our design approach is result-driven and it`s crucial for
         us to make your product reach it`s business metrics.
         {/* Blur background */}
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        <span className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
       </h3>
       <div className="flex flex-col">
         {/* Mission and vision section*/}

@@ -1,6 +1,9 @@
 import React from "react";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
+import { MotionDiv, variants } from "../components/MotionDiv";
+
+
 
 export default function WhyUsSection() {
   return (
@@ -16,6 +19,7 @@ export default function WhyUsSection() {
         {whyUsData.map((reason) => (
           <WhyUsCard
             key={reason.id}
+            index={reason.id}
             title={reason.title}
             description={reason.description}
             icon={reason.icon}
@@ -27,14 +31,26 @@ export default function WhyUsSection() {
 }
 
 export type WhyUsCardType = {
+  index: number;
   title: string;
   description: string;
   icon: any;
 };
 
-export const WhyUsCard = ({ title, description, icon }: WhyUsCardType) => {
+export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) => {
   return (
-    <div className="bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20">
+    <MotionDiv
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        delay: index * .2,
+        ease: "easeInOut",
+        duration: 0.5,
+      }}
+      viewport={{ amount: 0 }}
+      className="bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20"
+    >
       {/* Reason Card */}
       <div className="relative flex flex-col items-center justify-center gap-2 z-20">
         {/* Blur background */}
@@ -49,7 +65,7 @@ export const WhyUsCard = ({ title, description, icon }: WhyUsCardType) => {
           {description}
         </p>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 
@@ -104,8 +120,14 @@ export const CollaborativeApproachIcon = () => (
     </g>
   </svg>
 );
-''
-export const TransparentCommunicationIcon = ({ width = 90, height = 90 } : { width?: number, height?: number }) => (
+("");
+export const TransparentCommunicationIcon = ({
+  width = 90,
+  height = 90,
+}: {
+  width?: number;
+  height?: number;
+}) => (
   <svg
     fill="#55b8ff"
     width={width}
