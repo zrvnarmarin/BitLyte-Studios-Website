@@ -160,6 +160,10 @@ const navbarLinks = [
     link: "/services",
   },
   {
+    name: "Projects",
+    link: "/projects"
+  },
+  {
     name: "Contact",
     link: "/contact",
   }
