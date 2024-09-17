@@ -32,16 +32,16 @@ export const ServiceCategoryCard = ({
   services,
 }: ServiceCardType) => {
   return (
-    <div className="group relative overflow-hidden w-full grid grid-cols-2 justify-between gap-4 rounded-lg border-[0.5px] border-[#252525] z-20">
-      {/* Vidjdti da li ovo ostaviti ili izbrisati */}
+    <div className="group relative overflow-hidden w-full grid grid-cols-1 xl:grid-cols-2 justify-between md:gap- rounded-lg border-[0.5px] border-[#252525] z-20">
+      {/* Blur background */}
       <div className="w-48 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
       <div
-        className={`overflow-hidden relative w-fit flex flex-col items-center justify-center p-6 py-8`}
+        className={`overflow-hidden relative w-full lg:w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
-        <div className="flex flex-row items-center justify-start gap-1 w-full">
-          <h3 className="flex flex-row items-center gap-16 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
-            <span className="custom-text font-black text-2xl xs:text-4xl z-20">
+        <div className="flex flex-row items-center justify-start w-full">
+          <h3 className="w-full md:flex flex-row items-center gap-16 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
+            <span className="invisible md:visible custom-text font-black text-2xl xs:text-4xl z-20">
               0{id}
             </span>
             {title}
@@ -51,17 +51,20 @@ export const ServiceCategoryCard = ({
       </div>
 
       {/* Category services */}
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center">
         {services.map((service: string) => (
           <Link
             href={`/services/${service}`}
             key={service}
-            className="group h-full w-full flex  gap-6 relative overflow-hidden border-[0.5px] border-l-[#252525] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b]"
+            className="group h-full w-full flex gap-6 relative overflow-hidden border-[0.5px] border-l-[#252525] md:bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b]"
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-2 items-center justify-center w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
+            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-6 items-center justify-between w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
               {service}
+              <span className="md:hidden">
+                <RightArrow width={20} height={20} />
+              </span>
             </div>
           </Link>
         ))}

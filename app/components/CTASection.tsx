@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../public/test.css";
 import Link from "next/link";
-import { LogoForButton } from "../services/[serviceId]/HeroSection";
+import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 
 export default function CTASection() {
   return (
@@ -20,7 +20,7 @@ export default function CTASection() {
           <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
             <Link href={`/contact`}>
               <button className="w-fit flex items-center gap-2 py-3 px-6 xs:py-4 xs:px-12 text-[#ffffff] bg-gradient-to-r from-[#57b7fc] to-[#27A5FF] rounded-full font-medium text-xl xs:text-2xl sm:text-2xl md:text-3xl">
-                <LogoForButton fillColor="#ffffff" width={18} height={20} />
+                <LogoForButtonRotated fillColor="#ffffff" width={18} height={20} />
                 Start building
               </button>
             </Link>

@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
-      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 px-36">
+      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36">
         We helped businesses increase sales by{" "}
         <span className="custom-text">27%</span>. Your product`s achievements is
         our success. Our design approach is result-driven and it`s crucial for
@@ -38,7 +38,7 @@ export default function AchievementsSection() {
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>
         </h3>
-        <p className="relative w-full text-lg xs:text-xl sm:text-2xl text-[#ffffff] font-normal text-center xs:font-normal z-20 px-56">
+        <p className="relative w-full text-lg xs:text-xl sm:text-2xl text-[#ffffff] font-normal text-center xs:font-normal z-20 xl:px-56">
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>. Your product`s achievements
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni eum
@@ -50,7 +50,7 @@ export default function AchievementsSection() {
       <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
         <div className="flex flex-col gap-6">
           {/* Cards section */}
-          <div className="w-full flex gap-6 items-center">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
               <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
@@ -121,7 +121,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525] flex flex-col items-center rounded-lg p-16 z-30 `}
+      className={`w-full relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#1a4869] flex flex-col items-center rounded-lg p-16 z-30 `}
     >
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}

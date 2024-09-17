@@ -3,7 +3,7 @@ import Image from "next/image";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import Link from "next/link";
-import TestImage from '../../public/apartment.jpg'
+import TestImage from '../../public/apartment.jpg';
 
 export default function ProjectsSection() {
   return (
@@ -13,7 +13,7 @@ export default function ProjectsSection() {
       </h2>
 
       <div className="w-full flex flex-col gap-24 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <ProjectCardDesktop
             key={project.id}
             id={project.id}
@@ -28,7 +28,7 @@ export default function ProjectsSection() {
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/projects`}>
           <button className="w-fit flex items-center gap-2 py-4 px-12 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] hover:text-[#111111] border-[0.5px] border-[#0a2030] hover:bg-[#ffffff] rounded-full font-normal text-xl xs:text-2xl sm:text-2xl">
-          <LogoArrowRight fillColor="#ffffff" width={11} height={17} />
+            <LogoArrowRight fillColor="#ffffff" width={11} height={17} />
             See More Projects
           </button>
         </Link>
@@ -44,24 +44,24 @@ export const ProjectCardDesktop = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-col xl:flex-row rounded-lg gap-6 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]">
-      {/* Blur background */}
-
+    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg gap-6 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]">
       {/* Project image */}
-      <div className="relative w-full xl:w-1/2 flex items-center bg-[#ffffff] z-20">
+      <div className="relative w-full lg:w-1/2 flex items-center bg-[#ffffff] z-20">
         <Image
           src={imageSrc}
           alt="project_image"
-          layout="fill" // Makes the image fill the container
-          className="absolute inset-0 object-cover"
+          layout="responsive"
+          width={700} // Set appropriate width for responsiveness
+          height={500} // Set appropriate height for responsiveness
+          className="object-cover"
         />
         {/* Blue transparent gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A9FFF] opacity-60 z-30"></div>
       </div>
 
       {/* Project info */}
-      <div className="flex flex-col gap-6 w-full xl:w-1/2 z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 xl:px-6 xl:py-10">
-        <h3 className="w-full text-2xl xs:text-3xl xl:text-4xl text-start font-bold text-[#ffffff]">
+      <div className="flex flex-col gap-6 w-full lg:w-1/2 z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 lg:px-6 lg:py-10">
+        <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff]">
           {title}
         </h3>
         <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
@@ -87,7 +87,6 @@ export const ProjectCardDesktop = ({
   );
 };
 
-
 export type ProjectCardProps = {
   id: number;
   title: string;
@@ -106,7 +105,7 @@ export const projects = [
     imageSrc: TestImage,
   },
   {
-    id: 2, // Changed the id to be unique
+    id: 2,
     title: "Lease Lounge",
     description:
       "Rentalio is the rental management tool which we build in collaboration with great team.",
@@ -118,7 +117,7 @@ export const projects = [
 export const LogoArrowRight = ({
   fillColor = "#ffffff",
   width = 12,
-  height = 18
+  height = 18,
 }: {
   fillColor?: string;
   width?: number;

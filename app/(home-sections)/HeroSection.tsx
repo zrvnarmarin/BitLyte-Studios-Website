@@ -23,7 +23,7 @@ export default function HeroSection() {
           <span>Digital Marketing</span>
         </li>
         <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#bbe3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Web Development</span>
         </li>
         <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
@@ -50,6 +50,7 @@ export default function HeroSection() {
 
       {/* Blur background */}
       <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
     </HeroSectionWrapper>
   );
 }
