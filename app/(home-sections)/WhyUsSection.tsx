@@ -1,9 +1,6 @@
 import React from "react";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
-import { MotionDiv, variants } from "../components/MotionDiv";
-
-
 
 export default function WhyUsSection() {
   return (
@@ -39,16 +36,7 @@ export type WhyUsCardType = {
 
 export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) => {
   return (
-    <MotionDiv
-      variants={variants}
-      initial="hidden"
-      animate="visible"
-      transition={{
-        delay: index * .2,
-        ease: "easeInOut",
-        duration: 0.5,
-      }}
-      viewport={{ amount: 0 }}
+    <div
       className="bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20"
     >
       {/* Reason Card */}
@@ -65,7 +53,7 @@ export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) =>
           {description}
         </p>
       </div>
-    </MotionDiv>
+    </div>
   );
 };
 
