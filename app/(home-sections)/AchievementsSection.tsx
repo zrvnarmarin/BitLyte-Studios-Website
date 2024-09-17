@@ -33,7 +33,7 @@ export default function AchievementsSection() {
       </div>
 
       <div className="flex flex-col gap-6 py-4 sm:yt-8 md:py-16">
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
         <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20">
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>
@@ -48,6 +48,7 @@ export default function AchievementsSection() {
       </div>
 
       <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <div className="flex flex-col gap-6">
           {/* Cards section */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
