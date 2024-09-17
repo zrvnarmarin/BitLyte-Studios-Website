@@ -33,8 +33,7 @@ export default function AchievementsSection() {
       </div>
 
       <div className="flex flex-col gap-6 py-4 sm:yt-8 md:py-16">
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20">
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>
@@ -53,7 +52,7 @@ export default function AchievementsSection() {
           {/* Cards section */}
           <div className="w-full flex gap-6 items-center">
             <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
-              {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+              <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
               <div className="w-full flex justify-center z-20">
                 <SupportAndPartnershipIcon width={100} height={100} />
@@ -78,7 +77,7 @@ export default function AchievementsSection() {
             {/* <span className="flex w-20 h-.5 justify-center items-center text-center bg-primary-blue border-[0.5px] border-[#0a2030]"></span> */}
 
             <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
-              {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+              <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
               <div className="z-20">
                 <SupportAndPartnershipIcon width={100} height={100} />
