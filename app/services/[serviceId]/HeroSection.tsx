@@ -3,22 +3,19 @@ import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
 import Link from "next/link";
-import TestIkona from '../../../public/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg'
+import TestIkona from "../../../public/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
 
-export default function HeroSection() {
+export default function HeroSection({ serviceName } : { serviceName: string }) {
   return (
     <HeroSectionWrapper>
       {/* Desktop version */}
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
-        <div className="order-2 lg:order-1 flex flex-col gap-6">
-          <div className="absolute w-64 h-64 md:w-96 md:h-96 left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
-          {/* <p className="w-fit rounded-full  px-4 py-2 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-30">
-          &#x2022; Web Development
-          </p> */}
-          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-left z-20">
-            Transform
-            <span className="custom-text font-black"> Your Vision </span>
-            To Beautiful Reality
+        <div className="order-2 lg:order-1 flex flex-col gap-6 relative">
+          {/* Blur background effect */}
+          <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
+          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-tight text-[#ffffff] font-medium text-center lg:text-left z-30">
+            {formatString(serviceName)} That Makes A Difference
           </h1>
 
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
@@ -38,12 +35,12 @@ export default function HeroSection() {
         </div>
 
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
-          {/* Image container */}
-          <div className="hidden sm:block w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
+          {/* Blur color effect behind the image */}
+          <div className="w-80 h-80 lg:w-[26rem] lg:h-[26rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
             src={TestIkona}
             alt="t"
-            className="w-full h-full max-w-[274px] xs:max-w-[294px] sm:max-w-[314px] lg:max-w-[444px] 2xl:max-w-[474px] z-20"
+            className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[444px] 2xl:max-w-[474px] z-20"
           />
         </div>
       </div>
@@ -68,7 +65,7 @@ export const WebServicesIcon = ({
       fill="#5775D0"
       stroke="#5775D0"
       strokeWidth="0.1"
-      transform="scale(-1, 1)"  // Flips the icon horizontally
+      transform="scale(-1, 1)" // Flips the icon horizontally
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
@@ -146,8 +143,13 @@ export const WebServicesIcon = ({
   );
 };
 
-
-export const LeftArrowIcon = ({ width = 15, height = 15 } : { width?: number, height?: number }) => {
+export const LeftArrowIcon = ({
+  width = 15,
+  height = 15,
+}: {
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       width={width}
@@ -158,12 +160,27 @@ export const LeftArrowIcon = ({ width = 15, height = 15 } : { width?: number, he
       stroke="#000000"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
-      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <g id="SVGRepo_iconCarrier">
         <title>left-arrow</title>
         <desc>Created with Sketch.</desc>
-        <g id="icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-342.000000, -159.000000)" fill="#ffffff" fillRule="nonzero">
+        <g
+          id="icons"
+          stroke="none"
+          strokeWidth="1"
+          fill="none"
+          fillRule="evenodd"
+        >
+          <g
+            id="ui-gambling-website-lined-icnos-casinoshunter"
+            transform="translate(-342.000000, -159.000000)"
+            fill="#ffffff"
+            fillRule="nonzero"
+          >
             <g id="square-filled" transform="translate(50.000000, 120.000000)">
               <path
                 d="M317.108012,39.2902857 L327.649804,49.7417043 L327.708994,49.7959169 C327.889141,49.9745543 327.986143,50.2044182 328,50.4382227 L328,50.5617773 C327.986143,50.7955818 327.889141,51.0254457 327.708994,51.2040831 L327.6571,51.2479803 L317.108012,61.7097143 C316.717694,62.0967619 316.084865,62.0967619 315.694547,61.7097143 C315.30423,61.3226668 315.30423,60.6951387 315.694547,60.3080911 L324.702666,51.3738496 L292.99947,51.3746291 C292.447478,51.3746291 292,50.9308997 292,50.3835318 C292,49.8361639 292.447478,49.3924345 292.99947,49.3924345 L324.46779,49.3916551 L315.694547,40.6919089 C315.30423,40.3048613 315.30423,39.6773332 315.694547,39.2902857 C316.084865,38.9032381 316.717694,38.9032381 317.108012,39.2902857 Z M327.115357,50.382693 L316.401279,61.0089027 L327.002151,50.5002046 L327.002252,50.4963719 L326.943142,50.442585 L326.882737,50.382693 L327.115357,50.382693 Z"
@@ -201,7 +218,11 @@ export const LogoForButton = ({ width, height, fillColor }: ButtonProps) => {
   );
 };
 
-export const LogoForButtonRotated = ({ width, height, fillColor }: ButtonProps) => {
+export const LogoForButtonRotated = ({
+  width,
+  height,
+  fillColor,
+}: ButtonProps) => {
   return (
     <svg
       width={width}
@@ -218,7 +239,6 @@ export const LogoForButtonRotated = ({ width, height, fillColor }: ButtonProps) 
     </svg>
   );
 };
-
 
 export function formatString(input: string): string {
   // Step 1: Trim any leading/trailing whitespace
@@ -239,13 +259,18 @@ export function formatString(input: string): string {
     .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
     .join(" "); // Join the words with a space
 
+  // Step 6: Handle specific case for "Ui Ux Design"
+  if (capitalizedInput === "Ui Ux Design") {
+    return "UI/UX Design";
+  }
+
   return capitalizedInput;
 }
 
 // Example usage:
 try {
-  const formattedString: string = formatString("brand-identity");
-  console.log(formattedString); // Output: "Brand Identity"
+  const formattedString: string = formatString("ui-ux-design");
+  console.log(formattedString); // Output: "UI/UX Design"
 } catch (error: unknown) {
   if (error instanceof Error) {
     console.error(error.message);
@@ -253,10 +278,6 @@ try {
     console.error("An unknown error occurred.");
   }
 }
-
-
-
-
 
 
 // Icons for each service ANIMATED

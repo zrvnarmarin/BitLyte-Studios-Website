@@ -40,8 +40,8 @@ export const ServiceCategoryCard = ({
         className={`overflow-hidden relative w-full lg:w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
         <div className="flex flex-row items-center justify-start w-full">
-          <h3 className="w-full md:flex flex-row items-center gap-16 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
-            <span className="invisible md:visible custom-text font-black text-2xl xs:text-4xl z-20">
+          <h3 className="w-full flex flex-row items-center gap-4 md:gap-16 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
+            <span className="custom-text font-black text-2xl xs:text-4xl z-20">
               0{id}
             </span>
             {title}
@@ -61,7 +61,7 @@ export const ServiceCategoryCard = ({
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-6 items-center justify-between w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
-              {service}
+              <span className="text-start">{service}</span>
               <span className="md:hidden">
                 <RightArrow width={20} height={20} />
               </span>

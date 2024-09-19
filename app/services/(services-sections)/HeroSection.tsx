@@ -39,7 +39,8 @@ export default function HeroSection() {
 
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
           {/* Image container */}
-          <div className="hidden sm:block w-72 h-72 absolute right-32 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
+          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
           <WebServicesIcon />
         </div>
       </div>

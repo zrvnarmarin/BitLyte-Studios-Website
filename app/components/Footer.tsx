@@ -298,6 +298,11 @@ export const quickLinkRoutes = [
   },
   {
     id: 4,
+    title: "Projects",
+    href: "/projects",
+  },
+  {
+    id: 5,
     title: "Contact",
     href: "/contact",
   },

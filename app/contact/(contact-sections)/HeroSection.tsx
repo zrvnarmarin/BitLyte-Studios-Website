@@ -14,6 +14,8 @@ import ContactForm from "./ContactForm";
 export default function HeroSection() {
   return (
     <HeroSectionWrapper>
+          <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
       <div className="flex flex-col items-center gap-10">
         <p className="text-sm sm:text-base md:text-xl text-center font-bold text-[#ffffff] uppercase z-30">
           Contact Us
@@ -36,7 +38,7 @@ export default function HeroSection() {
           </div> */}
 
           {/* Company`s promises */}
-          <div className="relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
+          <div className="relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0d293d] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
 
             <div className="relative z-20 flex items-center justify-center pb-4 rounded-full">
               <Image src={DifferenceImage} width={100} height={100} alt="jj" />

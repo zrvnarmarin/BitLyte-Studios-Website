@@ -1,15 +1,18 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
-import { RightArrow } from "./../../(home-sections)/ServicesSection";
 
 export default function StepsSection() {
   return (
     <SectionWrapper>
-      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20">
+      <div className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
         See all the steps
         <span className="custom-text"> we take </span> to make your{" "}
         <span className="custom-text"> project shine </span>
-      </p>
+
+        {/* Blur background effect */}
+        <span className="md:w-24 md:h-24 lg:w-44 lg:h-44 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
         {steps.map((step) => (
           <StepCard key={step.id} />
@@ -33,16 +36,40 @@ export const StepCard = ({
           <span className="custom-text font-black">{1}. </span>
           Discovery
         </span>
-        <div className="hidden sm:block w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
-
+        <div className="w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <Logo />
         </div>
       </div>
 
-      {/* Steps */}
-      <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee]  font-normal  text-start ">
+      {/* Horizontal line */}
+      <div className="hidden relative lg:flex flex-col gap-4">
         <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+      </div>
+
+      {/* Vertical line */}
+      <div className="relative lg:hidden flex flex-col gap-4 pt-8">
+        <span className="w-0.5 h-20 border-[0.5px] border-[#0a2030]"></span>
+      </div>
+
+      <div className="relative flex flex-col gap-2">
+        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+          <span className="">Planning</span>
+        </div>
+        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
+          <span className="custom-text">&#x2022;</span> Planning phase is when
+          we discover your product and research the market
+        </p>
+      </div>
+
+      {/* Horizontal line */}
+      <div className="hidden relative lg:flex flex-col gap-4">
+        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+      </div>
+
+      {/* Vertical line */}
+      <div className="relative lg:hidden flex flex-col gap-4">
+        <span className="w-0.5 h-20 border-[0.5px] border-[#0a2030]"></span>
       </div>
 
       <div className="flex flex-col gap-2">
@@ -54,39 +81,6 @@ export const StepCard = ({
           we discover your product and research the market
         </p>
       </div>
-
-      {/* Steps */}
-      <div className="relative flex flex-col gap-4 text-base bg-[#0b0b0b] text-[#eeeeee]  font-normal  text-start ">
-        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-          <span className="">Planning</span>
-        </div>
-        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
-          <span className="custom-text">&#x2022;</span> Planning phase is when
-          we discover your product and research the market
-        </p>
-      </div>
-
-      {/* descriptions section */}
-      {/* <div className="flex flex-col  relative gap-2 w-full h-full  rounded-lg">
-        <div className="absolute w-64 h-64 md:w-32 md:h-32 left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div>
-        <div className="grid grid-cols-2 place-items-center gap-6">
-          
-          
-          <div className="flex flex-col gap-2">
-            <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-              <span>Planning</span>
-            </div>
-            <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
-              <span className="custom-text">&#x2022;</span> Planning phase is
-              when we discover your product and research the market
-            </p>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

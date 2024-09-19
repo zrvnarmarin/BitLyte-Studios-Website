@@ -32,7 +32,7 @@ export default function ServiceCategoriesSection() {
               <Link
                 href={`/services/${service.categoryTitle
                   .trim()
-                  .replace(/\s+/g, "-")
+                  .replace(/[\s\/]+/g, "-") 
                   .toLowerCase()}`}
                 key={service.id}
                 className="overflow-hidden relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 py-8 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525] min-h-[350px]"

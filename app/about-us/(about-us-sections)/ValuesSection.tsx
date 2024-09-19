@@ -9,17 +9,19 @@ import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <div className="relative overflow- flex flex-col gap-6 items-start">
+      <div className="relative flex flex-col gap-6 items-start">
+        {/* Blur background */}
         <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
-        <div className="grid grid-cols-2 gap-6 items-center">
-          <div className="relative  flex flex-col gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+          <div className="relative flex flex-col gap-2">
+
+            {/* Blur background */}
             <span className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
 
-            <h2 className="w-full  text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+            <h2 className="w-full text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
               Our <span className="custom-text font-black">Values</span>
             </h2>
-
             <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-8 z-20">
               As a freelance web designer and developer, I bring a unique
               combination of creativity and technical expertise to every
@@ -35,6 +37,7 @@ export default function WhyUsSection() {
               for excellence in both form and function.
             </p>
           </div>
+
           <Image
             src={TestHumanImage}
             alt="image"
@@ -42,15 +45,15 @@ export default function WhyUsSection() {
             height={0}
             className="rounded-lg"
           />
+
         </div>
 
         {/* Big paragraph */}
-        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-40 py-4 sm:py-8 md:py-6 px-36">
+        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-20 md:pt-16 lg:pt-24 pb-20 md:pb-16 lg:pb-24">
           We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span>. Your product`s achievements
           is our success. Our design approach is result-driven and it`s crucial
           for us to make your product reach it`s business metrics.
-          {/* Blur background */}
           <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         </h3>
 
@@ -69,6 +72,7 @@ export default function WhyUsSection() {
         </div>
       </div>
 
+      {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/services`}>
           <button className="w-fit flex items-center gap-2 py-4 px-12 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] hover:text-[#111111] border-[0.5px] border-[#0a2030] hover:bg-[#ffffff] rounded-full font-normal text-xl xs:text-2xl sm:text-2xl">

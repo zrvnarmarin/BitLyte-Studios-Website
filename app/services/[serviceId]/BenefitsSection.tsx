@@ -8,7 +8,7 @@ import "../../../public/test.css";
 export default function BenefitsSection() {
   return (
     <SectionWrapper>
-      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20">
+      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
         Explore how landing page
         <span className="custom-text">
           {" "}

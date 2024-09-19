@@ -16,7 +16,7 @@ export default function SimilarServicesSection() {
 
         <Link
           href={`/services/visual-identity`}
-          className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg"
+          className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1a4869]"
         >
           {/* Blur background */}
           <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[30px]"></div>
@@ -68,6 +68,7 @@ export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
   );
 };
 
+// TO DO: this is the test icon. Change it to other icon, but the same style!
 export const HighBrandAwareness = () => (
   <svg
     version="1.1"
