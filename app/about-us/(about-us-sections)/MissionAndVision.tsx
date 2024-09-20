@@ -12,16 +12,23 @@ import Link from "next/link";
 export default function MissionAndVision() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
-        Meet The Founders
-      </h2>
+      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] text-start xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-24 ">
+        We helped businesses increase sales by{" "}
+        <span className="custom-text">27%</span>. Your product`s achievements is
+        our success. Our design approach is result-driven and it`s crucial for
+        us to make your product reach it`s business metrics.
+        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      </h3>
 
-      {/* Founders cards */}
-      <div className="grid grid-cols-2 gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="relative w-full grid grid-cols-2 place-items-center gap-6 pt-4 sm:pt-8 md:pt-12 px-48 justify-center items-center">
+        <div className="w-[28rem] h-[28rem] absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        <h3 className="col-span-full relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-normal text-center xs:font-normal z-20 pb-4 sm:pb-8 md:pb-6 ">
+          Meet The <span className="custom-text">Founders</span>
+        </h3>
         {/* Marin Card */}
-        <div className="relative overflow-hidden grid grid-cols-2 rounded-lg border-[0.5px] border-[#1a4869] z-20">
+        <div className="relative overflow-hidden flex flex-col rounded-lg border-[#252525] z-20 bg-[#0b0b0b]">
           {/* Blur background */}
-          <div className="w-64 h-64 absolute right-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px]"></div>
+          <div className="w-64 h-64 absolute right-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[530px]"></div>
 
           {/* Image Section */}
           <div className="w-full relative z-20">
@@ -31,8 +38,8 @@ export default function MissionAndVision() {
             {/* Image */}
             <Image
               src={MarinRemovedBgImage}
-              width={300} // Set desired width
-              height={300} // Set desired height
+              width={0} // Set desired width
+              height={0} // Set desired height
               alt="Marin_image"
               className="z-20 object-cover"
             />
@@ -51,25 +58,21 @@ export default function MissionAndVision() {
               </p>
             </div>
 
-            {/* Social Media Icons and Divider (kept at the bottom) */}
+            {/* Social Media Icons and Divider */}
             <div className="flex flex-col gap-2 relative overflow-hidden z-20 mt-6">
               <div className="w-full flex items-center justify-end gap-8">
-                <div className="w-24 bg-[#0d293d] h-[0.5px]"></div>
-
                 <React.Fragment key={socialMediaIcons[2].id}>
                   <Link href={socialMediaIcons[2].href}>
                     {socialMediaIcons[2].icon()}
                   </Link>
                 </React.Fragment>
-
-                <div className="w-24 bg-[#0d293d] h-[0.5px]"></div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Igor Card */}
-        <div className="relative overflow-hidden grid grid-cols-2 rounded-lg border-[0.5px] border-[#1a4869] z-20">
+        {/* Marin Card */}
+        <div className="relative overflow-hidden flex flex-col rounded-lg  border-[#252525] z-20 bg-[#0b0b0b]">
           {/* Blur background */}
           <div className="w-64 h-64 absolute right-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px]"></div>
 
@@ -81,8 +84,8 @@ export default function MissionAndVision() {
             {/* Image */}
             <Image
               src={MarinRemovedBgImage}
-              width={300} // Set desired width
-              height={300} // Set desired height
+              width={0} // Set desired width
+              height={0} // Set desired height
               alt="Marin_image"
               className="z-20 object-cover"
             />
@@ -93,7 +96,7 @@ export default function MissionAndVision() {
             {/* Centered Content */}
             <div className="flex flex-col gap-2 justify-center items-start z-20 my-auto">
               <h2 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">
-                Igor Ozmec
+                Marin Zrvnar
               </h2>
               <p className="text-lg xs:text-xl font-light text-[#ffffff]">
                 Co-Founder <br />
@@ -101,18 +104,14 @@ export default function MissionAndVision() {
               </p>
             </div>
 
-            {/* Social Media Icons and Divider (kept at the bottom) */}
+            {/* Social Media Icons and Divider */}
             <div className="flex flex-col gap-2 relative overflow-hidden z-20 mt-6">
               <div className="w-full flex items-center justify-end gap-8">
-                <div className="w-24 bg-[#0d293d] h-[0.5px]"></div>
-
                 <React.Fragment key={socialMediaIcons[2].id}>
                   <Link href={socialMediaIcons[2].href}>
                     {socialMediaIcons[2].icon()}
                   </Link>
                 </React.Fragment>
-
-                <div className="w-24 bg-[#0d293d] h-[0.5px]"></div>
               </div>
             </div>
           </div>
@@ -120,13 +119,13 @@ export default function MissionAndVision() {
       </div>
 
       {/* Big paragraph */}
-      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-20 md:pt-16 lg:pt-24 pb-20 md:pb-16 lg:pb-24">
-          We helped businesses increase sales by{" "}
-          <span className="custom-text">27%</span>. Your product`s achievements
-          is our success. Our design approach is result-driven and it`s crucial
-          for us to make your product reach it`s business metrics.
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        </h3>
+      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-20 md:pt-16 lg:pt-24">
+        We helped businesses increase sales by{" "}
+        <span className="custom-text">27%</span>. Your product`s achievements is
+        our success. Our design approach is result-driven and it`s crucial for
+        us to make your product reach it`s business metrics.
+        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+      </h3>
 
       {/* Mission and vision section*/}
       <div className="flex flex-col">
