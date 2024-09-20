@@ -52,7 +52,7 @@ export default function AchievementsSection() {
         <div className="flex flex-col gap-6">
           {/* Cards section */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
+            <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#1a4869]">
               <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
               <div className="w-full flex justify-center z-20">
@@ -75,7 +75,7 @@ export default function AchievementsSection() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
+            <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#1a4869]">
               <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
 
               <div className="z-20">

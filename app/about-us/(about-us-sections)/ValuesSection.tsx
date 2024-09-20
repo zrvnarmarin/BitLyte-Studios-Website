@@ -20,7 +20,7 @@ export default function WhyUsSection() {
             <span className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
 
             <h2 className="w-full text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
-              Our <span className="custom-text font-black">Values</span>
+              What We Stand For
             </h2>
             <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-8 z-20">
               As a freelance web designer and developer, I bring a unique
