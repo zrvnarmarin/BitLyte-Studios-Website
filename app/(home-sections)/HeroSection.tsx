@@ -35,8 +35,8 @@ export default function HeroSection() {
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/contact`}>
-          <button className="w-fit flex items-center gap-2 py-4 px-10 text-[#ffffff] bg-gradient-to-r from-[#57b7fc] to-[#27A5FF] rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-3xl">
-            <LogoForButtonRotated fillColor="#ffffff" width={18} height={20} />
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] border-[3x] border-[#57b7fc] rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl">
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Start Building
           </button>
         </Link>
@@ -49,8 +49,7 @@ export default function HeroSection() {
       </div>
 
       {/* Blur background */}
-      <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-
+      <div className="w-52 h-52 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
     </HeroSectionWrapper>
   );
 }
