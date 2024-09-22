@@ -96,7 +96,7 @@ export default function MissionAndVision() {
             {/* Centered Content */}
             <div className="flex flex-col gap-2 justify-center items-start z-20 my-auto">
               <h2 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">
-                Marin Zrvnar
+                Igor Ozmec
               </h2>
               <p className="text-lg xs:text-xl font-light text-[#ffffff]">
                 Co-Founder <br />
