@@ -12,22 +12,28 @@ export default function HeroSection() {
         Success begins here
       </p>
       <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
-        Your caring
-        <span className="custom-text font-black"> Design Partner </span>
-        that provides experienced Product Designers
+        We create
+        <span className="custom-text font-black capitalize">
+          {" "}
+          powerful designs
+        </span>{" "}
+        with proven strategies, transforming your brand into a digital empire
       </h1>
+      {/* Fuel Your Revenue Growth with Innovative Web Solutions tailored to your business */}
+      {/* We make your business the digital giant your competitors fear */}
+      {/* We craft digital empires with proven strategies, transforming your brand into something unforgettable */}
 
       {/* Services */}
       <ul className="hidden xs:flex xs:flex-wrap relative w-full items-center justify-center z-30">
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
-          <span>Digital Marketing</span>
-        </li>
-        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#1a4869] z-20 rounded-full  px-4 py-2">
           <span>Web Development</span>
         </li>
-        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+        <span className="w-20 h-0.5 border-[0.5px] border-[#1a4869]"></span>
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#1a4869] z-20 rounded-full  px-4 py-2">
+          <span>Digital Marketing</span>
+        </li>
+        <span className="w-20 h-0.5 border-[0.5px] border-[#1a4869]"></span>
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#1a4869] z-20 rounded-full  px-4 py-2">
           <span>Digital Design</span>
         </li>
       </ul>
@@ -35,9 +41,9 @@ export default function HeroSection() {
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] border-[3x] border-[#57b7fc] rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl">
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            Start Building
+            Start Crafting
           </button>
         </Link>
       </div>

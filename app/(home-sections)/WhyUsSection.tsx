@@ -147,28 +147,28 @@ export const whyUsData = [
     id: 1,
     title: "Support And Partnership",
     description:
-      "We are among one of the fastest achieving agencies that will get your result",
+      "Your success is our priority, with guidance and support every step of the way",
     icon: SupportAndPartnershipIcon,
   },
   {
     id: 2,
     title: "Collaborative Approach",
     description:
-      "We provide cutting-edge solutions for your needs that will get your result",
+      "Working together to bring your brand to life with your ideas and our expertise",
     icon: CollaborativeApproachIcon,
   },
   {
     id: 3,
     title: "Transparent Communication",
     description:
-      "Our approach is tailored to meet your specific needs that will get your result",
+      "We keep you informed every step of the way with clear and honest updates",
     icon: TransparentCommunicationIcon,
   },
   {
     id: 4,
     title: "Highly Skilled Professionals",
     description:
-      "Our team consists of highly skilled professionals that will get your result",
+      "Our team consists of highly skilled professionals that will get you results",
     icon: HighlySkilledProffesional,
   },
 ];

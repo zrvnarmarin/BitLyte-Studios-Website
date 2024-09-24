@@ -2,29 +2,33 @@
   color: transparent; /* Transparent text */
   background-clip: text; /* Background clip to text */
   -webkit-background-clip: text; /* WebKit-specific property */
-  background-image: linear-gradient(to right, #1A9FFF, #0083E0); /* Gradient from purple to pink */
+  background-image: linear-gradient(
+    to right,
+    #1a9fff,
+    #0083e0
+  ); /* Gradient from purple to pink */
 }
 
 .linear-gradient-green-text {
   color: transparent; /* Transparent text */
   background-clip: text; /* Background clip to text */
   -webkit-background-clip: text; /* WebKit-specific property */
-  background-image: linear-gradient(to right, #59EE99, #16BB5E); 
+  background-image: linear-gradient(to right, #59ee99, #16bb5e);
 }
 
 .linear-gradient-background {
-  background-image: linear-gradient(to right, #e8f5ff, #f9f6fe); 
+  background-image: linear-gradient(to right, #e8f5ff, #f9f6fe);
 }
 
 .linear-gradient-purple-text {
   color: transparent; /* Transparent text */
   background-clip: text; /* Background clip to text */
   -webkit-background-clip: text; /* WebKit-specific property */
-  background-image: linear-gradient(to right, #7f96db, #5775D0); 
+  background-image: linear-gradient(to right, #7f96db, #5775d0);
 }
 
 .linear-gradient-blue-background {
-  background-image: linear-gradient(to right, #33AAFFB3, #1A9FFFB3);
+  background-image: linear-gradient(to right, #33aaffb3, #1a9fffb3);
 }
 
 .linear-gradient-dark-orange-text {
@@ -32,6 +36,4 @@
   background-clip: text; /* Background clip to text */
   -webkit-background-clip: text; /* WebKit-specific property */
   background-image: linear-gradient(to right, #d87a35, #e29b4b);
-
-
 }
