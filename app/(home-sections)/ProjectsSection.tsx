@@ -3,7 +3,8 @@ import Image from "next/image";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import Link from "next/link";
-import TestImage from '../../public/apartment.jpg';
+import TestImage from "../../public/apartment.jpg";
+import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 
 export default function ProjectsSection() {
   return (
@@ -25,10 +26,10 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <div className="relative w-full flex justify-center pt-4 sm:pt-8 md:pt-12 z-30">
+      <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/projects`}>
-          <button className="w-fit flex items-center gap-2 py-4 px-12 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] hover:text-[#111111] border-[0.5px] border-[#0a2030] hover:bg-[#ffffff] rounded-full font-normal text-xl xs:text-2xl sm:text-2xl">
-            <LogoArrowRight fillColor="#ffffff" width={11} height={17} />
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             See More Projects
           </button>
         </Link>

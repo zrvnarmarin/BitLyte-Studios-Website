@@ -14,15 +14,14 @@ export default function AchievementsSection() {
       <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36">
         Did you know? <span className="custom-text">75% </span>of users judge a
         company’s credibility based on its website design - we make sure yours
-        <span className="custom-text"> leaves the right impression</span> and brings your business more <span className="custom-text">growth</span> and <span className="custom-text">revenue</span>.
+        <span className="custom-text"> leaves the right impression</span> and
+        brings your business more <span className="custom-text">growth</span>{" "}
+        and <span className="custom-text">revenue</span>.
         <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
       </h3>
 
-      {/* <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div> */}
-
       {/* Achievements cards container */}
       <div className="w-full flex flex-col lg:flex-row gap-4 py-4 sm:py-8 md:py-12">
-        {/* Achievement card */}
         {achievements.map((achievement) => (
           <AchievementCard
             key={achievement.id}
@@ -34,85 +33,76 @@ export default function AchievementsSection() {
         ))}
       </div>
 
-      <div className="flex flex-col justify-start gap-6 py-4 sm:py-8 md:py-6 xl:px-36">
-        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
-        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20">
-          We helped businesses increase sales by{" "}
-          <span className="custom-text">27%</span>
-        </h3>
-        <p className="relative w-full text-lg xs:text-xl sm:text-2xl text-[#ffffff] font-normal text-center xs:font-normal z-20">
-          We helped businesses increase sales by{" "}
-          <span className="custom-text">27%</span>. Your product`s achievements
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni eum
-          dolores voluptatem harum labore atque explicabo alias velit beatae
-          asperiores!
-        </p>
-      </div>
-
-      <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="relative flex flex-col justify-start gap-6 py-4 sm:py-8 md:pt-24">
         <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        <div className="flex flex-col gap-6">
-          {/* Cards section */}
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#1a4869]">
-              <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+        
+        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 xl:px-72">
+          We helped businesses increase sales by{" "}
+          <span className="custom-text">27%</span> of users judge a company’s
+          <span className="custom-text"> leaves the right impression </span>
+        </h3>
 
-              <div className="w-full flex justify-center z-20">
-                <SupportAndPartnershipIcon width={100} height={100} />
-              </div>
-              <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
-                <p className="text-[#ffffff] font-bold text-2xl xs:text-3xl text-center z-20">
-                  App design that reflects your brand
-                </p>
-                <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20 pt-4">
-                  <span className="custom-text text-3xl sm:text-4xl">
-                    &#10003;
-                  </span>
-                  <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
-                    We`re constantly tracking the performance of our services.
-                    We`ll use internal testing to track increased exposure and
-                    other critical metrics.
+        <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+          <div className="flex flex-col gap-6">
+            {/* Cards section */}
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
+                <div className="w-full flex justify-center z-20">
+                  <SupportAndPartnershipIcon width={100} height={100} />
+                </div>
+                <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
+                  <p className="text-[#ffffff] font-bold text-2xl xs:text-3xl text-center z-20">
+                    App design that reflects your brand
                   </p>
+                  <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20 pt-4">
+                    <span className="custom-text text-3xl sm:text-4xl">
+                      &#10003;
+                    </span>
+                    <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                      We`re constantly tracking the performance of our services.
+                      We`ll use internal testing to track increased exposure and
+                      other critical metrics.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#1a4869]">
-              <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-
-              <div className="z-20">
-                <SupportAndPartnershipIcon width={100} height={100} />
-              </div>
-              <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
-                <p className="text-[#ffffff] font-bold text-2xl xs:text-3xl text-center z-20">
-                  App design that reflects your brand
-                </p>
-                <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20 pt-4">
-                  <span className="custom-text text-3xl sm:text-4xl">
-                    &#10003;
-                  </span>
-                  <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
-                    We`re constantly tracking the performance of our services.
-                    We`ll use internal testing to track increased exposure and
-                    other critical metrics.
+              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
+                <div className="z-20">
+                  <SupportAndPartnershipIcon width={100} height={100} />
+                </div>
+                <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
+                  <p className="text-[#ffffff] font-bold text-2xl xs:text-3xl text-center z-20">
+                    App design that reflects your brand
                   </p>
+                  <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20 pt-4">
+                    <span className="custom-text text-3xl sm:text-4xl">
+                      &#10003;
+                    </span>
+                    <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                      We`re constantly tracking the performance of our services.
+                      We`ll use internal testing to track increased exposure and
+                      other critical metrics.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
-          <Link href={`/about-us`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              Get To Know Us Better
-            </button>
-          </Link>
+          <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
+            <Link href={`/about-us`}>
+              <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
+                <LogoForButtonRotated
+                  fillColor="#000000"
+                  width={18}
+                  height={20}
+                />
+                Get To Know Us Better
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </SectionWrapper>
@@ -126,7 +116,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#1a4869] flex flex-col items-center rounded-lg p-16 z-30 `}
+      className={`w-full relative overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30 `}
     >
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
