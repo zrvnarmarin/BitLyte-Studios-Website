@@ -9,28 +9,6 @@ export default function Footer() {
       <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
       <div className="w-48 h-48 absolute right-32 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
 
-      <div className="absolute inset-0 w-full h-full">
-        {/* <svg
-          className="w-full h-full"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1600 900"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <rect fill="#0b0b0b"  />
-          <polygon fill="#327fcc" points="957 450 539 900 1396 900" />
-          <polygon fill="#020739" points="957 450 872.9 900 1396 900" />
-          <polygon fill="#2865ab" points="-60 900 398 662 816 900" />
-          <polygon fill="#050634" points="337 900 398 662 816 900" />
-          <polygon fill="#1f4d8b" points="1203 546 1552 900 876 900" />
-          <polygon fill="#06042f" points="1203 546 1552 900 1162 900" />
-          <polygon fill="#15366c" points="641 695 886 900 367 900" />
-          <polygon fill="#06032a" points="587 900 641 695 886 900" />
-          <polygon fill="#0b204f" points="1710 900 1401 632 1096 900" />
-          <polygon fill="#060226" points="1710 900 1401 632 1365 900" />
-          <polygon fill="#060733" points="1210 900 971 687 725 900" />
-          <polygon fill="#040121" points="943 900 1210 900 971 687" />
-        </svg> */}
-      </div>
       <div className="relative z-10 w-full flex flex-col items-start gap-2">
 
         {/* Logo */}

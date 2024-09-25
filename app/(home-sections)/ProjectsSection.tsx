@@ -47,21 +47,20 @@ export const ProjectCardDesktop = ({
   return (
     <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg gap-6 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]">
       {/* Project image */}
-      <div className="relative w-full lg:w-1/2 flex items-center bg-[#ffffff] z-20">
+      <div className="relative w-full flex items-center bg-[#ffffff] z-20">
         <Image
           src={imageSrc}
           alt="project_image"
-          layout="responsive"
-          width={700} // Set appropriate width for responsiveness
-          height={500} // Set appropriate height for responsiveness
+          width={0} // Set appropriate width for responsiveness
+          height={0} // Set appropriate height for responsiveness
           className="object-cover"
         />
         {/* Blue transparent gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A9FFF] opacity-60 z-30"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A9FFF] opacity-60 z-30"></div> */}
       </div>
 
       {/* Project info */}
-      <div className="flex flex-col gap-6 w-full lg:w-1/2 z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 lg:px-6 lg:py-10">
+      <div className="flex flex-col gap-6 w-full z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 lg:px-6 lg:py-10">
         <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff]">
           {title}
         </h3>
@@ -77,11 +76,17 @@ export const ProjectCardDesktop = ({
             experience, security, and impact potential.
           </p>
         </div>
-        <div className="w-full flex items-center justify-start">
-          <button className="w-fit bg-[#ffffff] flex gap-2 items-center justify-center font-normal lg:font-medium text-[#111111] text-lg md:text-xl z-20 rounded-full border-[0.5px] border-[#ffffff] py-2 md:py-3 px-6 md:px-10">
-            <LogoArrowRight fillColor="#333333" />
-            View Full Case
-          </button>
+        <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
+          <Link href={`/projects`}>
+            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 px-8 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+              <LogoForButtonRotated
+                fillColor="#000000"
+                width={18}
+                height={20}
+              />
+              Viev Full Case
+            </button>
+          </Link>
         </div>
       </div>
     </div>

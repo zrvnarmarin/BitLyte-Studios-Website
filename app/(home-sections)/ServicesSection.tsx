@@ -56,11 +56,11 @@ export const ServiceCategoryCard = ({
           <Link
             href={`/services/${service}`}
             key={service}
-            className="group h-full w-full flex gap-6 relative overflow-hidden border-[0.5px] border-l-[#252525] md:bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b]"
+            className="group h-full w-full flex gap-6 relative overflow-hidden border-[0.5px] border-l-[#252525] md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] duration-200"
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] flex gap-6 items-center justify-between w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
+            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-6 items-center justify-between w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
               <span className="text-start">{service}</span>
               <span className="md:hidden">
                 <RightArrow width={20} height={20} />
@@ -146,10 +146,20 @@ export const RightArrow = ({
   </svg>
 );
 
-export const LeftArrow = ({ strokeWidth = 0.1, color = "#ffffff" }) => (
+export const LeftArrow = ({
+  strokeWidth = 0.1,
+  color = "#ffffff",
+  width = 30,
+  height = 30,
+}: {
+  strokeWidth?: number;
+  color?: string;
+  width?: number;
+  height?: number;
+}) => (
   <svg
-    width="30px"
-    height="30x"
+    width={width}
+    height={height}
     viewBox="0 -6.5 38 38"
     xmlns="http://www.w3.org/2000/svg"
     fill={color}

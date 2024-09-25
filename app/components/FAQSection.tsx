@@ -26,6 +26,7 @@ export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
     <div className="w-full flex flex-col z-20 pt-4 sm:pt-8 md:pt-12">
       {faqArray.map((accordion, index) => (
         <Panel
+          id={accordion.id}
           key={accordion.id}
           index={index}
           title={accordion.title}
@@ -39,11 +40,13 @@ export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
 }
 
 function Panel({
+  id,
   title,
   answer,
   isActive,
   onShow,
 }: {
+  id: number;
   title: string;
   answer: string;
   isActive: boolean;
@@ -53,12 +56,14 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      className={`cursor-pointer border-b-[0.5px] border-[#252525] pl-6 pr-4 py-6`}
+      // TO DO: decide ib border is necesary here - border-b-[0.5px] border-[#0a2030]
+      className={`cursor-pointer rounded-lg pl-6 pr-4 py-6 hover:shadow-[0_0_5px_0_rgba(255,255,255,1)] ${isActive ? 'bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] hover:shadow-none border-[0.5px] border-[#0a2030]' : ''}`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
-        <h3 className="w-full text-xl sm:text-2xl text-[#ffffff] font-semibold">
-          {title}
-        </h3>
+        <div className="w-full flex items-center gap-4">
+          <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold">0{id}.</span>
+          <p className="text-xl sm:text-2xl text-[#ffffff] font-semibold">{title}</p>
+        </div>
         {isActive ? (
           <span className="rotate-90 duration-300">
             <BlueArrowRight />

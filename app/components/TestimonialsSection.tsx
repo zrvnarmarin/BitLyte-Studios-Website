@@ -13,22 +13,22 @@ export default function TestimonialsSection() {
           What our clients say
         </h2>
 
-        <div className="hidden lg:flex items-center justify-center gap-4 ">
-          <button className="relative overflow-hidden rounded-full p-4 border-[0.5px] border-[#252525]">
+        <div className="hidden lg:flex items-center justify-center gap-4">
+          <button className="relative overflow-hidden rounded-full p-4 bg-[#ffffff] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_15px_0_rgba(255,255,255,1)] duration-300">
             {/* RightArrow with a higher z-index */}
             <div className="relative z-20">
-              <LeftArrow />
+              <LeftArrow color="#000000" />
             </div>
             {/* Blur background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
+            {/* <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px] "></div> */}
           </button>
-          <button className="relative overflow-hidden rounded-full p-4 border-[0.5px] border-[#252525]">
+          <button className="relative overflow-hidden rounded-full p-4 bg-[#ffffff] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_15px_0_rgba(255,255,255,1)] duration-300">
             {/* RightArrow with a higher z-index */}
             <div className="relative z-20">
-              <RightArrow />
+              <RightArrow color="#000000" />
             </div>
             {/* Blur background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
+            {/* <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div> */}
           </button>
         </div>
       </div>
@@ -65,7 +65,7 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-20 border-[0.5px] border-[#1a4869]">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-20 border-[0.5px] border-[#0a2030]">
       {/* Blur background */}
       {/* Blur background */}
       <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>

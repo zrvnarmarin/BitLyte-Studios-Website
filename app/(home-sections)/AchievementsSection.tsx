@@ -33,7 +33,7 @@ export default function AchievementsSection() {
         ))}
       </div>
 
-      <div className="relative flex flex-col justify-start gap-6 py-4 sm:py-8 md:pt-24">
+      <div className="relative flex flex-col justify-start gap-6 py-4 sm:py-8 md:pt-16">
         <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         
         <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 xl:px-72">
@@ -43,11 +43,12 @@ export default function AchievementsSection() {
         </h3>
 
         <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+          {/* TO DO: see does this gradient is necessary */}
           <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <div className="flex flex-col gap-6">
             {/* Cards section */}
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
+              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#0a2030] bg-[#000000]">
                 <div className="w-full flex justify-center z-20">
                   <SupportAndPartnershipIcon width={100} height={100} />
                 </div>
@@ -68,7 +69,7 @@ export default function AchievementsSection() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525]">
+              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525] bg-[#000000]">
                 <div className="z-20">
                   <SupportAndPartnershipIcon width={100} height={100} />
                 </div>
@@ -99,7 +100,7 @@ export default function AchievementsSection() {
                   width={18}
                   height={20}
                 />
-                Get To Know Us Better
+                Discover Our Story
               </button>
             </Link>
           </div>
@@ -116,7 +117,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30 `}
+      className={`w-full relative overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30 bg-[#000000]`}
     >
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
