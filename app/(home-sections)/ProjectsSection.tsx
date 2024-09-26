@@ -9,9 +9,24 @@ import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 export default function ProjectsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
-        Our Work
-      </h2>
+      <div className="w-full flex items-center justify-between">
+        <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+          Our Work
+        </h2>
+        {/* TO DO: decide if the CTA button will be posiitoned here or in the bottom of the component */}
+        <div className="hidden relative w-full xl:flex justify-end z-30">
+          <Link href={`/projects`}>
+            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
+              <LogoForButtonRotated
+                fillColor="#000000"
+                width={18}
+                height={20}
+              />
+              More Projects
+            </button>
+          </Link>
+        </div>
+      </div>
 
       <div className="w-full flex flex-col gap-24 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
         {projects.map((project) => (
@@ -26,14 +41,15 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
+      {/* TO DO: decide if the CTA button will be posiitoned here or in the bottom of the component */}
+      {/* <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/projects`}>
           <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             See More Projects
           </button>
         </Link>
-      </div>
+      </div> */}
     </SectionWrapper>
   );
 }
@@ -77,17 +93,13 @@ export const ProjectCardDesktop = ({
           </p>
         </div>
         <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
-          <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 px-8 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              Viev Full Case
-            </button>
-          </Link>
-        </div>
+        <Link href={`/projects`}>
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
+            See Full Case
+          </button>
+        </Link>
+      </div>
       </div>
     </div>
   );

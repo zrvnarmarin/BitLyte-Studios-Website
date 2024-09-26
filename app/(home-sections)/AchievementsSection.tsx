@@ -5,6 +5,7 @@ import "../../public/test.css";
 import { LogoArrowRight } from "./ProjectsSection";
 import Link from "next/link";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
+import { HighBrandAwareness } from "../services/[serviceId]/SimilarServicesSection";
 
 // 75% of users judge a company’s credibility
 
@@ -17,7 +18,7 @@ export default function AchievementsSection() {
         <span className="custom-text"> leaves the right impression</span> and
         brings your business more <span className="custom-text">growth</span>{" "}
         and <span className="custom-text">revenue</span>.
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
       </h3>
 
       {/* Achievements cards container */}
@@ -34,63 +35,33 @@ export default function AchievementsSection() {
       </div>
 
       <div className="relative flex flex-col justify-start gap-6 py-4 sm:py-8 md:pt-16">
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        
-        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 xl:px-72">
-          We helped businesses increase sales by{" "}
+        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+
+        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 xl:px-36">
+          {/* We helped businesses increase sales by{" "}
           <span className="custom-text">27%</span> of users judge a company’s
-          <span className="custom-text"> leaves the right impression </span>
+          <span className="custom-text"> leaves the right impression </span> */}
+          Brands with{" "}
+          <span className="custom-text">consistent visual presentation</span>{" "}
+          across all platforms can increase revenue by{" "}
+          <span className="custom-text">23%</span> and are{" "}
+          <span className="custom-text">3x</span> more likely to be recognized
+          by customers. This are our promises to you.
         </h3>
 
+        {/* Cards and CTA section */}
         <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
           {/* TO DO: see does this gradient is necessary */}
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-          <div className="flex flex-col gap-6">
-            {/* Cards section */}
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#0a2030] bg-[#000000]">
-                <div className="w-full flex justify-center z-20">
-                  <SupportAndPartnershipIcon width={100} height={100} />
-                </div>
-                <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
-                  <p className="text-[#ffffff] font-bold text-2xl xs:text-3xl text-center z-20">
-                    App design that reflects your brand
-                  </p>
-                  <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20 pt-4">
-                    <span className="custom-text text-3xl sm:text-4xl">
-                      &#10003;
-                    </span>
-                    <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
-                      We`re constantly tracking the performance of our services.
-                      We`ll use internal testing to track increased exposure and
-                      other critical metrics.
-                    </p>
-                  </div>
-                </div>
-              </div>
+          {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
-              <div className="relative overflow-hidden rounded-lg flex flex-col items-center gap-4 rounded- p-6 border-[0.5px] border-[#252525] bg-[#000000]">
-                <div className="z-20">
-                  <SupportAndPartnershipIcon width={100} height={100} />
-                </div>
-                <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
-                  <p className="text-[#ffffff] font-bold text-2xl xs:text-3xl text-center z-20">
-                    App design that reflects your brand
-                  </p>
-                  <div className="flex flex-col xs:flex-row gap-2 xs:gap-8 items-center z-20 pt-4">
-                    <span className="custom-text text-3xl sm:text-4xl">
-                      &#10003;
-                    </span>
-                    <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
-                      We`re constantly tracking the performance of our services.
-                      We`ll use internal testing to track increased exposure and
-                      other critical metrics.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {promiseCardsData.map((promiseCard) => (
+            <PromiseCard
+              key={promiseCard.title}
+              title={promiseCard.title}
+              promise={promiseCard.promise}
+              description={promiseCard.description}
+            />
+          ))}
 
           <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
             <Link href={`/about-us`}>
@@ -117,7 +88,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30 bg-[#000000]`}
+      className={`w-full relative overflow-hidden border-[0.5px] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30`}
     >
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
@@ -131,6 +102,71 @@ export const AchievementCard = ({
   );
 };
 
+export type PromiseCardType = {
+  title: string;
+  promise: string;
+  description: string;
+};
+
+export const promiseCardsData: PromiseCardType[] = [
+  {
+    title: "Results You Can Trust",
+    promise: `We won't stop until your vision is fully realized. Your satisfaction drives our process, and we’re dedicated to delivering exactly what you need.`,
+    description: `We listen closely, adapt quickly, and implement feedback at every stage to ensure the final outcome aligns perfectly with your expectations.`,
+  },
+  {
+    title: "Results You Can Trust",
+    promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
+    description: `With dedicated project management, clear milestones, and regular updates, we keep the process streamlined and efficient, ensuring every deadline is met.`,
+  },
+  {
+    title: "Results You Can Trust",
+    promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions—everything we build is unique to your business.`,
+    description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
+  },
+];
+
+export const PromiseCard = ({
+  title,
+  promise,
+  description,
+}: PromiseCardType) => {
+  return (
+    <div className="relative overflow-hidden flex flex-col items-center gap-6 rounded-lg border-[0.5px] border-[#0a2030] bg-[#000000]">
+      {/* Blur gradients */}
+      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+
+      {/* Card content */}
+      <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
+        {/* TO DO: decide if grid grid-cols-2 gap-6 is better option than flex; plus which gap size fits better? */}
+        <div className="flex flex-row items-center gap-12">
+          <div className="flex flex-col gap-8 items-start z-20 py-12 px-10">
+            <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold uppercase">
+              {title}
+            </span>
+            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start pt-2">
+              {promise}
+            </p>
+            <div className="flex flex-row items-center gap-2">
+              <span className="custom-text text-lg xs:text-xl font-light z-20">
+                &#10003;
+              </span>
+              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                {description}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <HighBrandAwareness />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export type AchievementCardProps = {
   id: number;
   stat: string;
@@ -140,25 +176,25 @@ export type AchievementCardProps = {
 
 export const achievements = [
   {
-    id: 1,
-    stat: "80%",
-    description: "Reduction on latest onboarding",
+    id: 2,
+    stat: "3X",
+    description: "Boost in lead generation performace",
     colorClasses: {
       container: "bg-gradient-to-r from-[#1A9FFF] to-[#0086E6]",
     },
   },
   {
-    id: 2,
-    stat: "7%",
-    description: "Vulnerability fixes on GitHub",
+    id: 1,
+    stat: "150%",
+    description: "Increased engagement on platforms",
     colorClasses: {
       container: "bg-gradient-to-r from-[#1A9FFF] to-[#0086E6]",
     },
   },
   {
     id: 3,
-    stat: "22%",
-    description: "Increased development productivity",
+    stat: "5",
+    description: "Highly skilled experts in our team",
     colorClasses: {
       container: "bg-gradient-to-r from-[#1A9FFF] to-[#0086E6]",
     },
