@@ -91,7 +91,7 @@ export const AchievementCard = ({
     <div
       className={`w-full relative overflow-hidden border-[0.5px] bto-[#27a5ff2b] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30`}
     >
-        <div className="w-48 h-48 absolute bottom-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      <div className="w-48 h-48 absolute bottom-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
@@ -135,17 +135,12 @@ export const PromiseCard = ({
   description,
 }: PromiseCardType) => {
   return (
-    <div className="rounded-lg bg-[#] border-[0.5px] border-[#0a2030] z-20">
+    <div className="roulg bg-[#] border-t-[0.5px] border-[#0a2030] z-20 pt-6">
       <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20">
-
-       {/* Card content */}
-       <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 px-6 pt-12 pb-8">
-        {/* Blur gradients */}
-        
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-
-          <div className="grid grid-cols-3 gap-12 ">
-            <div className="col-span-2 flex flex-col gap-6 items-start z-20 px-12">
+        {/* Card content */}
+        <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 pl-6 ">
+          <div className="grid grid-cols-3 gap-12">
+            <div className="col-span-2 flex flex-col gap-6 items-start z-20 px-6 pt-6 pb-6 ">
               <div>
                 <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold uppercase">
                   {title}
@@ -163,12 +158,14 @@ export const PromiseCard = ({
                 </p>
               </div>
             </div>
-            <div className="bg-[#] col-span-1 flex flex-col items-center justify-center rounded-lg">
+            
+            <div className="relative overflow-hidden bg-[#] col-span-1 flex flex-col items-center justify-center rounded-lg border-[0.5px] border-[#0a2030]">
+              {/* Blur gradients */}
+              <div className="w-48 h-48 absolute bottom-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
               <HighBrandAwareness />
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

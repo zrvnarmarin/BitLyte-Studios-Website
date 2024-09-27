@@ -62,7 +62,7 @@ function Panel({
       <div className="flex items-center justify-between gap-6 py-2">
         <div className="w-full flex items-center gap-4">
           <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold">0{id}.</span>
-          <p className="text-xl sm:text-2xl text-[#ffffff] font-semibold">{title}</p>
+          <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">{title}</p>
         </div>
         {isActive ? (
           <span className="rotate-90 duration-300">
