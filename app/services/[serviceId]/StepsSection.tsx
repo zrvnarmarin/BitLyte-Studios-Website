@@ -85,42 +85,6 @@ export const StepCard = ({
   );
 };
 
-export const BulletPoint = () => {
-  return (
-    <svg
-      width="8"
-      height="8"
-      viewBox="0 0 28 28"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="0.25"
-        y="0.25"
-        width="27.5"
-        height="27.5"
-        rx="13.75"
-        fill="url(#paint0_linear_162_2)"
-        stroke="#A5B7EC"
-        stroke-width="0.5"
-      />
-      <defs>
-        <linearGradient
-          id="paint0_linear_162_2"
-          x1="-1.08097e-08"
-          y1="14.3458"
-          x2="28"
-          y2="13.6542"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stop-color="#7F96DB" />
-          <stop offset="1" stop-color="#5775D0" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-};
-
 export const steps: StepsCardType[] = [
   {
     id: 1,
