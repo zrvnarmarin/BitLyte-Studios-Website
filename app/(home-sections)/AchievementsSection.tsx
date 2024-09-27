@@ -91,7 +91,7 @@ export const AchievementCard = ({
     <div
       className={`w-full relative overflow-hidden border-[0.5px] bto-[#27a5ff2b] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30`}
     >
-      <div className="w-48 h-48 absolute bottom-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
@@ -161,8 +161,10 @@ export const PromiseCard = ({
             
             <div className="relative overflow-hidden bg-[#] col-span-1 flex flex-col items-center justify-center rounded-lg border-[0.5px] border-[#0a2030]">
               {/* Blur gradients */}
-              <div className="w-48 h-48 absolute bottom-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-              <HighBrandAwareness />
+              <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+              <span className="z-30">
+                <HighBrandAwareness />
+              </span>
             </div>
           </div>
         </div>
