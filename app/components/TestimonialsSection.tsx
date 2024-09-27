@@ -1,7 +1,6 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import '../../public/test.css';
-import Image from "next/image";
 // import TestimonialExampleImage from "../../../public/images/home/TestimonialImage.svg";
 import { LeftArrow, RightArrow } from "@/app/(home-sections)/ServicesSection";
 

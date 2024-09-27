@@ -32,7 +32,7 @@ export const ServiceCategoryCard = ({
   services,
 }: ServiceCardType) => {
   return (
-    <div className="group relative overflow-hidden w-full grid grid-cols-1 xl:grid-cols-2 justify-between md:gap- rounded-lg border-[0.5px] border-[#252525] z-20">
+    <div className="group relative overflow-hidden w-full grid grid-cols-1 xl:grid-cols-2 justify-between md:gap- rounded-lg border-[0.5px] border-[#0a2030] z-20">
       {/* Blur background */}
       <div className="w-48 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
@@ -56,7 +56,7 @@ export const ServiceCategoryCard = ({
           <Link
             href={`/services/${service}`}
             key={service}
-            className="group h-full w-full flex gap-6 relative overflow-hidden border-[0.5px] border-l-[#252525] md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] duration-200"
+            className="group h-full w-full flex gap-6 relative overflow-hidden border-[0.5px] border-l-[#0a2030] md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] duration-200"
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>

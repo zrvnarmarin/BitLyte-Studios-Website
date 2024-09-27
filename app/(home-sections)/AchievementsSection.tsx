@@ -2,12 +2,8 @@ import React from "react";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
-import { LogoArrowRight } from "./ProjectsSection";
 import Link from "next/link";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
-import { HighBrandAwareness } from "../services/[serviceId]/SimilarServicesSection";
-
-// 75% of users judge a company’s credibility
 
 export default function AchievementsSection() {
   return (
@@ -54,14 +50,19 @@ export default function AchievementsSection() {
           {/* TO DO: see does this gradient is necessary */}
           {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
-          {promiseCardsData.map((promiseCard) => (
-            <PromiseCard
-              key={promiseCard.title}
-              title={promiseCard.title}
-              promise={promiseCard.promise}
-              description={promiseCard.description}
-            />
-          ))}
+          <div className="flex flex-col gap-6 z-20">
+            {/* Blur background */}
+            {/* <div className="w-96 h-96 absolute right-24 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+
+            {promiseCardsData.map((promiseCard) => (
+              <PromiseCard
+                key={promiseCard.title}
+                title={promiseCard.title}
+                promise={promiseCard.promise}
+                description={promiseCard.description}
+              />
+            ))}
+          </div>
 
           <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
             <Link href={`/about-us`}>
@@ -88,8 +89,10 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden border-[0.5px] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30`}
+      className={`w-full relative overflow-hidden border-[0.5px] bto-[#27a5ff2b] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30`}
     >
+        <div className="w-48 h-48 absolute bottom-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
       <h3
         className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
       >
@@ -117,11 +120,11 @@ export const promiseCardsData: PromiseCardType[] = [
   {
     title: "Results You Can Trust",
     promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
-    description: `With dedicated project management, clear milestones, and regular updates, we keep the process streamlined and efficient, ensuring every deadline is met.`,
+    description: `With dedicated project management and clear milestones, we keep the process streamlined and efficient, ensuring every deadline is met.`,
   },
   {
     title: "Results You Can Trust",
-    promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions—everything we build is unique to your business.`,
+    promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions - everything we build is unique to your business.`,
     description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
   },
 ];
@@ -132,36 +135,41 @@ export const PromiseCard = ({
   description,
 }: PromiseCardType) => {
   return (
-    <div className="relative overflow-hidden flex flex-col items-center gap-6 rounded-lg border-[0.5px] border-[#0a2030] bg-[#000000]">
-      {/* Blur gradients */}
-      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-      <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+    <div className="rounded-lg bg-[#] border-[0.5px] border-[#0a2030] z-20">
+      <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20">
+        {/* Blur gradients */}
+        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
-      {/* Card content */}
-      <div className="flex flex-col items-center gap-0 justify-start z-20 px-">
-        {/* TO DO: decide if grid grid-cols-2 gap-6 is better option than flex; plus which gap size fits better? */}
-        <div className="flex flex-row items-center gap-12">
-          <div className="flex flex-col gap-8 items-start z-20 py-12 px-10">
-            <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold uppercase">
-              {title}
-            </span>
-            <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start pt-2">
-              {promise}
-            </p>
-            <div className="flex flex-row items-center gap-2">
-              <span className="custom-text text-lg xs:text-xl font-light z-20">
-                &#10003;
-              </span>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
-                {description}
+
+       {/* Card content */}
+       <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 px-6 pt-12 pb-8">
+        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
+          <div className="grid grid-cols-3 gap-12 ">
+            <div className="col-span-2 flex flex-col gap-6 items-start z-20 px-12">
+              <div>
+                <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold uppercase">
+                  {title}
+                </span>
+              </div>
+              <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start pt-6">
+                {promise}
               </p>
+              <div className="flex flex-row items-center gap-4">
+                <span className="custom-text text-lg xs:text-xl font-light z-20">
+                  &#10003;
+                </span>
+                <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                  {description}
+                </p>
+              </div>
+            </div>
+            <div className="bg-[#] col-span-1 flex flex-col items-center justify-center rounded-lg">
+              <HighBrandAwareness />
             </div>
           </div>
-
-          <div className="flex flex-col items-center justify-center">
-            <HighBrandAwareness />
-          </div>
         </div>
+
       </div>
     </div>
   );
@@ -243,28 +251,55 @@ export const BulletPoint = () => {
   );
 };
 
-const SupportAndPartnershipIcon = ({
-  width = 50,
-  height = 50,
-}: {
-  width: number;
-  height: number;
-}) => (
+export const HighBrandAwareness = () => (
   <svg
-    width={width}
-    height={height}
-    viewBox="0 0 48 48"
-    fill="#55b8ff"
-    stroke="#55b8ff"
+    version="1.1"
+    id="Layer_1_1_"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    viewBox="0 0 64 64"
+    xmlSpace="preserve"
+    width={200}
+    height={200}
   >
-    <g id="Layer_2" data-name="Layer 2">
-      <g id="Q3_icons" data-name="Q3 icons">
-        <g>
-          <path d="M18.4,13.8A5.9,5.9,0,0,1,23,12.1a7.6,7.6,0,0,1,5.2,2.2c2.9,2.8,3.4,7.2,1,9.7a2.1,2.1,0,0,0,0,2.9,2.4,2.4,0,0,0,1.4.5,1.8,1.8,0,0,0,1.4-.6c3.2-3.3,3.5-8.2,1.3-12.3H34a6.1,6.1,0,0,0,4.5-1.9,6.3,6.3,0,0,0-.2-8.9A6.5,6.5,0,0,0,34,2a6.6,6.6,0,0,0-4.6,1.9,6.3,6.3,0,0,0-1.6,5.3,11.2,11.2,0,0,0-4.7-1.1,9.5,9.5,0,0,0-7.6,3,2,2,0,1,0,2.9,2.7Z" />
-          <path d="M21.4,38.4C18,37.5,16,33.6,17,29.7s4.5-6.6,7.9-5.7a2,2,0,0,0,2.4-1.5,1.9,1.9,0,0,0-1.4-2.4,10.4,10.4,0,0,0-11.3,5.1,6.3,6.3,0,0,0-4.3-3.6l-1.4-.2a6.3,6.3,0,0,0-6.1,4.8,6.2,6.2,0,0,0,4.6,7.6l1.5.2a6.2,6.2,0,0,0,3.9-1.4,10.5,10.5,0,0,0,7.7,9.7h.4a2,2,0,0,0,2-1.5A1.9,1.9,0,0,0,21.4,38.4Z" />
-          <path d="M40.5,33.9a11.9,11.9,0,0,0,3.3-3.4A9.8,9.8,0,0,0,45,22.4,2,2,0,0,0,42.5,21a2,2,0,0,0-1.3,2.5,5.6,5.6,0,0,1-.8,4.8,8.2,8.2,0,0,1-4.5,3.4C32,32.9,28,31,27,27.7a2,2,0,0,0-2.5-1.4,2,2,0,0,0-1.4,2.5A10.5,10.5,0,0,0,33.2,36a6.3,6.3,0,0,0,5,10,5.7,5.7,0,0,0,1.8-.3,6.3,6.3,0,0,0,.5-11.8Z" />
-        </g>
-      </g>
-    </g>
+    <path
+      d="M3,44h23c0,0.188,0.053,0.375,0.159,0.54l2.332,3.614l-0.216,4.296c-0.02,0.393,0.193,0.761,0.543,0.94l3.829,1.958
+      l1.957,3.83c0.179,0.351,0.542,0.567,0.941,0.543l4.296-0.215l3.613,2.333C43.62,61.947,43.809,62,43.998,62s0.377-0.053,0.542-0.16
+      l3.614-2.332l4.296,0.216c0.401,0.019,0.761-0.193,0.94-0.543l1.958-3.829l3.83-1.957c0.351-0.179,0.563-0.547,0.543-0.941
+      l-0.215-4.296l2.333-3.613c0.213-0.33,0.213-0.754,0-1.084l-2.332-3.614l0.216-4.296c0.02-0.393-0.193-0.761-0.543-0.94
+      l-3.829-1.958l-1.957-3.83c-0.179-0.35-0.533-0.561-0.941-0.543l-4.296,0.215l-3.613-2.333C44.379,26.053,44.19,26,44,26V3
+      c0-0.552-0.448-1-1-1H3C2.448,2,2,2.448,2,3v40C2,43.552,2.448,44,3,44z M44.002,28.19l3.341,2.158
+      c0.176,0.114,0.378,0.172,0.593,0.159l3.972-0.199l1.81,3.542c0.096,0.187,0.248,0.339,0.436,0.435l3.541,1.811l-0.2,3.972
+      c-0.011,0.209,0.045,0.417,0.158,0.592l2.157,3.343l-2.158,3.341c-0.114,0.176-0.169,0.383-0.159,0.593l0.199,3.972l-3.542,1.81
+      c-0.187,0.096-0.339,0.248-0.435,0.436l-1.811,3.541l-3.972-0.2c-0.206-0.011-0.417,0.044-0.592,0.158l-3.343,2.157l-3.341-2.158
+      c-0.162-0.105-0.351-0.16-0.542-0.16c-0.017,0-0.033,0-0.05,0.001l-3.972,0.199l-1.81-3.542c-0.096-0.187-0.248-0.339-0.436-0.435
+      l-3.541-1.811l0.2-3.972c0.011-0.209-0.045-0.417-0.158-0.592l-2.157-3.343l2.158-3.341c0.114-0.176,0.169-0.383,0.159-0.593
+      l-0.199-3.972l3.542-1.81c0.187-0.096,0.339-0.248,0.435-0.436l1.811-3.541l3.972,0.2c0.209,0.015,0.417-0.045,0.592-0.158
+      L44.002,28.19z M18,4h10v13c0,0.551-0.449,1-1,1h-8c-0.551,0-1-0.449-1-1V4z M4,37h9v-2H4V4h12v13c0,1.654,1.346,3,3,3h8
+      c1.654,0,3-1.346,3-3V4h12v23.102l-2.154,1.39l-4.296-0.216c-0.404-0.024-0.761,0.193-0.94,0.543l-1.958,3.829l-3.83,1.957
+      c-0.351,0.179-0.563,0.547-0.543,0.941l0.215,4.296L27.1,42H4V37z"
+      fill="#ffffff"
+    />
+    <path
+      d="M33,43.999c-0.001,6.065,4.933,11,10.999,11.001c0,0,0.001,0,0.002,0c6.064,0,10.999-4.934,11-10.999
+      s-4.933-11-10.999-11.001c0,0-0.001,0-0.002,0C37.936,33,33.001,37.934,33,43.999z M44,35c0,0,0.001,0,0.002,0
+      c2.404,0,4.664,0.937,6.364,2.637c1.699,1.7,2.635,3.96,2.635,6.364c0,2.404-0.937,4.664-2.637,6.364C48.663,52.064,46.404,53,44,53
+      c0,0-0.001,0-0.002,0c-2.404,0-4.664-0.937-6.364-2.637c-1.699-1.7-2.635-3.96-2.635-6.364c0-2.404,0.937-4.664,2.637-6.364
+      C39.337,35.936,41.596,35,44,35z"
+      fill="#ffffff"
+    />
+    <path
+      d="M40.432,45.719l-0.509,3.12c-0.062,0.378,0.098,0.758,0.411,0.979c0.313,0.22,0.724,0.243,1.06,0.058L44,48.435l2.606,1.44
+      C46.758,49.958,46.924,50,47.09,50c0.202,0,0.404-0.062,0.576-0.183c0.313-0.221,0.473-0.601,0.411-0.979l-0.509-3.12l2.147-2.201
+      c0.262-0.268,0.352-0.66,0.232-1.016s-0.427-0.615-0.797-0.671l-2.927-0.447l-1.318-2.809C44.741,38.224,44.388,38,44,38
+      s-0.741,0.224-0.905,0.575l-1.318,2.809l-2.927,0.447c-0.371,0.057-0.678,0.316-0.797,0.671s-0.029,0.748,0.232,1.016L40.432,45.719
+      z M42.606,43.281c0.33-0.051,0.613-0.262,0.754-0.564L44,41.354l0.64,1.363c0.142,0.302,0.425,0.513,0.754,0.564l1.531,0.234
+      l-1.141,1.169c-0.222,0.227-0.322,0.546-0.271,0.859l0.259,1.586l-1.288-0.712c-0.151-0.083-0.317-0.125-0.484-0.125
+      s-0.333,0.042-0.484,0.125l-1.288,0.712l0.259-1.586c0.051-0.313-0.049-0.632-0.271-0.859l-1.141-1.169L42.606,43.281z"
+      fill="#ffffff"
+    />
+    <rect x="15" y="35" width="2" height="2" fill="#ffffff" />
   </svg>
 );

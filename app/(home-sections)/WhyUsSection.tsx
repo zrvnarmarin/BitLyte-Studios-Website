@@ -37,7 +37,7 @@ export type WhyUsCardType = {
 export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) => {
   return (
     <div
-      className="bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#252525] z-20"
+      className="bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20"
     >
       {/* Reason Card */}
       <div className="relative flex flex-col items-center justify-center gap-2 z-20">
