@@ -1,63 +1,64 @@
 import React from "react";
-import { LogoIconWhite } from "./Navbar";
+import { LogoIcon, LogoIconWhite } from "./Navbar";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="relative w-full mt-12 py-16 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.5px] border-[#0a2030] overflow-hidden">
-      
       <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
       <div className="w-48 h-48 absolute right-32 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
 
       <div className="relative z-10 w-full flex flex-col items-start gap-2">
-
         {/* Logo */}
-        <Link href="/">
-          <div className="flex flex-col md:flex-row items- md:items-center gap-2">
-            <LogoIconWhite width={95} height={95} />
-            <div className="flex flex-col items-start gap-2 md:gap-0">
-              <span className="text-[#ffffff] text-3xl font-semibold">
-                BitLyte Studios
-              </span>
-              <span className="text-base md:text-lg font-semibold text-[#dddddd] uppercase">
-                Zagreb, Croatia
-              </span>
-            </div>
+        <Link href={`/`} className="w-full flex items-center justify-center">
+          <div className="flex items-center gap-2 lg:gap-4">
+            <LogoIcon />
+            <span className="text-[#ffffff] text-lg sm:text-xl lg:text-2xl font-bold">
+              BitLyte Studios
+            </span>
           </div>
         </Link>
 
-        <div className="flex items-center justify-between w-full">
+        <div className="w-full flex items-center">
+          <div className="w-full flex flex-col pt-6 gap-2">
+            <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+              Contact info
+            </p>
+            <div className="flex items-center gap-2">
+              <ContactIcon />
+              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                +385015896878
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <EmailIcon />
+              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                bitlyte-studios@gmail.om
+              </span>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-between w-full">
             {/* Quick links */}
             <div className="flex flex-col pt-6 gap-2">
-              <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">Browse</p>
-              {quickLinkRoutes.map((routeLink) => (
-                <React.Fragment key={routeLink.id}>
-                  <Link href={routeLink.href}>
-                    <p className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                      {routeLink.title}
-                    </p>
-                  </Link>
-                </React.Fragment>
-              ))}
+              {/* <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+                Browse
+              </p> */}
+              <div className="flex flex-row gap-6">
+                {quickLinkRoutes.map((routeLink) => (
+                  <React.Fragment key={routeLink.id}>
+                    <Link href={routeLink.href}>
+                      <p className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                        {routeLink.title}
+                      </p>
+                    </Link>
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
 
             {/* Social media links */}
             <div className="flex flex-col pt-6 gap-2">
-              <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
-                Contact info
-              </p>
-              <div className="flex items-center gap-2">
-                <ContactIcon />
-                <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                  +385015896878
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <EmailIcon />
-                <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                  bitlyte-studios@gmail.om
-                </span>
-              </div>
               <div className="w-full flex items-center gap-8 pt-6">
                 {socialMediaIcons.map((socialMediaIcon) => (
                   <React.Fragment key={socialMediaIcon.id}>
@@ -68,26 +69,49 @@ export default function Footer() {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="w-full flex flex-col items-end pt-6 gap-2">
+            <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+              Contact info
+            </p>
+            <div className="flex items-center gap-2">
+              <ContactIcon />
+              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                +385015896878
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <EmailIcon />
+              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                bitlyte-studios@gmail.om
+              </span>
+            </div>
+          </div>
         </div>
 
-        {/* Copyright and author */}
-        <div className="flex flex-col gap-2 pt-6">
-          <p className="text-xs text-[#dddddd] font-light">
-            ©2024 BitLyte Studios. All rights reserved.
-          </p>
-          <p className="text-xs text-[#dddddd] font-light">
-            Developed by Marin Zrvnar
-          </p>
+        <div className="w-full flex flex-col items-center justify-between pb-6">
+          {/* Copyright and author */}
+          <div className="flex flex-col items-center justify-center gap-2 pt-6">
+            <p className="text-xs text-[#dddddd] font-light">
+              ©2024 BitLyte Studios. All rights reserved.
+            </p>
+            <p className="text-xs text-[#dddddd] font-light">
+              Developed by Marin Zrvnar
+            </p>
+          </div>
+          {/* Terms and privacy */}
         </div>
-
-        {/* Terms and privacy */}
-        <div className="w-full flex items-center justify-start gap-2 ">
-          <p className="text-xs text-[#dddddd] font-light">
-            Terms And Conditions
-          </p>
-          <span className="text-xs text-[#dddddd] font-light">|</span>
-          <p className="text-xs text-[#dddddd] font-light">Privacy Policy</p>
-        </div>
+        
+          <div className="w-full flex flex-col items-center justify-between pt-7 border-t-[0.5px] border-[#252525]">
+            <div className="flex items-center justify-start gap-2 ">
+              <p className="text-xs text-[#dddddd] font-light">
+                Terms And Conditions
+              </p>
+              <span className="text-xs text-[#dddddd] font-light">|</span>
+              <p className="text-xs text-[#dddddd] font-light">Privacy Policy</p>
+            </div>
+          </div>
       </div>
     </footer>
   );

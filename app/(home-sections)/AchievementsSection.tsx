@@ -36,17 +36,18 @@ export default function AchievementsSection() {
           across all platforms can increase revenue by{" "}
           <span className="custom-text">23%</span> and are{" "}
           <span className="custom-text">3x</span> more likely to be recognized
-          by customers. This are our promises to you.
+          by customers.
         </h3>
 
         {/* Cards and CTA section */}
         <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
           <div className="flex flex-col gap-6 z-20">
             {/* Blur background */}
-            {/* <div className="w-96 h-96 absolute right-24 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+            {/* <div className="w-24 h-24 absolute left-24 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
             {promiseCardsData.map((promiseCard) => (
               <PromiseCard
+                id={promiseCard.id}
                 key={promiseCard.title}
                 title={promiseCard.title}
                 promise={promiseCard.promise}
@@ -96,6 +97,7 @@ export const AchievementCard = ({
 };
 
 export type PromiseCardType = {
+  id: number;
   title: string;
   promise: string;
   description: string;
@@ -103,16 +105,19 @@ export type PromiseCardType = {
 
 export const promiseCardsData: PromiseCardType[] = [
   {
+    id: 1,
     title: "Results You Can Trust",
     promise: `We won't stop until your vision is fully realized. Your satisfaction drives our process, and we’re dedicated to delivering exactly what you need.`,
     description: `We listen closely, adapt quickly, and implement feedback at every stage to ensure the final outcome aligns perfectly with your expectations.`,
   },
   {
+    id: 2,
     title: "Results You Can Trust",
     promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
     description: `With dedicated project management and clear milestones, we keep the process streamlined and efficient, ensuring every deadline is met.`,
   },
   {
+    id: 3,
     title: "Results You Can Trust",
     promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions - everything we build is unique to your business.`,
     description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
@@ -120,12 +125,13 @@ export const promiseCardsData: PromiseCardType[] = [
 ];
 
 export const PromiseCard = ({
+  id,
   title,
   promise,
   description,
 }: PromiseCardType) => {
   return (
-    <div className="border-t-[0.5px] border-[#0a2030] z-20 py-6">
+    <div className={`${id % 2 === 0 ? 'border-y-[0.5px] border-[#0a2030]' : 'border-none'}  z-20 py-6`}>
       <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20">
         {/* Card content */}
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 pl-6 ">
