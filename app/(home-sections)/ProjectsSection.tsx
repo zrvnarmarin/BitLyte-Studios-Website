@@ -3,7 +3,7 @@ import Image from "next/image";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import Link from "next/link";
-import TestImage from "../../public/apartment.jpg";
+import TestImage from "../../public/apartment.webp";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 
 export default function ProjectsSection() {
