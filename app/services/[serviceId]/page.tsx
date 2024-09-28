@@ -4,7 +4,7 @@ import StepsSection from "./StepsSection";
 import FAQSection from "@/app/components/FAQSection";
 import TestimonialsSection from "@/app/components/TestimonialsSection";
 import SimilarServicesSection from "./SimilarServicesSection";
-import CTASection from "./CTASection";
+import CTASection from "@/app/components/CTASection";
 
 export default function Home({ params }: { params: { serviceId: string } }) {
   return (

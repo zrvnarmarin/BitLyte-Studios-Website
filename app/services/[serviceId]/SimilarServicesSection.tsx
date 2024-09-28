@@ -16,7 +16,7 @@ export default function SimilarServicesSection() {
 
         <Link
           href={`/services/visual-identity`}
-          className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1a4869]"
+          className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1d263f]"
         >
           {/* Blur background */}
           <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[30px]"></div>
@@ -51,8 +51,10 @@ export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
   return (
     <Link
       href={`/services/visual-identity`}
-      className="flex flex-col gap-8 relative overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] text-[#ffffff] px-5 py-10 rounded-lg border-[0.5px] border-[#252525]"
+      className="flex flex-col gap-8 relative overflow-hidden  text-[#ffffff] px-5 py-10 rounded-lg border-[0.5px] border-[#1d263f]"
     >
+      <div className="w-36 h-36 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+
       <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
         {CTAText}
       </h3>

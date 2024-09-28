@@ -15,7 +15,7 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-tight text-[#ffffff] font-medium text-center lg:text-left z-30">
-            {formatString(serviceName)} That Makes A Difference
+            <span className="custom-text">{formatString(serviceName)}</span> That Makes A Difference
           </h1>
 
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
@@ -24,11 +24,16 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
             approach makes it happen.
           </p>
 
-          <div className="w-full flex items-center justify-center lg:justify-start z-20 pt-6">
+          {/* CTA button */}
+          <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
             <Link href={`/contact`}>
-              <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#57b7fc] to-[#27A5FF] rounded-full font-medium text-xl xs:text-2xl sm:text-2xl md:text-3xl">
-                <LogoForButton fillColor="#ffffff" width={18} height={20} />
-                Start building
+              <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+                <LogoForButtonRotated
+                  fillColor="#000000"
+                  width={18}
+                  height={20}
+                />
+                Start Building
               </button>
             </Link>
           </div>
@@ -36,7 +41,7 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
 
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
           {/* Blur color effect behind the image */}
-          <div className="w-80 h-80 lg:w-[26rem] lg:h-[26rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+          <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
             src={TestIkona}
             alt="t"

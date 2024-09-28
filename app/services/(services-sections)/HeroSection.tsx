@@ -2,7 +2,10 @@ import React from "react";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
-import { LogoForButton } from "../[serviceId]/HeroSection";
+import {
+  LogoForButton,
+  LogoForButtonRotated,
+} from "../[serviceId]/HeroSection";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -27,11 +30,16 @@ export default function HeroSection() {
             approach makes it happen.
           </p>
 
-          <div className="w-full flex items-center justify-center lg:justify-start z-20 pt-6">
+          {/* CTA button */}
+          <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
             <Link href={`/contact`}>
-              <button className="w-fit flex items-center gap-2 py-4 px-12 text-[#ffffff] bg-gradient-to-r from-[#57b7fc] to-[#27A5FF] rounded-full font-medium text-xl xs:text-2xl sm:text-2xl md:text-3xl">
-                <LogoForButton fillColor="#ffffff" width={18} height={20} />
-                Start building
+              <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+                <LogoForButtonRotated
+                  fillColor="#000000"
+                  width={18}
+                  height={20}
+                />
+                Start Building
               </button>
             </Link>
           </div>
@@ -65,7 +73,7 @@ export const WebServicesIcon = ({
       fill="#5775D0"
       stroke="#5775D0"
       strokeWidth="0.1"
-      transform="scale(-1, 1)"  // Flips the icon horizontally
+      transform="scale(-1, 1)" // Flips the icon horizontally
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
