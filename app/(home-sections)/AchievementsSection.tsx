@@ -112,13 +112,13 @@ export const promiseCardsData: PromiseCardType[] = [
   },
   {
     id: 2,
-    title: "Results You Can Trust",
+    title: "On time, every time",
     promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
     description: `With dedicated project management and clear milestones, we keep the process streamlined and efficient, ensuring every deadline is met.`,
   },
   {
     id: 3,
-    title: "Results You Can Trust",
+    title: "Built exclusively for you",
     promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions - everything we build is unique to your business.`,
     description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
   },

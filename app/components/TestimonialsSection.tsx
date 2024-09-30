@@ -1,7 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import '../../public/test.css';
-// import TestimonialExampleImage from "../../../public/images/home/TestimonialImage.svg";
+import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
 import { LeftArrow, RightArrow } from "@/app/(home-sections)/ServicesSection";
 
 export default function TestimonialsSection() {
@@ -79,8 +80,8 @@ export const TestimonialCard = ({
         <p className="w-full text-xl xs:text-2xl font-light sm:text-3xl text-[#ffffff] leading-snug text-center z-20">
           {testimonialText}
         </p>
-        <div className="flex items-center justify-center gap-2 pt-12">
-          {/* <Image src={imageSrc} alt="testimonial image" /> */}
+        <div className="flex items-center justify-center gap-4 pt-12">
+          <Image src={TestimonialExampleImage} alt="testimonial image" width={70} height={70} />
           <p className="flex flex-col items-center gap-0">
             <span className="w-full font-medium text-xl lg:text-xl  text-[#ffffff]">
               {name}

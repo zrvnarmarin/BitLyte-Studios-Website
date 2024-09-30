@@ -25,26 +25,30 @@ const config: Config = {
       },
       fontSize: {
         "2xs": "10px",
-      }
+      },
     },
     colors: {
-      'primary-blue': '#1A9FFF',
-      'primary-purple': '#C17EF1',
-      'primary-green': '#17DE6D',
-      'primary-brown': '#3D3D3D',
-      'dark-blue': '#0083E0',
-      'dark-purple': '#AF5AED',
-      'dark-green': '#16BB5E',
-      'light-blue': '#33AAFF',
-      'light-purple': '#D3A3F5',
-      'light-green': '#59EE99',
-    }
+      "primary-blue": "#1A9FFF",
+      "primary-purple": "#C17EF1",
+      "primary-green": "#17DE6D",
+      "primary-brown": "#3D3D3D",
+      "dark-blue": "#0083E0",
+      "dark-purple": "#AF5AED",
+      "dark-green": "#16BB5E",
+      "light-blue": "#33AAFF",
+      "light-purple": "#D3A3F5",
+      "light-green": "#59EE99",
+    },
   },
   plugins: [
-    plugin(function ({ addBase, addComponents, addUtilities }) {
-      addBase({});
+    plugin(function ({ addBase, theme, addComponents, addUtilities }) {
+      addBase({
+        h1: { fontSize: theme("fontSize.2xl") },
+        h2: { fontSize: theme("fontSize.xl") },
+        h3: { fontSize: theme("fontSize.lg") },
+      });
       addComponents({
-        // 
+        //
       });
       addUtilities({
         ".tap-highlight-color": {
