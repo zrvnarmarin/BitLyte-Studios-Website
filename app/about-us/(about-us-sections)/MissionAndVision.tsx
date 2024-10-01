@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import MarinRemovedBgImage from "../../../public/marin_photoroom-Photoroom(1)_LE_auto_x2.jpg";
-import IgorImage from "../../../public/Igor.png";
+import IgorImage from "../../../public/Igor.jpeg";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import { socialMediaIcons } from "@/app/components/Footer";
@@ -12,12 +12,14 @@ import Link from "next/link";
 export default function MissionAndVision() {
   return (
     <SectionWrapper>
-      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] text-start xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-24 ">
-        We helped businesses increase sales by{" "}
+      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-24 ">
+        {/* We helped businesses increase sales by{" "}
         <span className="custom-text">27%</span>. Your product`s achievements is
         our success. Our design approach is result-driven and it`s crucial for
-        us to make your product reach it`s business metrics.
+        us to make your product reach it`s business metrics. */}
         <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        Fueled by creativity, technology, and an obsession with results, we bring your vision to life in ways that make your brand unforgettable. We’re not just creating websites, we’re crafting the future of your digital presence.
+
       </h3>
 
       <div className="relative w-full grid grid-cols-2 place-items-center gap-6 pt-4 sm:pt-8 md:pt-12 px-48 justify-center items-center">
@@ -83,7 +85,7 @@ export default function MissionAndVision() {
 
             {/* Image */}
             <Image
-              src={MarinRemovedBgImage}
+              src={IgorImage}
               width={0} // Set desired width
               height={0} // Set desired height
               alt="Marin_image"
@@ -157,7 +159,7 @@ export const ValueCard = ({
   icon: () => React.FC;
 }) => {
   return (
-    <div className="relative overflow-hidden flex flex-col items-start justify-center p-8 rounded-lg border-[0.5px] border-[#252525]">
+    <div className="relative overflow-hidden flex flex-col items-start justify-center p-8 rounded-lg border-[0.5px] border-[#0a2030]">
       <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
       <div className="w-full flex items-center justify-start">{icon()}</div>
       <h2 className="text-[#ffffff] text-3xl xs:text-4xl sm:text-5xl font-medium xs:font-normal mb-8">
@@ -230,14 +232,14 @@ export const valueCardData = [
     id: 1,
     title: "Mission",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, dolorem.",
+      "To create digital experiences that inspire growth and generate revenue for our clients by combining our team`s efforts.",
     icon: MissionIcon,
   },
   {
     id: 2,
     title: "Vision",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, dolorem.",
+      "To create a user-centered landscape where all our clients stand out, leading with unforgettable brand experiences.",
     icon: VisionIcon,
   },
 ];
