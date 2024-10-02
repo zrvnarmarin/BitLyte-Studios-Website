@@ -7,7 +7,7 @@ import "../../public/test.css";
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         Frequently Asked Questions
       </h2>
       <Accordion faqArray={homePageFAQ} />
@@ -56,13 +56,13 @@ function Panel({
   return (
     <div
       onClick={onShow}
-      // TO DO: decide ib border is necesary here - border-b-[0.5px] border-[#0a2030]
+      // TO DO: decide if border is necesary here - border-b-[0.5px] border-[#0a2030]
       className={`cursor-pointer rounded-lg pl-6 pr-4 py-6 hover:shadow-[0_0_5px_0_rgba(255,255,255,1)] ${isActive ? 'bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] hover:shadow-none border-[0.5px] border-[#0a2030]' : ''}`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
         <div className="w-full flex items-center gap-4">
-          <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold">0{id}.</span>
-          <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">{title}</p>
+          <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold">0{id}</span>
+          <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl">{title}</p>
         </div>
         {isActive ? (
           <span className="rotate-90 duration-300">

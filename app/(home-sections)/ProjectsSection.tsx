@@ -10,10 +10,10 @@ export default function ProjectsSection() {
   return (
     <SectionWrapper>
       <div className="w-full flex items-center justify-between">
-        <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+        <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
           Our Work
         </h2>
-        {/* TO DO: decide if the CTA button will be posiitoned here or in the bottom of the component */}
+
         <div className="hidden relative w-full xl:flex justify-end z-30">
           <Link href={`/projects`}>
             <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
@@ -40,16 +40,6 @@ export default function ProjectsSection() {
           />
         ))}
       </div>
-
-      {/* TO DO: decide if the CTA button will be posiitoned here or in the bottom of the component */}
-      {/* <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
-        <Link href={`/projects`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            See More Projects
-          </button>
-        </Link>
-      </div> */}
     </SectionWrapper>
   );
 }
@@ -80,12 +70,12 @@ export const ProjectCardDesktop = ({
         <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff]">
           {title}
         </h3>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
+        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
           {description}
         </p>
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-xl text-[#eeeeee] font-black">Project Briefing:</p>
-          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start">
+          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
             Our client, MYSO, or Million Yield Structuring Opportunities, is a
             Web3 finance platform changing the game with DeFi. They deliver
             innovative decentralized web apps with an unparalleled user
@@ -93,13 +83,17 @@ export const ProjectCardDesktop = ({
           </p>
         </div>
         <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
-        <Link href={`/projects`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            See Full Case
-          </button>
-        </Link>
-      </div>
+          <Link href={`/projects`}>
+            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
+              <LogoForButtonRotated
+                fillColor="#000000"
+                width={18}
+                height={20}
+              />
+              See Full Case
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import "../../public/test.css";
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         Why Choose Us
       </h2>
       <div className="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
@@ -46,10 +46,10 @@ export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) =>
           {/* Render the icon component */}
           {React.createElement(icon)}
         </div>
-        <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
+        <h3 className="w-full text-[#ffffff] font-semibold  text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
           {title}
         </h3>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-4 z-20">
+        <p className="text-xl font-light text-[#ffffff] text-start pt-6 z-40">
           {description}
         </p>
       </div>

@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+        <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
           What our clients say
         </h2>
 
@@ -65,7 +65,7 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-20 border-[0.5px] border-[#0a2030]">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
       {/* Blur background */}
       {/* Blur background */}
       <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
@@ -77,16 +77,16 @@ export const TestimonialCard = ({
         <div className="w-full flex items-center justify-center pb-6">
           <QuotesIcon />
         </div>
-        <p className="w-full text-xl xs:text-2xl font-light sm:text-3xl text-[#ffffff] leading-snug text-center z-20">
-          {testimonialText}
+        <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl text-[#ffffff] leading-snug text-center z-20">
+          {testimonialText} 
         </p>
-        <div className="flex items-center justify-center gap-4 pt-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12">
           <Image src={TestimonialExampleImage} alt="testimonial image" width={70} height={70} />
           <p className="flex flex-col items-center gap-0">
-            <span className="w-full font-medium text-xl lg:text-xl  text-[#ffffff]">
+            <span className="w-full font-medium text-xl lg:text-xl text-center text-[#ffffff]">
               {name}
             </span>
-            <span className="w-full text-md text-[#eeeeee] font-light ">
+            <span className="w-full text-center text-md text-[#eeeeee] font-light ">
               {companyName} comp
             </span>
           </p>
@@ -109,7 +109,7 @@ export type TestimonialCardProps = {
 export const testimonials = [
   {
     id: 1,
-    name: "Nick Forest",
+    name: "Nickita Hrischev Forest",
     companyName: "CEO Of WordPress",
     testimonialText:
       "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow. ",

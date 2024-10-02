@@ -15,11 +15,12 @@ export default function HeroSection() {
         </p>
 
         <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
-          Shape
+          {/* Shape
           <span className="custom-text font-black"> Your Future </span>
           And Build 
           <span className="custom-text font-black"> Your Dreams </span>
-          Together With Us
+          Together With Us */}
+          Building <span className="custom-text font-black">Your Online Identity  Together </span> – Our Story
         </h1>
       </div>
       <div className="bg-red-400 w-full h-full flex items-center justify-center pt-4 sm:pt-8 md:pt-12 z-20">

@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function ServicesSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         Our Services
       </h2>
 
@@ -40,11 +40,11 @@ export const ServiceCategoryCard = ({
         className={`overflow-hidden relative w-full lg:w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
         <div className="flex flex-row items-center justify-start w-full">
-          <h3 className="w-full flex flex-row items-center gap-4 md:gap-16 text-[#ffffff] font-semibold text-2xl xs:text-3xl z-20 text-center">
-            <span className="custom-text font-black text-2xl xs:text-4xl z-20">
+          <h3 className="w-full flex flex-row items-center gap-4 md:gap-16  z-20 text-center">
+            <span className="custom-text font-black text-3xl xs:text-4xl z-20">
               0{id}
             </span>
-            {title}
+            <span className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">{title}</span>
             <span className="group-hover:scale-105 group-hover:duration-900"></span>
           </h3>
         </div>
@@ -60,7 +60,7 @@ export const ServiceCategoryCard = ({
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-6 items-center justify-between w-full text-[#ffffff] font-medium text-xl lg:text-xl text-center z-20 px-8 py-8">
+            <div className="hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-6 items-center justify-between w-full text-[#ffffff] font-light hover:font-normal text-xl text-center z-20 px-8 py-8">
               <span className="text-start">{service}</span>
               <span className="md:hidden">
                 <RightArrow width={20} height={20} />

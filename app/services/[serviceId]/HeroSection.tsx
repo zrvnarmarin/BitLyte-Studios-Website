@@ -15,7 +15,7 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-tight text-[#ffffff] font-medium text-center lg:text-left z-30">
-            <span className="custom-text">{formatString(serviceName)}</span> That Makes A Difference
+            <span className="custom-text font-black">{formatString(serviceName)}</span> That Makes A Difference
           </h1>
 
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">

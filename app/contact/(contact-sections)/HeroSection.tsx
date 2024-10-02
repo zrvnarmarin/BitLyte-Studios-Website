@@ -14,18 +14,18 @@ import ContactForm from "./ContactForm";
 export default function HeroSection() {
   return (
     <HeroSectionWrapper>
-          <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      {/* <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
       <div className="flex flex-col items-center gap-10">
-        <p className="text-sm sm:text-base md:text-xl text-center font-bold text-[#ffffff] uppercase z-30">
+        <p className="text-base md:text-xl text-center font-bold text-[#ffffff] uppercase pb-2 z-30">
           Contact Us
         </p>
 
         <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
-          Shape
-          <span className="custom-text font-black"> Your Future </span>
-          And Build Your Dreams
-          <span className="custom-text font-black"> Together </span>
+          Turn Your
+          <span className="custom-text font-black"> Best Ideas </span>
+          Into A True Reality And
+          <span className="custom-text font-black"> Stand Out </span>
         </h1>
       </div>
 
@@ -38,13 +38,16 @@ export default function HeroSection() {
           </div> */}
 
           {/* Company`s promises */}
-          <div className="relative overflow-hidden bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0d293d] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
+          <div className="relative overflow-hidden border-[0.5px] border-[#0d293d] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
+            {/* Gradients */}
+            <div className="w-80 h-80 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+            <div className="w-80 h-80 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
             <div className="relative z-20 flex items-center justify-center pb-4 rounded-full">
               <Image src={DifferenceImage} width={100} height={100} alt="jj" />
             </div>
             <div className="relative z-20 flex flex-col items-center gap-4">
-              <p className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
+              <p className="w-full text-[#ffffff] font-semibold  text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
                 BitLyte Studios is here to make your dream project come to life.
               </p>
               <br />
@@ -103,21 +106,22 @@ export const ContactInfoCard = ({
   description,
 }: ContactInfoType) => {
   return (
-    <div className="overflow-hidden relative flex flex-col gap-2 rounded-lg py-6 border-[0.5px] border-[#0d293d] bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] z-20">
+    <div className="overflow-hidden relative flex flex-col gap-2 rounded-lg p-6 border-[0.5px] border-[#0d293d] z-20">
       {/* Blur background */}
-      {/* <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div> */}
+      <div className="w-40 h-40 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
+      <div className="w-40 h-40 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
 
-      <div className="relative flex flex-col items-center justify-center gap-2 z-20">
+      <div className="relative flex flex-col items-start justify-start gap-2 z-20">
         {/* Blur background */}
-        <div className="flex flex-row items-center justify-between gap-8">
+        <div className="flex flex-row items-center justify-between gap-6">
           <div className="flex items-center z-30">
             {React.createElement(icon)}
           </div>
           <div className="flex flex-col  gap-2">
-            <h3 className="w-full text-[#ffffff] font-medium text-xl lg:text-xl text-start z-20">
+            <h3 className="w-full text-[#ffffff] font-medium text-xl text-start z-20">
               {title}
             </h3>
-            <p className="text-md font-light text-[#ffffff] text-start  z-20">
+            <p className="text-md 2xl:text-lg font-light text-[#ffffff] text-start z-20">
               {description}
             </p>
           </div>

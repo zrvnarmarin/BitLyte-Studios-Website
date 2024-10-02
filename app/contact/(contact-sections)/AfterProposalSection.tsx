@@ -5,7 +5,7 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 export default function AfterProposalSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         What are the next steps?
       </h2>
 
@@ -32,14 +32,12 @@ export const ProcessStepCard = ({
 }: AfterProposalCardType) => {
   return (
     <div
-      className={`relative overflow-hidden flex-1 px-10 py-10 cursor-pointer rounded-lg bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]`}
+      className={`relative overflow-hidden flex-1 px-10 py-10 rounded-lg bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525]`}
     >
       {/* Blur background */}
 
       <div className="w-full flex items-center justify-start z-20">
-        <span className="custom-text font-black text-7xl z-0 mr-4">
-          {id}
-        </span>
+        <span className="custom-text font-black text-7xl z-0 mr-4">{id}</span>
         <span className="text-[#ffffff] font-semibold text-3xl z-20">
           {title}
         </span>
@@ -56,18 +54,17 @@ const afterProposalSteps: AfterProposalCardType[] = [
   {
     id: 1,
     title: "Crafting A Proposal",
-    description: `From our detailed review, we'll create a tailored proposal detailing the project scope, timelines, and a transparent cost breakdown.`,
+    description: `We’ll thoroughly review your goals and specific needs, then develop a customized plan to get you exactly where you want to be.`,
   },
   {
     id: 2,
-    title: "Initiating The Project",
-    description: `With your approval, we will begin working on your project diligently
-          and keeping you updated all along the way.`,
+    title: "Developing An Offer",
+    description: `Our detailed project proposal will cover the complete project plan, timeline, expected results, and a breakdown of all costs.`,
   },
   {
     id: 3,
-    title: "Crafting An Offer",
-    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
+    title: "Initiating The Project",
+    description: `With your approval, we will begin working on your project diligently and keeping you updated all along the way.`,
   },
 ];
 

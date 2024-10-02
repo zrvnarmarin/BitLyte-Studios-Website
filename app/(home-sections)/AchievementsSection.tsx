@@ -8,12 +8,16 @@ import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
-      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36">
+      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
         Did you know? <span className="custom-text">75% </span>of users judge a
         company’s credibility based on its website design - we make sure yours
-        <span className="custom-text"> leaves the right impression</span> and
-        brings your business more <span className="custom-text">growth</span>{" "}
-        and <span className="custom-text">revenue</span>.
+        <span className="custom-text capitalize">
+          {" "}
+          leaves the right impression
+        </span>{" "}
+        and brings your business more{" "}
+        <span className="custom-text capitalize">growth</span> and{" "}
+        <span className="custom-text capitalize">revenue</span>.
         {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
       </h3>
 
@@ -30,7 +34,7 @@ export default function AchievementsSection() {
       </div>
 
       <div className="relative flex flex-col justify-start gap-6 py-4 sm:py-8 ">
-        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36">
+        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
           Brands with{" "}
           <span className="custom-text">consistent visual presentation</span>{" "}
           across all platforms can increase revenue by{" "}
@@ -80,16 +84,16 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden border-[0.5px] bto-[#27a5ff2b] border-[#0a2030] flex flex-col items-center rounded-lg p-16 z-30`}
+      className={`w-full relative overflow-hidden border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg py-[68px] px-8 lg:py-20 xl:py-24 z-30`}
     >
       <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
       <h3
-        className={`font-semibold text-5xl sm:text-7xl text-center text-[#ffffff] z-20`}
+        className={`font-semibold text-[64px] md:text-[68px] xl:text-7xl text-center text-[#ffffff] z-20`}
       >
         {stat}
       </h3>
-      <p className="w-full text-lg sm:text-2xl text-center font-normal text-[#ffffff] pt-6 z-20">
+      <p className="text-xl xs:text-2xl font-light text-[#ffffff] text-center pt-6 z-20">
         {description}
       </p>
     </div>
@@ -131,31 +135,44 @@ export const PromiseCard = ({
   description,
 }: PromiseCardType) => {
   return (
-    <div className={`${id % 2 === 0 ? 'border-y-[0.5px] border-[#0a2030]' : 'border-none'}  z-20 py-6`}>
+    <div
+      className={`${
+        id % 2 === 0 ? "border-y-[0.5px] border-[#0a2030]" : "border-none"
+      }  z-20 py-6`}
+    >
       <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20">
         {/* Card content */}
-        <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 pl-6 ">
-          <div className="grid grid-cols-3 gap-12">
+        <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
             <div className="col-span-2 flex flex-col gap-6 items-start z-20 px-6 pt-6 pb-6 ">
               <div>
-                <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold uppercase">
+                <span className="text-lg sm:text-xl custom-text font-bold uppercase">
                   {title}
                 </span>
               </div>
-              <p className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start pt-6">
+              {/* Icon container mobile */}
+              <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center mt-6 rounded-lg border-[0.5px] border-[#0a2030]">
+                {/* Blur gradients */}
+                <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+                <span className="z-30">
+                  <HighBrandAwareness /> 
+                </span>
+              </div>
+              <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start pt-6">
                 {promise}
               </p>
-              <div className="flex flex-row items-center gap-4">
-                <span className="custom-text text-lg xs:text-xl font-light z-20">
+              <div className="flex flex-row text-center items-center gap-4">
+                <span className="hidden xl:block custom-text text-lg xs:text-xl font-light z-20">
                   &#10003;
                 </span>
-                <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start z-20">
+                <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
                   {description}
                 </p>
               </div>
             </div>
 
-            <div className="relative overflow-hidden col-span-1 flex flex-col items-center justify-center rounded-lg border-[0.5px] border-[#0a2030]">
+            {/* Icon container desktop -- TO DO: enlarge icon on lg screen sizes to 200!!*/} 
+            <div className="hidden lg:flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center rounded-lg border-[0.5px] border-[#0a2030]">
               {/* Blur gradients */}
               <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
               <span className="z-30">

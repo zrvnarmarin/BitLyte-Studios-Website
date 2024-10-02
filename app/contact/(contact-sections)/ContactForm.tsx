@@ -3,16 +3,23 @@ import Image from "next/image";
 import { Logo } from "@/app/services/[serviceId]/StepsSection";
 import "../../../public/test.css";
 import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
+import Link from "next/link";
+import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 
 export default function ContactForm() {
   return (
     // Form container
-    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg bg-gradient-to-r from-[#0b0b0b] to-[#27a5ff2b]">
+    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030]">
 
       {/* <div className="w-64 h-64 absolute left-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[830px]"></div> */}
       {/* <div className="w-64 h-64 absolute right-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[830px]"></div> */}
 
-      <h2 className="w-full text-[#ffffff] font-semibold text-center text-3xl pb-4">
+      <div className="w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+
+      {/* <div className="w-80 h-80 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="w-80 h-80 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div> */}
+      
+      <h2 className="w-full text-[#ffffff] font-semibold text-center text-3xl pb-4 z-20">
         Talk to us about{" "}
         <span className="text-[#1A9FFF] font-bold">your project</span>
       </h2>
@@ -23,7 +30,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-1">
           <label
             htmlFor="full-name"
-            className="w-full text-lg text-[#ffffff] font-semibold z-20"
+            className="w-full text-[#ffffff] font-medium text-xl text-start z-20"
           >
             Full Name
           </label>
@@ -38,7 +45,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-1">
           <label
             htmlFor="email"
-            className="w-full text-lg text-[#ffffff] font-semibold "
+            className="w-full text-[#ffffff] font-medium text-xl text-start z-20"
           >
             Email
           </label>
@@ -53,7 +60,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-1">
           <label
             htmlFor="project-message"
-            className="w-full text-lg text-[#ffffff] font-semibold "
+            className="w-full text-[#ffffff] font-medium text-xl text-start z-20 capitalize"
           >
             About your project
           </label>
@@ -65,12 +72,14 @@ export default function ContactForm() {
         </div>
 
         {/* Submit form button */}
-        <div className="w-full flex items-center justify-center">
-          <button className="w-fit bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] flex gap-2 items-center justify-center font-normal lg:font-medium text-[#ffffff] text-lg md:text-xl z-20 rounded-full py-2 md:py-3 px-6 md:px-10">
-            <LogoArrowRight fillColor="#ffffff" />
+        <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
+        <Link href={`/contact`}>
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Submit
           </button>
-        </div>
+        </Link>
+      </div>
       </form>
     </div>
   );
