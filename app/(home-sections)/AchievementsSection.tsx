@@ -1,9 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
 import Link from "next/link";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
+import CheckMarkIcon from '../../public/checkmark-seal-svgrepo-com.svg'
 
 export default function AchievementsSection() {
   return (
@@ -155,7 +157,7 @@ export const PromiseCard = ({
                 {/* Blur gradients */}
                 <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
                 <span className="z-30">
-                  <HighBrandAwareness /> 
+                  <Image src={CheckMarkIcon} width={0} height={0} alt="test" />
                 </span>
               </div>
               <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start pt-6">

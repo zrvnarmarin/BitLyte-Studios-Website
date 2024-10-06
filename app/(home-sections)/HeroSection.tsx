@@ -15,10 +15,13 @@ export default function HeroSection() {
         We create
         <span className="custom-text font-black capitalize">
           {" "}
-          powerful designs
+          converting websites
         </span>{" "}
-        with proven strategies, transforming your brand into a digital empire
+        and powerful
+        <span className="custom-text font-black capitalize">  digital campaigns {" "}</span>
+        with modern design and creativity
       </h1>
+      {/* We craft converting websites and powerful digital campaigns with modern design and creativity. */}
       {/* Fuel Your Revenue Growth with Innovative Web Solutions tailored to your business */}
       {/* We make your business the digital giant your competitors fear */}
       {/* We craft digital empires with proven strategies, transforming your brand into something unforgettable */}
