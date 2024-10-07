@@ -1,102 +1,37 @@
 import React from "react";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
-import Image from "next/image";
-import TestHumanImage from "../../../public/images/agency-image.png";
 import Link from "next/link";
-import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
 import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <div className="relative flex flex-col gap-6 items-start">
-        {/* Blur background */}
-        <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+      <h2 className="w-full text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+        Our Values
+      </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-          <div className="relative flex flex-col gap-2">
-            {/* Blur background */}
-            <span className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
+      <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
-            <h2 className="w-full text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
-              What We Stand For
-            </h2>
-            <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-8 z-20">
-              As a digital agency, we bring a unique combination of creativity
-              and technical expertise to every project. With a keen eye for
-              design and a passion for delivering user-friendly web experiences,
-              we work closely with clients to understand their needs and bring
-              their vision to life.
-            </p>
-            <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-8 z-20">
-              We build trust-based relationships with our clients, genuinely
-              support our team, and always prioritize users' needs, while acting
-              with honesty and integrity in everything we do.
-            </p>
-            {/* TO DO: vidjeti da li ovdje staviti cta ili da ostane dolje */}
-            {/* <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
-              <Link href={`/services`}>
-                <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-                  <LogoForButtonRotated
-                    fillColor="#000000"
-                    width={18}
-                    height={20}
-                  />
-                  Discover Our Services
-                </button>
-              </Link>
-            </div> */}
-          </div>
-
-          <Image
-            src={TestHumanImage}
-            alt="image"
-            width={0}
-            height={0}
-            className="rounded-lg"
+      {/* Values section */}
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 sm:pt-8 md:pt-12">
+        {values.map((value) => (
+          <ValueCard
+            key={value.id}
+            id={value.id}
+            title={value.title}
+            description={value.description}
+            icon={value.icon}
           />
-        </div>
-
-        {/* TO DO: vidjeti da li ovdje staviti cta ili da ostane dolje */}
-        {/* <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
-          <Link href={`/services`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              Discover Our Services
-            </button>
-          </Link>
-        </div> */}
-
-        {/* Values section */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-
-          {values.map((value) => (
-            <ValueCard
-              key={value.id}
-              title={value.title}
-              description={value.description}
-              icon={value.icon}
-            />
-          ))}
-        </div>
-
-        {/* Big paragraph */}
-        <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-20 md:pt-16 lg:pt-24 pb-20 md:pb-16 lg:pb-24">
-          {/* We helped businesses increase sales by{" "}
-          <span className="custom-text">27%</span>. Your product`s achievements
-          is our success. Our design approach is result-driven and it`s crucial
-          for us to make your product reach it`s business metrics. */}
-          At the end of the day, we’re more than just a digital agency – we're
-          your partner, dedicated to bringing your vision to life.
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        </h3>
+        ))}
       </div>
+
+      {/* Paragraph */}
+      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-20 md:pt-16 lg:pt-24 pb-20 md:pb-16 lg:pb-24">
+        At the end of the day, we’re more than just a digital agency – we're
+        your partner, dedicated to bringing your vision to life.
+        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      </h3>
 
       <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
         <Link href={`/services`}>
@@ -112,16 +47,20 @@ export default function WhyUsSection() {
 
 export const ValueCard = ({ title, description, icon }: ValueType) => {
   return (
-    <div className="flex flex-row gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20">
-      {icon()}
+    <div className="relative overflow-hidden flex flex-col gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20">
+      <div className="flex items-center justify-center xs:justify-start sm:justify-center">{icon()}</div>
+
       <div className="flex flex-col gap-2">
-        <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-start z-20">
+        <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center xs:text-start sm:text-center z-20">
           {title}
         </h3>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-2 z-20">
+        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-cente xs:text-start sm:text-center pt-2 z-20">
           {description}
         </p>
       </div>
+
+      {/* Blur background */}
+      <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
     </div>
   );
 };
@@ -390,7 +329,7 @@ export type ValueType = {
   id: number;
   title: string;
   description: string;
-  icon: () => React.FC;
+  icon: () => React.JSX.Element;
 };
 
 const values: ValueType[] = [

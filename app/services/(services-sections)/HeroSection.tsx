@@ -18,16 +18,16 @@ export default function HeroSection() {
           <p className="text-sm sm:text-base md:text-xl text-center md:text-start font-bold text-[#ffffff] uppercase z-30">
             Explore our services
           </p>
-          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-left z-20">
+          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-10 lg:leading-none text-[#ffffff] font-medium text-center lg:text-start z-20">
             Transform
             <span className="custom-text font-black"> Your Vision </span>
-            To Beautiful Reality
+            To Seamless Reality
           </h1>
 
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
-            As a UI/UX design agency, we create successful digital products that
-            combine user needs with business goals. Our human centred design
-            approach makes it happen.
+            As a web agency, we build digital products that meet both user
+            needs and business goals. Our human-centered design approach ensures
+            intuitive and effective results that boost your business.
           </p>
 
           {/* CTA button */}
@@ -39,7 +39,7 @@ export default function HeroSection() {
                   width={18}
                   height={20}
                 />
-                Start Building
+                Start Crafting
               </button>
             </Link>
           </div>

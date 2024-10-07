@@ -5,6 +5,7 @@ import ValuesSection from './(about-us-sections)/ValuesSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import MeetTheFoundersSection from './(about-us-sections)/MettTheFoundersSection';
 import IntroSection from './(about-us-sections)/IntroSection';
+import WhatWeStandForSection from './(about-us-sections)/WhatWeStandForSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <IntroSection />
       <MeetTheFoundersSection />
       <MissionAndVision />
+      <WhatWeStandForSection />
       <ValuesSection />
       <TestimonialsSection />
       <CTASection />

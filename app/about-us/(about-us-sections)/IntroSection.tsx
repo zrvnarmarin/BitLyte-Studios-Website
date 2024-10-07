@@ -9,7 +9,7 @@ export default function IntroSection() {
     <SectionWrapper>
       <div className="w-48 h-48 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="w-48 h-24 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-      <div className=" px-5 py-12 sm:px-16 sm:py-20 relative overflow-hidden flex items-center justify-center border-[#1d263f] rounded-lg border-[0.5px]">
+      <div className=" px-5 py-12 sm:px-16 sm:py-20 relative overflow-hidden flex items-center justify-center bg-[#0b0b0b] border-[#1d263f] rounded-lg border-[0.5px]">
         {/* Blur gradients */}
         <div className="w-48 h-48 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
         <div className="w-48 h-48 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>

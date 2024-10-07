@@ -1,33 +1,12 @@
 import React from "react";
-import Image from "next/image";
-import MarinRemovedBgImage from "../../../public/marin_photoroom-Photoroom(1)_LE_auto_x2.jpg";
-import IgorImage from "../../../public/Igor.jpeg";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
-import { socialMediaIcons } from "@/app/components/Footer";
-import Link from "next/link";
 
 // image enchancer: https://letsenhance.io/boost for team images i ovaj:https://pixlr.com/express/
 
 export default function MissionAndVision() {
   return (
     <SectionWrapper>
-      {/* <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-24 ">
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        Fueled by creativity, technology, and an obsession with results, we
-        bring your vision to life in ways that make your brand unforgettable.
-        We’re not just creating websites, we’re crafting the future of your
-        digital presence.
-      </h3> */}
-
-      {/* Big paragraph */}
-      {/* <h3 className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-20 md:pt-16 lg:pt-24">
-        Our founders came together with a shared passion for innovation and a
-        drive to reshape the digital space. Each brings years of experience,
-        creativity, and a commitment to success.
-        <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-      </h3> */}
-
       {/* Mission and vision section*/}
       <div className="flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-4 sm:py-8 md:py-6">
@@ -44,9 +23,6 @@ export default function MissionAndVision() {
     </SectionWrapper>
   );
 }
-{
-  /* <span className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span> */
-}
 
 export const ValueCard = ({
   title,
@@ -58,13 +34,13 @@ export const ValueCard = ({
   icon: () => React.FC;
 }) => {
   return (
-    <div className="relative overflow-hidden flex flex-col items-start justify-center p-8 rounded-lg border-[0.5px] border-[#0a2030]">
+    <div className="relative overflow-hidden flex flex-col items-center justify-center p-8 rounded-lg border-[0.5px] border-[#0a2030]">
       <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-      <div className="w-full flex items-center justify-start">{icon()}</div>
-      <h2 className="text-[#ffffff] text-3xl xs:text-4xl sm:text-5xl font-medium xs:font-normal mb-8">
-        Our <span className="text-primary-blue font-black">{title}</span>
+      <div className="w-full flex items-center justify-center">{icon()}</div>
+      <h2 className="text-[#ffffff] text-3xl xs:text-4xl sm:text-5xl font-medium xs:font-normal mb-8 z-20">
+        <span className="text-primary-">{title}</span>
       </h2>
-      <p className="text-start text-lg xs:text-xl font-light text-[#ffffff] z-20">
+      <p className="text-center text-lg xs:text-xl font-light text-[#ffffff] z-20">
         {description}
       </p>
     </div>
