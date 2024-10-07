@@ -14,7 +14,7 @@ export default function Home() {
       <IntroSection />
       <MeetTheFoundersSection />
       <MissionAndVision />
-      <WhatWeStandForSection />
+      <WhatWeStandForSection /> 
       <ValuesSection />
       <TestimonialsSection />
       <CTASection />
