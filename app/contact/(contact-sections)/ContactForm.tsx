@@ -9,16 +9,10 @@ import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 export default function ContactForm() {
   return (
     // Form container
-    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030]">
-
-      {/* <div className="w-64 h-64 absolute left-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[830px]"></div> */}
-      {/* <div className="w-64 h-64 absolute right-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[830px]"></div> */}
-
+    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030] bg-[#]">
+      {/* Blur effect background */}
       <div className="w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
-      {/* <div className="w-80 h-80 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-      <div className="w-80 h-80 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div> */}
-      
       <h2 className="w-full text-[#ffffff] font-semibold text-center text-3xl pb-4 z-20">
         Talk to us about{" "}
         <span className="text-[#1A9FFF] font-bold">your project</span>

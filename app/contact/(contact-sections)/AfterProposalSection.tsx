@@ -10,6 +10,7 @@ export default function AfterProposalSection() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="w-32 h-32 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         {afterProposalSteps.map((step) => (
           <ProcessStepCard
             id={step.id}

@@ -29,13 +29,13 @@ export default function WhyUsSection() {
       </div>
 
       {/* Paragraph section*/}
-      <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-16 md:pt-16 lg:pt-24 pb-8 md:pb-8 lg:pb-2">
+      <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-16 md:pt-16 lg:py-24 pb-8 md:pb-8 lg:pb-2">
         <h3 className="text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 relative">
           At the end of the day, we’re more than just an agency –{" "}
           <span className="custom-text">we're your partner</span>, dedicated to{" "}
           <span className="custom-text">bringing your vision to life.</span>
         </h3>
-        {/* Blur background */}
+        {/* Blur background effects */}
         <div className="w-48 h-24 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <div className="w-48 h-24 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <div className="w-96 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
@@ -56,16 +56,16 @@ export default function WhyUsSection() {
 
 export const ValueCard = ({ title, description, icon }: ValueType) => {
   return (
-    <div className="relative overflow-hidden flex flex-col gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20">
+    <div className="relative overflow-hidden flex flex-col xl:flex-row gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20">
       <div className="flex items-center justify-center xs:justify-start sm:justify-center">
         {icon()}
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center xs:text-start sm:text-center z-20">
+        <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center xs:text-start sm:text-center xl:text-start z-20">
           {title}
         </h3>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start sm:text-center pt-2 z-20">
+        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start sm:text-center xl:text-start pt-2 z-20">
           {description}
         </p>
       </div>

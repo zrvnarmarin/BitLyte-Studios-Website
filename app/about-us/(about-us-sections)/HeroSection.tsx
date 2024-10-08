@@ -10,10 +10,10 @@ import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 export default function HeroSection() {
   return (
     <HeroSectionWrapper>
+      {/* Main heading section */}
       <div className="flex flex-col items-center gap-10">
         {/* Blur background */}
         <div className="w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-
 
         <p className="text-base md:text-xl text-center font-bold text-[#ffffff] uppercase pb-2 z-30">
           About us
@@ -27,9 +27,14 @@ export default function HeroSection() {
           – Our Story
         </h1>
       </div>
-      <p className="text-xl font-light text-[#ffffff] text-center z-40 px-72">
-      We are a small team with big ambitions, dedicated to creating digital experiences that resonate with users and drive results. Every project to us is an opportunity to push boundaries and deliver exceptional value.
+
+      {/* Subheading */}
+      <p className="text-xl font-light text-[#ffffff] text-center z-40 xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 pt-2">
+        We are a small team with big ambitions, dedicated to creating digital
+        experiences that resonate with users and drive results. Every project to
+        us is an opportunity to push boundaries and deliver exceptional value.
       </p>
+
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
         <Link href={`/contact`}>
@@ -39,13 +44,9 @@ export default function HeroSection() {
           </button>
         </Link>
       </div>
-      
-      {/* <div className="bg-red-400 w-full h-full flex items-center justify-center pt-4 sm:pt-8 md:pt-12 z-20">
-        <Image src={HeroImage} alt="hero_image" className="rounded-lg z-20" />
-      </div> */}
-      {/* Blur background */}
-      <div className="w-48 h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
+      {/* Blur background effects */}
+      <div className="w-48 h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
       <div className="w-48 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
     </HeroSectionWrapper>
   );
