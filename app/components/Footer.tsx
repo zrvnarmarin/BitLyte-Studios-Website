@@ -10,7 +10,10 @@ export default function Footer() {
 
       <div className="relative z-10 w-full flex flex-col items-start gap-2">
         {/* Logo */}
-        <Link href={`/`} className="w-full flex items-center justify-center">
+        <Link
+          href={`/`}
+          className="w-full flex items-center justify-start lg:justify-center"
+        >
           <div className="flex items-center gap-2 lg:gap-4">
             <LogoIcon />
             <span className="text-[#ffffff] text-lg sm:text-xl lg:text-2xl font-bold">
@@ -19,8 +22,9 @@ export default function Footer() {
           </div>
         </Link>
 
-        <div className="w-full flex items-center">
-          <div className="w-full flex flex-col pt-6 gap-2">
+        <div className="w-full flex flex-col lg:flex-row items-center">
+          {/* Contact info */}
+          <div className="w-full flex flex-col pt-6 gap-2 order-3 lg:order-1">
             <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
               Contact info
             </p>
@@ -38,13 +42,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-between w-full">
+          <div className="flex flex-col flex-wrap items-start justify-between w-full order-1 lg:order-2">
             {/* Quick links */}
             <div className="flex flex-col pt-6 gap-2">
-              {/* <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+              <p className="xl:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
                 Browse
-              </p> */}
-              <div className="flex flex-row gap-6">
+              </p>
+              <div className="flex flex-col xs:flex-row lg:flex-row gap-6">
                 {quickLinkRoutes.map((routeLink) => (
                   <React.Fragment key={routeLink.id}>
                     <Link href={routeLink.href}>
@@ -58,8 +62,11 @@ export default function Footer() {
             </div>
 
             {/* Social media links */}
-            <div className="flex flex-col pt-6 gap-2">
-              <div className="w-full flex items-center gap-8 pt-6">
+            <div className="w-full flex flex-col pt-6 gap-2">
+              <p className="xl:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+                Folow Us On
+              </p>
+              <div className="w-full flex lg:items-center lg:justify-center gap-8 pt-6">
                 {socialMediaIcons.map((socialMediaIcon) => (
                   <React.Fragment key={socialMediaIcon.id}>
                     <Link href={socialMediaIcon.href}>
@@ -71,14 +78,15 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full flex flex-col items-end pt-6 gap-2">
+          {/* Company info */}
+          <div className="w-full flex flex-col items-start lg:items-end pt-6 gap-2 order-2 lg:order-3">
             <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
               Company info
             </p>
             <div className="flex items-center gap-2">
-              <ContactIcon />
-              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                +385015896878
+              <AddressIcon />
+              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light text-right">
+                CO10 5LW Assington, Sudbury
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -90,8 +98,8 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Copyright and author */}
         <div className="w-full flex flex-col items-center justify-between pb-6">
-          {/* Copyright and author */}
           <div className="flex flex-col items-center justify-center gap-2 pt-6">
             <p className="text-xs text-[#dddddd] font-light">
               ©2024 BitLyte Studios. All rights reserved.
@@ -323,9 +331,21 @@ export const secondaryLinks = [
   },
 ];
 
-export const AddressIcon = () => {
+export const AddressIcon = ({
+  width = 27,
+  height = 27,
+}: {
+  width?: number;
+  height?: number;
+}) => {
   return (
-    <svg viewBox="0 0 1024 1024" fill="#ffffff" stroke="#ffffff">
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 1024 1024"
+      fill="#ffffff"
+      stroke="#ffffff"
+    >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"

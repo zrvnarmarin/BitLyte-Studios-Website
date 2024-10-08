@@ -51,7 +51,7 @@ export const ProjectCardDesktop = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg gap-6 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#0a2030]">
+    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg gap-">
       {/* Project image */}
       <div className="relative w-full flex items-center bg-[#ffffff] z-20">
         <Image
@@ -66,15 +66,19 @@ export const ProjectCardDesktop = ({
       </div>
 
       {/* Project info */}
-      <div className="flex flex-col gap-6 w-full z-20 py-4 px-4 xs:px-6 sm:px-8 md:py-8 md:px-10 lg:px-6 lg:py-10">
-        <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff]">
+      <div className="relative overflow-hidden flex flex-col gap-6 w-full z-20 py-6 px-4 xs:px-6 sm:px-8 md:py-8 md:px-8 lg:px-12 lg:py-10 xl:py-12">
+        {/* Blur gradients */}
+        <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+        <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+       
+        <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff] z-20">
           {title}
         </h3>
         <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
           {description}
         </p>
         <div className="flex flex-col gap-2 pb-2">
-          <p className="text-xl text-[#eeeeee] font-black">Project Briefing:</p>
+          <p className="text-xl text-[#eeeeee] font-black z-20">Project Briefing:</p>
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
             Our client, MYSO, or Million Yield Structuring Opportunities, is a
             Web3 finance platform changing the game with DeFi. They deliver
