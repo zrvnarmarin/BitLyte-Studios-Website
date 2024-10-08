@@ -5,23 +5,29 @@ import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
 import Link from "next/link";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
-import CheckMarkIcon from '../../public/checkmark-seal-svgrepo-com.svg'
+import CheckMarkIcon from "../../public/checkmark-seal-svgrepo-com.svg";
 
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
-      <h3 className="relative w-full text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
-        Did you know? <span className="custom-text">75% </span>of users judge a
-        company’s credibility based on its website design - we make sure yours
-        <span className="custom-text capitalize">
-          {" "}
-          leaves the right impression
-        </span>{" "}
-        and brings your business more{" "}
+      <div className="relative overflow- w-full  z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
+        <h3 className="text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-center xs:font-normal">
+          Did you know? <span className="custom-text">75% </span>of users judge a
+          company’s credibility based on its website design - we make sure yours
+          <span className="custom-text capitalize">
+            {" "}
+            leaves the right impression
+          </span>{" "}
+          and brings your business more{" "}
         <span className="custom-text capitalize">growth</span> and{" "}
         <span className="custom-text capitalize">revenue</span>.
-        {/* <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
-      </h3>
+        </h3>
+
+        <div className="w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
+        {/* {/* <div className="w-24 h-48 absolute right-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+        {/* <div className="w-24 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>  */}
+      </div>
 
       {/* Achievements cards container */}
       <div className="w-full flex flex-col lg:flex-row gap-4 py-4 sm:py-8 md:py-12">
@@ -43,6 +49,8 @@ export default function AchievementsSection() {
           <span className="custom-text">23%</span> and are{" "}
           <span className="custom-text">3x</span> more likely to be recognized
           by customers.
+        <div className="w-72 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
         </h3>
 
         {/* Cards and CTA section */}
@@ -86,7 +94,7 @@ export const AchievementCard = ({
 }: AchievementCardProps) => {
   return (
     <div
-      className={`w-full relative overflow-hidden border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg py-[68px] px-8 lg:py-20 xl:py-24 z-30`}
+      className={`w-full relative overflow-hidden bg-[#0b0b0b] border-[0.5px] border-[#0a2030] flex flex-col items-center rounded-lg py-[68px] px-8 lg:py-20 xl:py-24 z-30`}
     >
       <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
@@ -173,7 +181,7 @@ export const PromiseCard = ({
               </div>
             </div>
 
-            {/* Icon container desktop -- TO DO: enlarge icon on lg screen sizes to 200!!*/} 
+            {/* Icon container desktop -- TO DO: enlarge icon on lg screen sizes to 200!!*/}
             <div className="hidden lg:flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center rounded-lg border-[0.5px] border-[#0a2030]">
               {/* Blur gradients */}
               <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>

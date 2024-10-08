@@ -1,93 +1,50 @@
-"use client";
-
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 
 export default function OurProcessessSection() {
-  const [selectedStep, setSelectedStep] = useState<ProcessessStepType | null>(
-    processesSteps[0]
-  );
-
   return (
     <SectionWrapper>
       <h2 className="w-full text-5xl text-[#ffffff] z-20">Our Process</h2>
-      {/* ovjde pronaci slike i sa svakim novim korakom, prethodna slika se spaja sa novom od tog koraka - pogledaj enterwell 
-kako je napravio steps sekciju!! tako i ti */}
-      {/* {selectedStep && (
-        <div className="w-full flex justify-center items-start mt-8 mb-6">
-          <Image
-            src={selectedStep.imageSrc}
-            alt={`Image for step ${selectedStep.id}`}
-            className="w-full max-w-[900px]"
-          />
-        </div>
-      )} */}
-      {/* Centered image of the selected step */}
+
+      {/* Process steps cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-12">
-        {/* All steps */}
         {processesSteps.map((step) => (
-          <div
+          <ProcessStepCard
             key={step.id}
-            className={`relative overflow-hidden flex-1 px-5 py-10 rounded-lg bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525] ${
-              selectedStep?.id === step.id ? "" : ""
-            }`}
-            onClick={() => setSelectedStep(step)}
-          >
-            {/* Blur background */}
-            {/* <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#3B4EB5] to-[#222222] z-10 blur-[230px]"></div> */}
-
-            <div className="w-full flex flex-col xs:flex-row items-center justify-start lg:justify-center z-20">
-              <span className="custom-text font-black text-7xl z-0 mr-4">
-                {step.id}
-              </span>
-              <span className="text-[#ffffff] font-semibold text-3xl text-center md:text-start z-20">
-                {step.title}
-              </span>
-            </div>
-
-            <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start lg:text-center xl:text-center pt-6 z-20">
-              {step.description}
-            </p>
-          </div>
+            id={step.id}
+            title={step.title}
+            description={step.description}
+          />
         ))}
       </div>
-
-      {/* Buttons - Hidden on screens larger than lg */}
-      {/* <div className="lg:hidden w-flex flex items-center justify-center mt-6">
-        <div className="w-fit flex items-center justify-center gap-2 rounded-full px-6 py-2 bg-[#2a2c2f]">
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#7f96db] to-[#8ca0dc]"></div>
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#7f96db] to-[#8ca0dc]"></div>
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#7f96db] to-[#8ca0dc]"></div>
-          <div className="h-2 w-2 rounded-full bg-gradient-to-r from-[#7f96db] to-[#8ca0dc]"></div>
-        </div>
-      </div> */}
     </SectionWrapper>
   );
 }
 
 export const ProcessStepCard = ({
   id,
-  imageSrc,
   title,
   description,
 }: ProcessessStepType) => {
   return (
-    <div className="flex flex-col gap-6">
-      {/* Image container */}
-      {/* <div className="w-full flex items-center justify-center">
-        <Image src={imageSrc} alt="step_image" />
-      </div> */}
+    <div
+      key={id}
+      className={`relative overflow-hidden flex-1 px-5 py-10 rounded-lg border-[0.5px] border-[#0a2030]`}
+    >
+      {/* Blur background */}
+      <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
-      {/* Data */}
-      <div className="relative">
-        {/* Blur background */}
-        <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[330px]"></div>
-        <p className="text-5xl">{id}.</p>
-        <p>{title}</p>
-        <p>{description}</p>
+      <div className="w-full flex flex-col xs:flex-row items-center justify-start lg:justify-center z-20">
+        <span className="custom-text font-black text-7xl z-0 mr-4">{id}</span>
+        <span className="text-[#ffffff] font-semibold text-3xl text-center md:text-start x z-20">
+          {title}
+        </span>
       </div>
+
+      <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start lg:text-center xl:text-start pt-6 z-20">
+        {description}
+      </p>
     </div>
   );
 };
@@ -95,25 +52,21 @@ export const ProcessStepCard = ({
 const processesSteps: ProcessessStepType[] = [
   {
     id: 1,
-    // imageSrc: FirstStepImage,
     title: "Discovery & Strategy",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 2,
-    // imageSrc: SecondStepImage,
     title: "Planning Visuals",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 3,
-    // imageSrc: ThirdStepImage,
     title: "Coding & Testing",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
   {
     id: 4,
-    // imageSrc: FourthStepImage,
     title: "Testing & Launching",
     description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
   },
@@ -121,10 +74,6 @@ const processesSteps: ProcessessStepType[] = [
 
 export type ProcessessStepType = {
   id: number;
-  // imageSrc: any;
   title: string;
   description: string;
 };
-
-// Requirements and gathering - https://www.svgrepo.com/svg/26760/education-form - 1. step
-//

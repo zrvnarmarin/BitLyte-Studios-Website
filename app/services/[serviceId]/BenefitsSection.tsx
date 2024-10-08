@@ -49,8 +49,10 @@ export const BenefitCard = ({
 }) => {
   return (
     <li
-      className={`overflow-hidden bg-gradient-to-b from-[#0b0b0b] to-[#27a5ff2b] relative group flex flex-col gap-4 rounded-lg p-5 border-[0.5px] border-[#252525]`}
+      className={`overflow-hidden bg-[#0b0b0b] relative flex flex-col gap-4 rounded-lg p-5 border-[0.5px] border-[#0a2030]`}
     >
+      {/* Blur background */}
+      <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
       <div className="w-full flex justify-center">{icon}</div>
 
       <div className="flex flex-col items-center justify-center gap-1 z-20">

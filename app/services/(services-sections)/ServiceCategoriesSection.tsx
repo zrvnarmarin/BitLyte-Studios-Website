@@ -32,13 +32,14 @@ export default function ServiceCategoriesSection() {
               <Link
                 href={`/services/${service.categoryTitle
                   .trim()
-                  .replace(/[\s\/]+/g, "-") 
+                  .replace(/[\s\/]+/g, "-")
                   .toLowerCase()}`}
                 key={service.id}
-                className="overflow-hidden relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 py-8 bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] border-[0.5px] border-[#252525] min-h-[350px]"
+                className="overflow-hidden relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 py-8 bg-[#0b0b0b] border-[0.5px] border-[#0a2030] min-h-[350px]"
               >
                 {/* Blur background */}
-                {/* <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-[#0b0b0b] to-[#3B4EB5] z-10 blur-[330px]"></div> */}
+                <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+
                 {/* Service Card */}
                 <div className="flex flex-col items-center justify-center gap-4 z-20 text-center">
                   <Image
