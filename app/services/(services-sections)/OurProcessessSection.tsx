@@ -53,22 +53,22 @@ const processesSteps: ProcessessStepType[] = [
   {
     id: 1,
     title: "Discovery & Strategy",
-    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
+    description: `We start by learning about your goals and target audience through meetings and research to shape the right approach.`,
   },
   {
     id: 2,
-    title: "Planning Visuals",
-    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
+    title: "Design & Planning",
+    description: `Using our insights, we create tailored strategies and designs that showcase your brand and effectively engage your audience.`,
   },
   {
     id: 3,
-    title: "Coding & Testing",
-    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
+    title: "Development & Testing",
+    description: `We bring the plan to life by developing high-quality, functional digital solutions that align with both user and business needs.`,
   },
   {
     id: 4,
-    title: "Testing & Launching",
-    description: `Time for finalizred screens infused with personality and life. We also create a UI kit to allow you tu easily build your future`,
+    title: "Delivery & Launching",
+    description: `After launching, we provide continuous support and track results, refining where necessary to ensure long-term success.`,
   },
 ];
 

@@ -104,8 +104,8 @@ export const serviceCategoriesData: ServiceCardType[] = [
 export const RightArrow = ({
   strokeWidth = 0.1,
   color = "#ffffff",
-  width = 30,
-  height = 30,
+  width = 20,
+  height = 20,
 }: {
   strokeWidth?: number;
   color?: string;
@@ -149,8 +149,8 @@ export const RightArrow = ({
 export const LeftArrow = ({
   strokeWidth = 0.1,
   color = "#ffffff",
-  width = 30,
-  height = 30,
+  width = 20,
+  height = 20,
 }: {
   strokeWidth?: number;
   color?: string;

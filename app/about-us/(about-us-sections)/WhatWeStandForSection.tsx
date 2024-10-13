@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
-import TestHumanImage from "../../../public/images/agency-image.png";
+import TestHumanImage from "../../../public/WhatWeStandForImage.png";
 
 export default function WhatWeStandForSection() {
   return (
@@ -31,13 +31,15 @@ export default function WhatWeStandForSection() {
             </p>
           </div>
 
-          <Image
-            src={TestHumanImage}
-            alt="image"
-            width={0}
-            height={0}
-            className="rounded-lg"
-          />
+          <div className="flex items-center justify-center">
+            <Image
+              src={TestHumanImage}
+              alt="image"
+              width={450}
+              height={450}
+              className="rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </SectionWrapper>

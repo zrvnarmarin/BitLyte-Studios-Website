@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
-import '../../public/test.css';
+import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
 import { LeftArrow, RightArrow } from "@/app/(home-sections)/ServicesSection";
 
@@ -14,21 +14,24 @@ export default function TestimonialsSection() {
         </h2>
 
         <div className="hidden lg:flex items-center justify-center gap-4">
-          <button className="relative overflow-hidden rounded-full p-4 bg-[#ffffff] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_15px_0_rgba(255,255,255,1)] duration-300">
-            {/* RightArrow with a higher z-index */}
-            <div className="relative z-20">
-              <LeftArrow color="#000000" />
-            </div>
-            {/* Blur background */}
-            {/* <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px] "></div> */}
+          <button className="relative overflow-hidden rounded-full p-4 duration-300 rotate-180 border-[0.5px] border-[#0a2030]">
+            {/* Gradient background */}
+            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
+
+            {/* Icon */}
+            <span className="relative z-20">
+              <RightArrow />
+            </span>
           </button>
-          <button className="relative overflow-hidden rounded-full p-4 bg-[#ffffff] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_15px_0_rgba(255,255,255,1)] duration-300">
-            {/* RightArrow with a higher z-index */}
-            <div className="relative z-20">
-              <RightArrow color="#000000" />
-            </div>
-            {/* Blur background */}
-            {/* <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div> */}
+
+          <button className="relative overflow-hidden rounded-full p-4 duration-300 border-[0.5px] border-[#0a2030]">
+            {/* Gradient background */}
+            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
+
+            {/* Icon */}
+            <span className="relative z-20">
+              <RightArrow />
+            </span>
           </button>
         </div>
       </div>
@@ -71,17 +74,21 @@ export const TestimonialCard = ({
       <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
-
       {/* Testimonial */}
       <div className="flex flex-col z-20">
         <div className="w-full flex items-center justify-center pb-6">
           <QuotesIcon />
         </div>
         <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl text-[#ffffff] leading-snug text-center z-20">
-          {testimonialText} 
+          {testimonialText}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12">
-          <Image src={TestimonialExampleImage} alt="testimonial image" width={70} height={70} />
+          <Image
+            src={TestimonialExampleImage}
+            alt="testimonial image"
+            width={70}
+            height={70}
+          />
           <p className="flex flex-col items-center gap-0">
             <span className="w-full font-medium text-xl lg:text-xl text-center text-[#ffffff]">
               {name}
@@ -92,7 +99,6 @@ export const TestimonialCard = ({
           </p>
         </div>
       </div>
-
     </div>
   );
 };
@@ -148,3 +154,20 @@ export const QuotesIcon = ({ width = 64, height = 64 }) => (
     </g>
   </svg>
 );
+
+export const BlueArrowRight = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 22 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 33H4.56913L22 16.5L11.1605 4.10231e-07L6.44771 0L0 33Z"
+        fill="#ffffff"
+      />
+    </svg>
+  );
+};

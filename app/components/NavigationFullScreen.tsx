@@ -174,10 +174,3 @@ export type NavbarLink = {
   link: string;
 };
 
-export const BlueArrowRight = () => {
-  return (
-    <svg width="27" height="27" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 33H4.56913L22 16.5L11.1605 4.10231e-07L6.44771 0L0 33Z" fill="#1A9FFF"/>
-    </svg>
-  )
-}
