@@ -51,15 +51,14 @@ export const ProjectCardDesktop = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg gap-">
+    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg">
       {/* Project image */}
-      <div className="relative w-full flex items-center bg-[#ffffff] z-20">
+      <div className="relative w-full h-[250px] xs:h-[300px] sm:h-[400px] lg:h-auto flex items-center bg-[#ffffff] z-20">
         <Image
           src={imageSrc}
           alt="project_image"
-          width={0} // Set appropriate width for responsiveness
-          height={0} // Set appropriate height for responsiveness
-          className="object-cover"
+          fill
+          className="object-cover w-full h-full"
         />
         {/* Blue transparent gradient overlay */}
         {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A9FFF] opacity-60 z-30"></div> */}
@@ -70,7 +69,7 @@ export const ProjectCardDesktop = ({
         {/* Blur gradients */}
         <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
         <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-       
+
         <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff] z-20">
           {title}
         </h3>
@@ -80,20 +79,13 @@ export const ProjectCardDesktop = ({
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-xl text-[#eeeeee] font-black z-20">Project Briefing:</p>
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
-            Our client, MYSO, or Million Yield Structuring Opportunities, is a
-            Web3 finance platform changing the game with DeFi. They deliver
-            innovative decentralized web apps with an unparalleled user
-            experience, security, and impact potential.
+            Our client, MYSO, or Million Yield Structuring Opportunities, is a Web3 finance platform changing the game with DeFi. They deliver innovative decentralized web apps with an unparalleled user experience, security, and impact potential.
           </p>
         </div>
         <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
           <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
+            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
+              <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
               See Full Case
             </button>
           </Link>
@@ -102,6 +94,8 @@ export const ProjectCardDesktop = ({
     </div>
   );
 };
+
+
 
 export type ProjectCardProps = {
   id: number;
