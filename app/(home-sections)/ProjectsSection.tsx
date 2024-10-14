@@ -77,15 +77,24 @@ export const ProjectCardDesktop = ({
           {description}
         </p>
         <div className="flex flex-col gap-2 pb-2">
-          <p className="text-xl text-[#eeeeee] font-black z-20">Project Briefing:</p>
+          <p className="text-xl text-[#eeeeee] font-black z-20">
+            Project Briefing:
+          </p>
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
-            Our client, MYSO, or Million Yield Structuring Opportunities, is a Web3 finance platform changing the game with DeFi. They deliver innovative decentralized web apps with an unparalleled user experience, security, and impact potential.
+            Our client, MYSO, or Million Yield Structuring Opportunities, is a
+            Web3 finance platform changing the game with DeFi. They deliver
+            innovative decentralized web apps with an unparalleled user
+            experience, security, and impact potential.
           </p>
         </div>
-        <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
+        <div className="relative w-full flex justify-start pt-4 md:pt-12 z-30">
           <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
+            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+              <LogoForButtonRotated
+                fillColor="#000000"
+                width={18}
+                height={20}
+              />
               See Full Case
             </button>
           </Link>
@@ -94,8 +103,6 @@ export const ProjectCardDesktop = ({
     </div>
   );
 };
-
-
 
 export type ProjectCardProps = {
   id: number;
