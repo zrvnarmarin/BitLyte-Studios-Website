@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function ServicesSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         Our Services
       </h2>
 

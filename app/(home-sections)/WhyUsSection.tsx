@@ -5,7 +5,7 @@ import "../../public/test.css";
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         Why Choose Us
       </h2>
       <div className="relative grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">

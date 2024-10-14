@@ -9,12 +9,12 @@ export default function TestimonialsSection() {
   return (
     <SectionWrapper>
       <div className="flex items-center justify-between">
-        <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+        <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
           What our clients say
         </h2>
 
         <div className="hidden lg:flex items-center justify-center gap-4">
-          <button className="relative overflow-hidden rounded-full p-4 duration-300 rotate-180 border-[0.5px] border-[#0a2030]">
+          <button className="relative overflow-hidden rounded-full p-4 duration-300 rotate-180 border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_10px_0_rgba(255,255,255,1)]">
             {/* Gradient background */}
             <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
 
@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
             </span>
           </button>
 
-          <button className="relative overflow-hidden rounded-full p-4 duration-300 border-[0.5px] border-[#0a2030]">
+          <button className="relative overflow-hidden rounded-full p-4 duration-300 border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_10px_0_rgba(255,255,255,1)]">
             {/* Gradient background */}
             <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
 

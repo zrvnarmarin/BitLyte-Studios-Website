@@ -25,7 +25,7 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           </p>
 
           {/* CTA button */}
-          <div className="relative w-full flex justify-start pt-4 md:pt-8 z-30">
+          <div className="relative w-full flex justify-center lg:justify-start pt-4 md:pt-8 z-30">
             <Link href={`/contact`}>
               <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
                 <LogoForButtonRotated
@@ -45,7 +45,7 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           <Image
             src={TestIkona}
             alt="t"
-            className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[444px] 2xl:max-w-[474px] z-20"
+            className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[400px] 2xl:max-w-[474px] z-20"
           />
         </div>
       </div>

@@ -5,10 +5,12 @@ import "../../../public/test.css";
 export default function OurProcessessSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-5xl text-[#ffffff] z-20">Our Process</h2>
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+        Our Proccess
+      </h2>
 
       {/* Process steps cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-4 sm:pt-8 md:pt-12">
         {processesSteps.map((step) => (
           <ProcessStepCard
             key={step.id}

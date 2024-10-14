@@ -31,13 +31,15 @@ export default function WhatWeStandForSection() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="w-full flex items-center sm:justify-start lg:justify-center relative ">
+            <div className="w-64 h-64 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
             <Image
               src={TestHumanImage}
               alt="image"
               width={450}
               height={450}
-              className="rounded-lg"
+              className="rounded-lg w-full h-auto sm:w-[400px] sm:h-[300px] md:w-[400px] md:h-[350px] lg:w-[400px] lg:h-[350px] xl:w-[500px] xl:h-[400px] z-20"
             />
           </div>
         </div>

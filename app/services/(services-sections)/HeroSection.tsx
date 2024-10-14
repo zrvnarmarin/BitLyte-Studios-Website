@@ -6,7 +6,7 @@ import {
   LogoForButton,
   LogoForButtonRotated,
 } from "../[serviceId]/HeroSection";
-import TestHero from "../../../public/BitLyte_Studios_ikona_SEO_Management_64x64px.svg"
+import TestHero from "../../../public/BitLyte_Studios_ikona_SEO_Management_64x64px.svg";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -26,8 +26,8 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
-            As a web agency, we build digital products that meet both user
-            needs and business goals. Our human-centered design approach ensures
+            As a web agency, we build digital products that meet both user needs
+            and business goals. Our human-centered design approach ensures
             intuitive and effective results that boost your business.
           </p>
 
@@ -56,6 +56,8 @@ export default function HeroSection() {
           />
         </div>
       </div>
+      {/* Blur background effects */}
+      {/* <div className="w-72 h-72 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
     </HeroSectionWrapper>
   );
 }
