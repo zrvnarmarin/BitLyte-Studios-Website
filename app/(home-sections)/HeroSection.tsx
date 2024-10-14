@@ -19,7 +19,7 @@ export default function HeroSection() {
         </span>{" "}
         and powerful
         <span className="custom-text font-black capitalize">  digital campaigns {" "}</span>
-        with modern design and creativity
+        with Modern Design 
       </h1>
       {/* We craft converting websites and powerful digital campaigns with modern design and creativity. */}
       {/* Fuel Your Revenue Growth with Innovative Web Solutions tailored to your business */}
@@ -44,7 +44,7 @@ export default function HeroSection() {
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
         <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Start Crafting
           </button>

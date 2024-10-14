@@ -6,6 +6,7 @@ import {
   LogoForButton,
   LogoForButtonRotated,
 } from "../[serviceId]/HeroSection";
+import TestHero from "../../../public/BitLyte_Studios_ikona_SEO_Management_64x64px.svg"
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -46,10 +47,13 @@ export default function HeroSection() {
         </div>
 
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
-          {/* Image container */}
-          <div className="w-48 h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-
-          <WebServicesIcon />
+          {/* Blur color effect behind the image */}
+          <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+          <Image
+            src={TestHero}
+            alt="t"
+            className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[444px] 2xl:max-w-[474px] z-20"
+          />
         </div>
       </div>
     </HeroSectionWrapper>
