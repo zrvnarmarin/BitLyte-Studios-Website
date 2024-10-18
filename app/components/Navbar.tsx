@@ -5,7 +5,7 @@ import Link from "next/link";
 import { UseScrollPosition } from "../utils/hooks/UseScrollPosition";
 import TransitionLink from "./TransitionLink";
 import { LogoArrowRight } from "../(home-sections)/ProjectsSection";
-import { navbarLinks } from './NavigationFullScreen';
+import { navbarLinks } from "./NavigationFullScreen";
 
 export default function Navbar({
   onOpenSidebar,
@@ -21,7 +21,7 @@ export default function Navbar({
         scrollPosition > 20
           ? "opacity-90 bg-[#0b0b0b] backdrop-blur-xl duration-700 3xl:py-4"
           : "duration-300"
-      } } duration-300 flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 lg:py-8 3xl:py-6`}
+      } } duration-300 flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 lg:py-8`}
     >
       <Link href={`/`}>
         <div className="flex items-center gap-2 lg:gap-4">
@@ -32,11 +32,16 @@ export default function Navbar({
         </div>
       </Link>
 
-      <div className="flex flex-row items-center gap-12">
-        {navbarLinks.map(navbarLink => 
-          <TransitionLink key={navbarLink.name} style={`font-medium text-lg text-[#ffffff]`} href={navbarLink.link} label={navbarLink.name} />
-        )}
-        
+      <div className="hidden lg:flex flex-row items-center gap-12">
+        {navbarLinks.map((navbarLink) => (
+          <TransitionLink
+            key={navbarLink.name}
+            style={`font-medium text-lg text-[#ffffff] hover:text-[#1a9fff]`}
+            href={navbarLink.link}
+            label={navbarLink.name}
+          />
+        ))}
+
         {/* <div className="text-3xl text-red-300 z-40">
           <Link
             href={`/contact`}
@@ -56,11 +61,21 @@ export default function Navbar({
         </div> */}
       </div>
 
-      <TransitionLink 
-        href={`/contact`} 
-        label={`Contact`} 
-        style={`relative overflow-hidden w-fit flex items-center gap-2 py-3  px-8 text-[#000000] bg-[#ffffff] rounded-full font-medium text-lg`} 
-      />
+      <div className="flex items-center gap-6">
+        <TransitionLink
+          href={`/contact`}
+          label={`Contact Us`}
+          style={`hidden relative overflow-hidden w-fit sm:flex items-center gap-2 py-3  px-8 text-[#000000] bg-[#ffffff] hover:text-[#ffffff] hover:bg-[#0b0b0b] border-[0.5px] border-[#ffffff] duration-300 rounded-full font-medium text-lg`}
+        />
+        <div
+          onClick={() => onOpenSidebar()}
+          className="lg:hidden flex items-center justify-center z-40"
+        >
+          <button className="cursor-pointer">
+            <MenuButton />
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }

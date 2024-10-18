@@ -7,6 +7,7 @@ import FAQSection from './components/FAQSection'
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import WhyUsSection from "./(home-sections)/WhyUsSection";
+import PromisesSection from "./(home-sections)/PromisesSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ServicesSection />
        <ProjectsSection />
       <AchievementsSection />
+      <PromisesSection />
       <TestimonialsSection />
       <FAQSection />
       <CTASection />

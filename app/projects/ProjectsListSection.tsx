@@ -6,31 +6,12 @@ import Link from "next/link";
 import TestImage from "../../public/apartment.webp";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 
-export default function ProjectsSection() {
+export default function ProjectsListSection() {
   return (
     <SectionWrapper>
-      <div className="w-full flex items-center justify-between">
-        <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-          Our Work
-        </h2>
-
-        <div className="hidden relative w-full xl:flex justify-end z-30">
-          <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              More Projects
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      <div className="w-full flex flex-col gap-24 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
+      <div className="w-full flex flex-col md:flex-row gap-6 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
         {projects.map((project) => (
-          <ProjectCardDesktop
+          <ProjectCard
             key={project.id}
             id={project.id}
             title={project.title}
@@ -44,16 +25,19 @@ export default function ProjectsSection() {
   );
 }
 
-export const ProjectCardDesktop = ({
+export const ProjectCard = ({
   title,
   description,
   serviceCategories,
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg border-[0.5px] border-[#0a2030]">
+    <Link
+      href={`/projects`}
+      className="relative overflow-hidden flex flex-col rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_25px_0_rgba(10,32,78,1)]"
+    >
       {/* Project image */}
-      <div className="relative w-full h-[250px] xs:h-[300px] sm:h-[400px] lg:h-auto flex items-center bg-[#ffffff] z-20">
+      <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[400px] flex items-center bg-[#ffffff] z-20">
         <Image
           src={imageSrc}
           alt="project_image"
@@ -71,9 +55,9 @@ export const ProjectCardDesktop = ({
         <h3 className="w-full text-2xl xs:text-3xl lg:text-4xl text-start font-bold text-[#ffffff] z-20">
           {title}
         </h3>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
+        {/* <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
           {description}
-        </p>
+        </p> */}
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-xl text-[#eeeeee] font-black z-20">
             Project Briefing:
@@ -85,20 +69,8 @@ export const ProjectCardDesktop = ({
             experience, security, and impact potential.
           </p>
         </div>
-        <div className="relative w-full flex justify-start pt-4 md:pt-6 z-30">
-          <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              See Full Case
-            </button>
-          </Link>
-        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

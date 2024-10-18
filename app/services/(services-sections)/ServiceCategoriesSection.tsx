@@ -35,7 +35,7 @@ export default function ServiceCategoriesSection() {
                   .replace(/[\s\/]+/g, "-")
                   .toLowerCase()}`}
                 key={service.id}
-                className="overflow-hidden relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 py-8 bg-[#0b0b0b] border-[0.5px] border-[#0a2030] min-h-[350px]"
+                className="overflow-hidden relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 py-8 bg-[#0b0b0b] border-[0.5px] border-[#0a2030] min-h-[350px] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
               >
                 {/* Blur background */}
                 <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>

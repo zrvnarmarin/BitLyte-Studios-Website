@@ -8,10 +8,11 @@ import { Logo } from "../services/[serviceId]/StepsSection";
 export default function HeroSection() {
   return (
     <HeroSectionWrapper>
-      <p className="text-base md:text-xl text-center font-bold text-[#ffffff] uppercase pb-2 z-30">
+      <p className="text-base md:text-xl 3xl:text-2xl text-center font-bold text-[#ffffff] uppercase pb-2 z-30">
         Success begins here
       </p>
-      <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
+
+      <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
         We create
         <span className="custom-text font-black capitalize">
           {" "}
@@ -21,22 +22,18 @@ export default function HeroSection() {
         <span className="custom-text font-black capitalize">  digital campaigns {" "}</span>
         with Modern Design 
       </h1>
-      {/* We craft converting websites and powerful digital campaigns with modern design and creativity. */}
-      {/* Fuel Your Revenue Growth with Innovative Web Solutions tailored to your business */}
-      {/* We make your business the digital giant your competitors fear */}
-      {/* We craft digital empires with proven strategies, transforming your brand into something unforgettable */}
 
       {/* Services */}
       <ul className="hidden xs:flex xs:flex-wrap relative w-full items-center justify-center z-30 gap-6 md:gap-0">
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base 3xl:text-lg text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Web Development</span>
         </li>
         <span className="hidden md:block w-20 h-0.5 border-[0.5px] border-[#1a4869]"></span>
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base 3xl:text-lg text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Digital Marketing</span>
         </li>
         <span className="hidden md:block w-20 h-0.5 border-[0.5px] border-[#1a4869]"></span>
-        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
+        <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base 3xl:text-lg text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
           <span>Digital Design</span>
         </li>
       </ul>
@@ -44,7 +41,7 @@ export default function HeroSection() {
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
         <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Start Crafting
           </button>
