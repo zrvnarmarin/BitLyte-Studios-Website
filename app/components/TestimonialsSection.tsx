@@ -4,7 +4,6 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
 
-// Define the type for the testimonial card props
 export type TestimonialCardProps = {
   id: number;
   name: string;
@@ -14,7 +13,6 @@ export type TestimonialCardProps = {
   rating: number;
 };
 
-// Define the testimonials array with proper types
 export const testimonials: TestimonialCardProps[] = [
   {
     id: 1,
@@ -36,7 +34,6 @@ export const testimonials: TestimonialCardProps[] = [
   // },
 ];
 
-// Main TestimonialsSection component
 export default function TestimonialsSection() {
   return (
     <SectionWrapper>
@@ -64,18 +61,17 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="hidden lg:flex items-center justify-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
-        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
-        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
-        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
-        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
-        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
       </div>
     </SectionWrapper>
   );
 }
 
-// TestimonialCard component definition
 export const TestimonialCard = ({
   name,
   companyName,
@@ -119,7 +115,6 @@ export const TestimonialCard = ({
   );
 };
 
-// QuotesIcon component definition
 export const QuotesIcon = ({ width = 64, height = 64 }) => (
   <svg
     fill="#ffffff"
@@ -143,7 +138,6 @@ export const QuotesIcon = ({ width = 64, height = 64 }) => (
   </svg>
 );
 
-// BlueArrowRight component definition
 export const BlueArrowRight = () => {
   return (
     <svg

@@ -13,32 +13,7 @@ export default function SimilarServicesSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
         <OtherServiceCard CTAText="Design your high converting landing page" />
-
-        <Link
-          href={`/services/visual-identity`}
-          className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1d263f]"
-        >
-          {/* Blur background */}
-          <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[30px]"></div>
-
-          <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center z-20">
-            Advance your brand visuals and conversion
-          </h3>
-          <div className="flex flex-col gap-6 z-20">
-            <div className="hidden sm:flex items-center justify-center">
-              <HighBrandAwareness />
-            </div>
-            <div className="w-full flex items-center justify-center">
-              <button className="w-fit flex gap-4 items-center justify-center text-2xl text-[#ffffff] font-semibold z-20">
-                Learn More
-                <span>
-                  <RightArrow width={25} height={25} />
-                </span>
-              </button>
-            </div>
-          </div>
-        </Link>
-
+        <OtherServiceMiddleCard />
         <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" />
         <OtherServiceCard CTAText="Elevate your brand with gradphic ilustrations" />
         <OtherServiceCard CTAText="Change your brand awareness and get more recognition" />
@@ -51,7 +26,7 @@ export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
   return (
     <Link
       href={`/services/visual-identity`}
-      className="flex flex-col gap-8 relative overflow-hidden  text-[#ffffff] px-5 py-10 rounded-lg border-[0.5px] border-[#1d263f]"
+      className="flex flex-col gap-8 relative overflow-hidden  text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1d263f] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
     >
       <div className="w-36 h-36 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
@@ -65,6 +40,35 @@ export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
             <RightArrow width={25} height={25} color="#dddddd" />
           </span>
         </button>
+      </div>
+    </Link>
+  );
+};
+
+export const OtherServiceMiddleCard = () => {
+  return (
+    <Link
+      href={`/services/visual-identity`}
+      className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1d263f] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
+    >
+      {/* Blur background */}
+      <div className="w-36 h-36 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+
+      <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center z-20">
+        Advance your brand visuals and conversion
+      </h3>
+      <div className="flex flex-col gap-6 z-20">
+        <div className="hidden sm:flex items-center justify-center">
+          <HighBrandAwareness />
+        </div>
+        <div className="w-full flex items-center justify-center">
+          <button className="w-fit flex gap-4 items-center justify-center text-2xl text-[#ffffff] font-semibold z-20">
+            Learn More
+            <span>
+              <RightArrow width={25} height={25} />
+            </span>
+          </button>
+        </div>
       </div>
     </Link>
   );
