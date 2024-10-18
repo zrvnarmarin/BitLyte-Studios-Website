@@ -3,7 +3,6 @@ import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
-import { LeftArrow, RightArrow } from "@/app/(home-sections)/ServicesSection";
 
 export default function TestimonialsSection() {
   return (
@@ -12,28 +11,6 @@ export default function TestimonialsSection() {
         <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
           What our clients say
         </h2>
-
-        <div className="hidden lg:flex items-center justify-center gap-4">
-          <button className="relative overflow-hidden rounded-full p-4 duration-300 rotate-180 border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_10px_0_rgba(255,255,255,1)]">
-            {/* Gradient background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
-
-            {/* Icon */}
-            <span className="relative z-20">
-              <RightArrow />
-            </span>
-          </button>
-
-          <button className="relative overflow-hidden rounded-full p-4 duration-300 border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_10px_0_rgba(255,255,255,1)]">
-            {/* Gradient background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
-
-            {/* Icon */}
-            <span className="relative z-20">
-              <RightArrow />
-            </span>
-          </button>
-        </div>
       </div>
 
       <div className="flex items-center justify-between pt-4 sm:pt-8 md:pt-12">
@@ -53,9 +30,14 @@ export default function TestimonialsSection() {
         </div>
       </div>
 
-      {/* <div className="w-full pt-8">
-        <div className="h-[0.1px] w-full bg-[#313131]"></div>
-      </div> */}
+      <div className="hidden lg:flex items-center justify-center gap-2">
+        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 h-2 rounded-full bg-[#55b8ff]"></span>
+      </div>
     </SectionWrapper>
   );
 }

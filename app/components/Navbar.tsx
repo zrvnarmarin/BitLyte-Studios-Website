@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { UseScrollPosition } from "../utils/hooks/UseScrollPosition";
+import TransitionLink from "./TransitionLink";
+import { LogoArrowRight } from "../(home-sections)/ProjectsSection";
+import { navbarLinks } from './NavigationFullScreen';
 
 export default function Navbar({
   onOpenSidebar,
@@ -15,8 +18,10 @@ export default function Navbar({
   return (
     <nav
       className={`w-full fixed z-50 opacity-95  ${
-        scrollPosition > 20 ? "opacity-90 bg-[#0b0b0b] backdrop-blur-xl duration-700" : ""
-      } } flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 3xl:py-6`}
+        scrollPosition > 20
+          ? "opacity-90 bg-[#0b0b0b] backdrop-blur-xl duration-700 3xl:py-4"
+          : "duration-300"
+      } } duration-300 flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 lg:py-8 3xl:py-6`}
     >
       <Link href={`/`}>
         <div className="flex items-center gap-2 lg:gap-4">
@@ -27,7 +32,11 @@ export default function Navbar({
         </div>
       </Link>
 
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-12">
+        {navbarLinks.map(navbarLink => 
+          <TransitionLink key={navbarLink.name} style={`font-medium text-lg text-[#ffffff]`} href={navbarLink.link} label={navbarLink.name} />
+        )}
+        
         {/* <div className="text-3xl text-red-300 z-40">
           <Link
             href={`/contact`}
@@ -36,7 +45,7 @@ export default function Navbar({
             <LogoArrowRight fillColor="#ffffff" />
             Contact Us
           </Link>
-        </div> */}
+        </div>
         <div
           onClick={() => onOpenSidebar()}
           className="flex items-center justify-center z-40"
@@ -44,8 +53,14 @@ export default function Navbar({
           <button className="cursor-pointer">
             <MenuButton />
           </button>
-        </div>
+        </div> */}
       </div>
+
+      <TransitionLink 
+        href={`/contact`} 
+        label={`Contact`} 
+        style={`relative overflow-hidden w-fit flex items-center gap-2 py-3  px-8 text-[#000000] bg-[#ffffff] rounded-full font-medium text-lg`} 
+      />
     </nav>
   );
 }

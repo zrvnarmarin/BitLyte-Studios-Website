@@ -51,7 +51,7 @@ export const ProjectCardDesktop = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg">
+    <div className="relative overflow-hidden flex flex-col lg:flex-row rounded-lg border-[0.5px] border-[#0a2030]">
       {/* Project image */}
       <div className="relative w-full h-[250px] xs:h-[300px] sm:h-[400px] lg:h-auto flex items-center bg-[#ffffff] z-20">
         <Image

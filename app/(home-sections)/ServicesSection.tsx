@@ -16,6 +16,7 @@ export default function ServicesSection() {
       <div className="relative w-full flex flex-col items-center gap-6 pt-4 sm:pt-8 md:pt-12">
         {serviceCategoriesData.map((serviceCategory) => (
           <ServiceCategoryCard
+            key={serviceCategory.id}
             id={serviceCategory.id}
             title={serviceCategory.title}
             services={serviceCategory.services}
