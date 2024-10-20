@@ -26,7 +26,7 @@ export default function WhatWeStandForSection() {
             </p>
             <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-8 z-20">
               We build trust-based relationships with our clients, genuinely
-              support our team, and always prioritize users' needs, while acting
+              support our team, and always prioritize users&apos; needs, while acting
               with honesty and integrity in everything we do.
             </p>
           </div>

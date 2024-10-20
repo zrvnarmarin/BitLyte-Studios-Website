@@ -31,7 +31,7 @@ export const ValueCard = ({
 }: {
   title: string;
   description: string;
-  icon: () => React.FC;
+  icon: () => React.JSX.Element;
 }) => {
   return (
     <div className="relative overflow-hidden flex flex-col items-center justify-center p-8 rounded-lg border-[0.5px] border-[#0a2030]">

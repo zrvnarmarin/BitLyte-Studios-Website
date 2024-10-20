@@ -1,9 +1,38 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
-import { LeftArrow, RightArrow } from "@/app/(home-sections)/ServicesSection";
+
+export type TestimonialCardProps = {
+  id: number;
+  name: string;
+  companyName: string;
+  testimonialText: string;
+  // imageSrc: StaticImageData; 
+  rating: number;
+};
+
+export const testimonials: TestimonialCardProps[] = [
+  {
+    id: 1,
+    name: "Nickita Hrischev Forest",
+    companyName: "CEO Of WordPress",
+    testimonialText:
+      "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow.",
+    // imageSrc: TestimonialExampleImage, 
+    rating: 5,
+  },
+  // {
+  //   id: 2,
+  //   name: "John Doe",
+  //   companyName: "CEO Of Apartmenify",
+  //   testimonialText:
+  //     "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly!",
+    
+  //   rating: 5,
+  // },
+];
 
 export default function TestimonialsSection() {
   return (
@@ -12,28 +41,6 @@ export default function TestimonialsSection() {
         <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
           What our clients say
         </h2>
-
-        <div className="hidden lg:flex items-center justify-center gap-4">
-          <button className="relative overflow-hidden rounded-full p-4 duration-300 rotate-180 border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_10px_0_rgba(255,255,255,1)]">
-            {/* Gradient background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
-
-            {/* Icon */}
-            <span className="relative z-20">
-              <RightArrow />
-            </span>
-          </button>
-
-          <button className="relative overflow-hidden rounded-full p-4 duration-300 border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(255,255,255,1)] hover:shadow-[0_0_10px_0_rgba(255,255,255,1)]">
-            {/* Gradient background */}
-            <div className="w-full h-full absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[20px]"></div>
-
-            {/* Icon */}
-            <span className="relative z-20">
-              <RightArrow />
-            </span>
-          </button>
-        </div>
       </div>
 
       <div className="flex items-center justify-between pt-4 sm:pt-8 md:pt-12">
@@ -46,16 +53,21 @@ export default function TestimonialsSection() {
               name={testimonial.name}
               companyName={testimonial.companyName}
               testimonialText={testimonial.testimonialText}
-              imageSrc={testimonial.imageSrc}
+              // imageSrc={testimonial.imageSrc} 
               rating={testimonial.rating}
             />
           ))}
         </div>
       </div>
 
-      {/* <div className="w-full pt-8">
-        <div className="h-[0.1px] w-full bg-[#313131]"></div>
-      </div> */}
+      <div className="hidden lg:flex items-center justify-center gap-2">
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+        <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
+      </div>
     </SectionWrapper>
   );
 }
@@ -64,12 +76,11 @@ export const TestimonialCard = ({
   name,
   companyName,
   testimonialText,
-  imageSrc,
+  // imageSrc, 
   rating,
 }: TestimonialCardProps) => {
   return (
     <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
-      {/* Blur background */}
       {/* Blur background */}
       <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
@@ -79,22 +90,23 @@ export const TestimonialCard = ({
         <div className="w-full flex items-center justify-center pb-6">
           <QuotesIcon />
         </div>
-        <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl text-[#ffffff] leading-snug text-center z-20">
+        <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl 3xl:text-4xl text-[#ffffff] leading-snug text-center z-20">
           {testimonialText}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12 3xl:pt-14">
           <Image
             src={TestimonialExampleImage}
+            // src={imageSrc} 
             alt="testimonial image"
             width={70}
             height={70}
           />
           <p className="flex flex-col items-center gap-0">
-            <span className="w-full font-medium text-xl lg:text-xl text-center text-[#ffffff]">
+            <span className="w-full font-medium text-xl lg:text-xl 3xl:text-2xl text-center text-[#ffffff]">
               {name}
             </span>
-            <span className="w-full text-center text-md text-[#eeeeee] font-light ">
-              {companyName} comp
+            <span className="w-full text-center text-base 3xl:text-lg text-[#eeeeee] font-light ">
+              {companyName}
             </span>
           </p>
         </div>
@@ -102,35 +114,6 @@ export const TestimonialCard = ({
     </div>
   );
 };
-
-export type TestimonialCardProps = {
-  id: number;
-  name: string;
-  companyName: string;
-  testimonialText: string;
-  imageSrc: string;
-  rating: number;
-};
-
-export const testimonials = [
-  {
-    id: 1,
-    name: "Nickita Hrischev Forest",
-    companyName: "CEO Of WordPress",
-    testimonialText:
-      "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow. ",
-    // imageSrc: TestimonialExampleImage,
-    rating: 5,
-  },
-  // {
-  //     id: 2,
-  //     name: 'John Doe',
-  //     companyName: 'CEO Of Apartmenify',
-  //     testimonialText: 'I was shockinlgy surprise by the delivery of BitLyte agency. They were super correct and did the job just perfectly!',
-  //     imageSrc: TestimonialExampleImage,
-  //     rating: 5
-  // }
-];
 
 export const QuotesIcon = ({ width = 64, height = 64 }) => (
   <svg

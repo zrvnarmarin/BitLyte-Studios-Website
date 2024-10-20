@@ -1,69 +1,56 @@
 import React from "react";
-import Image from "next/image";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
 import Link from "next/link";
 import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 
-export default function AchievementsSection() {
+export default function PromisesSection() {
   return (
     <SectionWrapper>
-      <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
-        <h3 className="text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 relative">
-          Did you know? <span className="custom-text">75% </span>of users judge
-          a company’s credibility based on its website design - we make sure
-          yours
-          <span className="custom-text capitalize">
-            {" "}
-            leaves the right impression
-          </span>{" "}
-          and brings your business more{" "}
-          <span className="custom-text capitalize">growth</span> and{" "}
-          <span className="custom-text capitalize">revenue</span>.
-        </h3>
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+        What we promise to you
+      </h2>
 
-        <div className="w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      {/* Cards and CTA section */}
+      <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
+        <div className="flex flex-col gap-6 z-20">
+          {promiseCardsData.map((promiseCard) => (
+            <PromiseCard
+              id={promiseCard.id}
+              icon={promiseCard.icon}
+              key={promiseCard.title}
+              title={promiseCard.title}
+              promise={promiseCard.promise}
+              description={promiseCard.description}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Achievements cards container */}
-      <div className="w-full flex flex-col lg:flex-row gap-4 pt-4 sm:pt-8 md:pt-12">
-        {achievements.map((achievement) => (
-          <AchievementCard
-            key={achievement.id}
-            id={achievement.id}
-            stat={achievement.stat}
-            description={achievement.description}
-          />
-        ))}
+      <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
+        <h3 className="relative text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] pt-4 lg:pt-8 font-medium text-center xs:font-normal z-20">
+          Brands with{" "}
+          <span className="custom-text">consistent visual presentation</span>{" "}
+          across all platforms can increase revenue by{" "}
+          <span className="custom-text">23%</span> and are{" "}
+          <span className="custom-text">3x</span> more likely to be recognized
+          by customers.
+        </h3>
+        <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      </div>
+
+      <div className="relative w-full flex justify-center z-30">
+        <Link href={`/services`}>
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
+            Find More About Us
+          </button>
+        </Link>
       </div>
     </SectionWrapper>
   );
 }
-
-export const AchievementCard = ({
-  stat,
-  description,
-}: AchievementCardProps) => {
-  return (
-    <div
-      className={`w-full relative overflow-hidden bg-[#0b0b0b] border-[0.5px] border-[#0a2030] shadow-[0_0_5px_0_rgba(10,32,78,1)] flex flex-col items-center rounded-lg py-[68px] px-8 lg:py-20 xl:py-24 z-30`}
-    >
-      {/* Gradients */}
-      <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px]"></div>
-      <div className="w-16 h-16 absolute right-0 left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px]"></div>
-
-      <h3
-        className={`font-medium text-[64px] md:text-[68px] xl:text-7xl text-center text-[#ffffff] z-20`}
-      >
-        {stat}
-      </h3>
-      <p className="text-xl xs:text-2xl font-light text-[#dddddd] text-center pt-6 z-20">
-        {description}
-      </p>
-    </div>
-  );
-};
 
 export type PromiseCardType = {
   id: number;
@@ -237,27 +224,3 @@ export const PromiseCard = ({
     </div>
   );
 };
-
-export type AchievementCardProps = {
-  id: number;
-  stat: string;
-  description: string;
-};
-
-export const achievements = [
-  {
-    id: 2,
-    stat: "3X",
-    description: "Boost in lead generation performace",
-  },
-  {
-    id: 1,
-    stat: "150%",
-    description: "Increased engagement on platforms",
-  },
-  {
-    id: 3,
-    stat: "5",
-    description: "Highly skilled experts in our team",
-  },
-];

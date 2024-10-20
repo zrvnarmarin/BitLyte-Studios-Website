@@ -31,8 +31,8 @@ export default function WhyUsSection() {
       {/* Paragraph section*/}
       <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-16 md:pt-16 lg:py-24 pb-8 md:pb-8 lg:pb-2">
         <h3 className="text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 relative">
-          At the end of the day, we’re more than just an agency –{" "}
-          <span className="custom-text">we're your partner</span>, dedicated to{" "}
+          At the end of the day, we&apos;re more than just an agency -{" "}
+          <span className="custom-text">we&apos;re your partner</span>, dedicated to{" "}
           <span className="custom-text">bringing your vision to life.</span>
         </h3>
         {/* Blur background effects */}

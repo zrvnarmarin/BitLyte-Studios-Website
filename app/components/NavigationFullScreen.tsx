@@ -146,11 +146,11 @@ export const XButton = () => {
   );
 };
 
-const navbarLinks = [
-  {
-    name: "Home",
-    link: "/",
-  },
+export const navbarLinks = [
+  // {
+  //   name: "Home",
+  //   link: "/",
+  // },
   {
     name: "About",
     link: "/about-us",
@@ -163,10 +163,10 @@ const navbarLinks = [
     name: "Projects",
     link: "/projects"
   },
-  {
-    name: "Contact",
-    link: "/contact",
-  }
+  // {
+  //   name: "Contact",
+  //   link: "/contact",
+  // }
 ];
 
 export type NavbarLink = {
