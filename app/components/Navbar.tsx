@@ -21,7 +21,7 @@ export default function Navbar({
         scrollPosition > 20
           ? "opacity-90 bg-[#0b0b0b] backdrop-blur-xl duration-700 3xl:py-4"
           : "duration-300"
-      } } duration-300 flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 lg:py-8`}
+      } } duration-300 flex flex-row justify-between items-center lg:bg-inherit px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-4 lg:py-5 3xl:py-8`}
     >
       <Link href={`/`}>
         <div className="flex items-center gap-2 lg:gap-4">

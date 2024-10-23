@@ -49,7 +49,7 @@ export default function HeroSection() {
       </div>
 
       {/* Logo Behind */}
-      <div className="absolute inset-0 flex items-center justify-center z-20 xs:pt-24 sm:pt-0 md:pt-0">
+      <div className="hidden absolute inset-0 md:flex items-center justify-center z-20 xs:pt-24 sm:pt-0 md:pt-0">
         <div className="hidden sm:block w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[130px]"></div>
         <Logo width={500} height={500} />
       </div>

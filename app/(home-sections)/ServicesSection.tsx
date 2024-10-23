@@ -66,8 +66,8 @@ export const ServiceCategoryCard = ({
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className="h-full hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-6 items-center justify-between md:justify-center w-full text-[#ffffff] font-light hover:font-normal text-xl text-center z-20 px-8 py-8">
-              <span className="text-center">{service}</span>
+            <div className="h-full hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-6 items-center justify-between md:justify-center w-full text-[#ffffff] font-light hover:font-normal text-xl text-center z-20 px-8 py-6 lg:py-8">
+              <span className="text-start md:text-center">{service}</span>
               <span className="md:hidden">
                 <RightArrow width={20} height={20} />
               </span>
