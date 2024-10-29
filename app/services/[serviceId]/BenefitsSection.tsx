@@ -4,21 +4,15 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../../public/test.css";
+import LandingPageImage from "../../../public/images/services/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg"
 
 export default function BenefitsSection() {
   return (
     <SectionWrapper>
       <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
         Explore how landing page
-        <span className="custom-text">
-          {" "}
-          boosts conversions{" "}
-        </span>{" "}
-        and makes your{" "}
-        <span className="custom-text">
-          {" "}
-          product more impactful{" "}
-        </span>
+        <span className="custom-text"> boosts conversions </span> and makes your{" "}
+        <span className="custom-text"> product more impactful </span>
       </p>
 
       {/* Right side */}
@@ -68,6 +62,8 @@ export const BenefitCard = ({
     </li>
   );
 };
+
+// Benefits of service
 
 export const BoostedEngagement = () => {
   return (
@@ -1475,10 +1471,18 @@ export const LandingPageIcon = () => {
 };
 
 export const businessBenefits: BusinessBenefitsCardType[] = [
+  // {
+  //   id: 1,
+  //   icon: <IncomeGrowth />,
+  //   title: "Boosted Engagment",
+  //   description:
+  //     "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
+  //   gradient: "bg-gradient-to-r from-[#292929] to-[#ED1AFF]",
+  // },
   {
     id: 1,
-    icon: <IncomeGrowth />,
-    title: "Boosted Engagment",
+    icon: <HighBrandAwareness />,
+    title: "High Brand Awareness",
     description:
       "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
     gradient: "bg-gradient-to-r from-[#292929] to-[#ED1AFF]",
@@ -1491,12 +1495,20 @@ export const businessBenefits: BusinessBenefitsCardType[] = [
       "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
     gradient: "bg-gradient-to-r from-[#292929] to-[#FF7A1A]",
   },
+  // {
+  //   id: 3,
+  //   icon: <TargetedAudience />,
+  //   title: "Targeted Messaging",
+  //   description:
+  //     "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts.",
+  //   gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
+  // },
   {
     id: 3,
-    icon: <IncomeGrowth />,
-    title: "Targeted Messaging",
+    icon: <TargetedAudience />,
+    title: "Recognized Visual Identity",
     description:
-      "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts.",
+      "A recognized visual identity on landing pages builds brand familiarity and trust. Aligning the landing page with your brand strengthens emotional connections, enhancing lead generation and securing you long-term partnerships.",
     gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
   },
 ];
@@ -1509,77 +1521,3 @@ export type BusinessBenefitsCardType = {
   gradient: string;
 };
 
-const allServicesArray = [
-  {
-    id: 1,
-    name: "Landing Page",
-    benefits: [
-      {
-        id: 1,
-        title: "Increased Conversion Rates",
-        description:
-          "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates",
-      },
-      {
-        id: 2,
-        title: "Clear Value Proposition",
-        description:
-          "A service landing page allows you to clearly communicate your unique value proposition and differentiate your services from competitors. This helps in capturing the interest of potential customers and persuading them to take action",
-      },
-      {
-        id: 3,
-        title: "Targeted Messaging",
-        description:
-          "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts",
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "Website Development",
-    benefits: [
-      {
-        id: 1,
-        title: "Brand Consistency",
-        description:
-          "Professional development ensures that your website aligns with your brand identity, including colors, fonts, and messaging. Consistent branding across your site helps reinforce your brand`s image and values.",
-      },
-      {
-        id: 2,
-        title: "Higher Conversion Rates",
-        description:
-          "Well-designed websites are optimized for conversions. Features such as clear calls to action, effective landing pages, and streamlined checkout processes can significantly increase the likelihood of turning visitors into customers",
-      },
-      {
-        id: 3,
-        title: "Increased Credibility and Trust",
-        description:
-          "A professionally designed website with high-quality content and design elements boosts your brand`s credibility. A polished, functional site reassures visitors that your business is legitimate and trustworthy",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Frontend Development",
-    benefits: [
-      {
-        id: 1,
-        title: "Brand Consistency",
-        description:
-          "Professional development ensures that your website aligns with your brand identity, including colors, fonts, and messaging. Consistent branding across your site helps reinforce your brand`s image and values.",
-      },
-      {
-        id: 2,
-        title: "Higher Conversion Rates",
-        description:
-          "Well-designed websites are optimized for conversions. Features such as clear calls to action, effective landing pages, and streamlined checkout processes can significantly increase the likelihood of turning visitors into customers",
-      },
-      {
-        id: 3,
-        title: "Increased Credibility and Trust",
-        description:
-          "A professionally designed website with high-quality content and design elements boosts your brand`s credibility. A polished, functional site reassures visitors that your business is legitimate and trustworthy",
-      },
-    ],
-  },
-];

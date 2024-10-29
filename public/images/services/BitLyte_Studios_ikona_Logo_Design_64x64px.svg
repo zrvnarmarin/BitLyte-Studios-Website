@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0" y1="32" x2="64" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3cf2de" stop-opacity=".8"/>
+      <stop offset=".19" stop-color="rgba(67, 231, 224, .82)" stop-opacity=".82"/>
+      <stop offset=".5" stop-color="rgba(86, 203, 231, .88)" stop-opacity=".88"/>
+      <stop offset=".88" stop-color="rgba(117, 156, 243, .97)" stop-opacity=".97"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <circle class="cls-1" cx="32" cy="32" r="32"/>
+  <polyline class="cls-2" points="32 54.15 12.32 43.93 12.32 21.21 32 9.85 51.68 21.21 51.68 43.93 32 54.15 32 46.08 44.16 23.68 19.84 23.68 32 46.08 51.68 43.93 44.16 23.68 51.68 21.21 44.16 23.68 32 9.85 19.84 23.68 12.32 21.21 19.84 23.68 12.32 43.93 32 46.08"/>
+</svg>

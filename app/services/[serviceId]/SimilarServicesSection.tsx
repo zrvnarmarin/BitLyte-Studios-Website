@@ -54,7 +54,7 @@ export const OtherServiceMiddleCard = () => {
       {/* Blur background */}
       <div className="w-36 h-36 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
-      <h3 className="w-full text-[#ffffff] font-semibold text-3xl text-center z-20">
+      <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
         Advance your brand visuals and conversion
       </h3>
       <div className="flex flex-col gap-6 z-20">
@@ -62,7 +62,7 @@ export const OtherServiceMiddleCard = () => {
           <HighBrandAwareness />
         </div>
         <div className="w-full flex items-center justify-center">
-          <button className="w-fit flex gap-4 items-center justify-center text-2xl text-[#ffffff] font-semibold z-20">
+          <button className="w-fit flex gap-4 items-center justify-center text-[#cccccc] font-medium text-xl xs:text-2xl z-20">
             Learn More
             <span>
               <RightArrow width={25} height={25} />

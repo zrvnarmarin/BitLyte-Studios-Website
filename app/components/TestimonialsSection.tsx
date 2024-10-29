@@ -3,36 +3,37 @@ import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
+import InfiniteCarousel from "./InfiniteCarousel";
 
-export type TestimonialCardProps = {
-  id: number;
-  name: string;
-  companyName: string;
-  testimonialText: string;
-  // imageSrc: StaticImageData; 
-  rating: number;
-};
+// export type TestimonialCardProps = {
+//   id: number;
+//   name: string;
+//   companyName: string;
+//   testimonialText: string;
+//   // imageSrc: StaticImageData; 
+//   rating: number;
+// };
 
-export const testimonials: TestimonialCardProps[] = [
-  {
-    id: 1,
-    name: "Nickita Hrischev Forest",
-    companyName: "CEO Of WordPress",
-    testimonialText:
-      "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow.",
-    // imageSrc: TestimonialExampleImage, 
-    rating: 5,
-  },
-  // {
-  //   id: 2,
-  //   name: "John Doe",
-  //   companyName: "CEO Of Apartmenify",
-  //   testimonialText:
-  //     "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly!",
+// export const testimonials: TestimonialCardProps[] = [
+//   {
+//     id: 1,
+//     name: "Nickita Hrischev Forest",
+//     companyName: "CEO Of WordPress",
+//     testimonialText:
+//       "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow.",
+//     // imageSrc: TestimonialExampleImage, 
+//     rating: 5,
+//   },
+//   {
+//     id: 2,
+//     name: "John Doe",
+//     companyName: "CEO Of Apartmenify",
+//     testimonialText:
+//       "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly!",
     
-  //   rating: 5,
-  // },
-];
+//     rating: 5,
+//   },
+// ];
 
 export default function TestimonialsSection() {
   return (
@@ -43,9 +44,11 @@ export default function TestimonialsSection() {
         </h2>
       </div>
 
+      <InfiniteCarousel ></InfiniteCarousel>
+
       <div className="flex items-center justify-between pt-4 sm:pt-8 md:pt-12">
         {/* Testimonial cards container */}
-        <div className="relative w-full flex flex-col justify-center items-center gap-8">
+        {/* <div className="relative w-full flex flex-col justify-center items-center gap-8">
           {testimonials.map((testimonial) => (
             <TestimonialCard
               key={testimonial.id}
@@ -53,21 +56,20 @@ export default function TestimonialsSection() {
               name={testimonial.name}
               companyName={testimonial.companyName}
               testimonialText={testimonial.testimonialText}
-              // imageSrc={testimonial.imageSrc} 
               rating={testimonial.rating}
             />
           ))}
-        </div>
+        </div> */}
       </div>
 
-      <div className="hidden lg:flex items-center justify-center gap-2">
+      {/* <div className="hidden lg:flex items-center justify-center gap-2">
         <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
         <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
         <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
         <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
         <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
         <span className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-[#55b8ff]"></span>
-      </div>
+      </div> */}
     </SectionWrapper>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import "../../../public/test.css";
 import Image from "next/image";
-import HeroImage from "../../../public/images/agency-image.png";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import { RightArrow } from "@/app/(home-sections)/ServicesSection";
 import Link from "next/link";

@@ -40,9 +40,9 @@ export default function PromisesSection() {
         <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
       </div>
 
-      <div className="relative w-full flex justify-center z-30">
+      <div className="relative w-full flex justify-center pt-4 md:pt-6 z-30">
         <Link href={`/services`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Find More About Us
           </button>
@@ -179,17 +179,16 @@ export const PromiseCard = ({
   description,
 }: PromiseCardType) => {
   return (
-    <div
-      className={`z-20 py-6 overflow-hidden relative border-[0.5px] border-[#0a2030] bg-[#0b0b0b] rounded-lg`}
-    >
+    <div className={`z-20 py-6 overflow-hidden relative `}>
       {/* Blur gradient */}
-      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
       {/* Card content */}
-      <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20">
+      <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20 border-[0.5px] border-[#0a2030] ">
+        <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
-            <div className="col-span-2 flex flex-col gap-6 items-start z-20 px-6 pt-6 pb-6 ">
+            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-12 pb-10 ">
               <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
                 <div className="flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center">
                   <span className="z-30">{icon()}</span>
@@ -205,7 +204,7 @@ export const PromiseCard = ({
               <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start lg:pt-6">
                 {promise}
               </p>
-              <div className="flex flex-row text-center items-center gap-4">
+              <div className="flex flex-row text-center items-center gap-4 lg:pt-4">
                 <span className="hidden xl:block custom-text text-lg xs:text-xl font-light z-20">
                   &#10003;
                 </span>
@@ -215,8 +214,9 @@ export const PromiseCard = ({
               </div>
             </div>
 
-            <div className="hidden lg:flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center">
+            <div className="bg-[#0b0b0b] rounded-lg hidden lg:flex col-span-full relative overflow lg:col-span-1 flex-col items-center justify-center">
               <span className="z-30">{icon()}</span>
+              <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
             </div>
           </div>
         </div>
