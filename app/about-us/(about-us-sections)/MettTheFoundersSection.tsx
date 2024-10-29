@@ -27,23 +27,6 @@ export default function MeetTheFoundersSection() {
         the future, they aimed to build a dynamic agency that would push the
         limits of what’s possible.
       </p>
-      {/* Founders grid container - stavi px-64 možda! */}
-      {/* <div className="relative w-full flex flex-row px-60 gap-6 justify-center items-center pt-4 sm:pt-8 md:pt-12 border-[  border-x-[#1d263f] rounded-lg"> */}
-
-      {/* Blur gradients */}
-      {/* <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-        <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-        <div className="w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
-
-      {/* {foundersData.map((founderInfo) => (
-          <FounderCard
-            key={founderInfo.id}
-            id={founderInfo.id}
-            name={founderInfo.name}
-            imgSrc={founderInfo.imgSrc}
-          />
-        ))} */}
-      {/* </div> */}
 
       {/* Smaller screen cards */}
       <div className="relative w-full grid grid-cols-1 sm:grid-cols-2 md:px-8 lg:px-24 xl:px-60 3xl:px-72 gap-6 justify-center items-center pt-4 sm:pt-8 md:pt-12 border-[  border-x-[#1d263f] rounded-lg">
