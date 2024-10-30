@@ -6,7 +6,7 @@ import {
   LogoForButton,
   LogoForButtonRotated,
 } from "../[serviceId]/HeroSection";
-import TestHero from "../../../public/BitLyte_Studios_ikona_SEO_Management_64x64px.svg";
+import TestHero from "../../../public/images/services/BitLyte_Studios_ikona_Web_Services_Image_Hero_Section.svg";
 import Link from "next/link";
 
 export default function HeroSection() {
