@@ -2,10 +2,7 @@ import React from "react";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
-import {
-  LogoForButton,
-  LogoForButtonRotated,
-} from "../[serviceId]/HeroSection";
+import { LogoForButtonRotated } from "../[serviceId]/HeroSection";
 import TestHero from "../../../public/images/services/BitLyte_Studios_ikona_Web_Services_Image_Hero_Section.svg";
 import Link from "next/link";
 
@@ -47,8 +44,10 @@ export default function HeroSection() {
         </div>
 
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
+        <div className="w-full h-full absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[930px] pointer-events-none"></div>
+
           {/* Blur color effect behind the image */}
-          <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+          {/* <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
           <Image
             src={TestHero}
             alt="t"
