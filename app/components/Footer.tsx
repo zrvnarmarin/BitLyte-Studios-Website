@@ -26,8 +26,8 @@ export default function Footer() {
 
         <div className="w-full flex flex-col lg:flex-row items-center">
           {/* Contact info */}
-          <div className="w-full flex flex-col pt-16 gap-2 order-3 lg:order-1">
-            <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+          <div className="w-full flex flex-col pt-12 lg:pt-24 gap-2 order-3 lg:order-1">
+            <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase pb-2">
               Contact info
             </p>
             <div className="flex items-center gap-2">
@@ -46,15 +46,15 @@ export default function Footer() {
 
           <div className="flex flex-col flex-wrap items-start justify-between w-full order-1 lg:order-2">
             {/* Quick links */}
-            <div className="w-full flex flex-col pt-6 gap-6">
-              <p className="xl:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+            <div className="w-full flex flex-col pt-4 gap-6">
+              <p className="lg:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
                 Browse
               </p>
-              <div className="flex flex-col xs:flex-row lg:flex-row    gap-5">
+              <div className="flex flex-col xs:flex-row lg:flex-row justify-start lg:justify-center sm:w-full gap-5">
                 {quickLinkRoutes.map((routeLink) => (
                   <React.Fragment key={routeLink.id}>
                     <Link href={routeLink.href}>
-                      <p className="text-sm md:text-lg text-[#ffffff] font-light md:font-light">
+                      <p className="text-sm md:text-lg text-[#ffffff] hover:text-[#1a9fff] font-light md:font-light">
                         {routeLink.title}
                       </p>
                     </Link>
@@ -64,8 +64,8 @@ export default function Footer() {
             </div>
 
             {/* Social media links */}
-            <div className="w-full flex flex-col pt-16 gap-6">
-              <p className="xl:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+            <div className="w-full flex flex-col pt-12 lg:pt-8 gap-4">
+              <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase lg:text-center">
                 Folow Us On
               </p>
               <div className="w-full flex lg:items-center lg:justify-center gap-8">
@@ -81,28 +81,28 @@ export default function Footer() {
           </div>
 
           {/* Company info */}
-          <div className="w-full flex flex-col items-start lg:items-end pt-16 gap-2 order-2 lg:order-3">
-            <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
+          <div className="w-full flex flex-col items-start lg:items-end pt-12 lg:pt-24 gap-2 order-2 lg:order-3">
+            <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase pb-2">
               Company info
             </p>
             <div className="flex items-center gap-2">
               <AddressIcon />
-              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light text-right">
-                CO10 5LW Assington, Sudbury
+              <span className="text-sm md:text-base text-[#ffffff] font-normal md:font-light text-left">
+                Assington, Sudbury, UK
               </span>
             </div>
             <div className="flex items-center gap-2">
               <EmailIcon />
-              <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                bitlyte-studios@gmail.om
+              <span className="text-sm md:text-base text-[#ffffff] font-normal md:font-light text-left">
+                Assington, Sudbury
               </span>
             </div>
           </div>
         </div>
 
         {/* Copyright and author */}
-        <div className="w-full flex flex-col items-start justify-between pb-4 pt-16">
-          <div className="flex flex-col items-start justify-center gap-2">
+        <div className="w-full flex flex-col items-start lg:items-center justify-between pb-0 lg:pb-2 pt-12">
+          <div className="flex flex-col items-start lg:items-center justify-center gap-2">
             <p className="text-xs text-[#dddddd] font-light">
               ©2024 BitLyte Studios. All rights reserved.
             </p>
@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
 
         {/* Terms and privacy */}
-        <div className="w-full flex flex-col items-start lg:items-center justify-between pt-6 border-t-[0.5px] border-[#252525]">
+        <div className="w-full flex flex-col items-start lg:items-center justify-between pt-2 lg:pt-4 border-t-[0.5px] border-[#0a2030]">
           <div className="flex items-center justify-start gap-2 ">
             <p className="text-xs text-[#dddddd] font-light">
               Terms And Conditions
