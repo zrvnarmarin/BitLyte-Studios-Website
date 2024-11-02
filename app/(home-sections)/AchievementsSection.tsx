@@ -10,7 +10,7 @@ export default function AchievementsSection() {
   return (
     <SectionWrapper>
       <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
-        <h3 className="text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 relative">
+        <h3 className="text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-start xs:text-center xs:font-normal z-20 relative">
           Did you know? <span className="custom-text">75% </span>of users judge
           a company’s credibility based on its website design - we make sure
           yours

@@ -85,16 +85,15 @@ export const ProjectCardDesktop = ({
             experience, security, and impact potential.
           </p>
         </div>
+
+        {/* CTA section */}
         <div className="relative w-full flex justify-start pt-4 md:pt-6 z-30">
-          <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              See Full Case
-            </button>
+          <Link
+            href={`/projects`}
+            className="relative overflow-hidden w-full xs:w-fit flex items-center justify-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff] rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300"
+          >
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
+            See Full Case
           </Link>
         </div>
       </div>

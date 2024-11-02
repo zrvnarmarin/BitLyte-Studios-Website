@@ -1,9 +1,9 @@
 import HeroSection from "./(home-sections)/HeroSection";
-import ServicesSection from './(home-sections)/ServicesSection'
-import ProjectsSection from './(home-sections)/ProjectsSection'
+import ServicesSection from "./(home-sections)/ServicesSection";
+import ProjectsSection from "./(home-sections)/ProjectsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
-import AchievementsSection from './(home-sections)/AchievementsSection'
-import FAQSection from './components/FAQSection'
+import AchievementsSection from "./(home-sections)/AchievementsSection";
+import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import WhyUsSection from "./(home-sections)/WhyUsSection";
@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <WhyUsSection />
       <ServicesSection />
-       <ProjectsSection />
+      <ProjectsSection />
       <AchievementsSection />
       <PromisesSection />
       <TestimonialsSection />

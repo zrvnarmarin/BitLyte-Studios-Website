@@ -28,6 +28,7 @@ export default function PromisesSection() {
         </div>
       </div>
 
+      {/* Paragraph section */}
       <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
         <h3 className="relative text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] pt-4 lg:pt-8 font-medium text-center xs:font-normal z-20">
           Brands with{" "}
@@ -40,12 +41,14 @@ export default function PromisesSection() {
         <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
       </div>
 
-      <div className="relative w-full flex justify-center pt-4 md:pt-6 z-30">
-        <Link href={`/services`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            Find More About Us
-          </button>
+      {/* CTA section */}
+      <div className="relative w-full flex justify-start xs:justify-center pt-4 md:pt-6 z-30">
+        <Link
+          href={`/services`}
+          className="relative overflow-hidden w-full xs:w-fit flex items-center justify-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff] rounded-full font-medium text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300"
+        >
+          <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
+          Find More About Us
         </Link>
       </div>
     </SectionWrapper>
@@ -67,10 +70,10 @@ export const GearIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     stroke="#55b8ff"
     strokeWidth="1.5"
-    className=" w-16 h-16 
-                   sm:w-16 sm:h-16 
-                   md:w-24 md:h-24 
-                   lg:w-32 lg:h-32
+    className=" w-20 h-20 
+                   sm:w-24 sm:h-24 
+                   md:w-28 md:h-28 
+                   lg:w-56 lg:h-56
                   2xl:w-80 2xl:h-80"
   >
     <path d="M25 34c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9zm0-16c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"></path>
@@ -85,10 +88,10 @@ export const StarIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     stroke="#55b8ff"
     strokeWidth="0.9"
-    className=" w-16 h-16 
-                   sm:w-16 sm:h-16 
-                   md:w-24 md:h-24 
-                   lg:w-32 lg:h-32
+    className="w-20 h-20 
+                   sm:w-24 sm:h-24 
+                   md:w-28 md:h-28 
+                   lg:w-56 lg:h-56
                   2xl:w-80 2xl:h-80"
   >
     <path d="M15.2 40.6c-.2 0-.4-.1-.6-.2-.4-.3-.5-.7-.4-1.1l3.9-12-10.2-7.5c-.4-.3-.5-.7-.4-1.1s.5-.7 1-.7h12.7L25 5.9c.1-.4.5-.7 1-.7s.8.3 1 .7L30.9 18h12.7c.4 0 .8.2 1 .6s0 .9-.4 1.1L34 27.1l3.9 12c.1.4 0 .9-.4 1.1s-.8.3-1.2 0L26 33l-10.2 7.4c-.2.1-.4.2-.6.2zM26 30.7c.2 0 .4.1.6.2l8.3 6.1-3.2-9.8c-.1-.4 0-.9.4-1.1l8.3-6.1H30.1c-.4 0-.8-.3-1-.7L26 9.5l-3.2 9.8c-.1.4-.5.7-1 .7H11.5l8.3 6.1c.4.3.5.7.4 1.1L17.1 37l8.3-6.1c.2-.1.4-.2.6-.2z"></path>
@@ -102,10 +105,10 @@ export const ClockIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     stroke="#55b8ff"
     strokeWidth="0.9"
-    className=" w-16 h-16 
-                   sm:w-16 sm:h-16 
-                   md:w-24 md:h-24 
-                   lg:w-32 lg:h-32
+    className=" w-20 h-20 
+                   sm:w-24 sm:h-24 
+                   md:w-28 md:h-28 
+                   lg:w-56 lg:h-56
                   2xl:w-80 2xl:h-80"
   >
     <path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path>
@@ -154,23 +157,21 @@ export const PromiseCard = ({
 
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
-            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-12 pb-10 ">
+            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-6 md:pt-8 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
               <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
                 <div className="flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center">
                   <span className="z-30">{icon()}</span>
                 </div>
               </div>
 
-              <div>
-                <span className="text-lg sm:text-xl custom-text font-bold uppercase">
-                  {title}
-                </span>
+              <div className="text-lg sm:text-xl custom-text font-bold uppercase pt-2">
+                {title}
               </div>
               {/* Icon container mobile */}
-              <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start lg:pt-6">
+              <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start pt-2 lg:pt-4">
                 {promise}
               </p>
-              <div className="flex flex-row text-center items-center gap-4 lg:pt-4">
+              <div className="flex flex-row text-center items-center gap-4 pt-4 lg:pt-4">
                 <span className="hidden xl:block custom-text text-lg xs:text-xl font-light z-20">
                   &#10003;
                 </span>

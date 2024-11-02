@@ -10,7 +10,7 @@ export const InfiniteCarousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 30000); // Change every 3 seconds
+    }, 5000); // Change every 3 seconds
 
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);

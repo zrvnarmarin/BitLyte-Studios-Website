@@ -4,7 +4,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full mt-20 md:mt-24 py-16 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.5px] border-[#0a2030] overflow-hidden">
+    <footer className="relative w-full mt-20 md:mt-24 pt-16 pb-6 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.5px] border-[#0a2030] overflow-hidden">
+
+      {/* Background gradients */}
       <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
       <div className="w-48 h-48 absolute right-32 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
 
@@ -24,7 +26,7 @@ export default function Footer() {
 
         <div className="w-full flex flex-col lg:flex-row items-center">
           {/* Contact info */}
-          <div className="w-full flex flex-col pt-6 gap-2 order-3 lg:order-1">
+          <div className="w-full flex flex-col pt-16 gap-2 order-3 lg:order-1">
             <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
               Contact info
             </p>
@@ -44,15 +46,15 @@ export default function Footer() {
 
           <div className="flex flex-col flex-wrap items-start justify-between w-full order-1 lg:order-2">
             {/* Quick links */}
-            <div className="flex flex-col pt-6 gap-2">
+            <div className="w-full flex flex-col pt-6 gap-6">
               <p className="xl:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
                 Browse
               </p>
-              <div className="flex flex-col xs:flex-row lg:flex-row gap-6">
+              <div className="flex flex-col xs:flex-row lg:flex-row    gap-5">
                 {quickLinkRoutes.map((routeLink) => (
                   <React.Fragment key={routeLink.id}>
                     <Link href={routeLink.href}>
-                      <p className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
+                      <p className="text-sm md:text-lg text-[#ffffff] font-light md:font-light">
                         {routeLink.title}
                       </p>
                     </Link>
@@ -62,11 +64,11 @@ export default function Footer() {
             </div>
 
             {/* Social media links */}
-            <div className="w-full flex flex-col pt-6 gap-2">
+            <div className="w-full flex flex-col pt-16 gap-6">
               <p className="xl:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
                 Folow Us On
               </p>
-              <div className="w-full flex lg:items-center lg:justify-center gap-8 pt-6">
+              <div className="w-full flex lg:items-center lg:justify-center gap-8">
                 {socialMediaIcons.map((socialMediaIcon) => (
                   <React.Fragment key={socialMediaIcon.id}>
                     <Link href={socialMediaIcon.href}>
@@ -79,7 +81,7 @@ export default function Footer() {
           </div>
 
           {/* Company info */}
-          <div className="w-full flex flex-col items-start lg:items-end pt-6 gap-2 order-2 lg:order-3">
+          <div className="w-full flex flex-col items-start lg:items-end pt-16 gap-2 order-2 lg:order-3">
             <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
               Company info
             </p>
@@ -99,8 +101,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright and author */}
-        <div className="w-full flex flex-col items-center justify-between pb-6">
-          <div className="flex flex-col items-center justify-center gap-2 pt-6">
+        <div className="w-full flex flex-col items-start justify-between pb-4 pt-16">
+          <div className="flex flex-col items-start justify-center gap-2">
             <p className="text-xs text-[#dddddd] font-light">
               ©2024 BitLyte Studios. All rights reserved.
             </p>
@@ -108,10 +110,11 @@ export default function Footer() {
               Developed by Marin Zrvnar
             </p>
           </div>
-          {/* Terms and privacy */}
+          
         </div>
 
-        <div className="w-full flex flex-col items-center justify-between pt-7 border-t-[0.5px] border-[#252525]">
+        {/* Terms and privacy */}
+        <div className="w-full flex flex-col items-start lg:items-center justify-between pt-6 border-t-[0.5px] border-[#252525]">
           <div className="flex items-center justify-start gap-2 ">
             <p className="text-xs text-[#dddddd] font-light">
               Terms And Conditions
