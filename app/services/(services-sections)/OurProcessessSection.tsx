@@ -10,7 +10,7 @@ export default function OurProcessessSection() {
       </h2>
 
       {/* Process steps cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-4 sm:pt-8 md:pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pt-4 sm:pt-8 md:pt-12 z-40">
         {processesSteps.map((step) => (
           <ProcessStepCard
             key={step.id}

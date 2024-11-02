@@ -64,50 +64,6 @@ export default function ServiceCategoriesSection() {
   );
 }
 
-// TO DO: put this in the ServiceCategorySection instead other one
-export const ServiceCategoryCards = ({
-  serviceCategoryServices,
-  serviceCategoryId,
-  serviceCategoryTitle,
-}: ServiceCategoryType) => {
-  return (
-    <React.Fragment key={serviceCategoryId}>
-      <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal">
-        {serviceCategoryTitle}
-      </h2>
-      <div
-        key={serviceCategoryTitle}
-        className="grid grid-cols-1 lg:grid-cols-3 gap-6 py-4 sm:py-8 md:py-12"
-      >
-        {serviceCategoryServices.map((service: ServiceType) => (
-          <Link
-            href={`/services/${service.title
-              .trim()
-              .replace(/[\s\/]+/g, "-")
-              .toLowerCase()}`}
-            key={service.id}
-            className="overflow-hidden relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 py-8 bg-[#0b0b0b] border-[0.5px] border-[#0a2030] min-h-[350px]"
-          >
-            {/* Blur background */}
-            <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
-
-            {/* Service Card */}
-            <div className="flex flex-col items-center justify-center gap-4 z-20 text-center">
-              <Image height={180} width={180} alt="img" src={service.imgSrc} />
-              <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">
-                {service.title}
-              </h3>
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] pt-4">
-                {service.description}
-              </p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </React.Fragment>
-  );
-};
-
 export type ServiceCategoryType = {
   serviceCategoryId: number;
   serviceCategoryTitle: string;

@@ -27,30 +27,6 @@ export default function PromisesSection() {
           ))}
         </div>
       </div>
-
-      {/* Paragraph section */}
-      <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
-        <h3 className="relative text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] pt-4 lg:pt-8 font-medium text-center xs:font-normal z-20">
-          Brands with{" "}
-          <span className="custom-text">consistent visual presentation</span>{" "}
-          across all platforms can increase revenue by{" "}
-          <span className="custom-text">23%</span> and are{" "}
-          <span className="custom-text">3x</span> more likely to be recognized
-          by customers.
-        </h3>
-        <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-      </div>
-
-      {/* CTA section */}
-      <div className="relative w-full flex justify-start xs:justify-center pt-4 md:pt-6 z-30">
-        <Link
-          href={`/services`}
-          className="relative overflow-hidden w-full xs:w-fit flex items-center justify-center gap-2 py-3 sm:py-4 px-10 sm:px-12 text-[#000000] bg-[#ffffff] rounded-full font-semibold text-lg sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300"
-        >
-          <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-          Find More About Us
-        </Link>
-      </div>
     </SectionWrapper>
   );
 }
@@ -69,7 +45,7 @@ export const GearIcon = () => (
     viewBox="0 0 50 50"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#55b8ff"
-    strokeWidth="1.5"
+    strokeWidth="0.4"
     className=" w-20 h-20 
                    sm:w-24 sm:h-24 
                    md:w-28 md:h-28 
@@ -87,7 +63,7 @@ export const StarIcon = () => (
     viewBox="0 0 50 50"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#55b8ff"
-    strokeWidth="0.9"
+    strokeWidth="0.4"
     className="w-20 h-20 
                    sm:w-24 sm:h-24 
                    md:w-28 md:h-28 
@@ -104,7 +80,7 @@ export const ClockIcon = () => (
     viewBox="0 0 50 50"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#55b8ff"
-    strokeWidth="0.9"
+    strokeWidth="0.4"
     className=" w-20 h-20 
                    sm:w-24 sm:h-24 
                    md:w-28 md:h-28 

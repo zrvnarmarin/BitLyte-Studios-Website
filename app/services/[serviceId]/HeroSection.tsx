@@ -3,38 +3,38 @@ import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
 import Link from "next/link";
-import TestIkona from "../../../public/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
 
 //Landing page image
-import LandingPAgeServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg"
+import LandingPAgeServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg";
 
 // Website development image
-import WebsiteDevelopmentServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Website_Design_64x64px (1).svg"
+import WebsiteDevelopmentServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Website_Design_64x64px (1).svg";
 
 // Frontend development image
-import FrontendDevelopmentServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Web_Development_64x64px (1).svg"
+import FrontendDevelopmentServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Web_Development_64x64px (1).svg";
 
 // Copywriting image
-import CopywritingServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Copywriting_64x64px.svg"
+import CopywritingServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Copywriting_64x64px.svg";
 
 // Social media management image
-import SocialMediaManagementServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Social_Media_Assets_64x64px (1).svg"
+import SocialMediaManagementServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Social_Media_Assets_64x64px (1).svg";
 
 // Meta hiring campaigns image
-import MetaHiringCampaignsServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_MetaHriring_Campaigns_64x64px.svg"
+import MetaHiringCampaignsServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_MetaHriring_Campaigns_64x64px.svg";
 
 // UI/UX design image
-import UIUXServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_UI_UX_Design_64x64px.svg"
+import UIUXServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_UI_UX_Design_64x64px.svg";
 
 // Brand Identity image
-import BrandIdentityServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg"
+import BrandIdentityServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
 
 // Logo Design image
-import LogoDesignServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Logo_Design_64x64px.svg"
+import LogoDesignServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Logo_Design_64x64px.svg";
 
+// Service benefits icons
+import { ClientSatisfaction, HighBrandAwareness, RecognizedVisualIdentity } from "./BenefitsSection";
 
-
-export default function HeroSection({ serviceName } : { serviceName: string }) {
+export default function HeroSection({ serviceName }: { serviceName: string }) {
   return (
     <HeroSectionWrapper>
       {/* Desktop version */}
@@ -44,10 +44,15 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           <div className="lg:w-48 lg:h-48 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-tight text-[#ffffff] font-medium text-start xs:text-center lg:text-left z-30">
-            <span className="custom-text font-black">{formatString(serviceName)}</span> For Maximized Lead Generation
+            <span className="custom-text font-black">
+              {formatString(serviceName)}
+            </span>{" "}
+            For Maximized Lead Generation
           </h1>
           <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start xs:text-center lg:text-left z-20">
-          Our landing pages will help generate your business new leads and drive your sales exponentially by helping you maximize every visitor`s potential and making them engage with your product.    
+            Our landing pages will help generate your business new leads and
+            drive your sales exponentially by helping you maximize every
+            visitor`s potential and making them engage with your product.
           </p>
 
           {/* CTA button */}
@@ -65,11 +70,15 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           </div>
         </div>
 
+        {/* Blur background effects */}
+        <div className="md:w-48 md:h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        <div className="md:w-32 md:h-32 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        
         <div className="order-1 lg:order-2 relative flex items-center justify-start xs:justify-center">
           {/* Blur color effect behind the image */}
-          <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+          <div className="w-80 h-80 lg:w-[10rem] lg:h-[10rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
-            src={SocialMediaManagementServiceImage}
+            src={UIUXServiceImage}
             alt="t"
             className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[400px] 2xl:max-w-[474px] z-20"
           />
@@ -78,7 +87,6 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
     </HeroSectionWrapper>
   );
 }
-
 
 export type ButtonProps = {
   width: number;
@@ -164,6 +172,10 @@ try {
   }
 }
 
+
+
+
+
 //TO DO: Finish this array of services, and this will be primary data source for every /service/[serviceId] route page!
 // Service for landing page is blueprint for other services! And it is finished!
 export const allServicesArray = [
@@ -172,22 +184,26 @@ export const allServicesArray = [
     name: "Landing Page",
     serviceImage: LandingPAgeServiceImage,
     heroSectionHeading: "Landing Page For Maximized Lead Generation",
-    heroSectionSubheading: "Our landing pages will help generate your business new leads and drive your sales exponentially by helping you maximize every visitor's potential and making them engage with your product.",
+    heroSectionSubheading:
+      "Our landing pages will help generate your business new leads and drive your sales exponentially by helping you maximize every visitor's potential and making them engage with your product.",
     benefits: [
       {
         id: 1,
+        icon: <HighBrandAwareness />,
         title: "High Brand Awareness",
         description:
           "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
       },
       {
         id: 2,
+        icon: <ClientSatisfaction />,
         title: "Enhanced User Experience",
         description:
           "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
       },
       {
         id: 3,
+        icon: <RecognizedVisualIdentity />,
         title: "Recognized Visual Identity",
         description:
           "A recognized visual identity on landing pages builds brand familiarity and trust. Aligning the landing page with your brand strengthens emotional connections, enhancing lead generation and securing you long-term partnerships.",
@@ -201,14 +217,22 @@ export const allServicesArray = [
           {
             id: 1,
             stepName: "Planning",
-            stepDescription: "Planning is the first step in the procces"
+            stepDescription: "Planning is the first step in the procces",
           },
           {
             id: 2,
             stepName: "Wireframing",
-            stepDescription: "Wireframing is the fisecond rst step in the procces"
-          }
-        ]
+            stepDescription:
+              "Wireframing is the fisecond rst step in the procces",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "Does my business needs a landing page?",
+        answer: "Need of a landing page depends on many factors, including your niche and the rest."
       }
     ]
   },

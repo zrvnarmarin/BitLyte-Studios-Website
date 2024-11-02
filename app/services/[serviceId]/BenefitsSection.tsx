@@ -1,15 +1,13 @@
 "use client";
 
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../../public/test.css";
-import LandingPageImage from "../../../public/images/services/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg"
 
 export default function BenefitsSection() {
   return (
     <SectionWrapper>
-      <p className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
+      <p className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal leading-none text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
         Explore how landing page
         <span className="custom-text"> boosts conversions </span> and makes your{" "}
         <span className="custom-text"> product more impactful </span>
@@ -63,15 +61,15 @@ export const BenefitCard = ({
   );
 };
 
-// Benefits of service
+// Service benefits icons:
 
 export const BoostedEngagement = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
-      width="200"
-      height="200"
+      width="150"
+      height="150"
       version="1.1"
       style={{
         shapeRendering: "geometricPrecision",
@@ -182,72 +180,6 @@ export const BoostedEngagement = () => {
   );
 };
 
-export const TargetedAudience = () => (
-  <svg
-    id="Layer_1"
-    data-name="Layer 1"
-    viewBox="0 0 128 128"
-    width="200"
-    height="200"
-  >
-    <defs>
-      <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#00ECD1">
-          <animate
-            attributeName="stop-color"
-            values="#00ECD1; #7486F7; #a5b4fc; #00ECD1"
-            dur="3s"
-            repeatCount="indefinite"
-          />
-        </stop>
-        <stop offset="50%" stopColor="#7486F7">
-          <animate
-            attributeName="stop-color"
-            values="#7486F7; #a5b4fc; #00ECD1; #7486F7"
-            dur="3s"
-            repeatCount="indefinite"
-          />
-        </stop>
-        <stop offset="100%" stopColor="#a5b4fc">
-          <animate
-            attributeName="stop-color"
-            values="#a5b4fc; #00ECD1; #7486F7; #a5b4fc"
-            dur="3s"
-            repeatCount="indefinite"
-          />
-        </stop>
-      </linearGradient>
-      <style>
-        {`
-          .cls-1 { fill: url(#animatedGradient); }
-          .cls-2 { fill: url(#animatedGradient); }
-        `}
-      </style>
-    </defs>
-    <title>n</title>
-    <path
-      className="cls-1"
-      d="M81.013,56.63793A17.02141,17.02141,0,0,0,67.0733,39.90124c-.288-.05279-.57781-.09716-.86925-.13479l-.00014-2.2316h2.2159l-.76675-12.84941a3.653,3.653,0,1,0-7.306.00551l-.50176,12.843,1.97438-.00092v2.235c-.19671.02542-.39321.051-.58766.08282A17.01345,17.01345,0,1,0,81.013,56.63793ZM64.00043,68.42214A11.78381,11.78381,0,1,1,75.78385,56.63868,11.74725,11.74725,0,0,1,64.00043,68.42214Z"
-    />
-    <path
-      className="cls-2"
-      d="M125.97463,79.92524a5.039,5.039,0,0,0-2.70723-3.65444c-4.71941-2.3485-15.06627-5.82362-15.06627-5.82362V67.03372l.28586-.21857a9.88967,9.88967,0,0,0,3.75536-6.28323l.056-.36434h.28528a3.80866,3.80866,0,0,0,3.53173-2.37652,4.17067,4.17067,0,0,0,.52126-2.01218,3.80152,3.80152,0,0,0-.27464-1.41808,1.96844,1.96844,0,0,0-.76285-1.23311l-.95843-.5773.24156-1.03695c1.7202-7.52192-4.10287-14.29278-11.92242-14.47772-.19-.00561-.38059-.00561-.56553,0-.185-.00561-.37556-.00561-.56611,0-7.819.18494-13.64261,6.9558-11.91626,14.47772l.2354,1.03695-.95286.5773a1.97294,1.97294,0,0,0-.76788,1.23311,3.79069,3.79069,0,0,0-.27464,1.41808,4.17067,4.17067,0,0,0,.52126,2.01218A3.82139,3.82139,0,0,0,92.21,60.16758h.28025l.05549.36434a9.8903,9.8903,0,0,0,3.75595,6.28323l.28528.21857v3.41347S86.24012,73.9223,81.52686,76.2708a5.0331,5.0331,0,0,0-1.65345,1.32277c4.25979,1.5526,9.43882,3.548,12.71719,5.179a9.92933,9.92933,0,0,1,5.33092,7.18c.14013.824.26906,1.71513.38114,2.64h28.6248A110.01651,110.01651,0,0,0,125.97463,79.92524Z"
-    />
-    <path
-      className="cls-2"
-      d="M35.40885,82.77236c3.27892-1.631,8.45794-3.62643,12.71719-5.179a5.03752,5.03752,0,0,0-1.6529-1.32277c-4.71383-2.3485-15.06066-5.82362-15.06066-5.82362V67.03351l.28586-.2186a9.88959,9.88959,0,0,0,3.75536-6.28323l.056-.36431H35.79a3.82139,3.82139,0,0,0,3.53676-2.37652,4.1708,4.1708,0,0,0,.52126-2.01221,3.80134,3.80134,0,0,0-.27464-1.41805,1.97261,1.97261,0,0,0-.76788-1.23311l-.95341-.57733.23595-1.03691c1.72581-7.52195-4.09726-14.29278-11.91623-14.47775-.19059-.00561-.38117-.00561-.56611,0-.185-.00561-.37556-.00561-.56611,0-7.819.185-13.64261,6.9558-11.92242,14.47775l.24156,1.03691-.95844.57733a1.96524,1.96524,0,0,0-.76231,1.23311,3.802,3.802,0,0,0-.27464,1.41805,4.1708,4.1708,0,0,0,.52126,2.01221,3.80734,3.80734,0,0,0,3.53118,2.37652h.28583l.05549.36431A9.89021,9.89021,0,0,0,19.513,66.81491l.28528.2186v3.41343S9.45146,73.92206,4.73263,76.27056A5.04108,5.04108,0,0,0,2.02482,79.925a109.9651,109.9651,0,0,0-.95228,12.66731h28.6248c.11211-.92481.241-1.816.38114-2.63994A9.9287,9.9287,0,0,1,35.40885,82.77236Z"
-    />
-    <path
-      className="cls-1"
-      d="M91.09,85.782c-6.1207-3.0508-19.55367-7.56-19.55367-7.56H70.40025l-3.67576,4.9038,3.44593,23.842H95.84421a142.11749,142.11749,0,0,0-1.23479-16.44508A6.53929,6.53929,0,0,0,91.09,85.782Z"
-    />
-    <path
-      className="cls-1"
-      d="M56.46322,78.22212s-13.433,4.50867-19.55364,7.56a6.53924,6.53924,0,0,0-3.51942,4.74072A142.11789,142.11789,0,0,0,32.15538,106.968H57.82972L61.2751,83.126l-3.67576-4.90384Z"
-    />
-  </svg>
-);
-
 export const RecognizedVisualIdentity = () => {
   return (
     <svg
@@ -255,8 +187,8 @@ export const RecognizedVisualIdentity = () => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
-      width={200}
-      height={200}
+      width={150}
+      height={150}
     >
       <defs>
         <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -367,8 +299,8 @@ export const ClientSatisfaction = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    width="200"
-    height="200"
+    width="150"
+    height="150"
     version="1.1"
     style={{
       shapeRendering: "geometricPrecision",
@@ -511,7 +443,7 @@ export const IncomeGrowth = () => (
 );
 
 export const ResponsiveAndAdaptive = () => (
-  <svg viewBox="0 0 64 64" width="200" height="200">
+  <svg viewBox="0 0 64 64" width="150" height="150">
     <defs>
       <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="#00ECD1">
@@ -590,8 +522,8 @@ export const ResponsiveAndAdaptive = () => (
 
 export const StrongDigitalPresence = () => (
   <svg
-    width="200"
-    height="200"
+    width="150"
+    height="150"
     viewBox="0 0 512 512"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -677,8 +609,8 @@ export const CostEfficiency = () => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 1707 1707"
-    width="1.70666in"
-    height="1.70666in"
+    width="150"
+    height="150"
     style={{
       shapeRendering: "geometricPrecision",
       textRendering: "geometricPrecision",
@@ -804,8 +736,8 @@ export const CostEfficiency = () => (
 export const CustomerRetention = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="200"
-    height="200"
+    width="150"
+    height="150"
     version="1.1"
     style={{
       shapeRendering: "geometricPrecision",
@@ -858,8 +790,8 @@ export const CustomerRetention = () => (
 
 export const BetterCustomerInsight = () => (
   <svg
-    width="200"
-    height="200"
+    width="150"
+    height="150"
     viewBox="0 0 64 64"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -926,8 +858,8 @@ export const BetterCustomerInsight = () => (
 
 export const IncreasedTrafficAndLeads = () => (
   <svg
-    width="200"
-    height="200"
+    width="150"
+    height="150"
     viewBox="0 0 1707 1707"
     style={{
       shapeRendering: "geometricPrecision",
@@ -979,8 +911,8 @@ export const IncreasedTrafficAndLeads = () => (
 export const CompetitiveAdvantage = () => (
   <svg
     xmlSpace="preserve"
-    width="200"
-    height="200"
+    width="150"
+    height="150"
     version="1.1"
     style={{
       shapeRendering: "geometricPrecision",
@@ -1035,8 +967,8 @@ export const CompetitiveAdvantage = () => (
 
 export const IncreasedSEO = () => (
   <svg
-    width={200}
-    height={200}
+    width={150}
+    height={150}
     version="1.1"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -1100,8 +1032,8 @@ export const HighBrandAwareness = () => (
     y="0px"
     viewBox="0 0 64 64"
     xmlSpace="preserve"
-    width={200}
-    height={200}
+    width={150}
+    height={150}
   >
     <defs>
       <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -1171,314 +1103,7 @@ export const HighBrandAwareness = () => (
   </svg>
 );
 
-export const LandingPageIcon = () => {
-  return (
-    <svg
-      id="Layer_1"
-      data-name="Layer 1"
-      viewBox="0 0 63.97 41.71"
-      width={200}
-      height={200}
-    >
-      <defs>
-        <style>
-          {`
-          .cls-1 {
-            fill-rule: evenodd;
-          }
-
-          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
-            stroke-width: 0px;
-          }
-
-          .cls-1, .cls-9 {
-            fill: #fff;
-          }
-
-          .cls-2 {
-            fill: url(#linear-gradient);
-          }
-
-          .cls-3 {
-            fill: url(#linear-gradient-6);
-          }
-
-          .cls-4 {
-            fill: url(#linear-gradient-11);
-          }
-
-          .cls-11 {
-            opacity: .8;
-          }
-
-          .cls-5 {
-            fill: url(#linear-gradient-2);
-          }
-
-          .cls-6 {
-            fill: url(#linear-gradient-7);
-          }
-
-          .cls-7 {
-            fill: url(#linear-gradient-9);
-          }
-
-          .cls-12 {
-            fill: url(#linear-gradient-3);
-            stroke: url(#linear-gradient-4);
-            stroke-width: .15px;
-          }
-
-          .cls-12, .cls-13 {
-            stroke-miterlimit: 10;
-          }
-
-          .cls-8 {
-            fill: url(#linear-gradient-8);
-          }
-
-          .cls-13 {
-            fill: none;
-            stroke: url(#linear-gradient-5);
-            stroke-width: .16px;
-          }
-
-          .cls-10 {
-            fill: url(#linear-gradient-10);
-          }
-        `}
-        </style>
-        <linearGradient
-          id="linear-gradient"
-          x1="8.14"
-          y1="23.16"
-          x2="55.83"
-          y2="46.41"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stopColor="#3cf2de" stopOpacity=".8" />
-          <stop
-            offset=".15"
-            stopColor="rgba(67, 231, 224, .82)"
-            stopOpacity=".82"
-          />
-          <stop
-            offset=".38"
-            stopColor="rgba(86, 203, 231, .88)"
-            stopOpacity=".88"
-          />
-          <stop
-            offset=".67"
-            stopColor="rgba(117, 156, 243, .97)"
-            stopOpacity=".97"
-          />
-          <stop offset=".77" stopColor="#818cf8" />
-        </linearGradient>
-        <linearGradient
-          id="linear-gradient-2"
-          x1="14.01"
-          y1="28.81"
-          x2="49.76"
-          y2="46.24"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-3"
-          x1=".08"
-          y1="3.43"
-          x2="63.89"
-          y2="3.43"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-4"
-          x1="0"
-          y1="3.43"
-          x2="63.96"
-          y2="3.43"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-5"
-          x1="0"
-          y1="24.21"
-          x2="63.97"
-          y2="24.21"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-6"
-          x1="39.43"
-          y1="23.33"
-          x2="57.64"
-          y2="32.2"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-7"
-          x1="39.43"
-          y1="19.71"
-          x2="57.64"
-          y2="28.59"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-8"
-          x1="39.43"
-          y1="16.1"
-          x2="57.64"
-          y2="24.98"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-9"
-          x1="39.43"
-          y1="12.49"
-          x2="57.64"
-          y2="21.36"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-10"
-          x1="39.43"
-          y1="8.87"
-          x2="57.64"
-          y2="17.75"
-          xlinkHref="#linear-gradient"
-        />
-        <linearGradient
-          id="linear-gradient-11"
-          x1="3.96"
-          y1="13.57"
-          x2="32.49"
-          y2="27.47"
-          xlinkHref="#linear-gradient"
-        />
-      </defs>
-      <g>
-        <g className="cls-11">
-          <rect
-            className="cls-2"
-            x="2.55"
-            y="34.17"
-            width="58.87"
-            height="1.24"
-            rx=".62"
-            ry=".62"
-          />
-        </g>
-        <g className="cls-11">
-          <rect
-            className="cls-5"
-            x="9.86"
-            y="36.87"
-            width="44.06"
-            height="1.31"
-            rx=".6"
-            ry=".6"
-          />
-        </g>
-      </g>
-      <path
-        className="cls-12"
-        d="M63.89,2.05v4.74H.08V2.05C.08.97,1.07.08,2.27.08h59.42c1.21,0,2.19.89,2.19,1.97Z"
-      />
-      <path
-        className="cls-13"
-        d="M63.89,6.79v32.58c0,1.25-.99,2.26-2.19,2.26H2.27c-1.21,0-2.19-1.01-2.19-2.26V6.79h63.81Z"
-      />
-      <g>
-        <g className="cls-11">
-          <rect
-            className="cls-3"
-            x="37.44"
-            y="26.82"
-            width="22.19"
-            height="1.88"
-            rx=".76"
-            ry=".76"
-          />
-        </g>
-        <g className="cls-11">
-          <rect
-            className="cls-6"
-            x="37.44"
-            y="23.21"
-            width="22.19"
-            height="1.88"
-            rx=".76"
-            ry=".76"
-          />
-        </g>
-        <g className="cls-11">
-          <rect
-            className="cls-8"
-            x="37.44"
-            y="19.6"
-            width="22.19"
-            height="1.88"
-            rx=".76"
-            ry=".76"
-          />
-        </g>
-        <g className="cls-11">
-          <rect
-            className="cls-7"
-            x="37.44"
-            y="15.98"
-            width="22.19"
-            height="1.88"
-            rx=".76"
-            ry=".76"
-          />
-        </g>
-        <g className="cls-11">
-          <rect
-            className="cls-10"
-            x="37.44"
-            y="12.37"
-            width="22.19"
-            height="1.88"
-            rx=".76"
-            ry=".76"
-          />
-        </g>
-      </g>
-      <g className="cls-11">
-        <rect
-          className="cls-4"
-          x="4.35"
-          y="10.22"
-          width="27.75"
-          height="20.61"
-          rx="3.32"
-          ry="3.32"
-        />
-      </g>
-      <g>
-        <path
-          className="cls-1"
-          d="M13.99,14.25L4.34,30.86h19.92S14.6,14.25,14.6,14.25c-.13-.23-.47-.23-.6,0Z"
-        />
-        <path
-          className="cls-1"
-          d="M24.44,20.23l-3.49,4.94,3.31,5.68h7.86s-7.11-10.62-7.11-10.62c-.13-.2-.42-.2-.56,0Z"
-        />
-        <ellipse className="cls-9" cx="22.29" cy="14.59" rx="1.71" ry="1.78" />
-      </g>
-    </svg>
-  );
-};
-
 export const businessBenefits: BusinessBenefitsCardType[] = [
-  // {
-  //   id: 1,
-  //   icon: <IncomeGrowth />,
-  //   title: "Boosted Engagment",
-  //   description:
-  //     "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
-  //   gradient: "bg-gradient-to-r from-[#292929] to-[#ED1AFF]",
-  // },
   {
     id: 1,
     icon: <HighBrandAwareness />,
@@ -1495,17 +1120,9 @@ export const businessBenefits: BusinessBenefitsCardType[] = [
       "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
     gradient: "bg-gradient-to-r from-[#292929] to-[#FF7A1A]",
   },
-  // {
-  //   id: 3,
-  //   icon: <TargetedAudience />,
-  //   title: "Targeted Messaging",
-  //   description:
-  //     "Landing pages allow for highly targeted messaging tailored to specific audiences or campaigns. This ensures that the content resonates with the visitor’s needs and interests, improving the relevance and effectiveness of your marketing efforts.",
-  //   gradient: "bg-gradient-to-r from-[#292929] to-[#9FFF1A]",
-  // },
   {
     id: 3,
-    icon: <TargetedAudience />,
+    icon: <ClientSatisfaction />,
     title: "Recognized Visual Identity",
     description:
       "A recognized visual identity on landing pages builds brand familiarity and trust. Aligning the landing page with your brand strengthens emotional connections, enhancing lead generation and securing you long-term partnerships.",

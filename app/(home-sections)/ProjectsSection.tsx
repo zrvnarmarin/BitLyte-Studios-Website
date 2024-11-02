@@ -15,15 +15,12 @@ export default function ProjectsSection() {
         </h2>
 
         <div className="hidden relative w-full xl:flex justify-end z-30">
-          <Link href={`/projects`}>
-            <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-semibold text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
-              <LogoForButtonRotated
-                fillColor="#000000"
-                width={18}
-                height={20}
-              />
-              More Projects
-            </button>
+          <Link
+            href={`/projects`}
+            className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] rounded-full font-semibold text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300"
+          >
+            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
+            More Projects
           </Link>
         </div>
       </div>

@@ -1,15 +1,11 @@
 import React from "react";
-import Image from "next/image";
-import { Logo } from "@/app/services/[serviceId]/StepsSection";
 import "../../../public/test.css";
-import { LogoArrowRight } from "@/app/(home-sections)/ProjectsSection";
-import Link from "next/link";
 import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 
 export default function ContactForm() {
   return (
     // Form container
-    <div className="flex flex-col gap-8 z-20 overflow-hidden relative px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030] bg-[#]">
+    <div className="flex z-30 flex-col gap-8 bg-[#0b0b0b] overflow-hidden relative px-4 py-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030]">
       {/* Blur effect background */}
       <div className="w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
@@ -67,13 +63,11 @@ export default function ContactForm() {
 
         {/* Submit form button */}
         <div className="relative w-full flex justify-center pt-4 md:pt-8 z-30">
-        <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+          <button type="submit" className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] rounded-full font-semibold text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Submit
           </button>
-        </Link>
-      </div>
+        </div>
       </form>
     </div>
   );

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full mt-20 md:mt-24 pt-16 pb-6 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.5px] border-[#0a2030] overflow-hidden">
+    <footer className="relative w-full mt-20 md:mt-24 pt-16 pb-6 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.] border-[#0a2030] overflow-hidden">
 
       {/* Background gradients */}
       <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>

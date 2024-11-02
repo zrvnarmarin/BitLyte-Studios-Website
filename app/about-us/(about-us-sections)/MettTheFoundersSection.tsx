@@ -13,8 +13,6 @@ export default function MeetTheFoundersSection() {
   return (
     <SectionWrapper>
       {/* Blur effects */}
-      <div className="w-48 h-48 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-      <div className="w-48 h-48 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="w-64 h-64 absolute right-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
       <div className="w-64 h-64 absolute left-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
 

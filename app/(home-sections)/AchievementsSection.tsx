@@ -9,25 +9,8 @@ import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
-      <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 sm:px-12 md:px-16 xl:px-36">
-        <h3 className="text-3xl xs:text-4xl sm:text-[42px] md:text-5xl text-[#ffffff] font-medium text-start xs:text-center xs:font-normal z-20 relative">
-          Did you know? <span className="custom-text">75% </span>of users judge
-          a company’s credibility based on its website design - we make sure
-          yours
-          <span className="custom-text capitalize">
-            {" "}
-            leaves the right impression
-          </span>{" "}
-          and brings your business more{" "}
-          <span className="custom-text capitalize">growth</span> and{" "}
-          <span className="custom-text capitalize">revenue</span>.
-        </h3>
-
-        {/* <div className="w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
-      </div>
-
       {/* Achievements cards container */}
-      <div className="w-full flex flex-col lg:flex-row gap-4 pt-4 sm:pt-8 md:pt-12">
+      <div className="w-full flex flex-col lg:flex-row gap-4 ">
         {achievements.map((achievement) => (
           <AchievementCard
             key={achievement.id}

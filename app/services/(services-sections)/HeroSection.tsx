@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
         <div className="order-2 lg:order-1 flex flex-col gap-6">
           {/* <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div> */}
-          <p className="text-base md:text-xl 3xl:text-2xl text-start xs:text-center md:text-start font-bold text-[#ffffff] uppercase pb-2 z-30">
+          <p className="text-base md:text-xl 3xl:text-2xl text-start xs:text-center md:text-center lg:text-start font-bold text-[#ffffff] uppercase pb-2 z-30">
             Explore our services
           </p>
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-start xs:text-center lg:text-start z-30">
@@ -44,10 +44,8 @@ export default function HeroSection() {
         </div>
 
         <div className="order-1 lg:order-2 relative flex items-center justify-start xs:justify-center">
-        <div className="w-full h-full absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[930px] pointer-events-none"></div>
-
           {/* Blur color effect behind the image */}
-          {/* <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+          <div className="w-64 h-64 lg:w-[18rem] lg:h-[18rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
             src={TestHero}
             alt="t"
@@ -55,8 +53,11 @@ export default function HeroSection() {
           />
         </div>
       </div>
+      
       {/* Blur background effects */}
-      <div className="w-72 h-72 absolute left-24 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[430px] pointer-events-none"></div>
+      <div className="w-56 h-56 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      <div className="md:w-48 md:h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      <div className="md:w-48 md:h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
     </HeroSectionWrapper>
   );
 }

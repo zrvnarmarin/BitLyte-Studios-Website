@@ -5,9 +5,10 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import AchievementsSection from "./(home-sections)/AchievementsSection";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
-import Footer from "./components/Footer";
 import WhyUsSection from "./(home-sections)/WhyUsSection";
 import PromisesSection from "./(home-sections)/PromisesSection";
+import ParagraphOne from "./(home-sections)/ParagraphOne";
+import ParagraphTwo from "./(home-sections)/ParagraphTwo";
 
 export default function Home() {
   return (
@@ -16,12 +17,13 @@ export default function Home() {
       <WhyUsSection />
       <ServicesSection />
       <ProjectsSection />
+      <ParagraphOne />
       <AchievementsSection />
       <PromisesSection />
+      <ParagraphTwo />
       <TestimonialsSection />
       <FAQSection />
       <CTASection />
-      {/* <Footer /> */}
     </main>
   );
 }

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen h-full flex-col items-center bg-[#ffffff]">
       <HeroSection />
-      {/* <IntroSection /> */}
+      <IntroSection />
       <MeetTheFoundersSection />
       <MissionAndVision />
       <WhatWeStandForSection /> 

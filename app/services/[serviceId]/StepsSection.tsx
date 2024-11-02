@@ -4,14 +4,19 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 export default function StepsSection() {
   return (
     <SectionWrapper>
-      <div className="relative w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
-        See all the steps
-        <span className="custom-text"> we take </span> to make your{" "}
-        <span className="custom-text"> project shine </span>
-
-        {/* Blur background effect */}
-        <span className="md:w-24 md:h-24 lg:w-44 lg:h-44 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></span>
+      <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        
+      <div className="relative">
+        <p className="relative w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center leading-none z-20 py-2 sm:py-6 md:py-4 xl:px-36">
+          See all the steps
+          <span className="custom-text"> we take </span> to make your{" "}
+          <span className="custom-text"> project shine </span>
+          {/* Blur background effect */}
+        </p>
+        {/* <span className="md:w-36 md:h-36 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></span> */}
       </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
         {steps.map((step) => (
