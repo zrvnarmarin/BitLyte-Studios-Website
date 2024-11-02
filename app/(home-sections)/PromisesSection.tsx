@@ -69,7 +69,8 @@ export const GearIcon = () => {
       stroke="#55b8ff"
       strokeWidth={0.1}
       className=" w-16 h-16 
-                   sm:w-16 sm:h-16 
+                   xs:w-18 xs:h-18
+                   sm:w-20 sm:h-20 
                    md:w-24 md:h-24 
                    lg:w-32 lg:h-32
                   2xl:w-48 2xl:h-48"
@@ -180,35 +181,32 @@ export const PromiseCard = ({
 }: PromiseCardType) => {
   return (
     <div className={`z-20 py-6 overflow-hidden relative `}>
-      {/* Blur gradient */}
-
       {/* Card content */}
       <div className="relative rounded-lg overflow-hidden flex flex-col items-center gap-1 z-20 border-[0.5px] border-[#0a2030] ">
+        {/* Blur gradient */}
         <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
-            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-12 pb-10 ">
+            <div className="col-span-2 flex flex-col items-start z-20 px-6 pt-10 md:pt-8 pb-10">
               <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
                 <div className="flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center">
                   <span className="z-30">{icon()}</span>
                 </div>
               </div>
 
-              <div>
-                <span className="text-lg sm:text-xl custom-text font-bold uppercase">
-                  {title}
-                </span>
+              <div className="text-lg sm:text-xl custom-text font-bold uppercase pt-4">
+                {title}
               </div>
               {/* Icon container mobile */}
-              <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start lg:pt-6">
+              <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start pt-8">
                 {promise}
               </p>
               <div className="flex flex-row text-center items-center gap-4 lg:pt-4">
                 <span className="hidden xl:block custom-text text-lg xs:text-xl font-light z-20">
                   &#10003;
                 </span>
-                <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
+                <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20 pt-6">
                   {description}
                 </p>
               </div>
