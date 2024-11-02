@@ -69,7 +69,7 @@ export default function HeroSection({ serviceName } : { serviceName: string }) {
           {/* Blur color effect behind the image */}
           <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
-            src={UIUXServiceImage}
+            src={SocialMediaManagementServiceImage}
             alt="t"
             className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[400px] 2xl:max-w-[474px] z-20"
           />

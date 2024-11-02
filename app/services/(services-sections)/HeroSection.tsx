@@ -56,7 +56,7 @@ export default function HeroSection() {
         </div>
       </div>
       {/* Blur background effects */}
-      {/* <div className="w-72 h-72 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+      <div className="w-72 h-72 absolute left-24 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[430px] pointer-events-none"></div>
     </HeroSectionWrapper>
   );
 }
