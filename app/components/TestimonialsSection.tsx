@@ -1,39 +1,9 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
 import InfiniteCarousel from "./InfiniteCarousel";
-
-// export type TestimonialCardProps = {
-//   id: number;
-//   name: string;
-//   companyName: string;
-//   testimonialText: string;
-//   // imageSrc: StaticImageData; 
-//   rating: number;
-// };
-
-// export const testimonials: TestimonialCardProps[] = [
-//   {
-//     id: 1,
-//     name: "Nickita Hrischev Forest",
-//     companyName: "CEO Of WordPress",
-//     testimonialText:
-//       "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind, making it incredibly easy to navigate even for someone with minimal technical skills. The setup process was straightforward, and the step-by-step guides provided were both comprehensive and easy to follow.",
-//     // imageSrc: TestimonialExampleImage, 
-//     rating: 5,
-//   },
-//   {
-//     id: 2,
-//     name: "John Doe",
-//     companyName: "CEO Of Apartmenify",
-//     testimonialText:
-//       "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly!",
-    
-//     rating: 5,
-//   },
-// ];
 
 export default function TestimonialsSection() {
   return (
@@ -82,32 +52,33 @@ export const TestimonialCard = ({
   rating,
 }: TestimonialCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-10 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
+    <div className="relative overflow-hidden rounded-lg flex flex-row items-center px-6 py-6 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
       {/* Blur background */}
       <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
       {/* Testimonial */}
       <div className="flex flex-col z-20">
-        <div className="w-full flex items-center justify-center pb-6">
+        <div className="w-full flex items-center justify-start sm:justify-center pb-6">
           <QuotesIcon />
         </div>
-        <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl 3xl:text-4xl text-[#ffffff] leading-snug text-center z-20">
+        <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl 3xl:text-4xl text-[#ffffff] leading-snug text-start sm:text-center z-20">
           {testimonialText}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-12 3xl:pt-14">
+        <div className="flex flex-row sm:flex-row items-center xs:justify-start sm:justify-center gap-4 pt-10 3xl:pt-14">
           <Image
             src={TestimonialExampleImage}
             // src={imageSrc} 
             alt="testimonial image"
-            width={70}
-            height={70}
+            className="w-16 h-16"
+            // width={70}
+            // height={70}
           />
-          <p className="flex flex-col items-center gap-0">
-            <span className="w-full font-medium text-xl lg:text-xl 3xl:text-2xl text-center text-[#ffffff]">
+          <p className="flex flex-col items-center justify-start gap-1">
+            <span className="w-full font-medium text-sm xs:text-base lg:text-xl 3xl:text-2xl text-start text-[#ffffff]">
               {name}
             </span>
-            <span className="w-full text-center text-base 3xl:text-lg text-[#eeeeee] font-light ">
+            <span className="w-full text-start text-xs xs:text-sm 3xl:text-lg text-[#eeeeee] font-light ">
               {companyName}
             </span>
           </p>
@@ -117,11 +88,10 @@ export const TestimonialCard = ({
   );
 };
 
-export const QuotesIcon = ({ width = 64, height = 64 }) => (
+export const QuotesIcon = () => (
   <svg
     fill="#ffffff"
-    width={width}
-    height={height}
+    className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16"
     viewBox="0 0 123.961 123.961"
     style={{ transform: "scale(0.7)", transformOrigin: "center" }}
   >
