@@ -4,6 +4,7 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 // import "../../public/test.css";
 import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
 import InfiniteCarousel from "./InfiniteCarousel";
+import { TestimonialCardProps } from "./InfiniteCarousel";
 
 export default function TestimonialsSection() {
   return (
@@ -24,7 +25,7 @@ export const TestimonialCard = ({
   testimonialText,
   // imageSrc, 
   rating,
-}: TestimonialCardProps) => {
+}: any) => {
   return (
     <div className="relative overflow-hidden bg-[#0b0b0b] rounded-lg flex flex-row items-center px-6 py-6 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
       {/* Blur background */}
