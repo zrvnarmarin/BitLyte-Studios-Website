@@ -16,7 +16,7 @@ export default function Home() {
       <MissionAndVision />
       <WhatWeStandForSection /> 
       <ValuesSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CTASection />
     </main>
   );
