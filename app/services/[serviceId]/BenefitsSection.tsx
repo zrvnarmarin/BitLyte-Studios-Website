@@ -21,7 +21,7 @@ export default function BenefitsSection() {
               key={card.id}
               title={card.title}
               description={card.description}
-              icon={card.icon}
+              icon={<BoostedEngagement />}
             />
           ))}
         </ul>
@@ -37,7 +37,7 @@ export const BenefitCard = ({
 }: {
   title: string;
   description: string;
-  icon?: () => React.JSX.Element;
+  icon?: React.ReactNode;
 }) => {
   return (
     <li
@@ -1103,10 +1103,10 @@ export const HighBrandAwareness = () => (
   </svg>
 );
 
-export const businessBenefits: BusinessBenefitsCardType[] = [
+export const businessBenefits: BenefitCardProps[] = [
   {
     id: 1,
-    icon: <HighBrandAwareness />,
+    icon: <HighBrandAwareness />, 
     title: "High Brand Awareness",
     description:
       "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
@@ -1130,11 +1130,10 @@ export const businessBenefits: BusinessBenefitsCardType[] = [
   },
 ];
 
-export type BusinessBenefitsCardType = {
+interface BenefitCardProps {
   id: number;
   title: string;
   description: string;
-  icon: () => JSX.Element;
+  icon?: React.ReactNode | (() => React.ReactNode);
   gradient: string;
-};
-
+}
