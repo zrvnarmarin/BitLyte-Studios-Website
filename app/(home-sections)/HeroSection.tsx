@@ -9,18 +9,22 @@ export default function HeroSection() {
   return (
     <HeroSectionWrapper>
       <p className="text-base md:text-xl 3xl:text-2xl text-center font-bold text-[#ffffff] uppercase pb-2 z-30">
-        Success begins here
+        Success starts here
       </p>
 
-      <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
-        We create
+      <h1 className="text-[2.43rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-[2.6rem] lg:leading-none  text-[#ffffff] font-medium text-center z-30">
+        Business focused
         <span className="custom-text font-black capitalize">
           {" "}
-          converting websites
+          web design
         </span>{" "}
-        and powerful
-        <span className="custom-text font-black capitalize">  digital campaigns {" "}</span>
-        with Modern Design 
+        that solidifies your
+        <span className="custom-text font-black capitalize"> Brand Image </span>
+        and establishes{" "}
+        <span className="custom-text font-black capitalize">
+          {" "}
+          constant revenue{" "}
+        </span>
       </h1>
 
       {/* Services */}
@@ -41,7 +45,7 @@ export default function HeroSection() {
       {/* CTA button */}
       <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
         <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-semibold text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Start Crafting
           </button>
