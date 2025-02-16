@@ -41,7 +41,7 @@ export const ServiceCategoryCard = ({
         className={`overflow-hidden relative w-full lg:w-fit flex flex-col items-center justify-center p-6 py-8`}
       >
         <div className="flex flex-row items-center justify-start w-full">
-          <h3 className="w-full flex flex-col sm:flex-row items-center gap-0 sm:gap-4 md:gap-16 z-20 text-center">
+          <h3 className="w-full flex  sm:flex-row items-center gap-3 sm:gap-4 md:gap-16 z-20 text-center">
             <span className="custom-text font-black text-3xl xs:text-4xl z-20">
               0{id}
             </span>
