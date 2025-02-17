@@ -27,6 +27,11 @@ export default function HeroSection() {
         </span>
       </h1>
 
+      <p className="md:hidden text-xl font-light text-[#ffffff] text-center z-40 xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 pt-2">
+        We know that building an online presence and trust between
+        you and your customers is vital for growing the business. With our robust development and targeted design, your time is saved and your energy converts to profits.   
+      </p>
+
       {/* Services */}
       <ul className="hidden xs:flex xs:flex-wrap relative w-full items-center justify-center z-30 gap-6 md:gap-0">
         <li className="w-fit bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-base 3xl:text-lg text-[#95d3ff] font-normal border-[0.5px] border-[#0a2030] z-20 rounded-full  px-4 py-2">
@@ -43,9 +48,9 @@ export default function HeroSection() {
       </ul>
 
       {/* CTA button */}
-      <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
+      <div className="relative w-full flex justify-center pt-8 md:pt-12 z-30">
         <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-normal text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
             Start Crafting
           </button>
