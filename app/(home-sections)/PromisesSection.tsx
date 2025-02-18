@@ -13,8 +13,7 @@ export default function PromisesSection() {
       </h2>
 
       {/* Cards and CTA section */}
-      <div className="w-full relative grid grid-cols-1 xl:grid-cols-1 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
-        <div className="flex flex-col gap-6 z-20">
+      <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-6">
           {promiseCardsData.map((promiseCard) => (
             <PromiseCard
               id={promiseCard.id}
@@ -25,7 +24,6 @@ export default function PromisesSection() {
               description={promiseCard.description}
             />
           ))}
-        </div>
       </div>
     </SectionWrapper>
   );
@@ -95,10 +93,10 @@ export const ClockIcon = () => (
 export const promiseCardsData: PromiseCardType[] = [
   {
     id: 1,
-    icon: StarIcon,
-    title: "Results You Can Trust",
-    promise: `We won't stop until your vision is fully realized. Your satisfaction drives our process, and we’re dedicated to delivering exactly what you need.`,
-    description: `We listen closely, adapt quickly, and implement feedback at every stage to ensure the final outcome aligns perfectly with your expectations.`,
+    icon: GearIcon,
+    title: "Built exclusively for you",
+    promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions - everything we build is unique to your business.`,
+    description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
   },
   {
     id: 2,
@@ -106,14 +104,7 @@ export const promiseCardsData: PromiseCardType[] = [
     title: "On time, every time",
     promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
     description: `With dedicated project management and clear milestones, we keep the process streamlined and efficient, ensuring every deadline is met.`,
-  },
-  {
-    id: 3,
-    icon: GearIcon,
-    title: "Built exclusively for you",
-    promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions - everything we build is unique to your business.`,
-    description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
-  },
+  }
 ];
 
 export const PromiseCard = ({
@@ -132,13 +123,13 @@ export const PromiseCard = ({
         <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12">
-            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-6 md:pt-8 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
-              <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12"> */}
+            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-8 md:pt-8 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
+              {/* <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
                 <div className="flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center">
                   <span className="z-30">{icon()}</span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="text-lg sm:text-xl custom-text font-bold uppercase pt-2">
                 {title}
@@ -157,11 +148,11 @@ export const PromiseCard = ({
               </div>
             </div>
 
-            <div className="bg-[#0b0b0b] rounded-lg hidden lg:flex col-span-full relative overflow lg:col-span-1 flex-col items-center justify-center">
+            {/* <div className="bg-[#0b0b0b] rounded-lg hidden lg:flex col-span-full relative overflow lg:col-span-1 flex-col items-center justify-center">
               <span className="z-30">{icon()}</span>
               <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </div>
     </div>

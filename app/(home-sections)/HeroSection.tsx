@@ -12,7 +12,7 @@ export default function HeroSection() {
         Success starts here
       </p>
 
-      <h1 className="text-[2.43rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-[2.6rem] lg:leading-none  text-[#ffffff] font-medium text-center z-30">
+      <h1 className="pt-4 text-[2.43rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-[2.6rem] lg:leading-none  text-[#ffffff] font-medium text-center z-30">
         Business focused
         <span className="custom-text font-black capitalize">
           {" "}
@@ -28,8 +28,9 @@ export default function HeroSection() {
       </h1>
 
       <p className="md:hidden text-xl font-light text-[#ffffff] text-center z-40 xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 pt-2">
-        We know that building an online presence and trust between
-        you and your customers is vital for growing the business. With our robust development and targeted design, your time is saved and your energy converts to profits.   
+        Building an online presence and trust with your customers
+        is vital for growing the business. With our robust development and
+        targeted design, your time is saved and your energy converts to profits.
       </p>
 
       {/* Services */}

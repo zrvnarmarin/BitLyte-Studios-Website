@@ -9,6 +9,8 @@ import WhyUsSection from "./(home-sections)/WhyUsSection";
 import PromisesSection from "./(home-sections)/PromisesSection";
 import ParagraphOne from "./(home-sections)/ParagraphOne";
 import ParagraphTwo from "./(home-sections)/ParagraphTwo";
+import ParagraphSectionThree from "./(home-sections)/ParagraphSectionThree";
+import OurProcessessSection from "./services/(services-sections)/OurProcessessSection";
 
 export default function Home() {
   return (
@@ -16,11 +18,12 @@ export default function Home() {
       <HeroSection />
       <WhyUsSection />
       <ServicesSection />
+      <ParagraphSectionThree />
       <ProjectsSection />
-      <ParagraphOne />
       <AchievementsSection />
-      <PromisesSection />
+      <OurProcessessSection />
       <ParagraphTwo />
+      <PromisesSection />
       <TestimonialsSection />
       <FAQSection />
       <CTASection />

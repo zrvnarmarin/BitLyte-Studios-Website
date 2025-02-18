@@ -34,14 +34,14 @@ export const InfiniteCarousel = () => {
           </div>
         ))}
       </div>
-      <div className="carousel-indicators">
+      {/* <div className="carousel-indicators">
         {testimonials.map((_, index) => (
           <span
             key={index}
             className={currentIndex === index ? "active" : ""}
           ></span>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
