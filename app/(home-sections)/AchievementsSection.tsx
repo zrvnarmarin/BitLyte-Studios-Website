@@ -9,8 +9,12 @@ import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 export default function AchievementsSection() {
   return (
     <SectionWrapper>
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+        Growing achievements
+      </h2>
+
       {/* Achievements cards container */}
-      <div className="w-full flex flex-col lg:flex-row gap-4 ">
+      <div className="w-full flex flex-col lg:flex-row gap-4 pt-4 sm:pt-8 md:pt-12">
         {achievements.map((achievement) => (
           <AchievementCard
             key={achievement.id}
@@ -230,8 +234,8 @@ export type AchievementCardProps = {
 export const achievements = [
   {
     id: 2,
-    stat: "3X",
-    description: "Boost in lead generation performace",
+    stat: "4",
+    description: "Satisfied clients",
   },
   {
     id: 1,
@@ -240,7 +244,7 @@ export const achievements = [
   },
   {
     id: 3,
-    stat: "5",
-    description: "Highly skilled experts in our team",
+    stat: "3",
+    description: "Experts in our team",
   },
 ];

@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
         </Link>
 
-        <div className="w-full flex flex-col lg:flex-row items-center">
+        <div className="w-full flex flex-col lg:flex-row items-center pt-4">
           {/* Contact info */}
           <div className="w-full flex flex-col pt-12 lg:pt-24 gap-2 order-3 lg:order-1">
             <p className="text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase pb-2">
@@ -50,7 +50,7 @@ export default function Footer() {
               <p className="lg:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
                 Browse
               </p>
-              <div className="flex flex-col xs:flex-row lg:flex-row justify-start lg:justify-center sm:w-full gap-5">
+              <div className="grid grid-cols-2 xs:flex xs:flex-row lg:flex-row justify-start lg:justify-center sm:w-full gap-5">
                 {quickLinkRoutes.map((routeLink) => (
                   <React.Fragment key={routeLink.id}>
                     <Link href={routeLink.href}>

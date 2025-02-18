@@ -30,7 +30,7 @@ export default function HeroSection() {
       <p className="md:hidden text-xl font-light text-[#ffffff] text-center z-40 xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 pt-2">
         Building an online presence and trust with your customers
         is vital for growing the business. With our robust development and
-        targeted design, your time is saved and your energy converts to profits.
+        targeted design, your time is saved and workflows optimized.
       </p>
 
       {/* Services */}
@@ -53,7 +53,7 @@ export default function HeroSection() {
         <Link href={`/contact`}>
           <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-normal text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            Start Crafting
+            Get started
           </button>
         </Link>
       </div>

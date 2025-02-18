@@ -14,16 +14,16 @@ export default function PromisesSection() {
 
       {/* Cards and CTA section */}
       <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-6">
-          {promiseCardsData.map((promiseCard) => (
-            <PromiseCard
-              id={promiseCard.id}
-              icon={promiseCard.icon}
-              key={promiseCard.title}
-              title={promiseCard.title}
-              promise={promiseCard.promise}
-              description={promiseCard.description}
-            />
-          ))}
+        {promiseCardsData.map((promiseCard) => (
+          <PromiseCard
+            id={promiseCard.id}
+            icon={promiseCard.icon}
+            key={promiseCard.title}
+            title={promiseCard.title}
+            promise={promiseCard.promise}
+            description={promiseCard.description}
+          />
+        ))}
       </div>
     </SectionWrapper>
   );
@@ -104,7 +104,7 @@ export const promiseCardsData: PromiseCardType[] = [
     title: "On time, every time",
     promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
     description: `With dedicated project management and clear milestones, we keep the process streamlined and efficient, ensuring every deadline is met.`,
-  }
+  },
 ];
 
 export const PromiseCard = ({
@@ -124,31 +124,31 @@ export const PromiseCard = ({
 
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
           {/* <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-12"> */}
-            <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-8 md:pt-8 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
-              {/* <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
+          <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-8 md:pt-8 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
+            {/* <div className="col-span-full relative overflow-hidden lg:col-span-1 flex lg:hidden flex-col items-center justify-center">
                 <div className="flex col-span-full relative overflow-hidden lg:col-span-1 flex-col items-center justify-center">
                   <span className="z-30">{icon()}</span>
                 </div>
               </div> */}
 
-              <div className="text-lg sm:text-xl custom-text font-bold uppercase pt-2">
-                {title}
-              </div>
-              {/* Icon container mobile */}
-              <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start pt-2 lg:pt-4">
-                {promise}
-              </p>
-              <div className="flex flex-row text-center items-center gap-4 pt-4 lg:pt-4">
-                <span className="hidden xl:block custom-text text-lg xs:text-xl font-light z-20">
-                  &#10003;
-                </span>
-                <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
-                  {description}
-                </p>
-              </div>
+            <div className="text-lg sm:text-xl custom-text font-bold uppercase pt-2">
+              {title}
             </div>
+            {/* Icon container mobile */}
+            <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl leading-tight text-start pt-2 lg:pt-4">
+              {promise}
+            </p>
+            <div className="flex flex-row text-center items-center gap-4 pt-4 lg:pt-4">
+              <span className="hidden xl:block custom-text text-lg xs:text-xl font-light z-20">
+                &#10003;
+              </span>
+              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
+                {description}
+              </p>
+            </div>
+          </div>
 
-            {/* <div className="bg-[#0b0b0b] rounded-lg hidden lg:flex col-span-full relative overflow lg:col-span-1 flex-col items-center justify-center">
+          {/* <div className="bg-[#0b0b0b] rounded-lg hidden lg:flex col-span-full relative overflow lg:col-span-1 flex-col items-center justify-center">
               <span className="z-30">{icon()}</span>
               <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
             </div> */}

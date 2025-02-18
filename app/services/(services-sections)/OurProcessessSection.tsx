@@ -6,7 +6,7 @@ export default function OurProcessessSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-        Our Proccess
+        Our workflow
       </h2>
 
       {/* Process steps cards */}
@@ -32,7 +32,7 @@ export const ProcessStepCard = ({
   return (
     <div
       key={id}
-      className={`relative overflow-hidden flex-1 px-5 py-10 rounded-lg border-[0.5px] border-[#0a2030]`}
+      className={`relative overflow-hidden flex-1 px-6 py-10 rounded-lg border-[0.5px] border-[#0a2030]`}
     >
       {/* Blur background */}
       <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
