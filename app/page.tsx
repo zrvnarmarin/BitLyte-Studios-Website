@@ -2,12 +2,10 @@ import HeroSection from "./(home-sections)/HeroSection";
 import ServicesSection from "./(home-sections)/ServicesSection";
 import ProjectsSection from "./(home-sections)/ProjectsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
-import AchievementsSection from "./(home-sections)/AchievementsSection";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
 import WhyUsSection from "./(home-sections)/WhyUsSection";
 import PromisesSection from "./(home-sections)/PromisesSection";
-import ParagraphOne from "./(home-sections)/ParagraphOne";
 import ParagraphTwo from "./(home-sections)/ParagraphTwo";
 import ParagraphSectionThree from "./(home-sections)/ParagraphSectionThree";
 import OurProcessessSection from "./services/(services-sections)/OurProcessessSection";
@@ -20,7 +18,7 @@ export default function Home() {
       <ServicesSection />
       <ParagraphSectionThree />
       <ProjectsSection />
-      <AchievementsSection />
+      {/* <AchievementsSection /> */}
       <OurProcessessSection />
       <ParagraphTwo />
       <PromisesSection />

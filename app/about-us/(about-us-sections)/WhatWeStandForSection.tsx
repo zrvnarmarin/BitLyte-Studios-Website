@@ -14,7 +14,7 @@ export default function WhatWeStandForSection() {
             <div className="w-48 h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
             <div className="w-48 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
-            <h2 className="w-full text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+            <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
               What We Stand For
             </h2>
             <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start pt-4 sm:pt-8 md:pt-12 z-20">

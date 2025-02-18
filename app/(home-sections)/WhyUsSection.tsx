@@ -48,7 +48,7 @@ export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) =>
           {/* Render the icon component */}
           {React.createElement(icon)}
         </div>
-        <h3 className="w-full text-[#ffffff] font-semibold  text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
+        <h3 className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
           {title}
         </h3>
         <p className="text-xl font-light text-[#ffffff] text-center pt-6 z-40">

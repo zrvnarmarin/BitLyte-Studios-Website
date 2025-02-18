@@ -10,7 +10,7 @@ export default function AchievementsSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-        Growing achievements
+        Achievements and growth
       </h2>
 
       {/* Achievements cards container */}
@@ -235,7 +235,7 @@ export const achievements = [
   {
     id: 2,
     stat: "4",
-    description: "Satisfied clients",
+    description: "Satisfied cliesnts",
   },
   {
     id: 1,

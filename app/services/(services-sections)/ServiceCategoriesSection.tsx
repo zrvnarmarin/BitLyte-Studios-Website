@@ -21,7 +21,7 @@ export default function ServiceCategoriesSection() {
     <SectionWrapper>
       {serviceCategories.map((serviceCategory) => (
         <React.Fragment key={serviceCategory.id}>
-          <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal">
+          <h2 className="w-full text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal pt-4">
             {serviceCategory.serviceCategoryTitle}
           </h2>
           <div
@@ -48,7 +48,7 @@ export default function ServiceCategoriesSection() {
                     alt="img"
                     src={service.imageSrc}
                   />
-                  <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">
+                  <h3 className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight">
                     {service.categoryTitle}
                   </h3>
                   <p className="text-lg xs:text-xl font-light text-[#ffffff] pt-4">

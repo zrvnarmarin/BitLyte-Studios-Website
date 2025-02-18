@@ -48,7 +48,7 @@ export default function MeetTheFoundersSection() {
 
 export const FounderCard = ({ id, name, imgSrc }: FounderDataType) => {
   return (
-    <div className="w-full relative overflow-hidden flex flex-col z-20 hover:shadow-[0_0_10px_0_rgba(255,255,255,1)] rounded-lg">
+    <div className="w-full relative overflow-hidden flex flex-col z-20 rounded-lg">
       <div className="w-full relative z-20 rounded-lg py-6 px-6">
         <Image
           src={imgSrc}
@@ -63,7 +63,7 @@ export const FounderCard = ({ id, name, imgSrc }: FounderDataType) => {
       <div className="relative flex flex-col justify-between items-start pb-4 pt-2 px-6">
         {/* Centered Content */}
         <div className="flex flex-col gap-2 justify-center items-start z-20 my-auto">
-          <h2 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">
+          <h2 className="text-[#ffffff] font-semibold text-3xl">
             {name}
           </h2>
           <p className="text-lg xs:text-xl font-light text-[#ffffff]">

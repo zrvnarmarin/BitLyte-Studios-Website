@@ -7,7 +7,7 @@ import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 export default function WhyUsSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-start text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium xs:font-normal z-20">
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         Our Values
       </h2>
 
@@ -42,11 +42,11 @@ export default function WhyUsSection() {
       </div>
 
       {/* CTA section */}
-      <div className="relative w-full flex justify-center pt-4 md:pt-4 z-30">
-        <Link href={`/services`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff]  rounded-full font-semibold text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
+      <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
+        <Link href={`/contact`}>
+          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-normal text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
             <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            Discover Our Services
+            See Our Services
           </button>
         </Link>
       </div>
@@ -61,8 +61,8 @@ export const ValueCard = ({ title, description, icon }: ValueType) => {
         {icon()}
       </div>
 
-      <div className="flex flex-col gap-2">
-        <h3 className="text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center xs:text-start sm:text-center xl:text-start z-20">
+      <div className="flex flex-col gap-2"> 
+        <h3 className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-center xs:text-start sm:text-center xl:text-start z-20">
           {title}
         </h3>
         <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start sm:text-center xl:text-start pt-2 z-20">
