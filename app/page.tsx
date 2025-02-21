@@ -16,7 +16,9 @@ export default function Home() {
       <HeroSection />
       <WhyUsSection />
       <ServicesSection />
-      <ParagraphSectionThree />
+      <div className="hidden md:flex">
+        <ParagraphSectionThree />
+      </div>
       <ProjectsSection />
       {/* <AchievementsSection /> */}
       <OurProcessessSection />

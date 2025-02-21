@@ -50,7 +50,7 @@ export default function Footer() {
               <p className="lg:hidden text-base md:text-xl text-[#ffffff] font-normal md:font-bold uppercase">
                 Browse
               </p>
-              <div className="grid grid-cols-2 xs:flex xs:flex-row lg:flex-row justify-start lg:justify-center sm:w-full gap-5">
+              <div className="grid grid-cols-2 sm:flex lg:flex-row justify-start lg:justify-center sm:w-full gap-5">
                 {quickLinkRoutes.map((routeLink) => (
                   <React.Fragment key={routeLink.id}>
                     <Link href={routeLink.href}>

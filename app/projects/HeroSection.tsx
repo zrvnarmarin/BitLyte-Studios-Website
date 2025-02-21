@@ -31,7 +31,7 @@ export default function HeroSection() {
             to seamless reality
           </h1>
 
-          <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
+          <p className="text-xl font-light text-[#ffffff] text-center lg:text-left z-20">
             As a web agency, we build digital products that meet both user needs
             and business goals. Our human-centered design approach ensures
             intuitive and effective results that boost your business. Take a

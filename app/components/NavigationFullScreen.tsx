@@ -147,14 +147,6 @@ export const XButton = () => {
 };
 
 export const navbarLinks = [
-  // {
-  //   name: "Home",
-  //   link: "/",
-  // },
-  {
-    name: "About",
-    link: "/about-us",
-  },
   {
     name: "Services",
     link: "/services",
@@ -163,10 +155,14 @@ export const navbarLinks = [
     name: "Projects",
     link: "/projects"
   },
-  // {
-  //   name: "Contact",
-  //   link: "/contact",
-  // }
+  {
+    name: "About",
+    link: "/about-us",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  }
 ];
 
 export type NavbarLink = {

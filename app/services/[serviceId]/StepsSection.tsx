@@ -1,12 +1,13 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
+import { div } from "framer-motion/client";
 
 export default function StepsSection() {
   return (
     <SectionWrapper>
       <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        
+      <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+
       <div className="relative">
         <p className="relative w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center leading-none z-20 py-2 sm:py-6 md:py-4 xl:px-36">
           See all the steps
@@ -17,10 +18,15 @@ export default function StepsSection() {
         {/* <span className="md:w-36 md:h-36 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></span> */}
       </div>
 
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:hidden items-start justify-start gap-6 pt-16">
         {steps.map((step) => (
-          <StepCard key={step.id} />
+          <StepCardMobile id={1} description='Description' title='Discovery And Retribution' key={step.id} />
+        ))}
+      </div>
+
+      <div className="hidden xl:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
+        {steps.map((step) => (
+          <StepCard id={1} description='Description' title='hey' key={step.id} />
         ))}
       </div>
     </SectionWrapper>
@@ -90,6 +96,62 @@ export const StepCard = ({
   );
 };
 
+export const StepCardMobile = ({
+  id = 1,
+  title = 'Discovery',
+  description = 'Some description',
+} : {
+  id?: number;
+  title?: string;
+  description?: string;
+}) => {
+  return (
+    <div
+      key={id}
+      className={`relative overflow-hidden flex-1 px-6 py-10 rounded-lg border-[0.5px] border-[#0a2030]`}
+    >
+      {/* Blur background */}
+      <div className="w-32 h-32 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+      <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+
+
+      <div className="w-full flex flex-col items-center justify-start lg:justify-center z-20">
+        <span className="custom-text font-black text-7xl z-0 mr-4">{id}</span>
+        <span className="text-[#ffffff] font-semibold text-3xl text-center x z-20">
+          {title}
+        </span>
+      </div>
+
+      {/* Subheading and description */}
+      <div className="relative flex flex-col gap-2 pt-8">
+        <div className="w-full  flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
+          <span className="">Planning</span>
+        </div>
+        <p className="text-xl font-light text-[#ffffff] text-center px-4 py-2 z-20">
+          <span className="custom-text">&#x2022;</span> Planning phase is when
+          we discover your product and research the market
+        </p>
+      </div>
+
+      {/* Vertical line */}
+      <div className="relative  flex flex-col items-center justify-center gap-4 py-2">
+        <span className="w-0.5 h-10 border-[0.5px] border-[#0a2030]"></span>
+      </div>
+
+      {/* Subheading and description */}
+      <div className="relative flex flex-col gap-2">
+        <div className="w-full  flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
+          <span className="">Planning</span>
+        </div>
+        <p className="text-xl font-light text-[#ffffff] text-center px-4 py-2 z-20">
+          <span className="custom-text">&#x2022;</span> Planning phase is when
+          we discover your product and research the market
+        </p>
+      </div>
+    </div>
+  );
+};
+
 export const steps: StepsCardType[] = [
   {
     id: 1,
@@ -128,7 +190,13 @@ export type StepsCardType = {
   blurBackground?: string;
 };
 
-export const Logo = ({ width = 50, height = 50 }: { width?: number; height?: number }) => {
+export const Logo = ({
+  width = 50,
+  height = 50,
+}: {
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       className="z-30"

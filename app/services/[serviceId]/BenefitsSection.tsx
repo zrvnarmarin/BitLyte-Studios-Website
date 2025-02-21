@@ -49,11 +49,11 @@ export const BenefitCard = ({
 
       <div className="flex flex-col items-center justify-center gap-1 z-20">
         <div className="w-full flex items-center gap-2">
-          <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
+          <h3 className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
             {title}
           </h3>
         </div>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-6 z-20">
+        <p className="text-xl font-light text-[#ffffff] text-center pt-6 z-20">
           {description}
         </p>
       </div>

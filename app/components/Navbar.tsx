@@ -26,7 +26,7 @@ export default function Navbar({
       <Link href={`/`}>
         <div className="flex items-center gap-2 lg:gap-4">
           <LogoIcon />
-          <span className="text-[#ffffff] text-lg sm:text-xl lg:text-2xl font-bold">
+          <span className="text-[#ffffff] text-xl lg:text-2xl font-bold">
             BitLyte Studios
           </span>
         </div>
