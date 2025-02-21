@@ -1,10 +1,34 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import { div } from "framer-motion/client";
+import { allServicesArray } from "./AllServicesData";
+import { formatString } from "./HeroSection";
 
-export default function StepsSection() {
+export default function StepsSection({ serviceName }: { serviceName: string }) {
+  console.log(formatString(serviceName));
+  
+  const selectedService = allServicesArray.find(
+    (service) => service.name === serviceName
+  );
+
+  let test = Boolean(formatString(serviceName) === allServicesArray[1].name);
+
+  console.log(test);
+
   return (
     <SectionWrapper>
+      <ul>
+        {allServicesArray.map((selectedService) => (
+          <div
+            key={selectedService.id}
+            className="text-[#000000] bg-[#ffffff] w-full"
+          >
+            {selectedService.name}{" "}
+          </div>
+        ))}
+      </ul>
+      <p className="text-[#000000] bg-[#ffffff]">{test.toString()}</p>
+
       <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
       <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
@@ -20,13 +44,23 @@ export default function StepsSection() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:hidden items-start justify-start gap-6 pt-16">
         {steps.map((step) => (
-          <StepCardMobile id={1} description='Description' title='Discovery And Retribution' key={step.id} />
+          <StepCardMobile
+            id={1}
+            description="Description"
+            title="Discovery And Retribution"
+            key={step.id}
+          />
         ))}
       </div>
 
       <div className="hidden xl:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
         {steps.map((step) => (
-          <StepCard id={1} description='Description' title='hey' key={step.id} />
+          <StepCard
+            id={1}
+            description="Description"
+            title="hey"
+            key={step.id}
+          />
         ))}
       </div>
     </SectionWrapper>
@@ -98,9 +132,9 @@ export const StepCard = ({
 
 export const StepCardMobile = ({
   id = 1,
-  title = 'Discovery',
-  description = 'Some description',
-} : {
+  title = "Discovery",
+  description = "Some description",
+}: {
   id?: number;
   title?: string;
   description?: string;
@@ -113,7 +147,6 @@ export const StepCardMobile = ({
       {/* Blur background */}
       <div className="w-32 h-32 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
       <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
-
 
       <div className="w-full flex flex-col items-center justify-start lg:justify-center z-20">
         <span className="custom-text font-black text-7xl z-0 mr-4">{id}</span>

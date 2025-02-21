@@ -51,13 +51,13 @@ export default function HeroSection() {
               </p>
               <br />
               <div className="flex flex-col gap-2 relative overflow-hidden">
-                <p className="w-full text-lg xs:text-xl font-light text-[#ffffff] text-center z-20">
+                <p className="w-full text-xl font-light text-[#ffffff] text-center z-20">
                   We want to make a positive difference for your business or
                   your life and accelerate it together with you and leave a
                   better mark in the world.
                 </p>
                 <br />
-                <p className="w-full text-lg xs:text-xl font-light text-[#ffffff] text-center z-20">
+                <p className="w-full text-xl font-light text-[#ffffff] text-center z-20">
                   Together with us, let`s make sure that you leave your digital
                   footprint in the right way.
                 </p>
@@ -117,7 +117,7 @@ export const ContactInfoCard = ({
             {React.createElement(icon)}
           </div>
           <div className="flex flex-col  gap-2">
-            <h3 className="w-full text-[#ffffff] font-medium text-xl text-start z-20">
+            <h3 className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-start z-20">
               {title}
             </h3>
             <p className="text-md 2xl:text-lg font-light text-[#ffffff] text-start z-20">

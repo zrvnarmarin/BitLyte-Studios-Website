@@ -3,15 +3,31 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../../public/test.css";
+import { allServicesArray } from './AllServicesData';
+import { formatString } from "./HeroSection";
 
-export default function BenefitsSection() {
+export default function BenefitsSection({ serviceName }: { serviceName: string }) {
+  console.log(formatString(serviceName));
+  const selectedService = allServicesArray.find(service => service.name === serviceName);
+
+  let test = Boolean(formatString(serviceName) === allServicesArray[1].name);
+
+  console.log(test);
+
   return (
     <SectionWrapper>
       <p className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal leading-none text-center z-20 py-2 sm:py-6 md:py-4 xl:px-36">
-        Explore how landing page
+        Explore how  {formatString(serviceName)}, {selectedService?.name}
         <span className="custom-text"> boosts conversions </span> and makes your{" "}
         <span className="custom-text"> product more impactful </span>
       </p>
+
+      <ul>
+        {allServicesArray.map(selectedService => 
+          <div key={selectedService.id} className="text-[#000000] bg-[#ffffff] w-full">{selectedService.name} </div>
+        )}
+        <p className="text-[#000000] bg-[#ffffff]">{test.toString()}</p>
+      </ul>
 
       {/* Right side */}
       <div className="">

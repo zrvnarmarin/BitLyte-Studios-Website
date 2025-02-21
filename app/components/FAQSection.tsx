@@ -75,7 +75,7 @@ function Panel({
         )}
       </div>
       {isActive ? (
-        <p className="sm:pl-2 py-4 text-lg sm:text-xl font-light text-[#ffffff]">
+        <p className="sm:pl-2 py-4 text-xl font-light text-[#ffffff]">
           {answer}
         </p>
       ) : null}
