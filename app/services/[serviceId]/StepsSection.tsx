@@ -1,34 +1,16 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import { div } from "framer-motion/client";
-import { allServicesArray } from "./AllServicesData";
 import { formatString } from "./HeroSection";
+import { allServicesArray } from './AllServicesData';
 
 export default function StepsSection({ serviceName }: { serviceName: string }) {
-  console.log(formatString(serviceName));
-  
   const selectedService = allServicesArray.find(
-    (service) => service.name === serviceName
+    (service) => formatString(serviceName) === service.name
   );
-
-  let test = Boolean(formatString(serviceName) === allServicesArray[1].name);
-
-  console.log(test);
 
   return (
     <SectionWrapper>
-      <ul>
-        {allServicesArray.map((selectedService) => (
-          <div
-            key={selectedService.id}
-            className="text-[#000000] bg-[#ffffff] w-full"
-          >
-            {selectedService.name}{" "}
-          </div>
-        ))}
-      </ul>
-      <p className="text-[#000000] bg-[#ffffff]">{test.toString()}</p>
-
       <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
       <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 

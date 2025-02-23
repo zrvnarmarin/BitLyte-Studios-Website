@@ -3,38 +3,13 @@ import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
 import Link from "next/link";
-
-//Landing page image
-import LandingPAgeServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg";
-
-// Website development image
-import WebsiteDevelopmentServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Website_Design_64x64px (1).svg";
-
-// Frontend development image
-import FrontendDevelopmentServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Web_Development_64x64px (1).svg";
-
-// Copywriting image
-import CopywritingServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Copywriting_64x64px.svg";
-
-// Social media management image
-import SocialMediaManagementServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Social_Media_Assets_64x64px (1).svg";
-
-// Meta hiring campaigns image
-import MetaHiringCampaignsServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_MetaHriring_Campaigns_64x64px.svg";
-
-// UI/UX design image
-import UIUXServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_UI_UX_Design_64x64px.svg";
-
-// Brand Identity image
-import BrandIdentityServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
-
-// Logo Design image
-import LogoDesignServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Logo_Design_64x64px.svg";
-
-// Service benefits icons
-import { ClientSatisfaction, HighBrandAwareness, RecognizedVisualIdentity } from "./BenefitsSection";
+import { allServicesArray } from "./AllServicesData";
 
 export default function HeroSection({ serviceName }: { serviceName: string }) {
+  const selectedService = allServicesArray.find(
+    (service) => formatString(serviceName) === service.name
+  );
+
   return (
     <HeroSectionWrapper>
       {/* Desktop version */}
@@ -45,7 +20,7 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
 
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-tight text-[#ffffff] font-medium text-start xs:text-center lg:text-left z-30">
             <span className="custom-text font-black">
-              {formatString(serviceName)}
+              {selectedService?.name}
             </span>{" "}
             For Maximized Lead Generation
           </h1>
@@ -73,12 +48,12 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
         {/* Blur background effects */}
         <div className="md:w-48 md:h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <div className="md:w-32 md:h-32 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        
+
         <div className="order-1 lg:order-2 relative flex items-center justify-start xs:justify-center">
           {/* Blur color effect behind the image */}
           <div className="w-80 h-80 lg:w-[10rem] lg:h-[10rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
-            src={SocialMediaManagementServiceImage}
+            src={selectedService?.serviceImage}
             alt="t"
             className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[400px] 2xl:max-w-[474px] z-20"
           />
@@ -171,10 +146,6 @@ try {
     console.error("An unknown error occurred.");
   }
 }
-
-
-
-
 
 //TO DO: Finish this array of services, and this will be primary data source for every /service/[serviceId] route page!
 // Service for landing page is blueprint for other services! And it is finished!

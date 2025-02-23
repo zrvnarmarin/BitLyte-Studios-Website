@@ -1,3 +1,19 @@
+import {
+  BoostedEngagement,
+  RecognizedVisualIdentity,
+  ClientSatisfaction,
+  IncomeGrowth,
+  ResponsiveAndAdaptive,
+  StrongDigitalPresence,
+  CostEfficiency,
+  CustomerRetention,
+  BetterCustomerInsight,
+  IncreasedTrafficAndLeads,
+  CompetitiveAdvantage,
+  IncreasedSEO,
+  HighBrandAwareness,
+} from "./serviceBenefitsIcon";
+
 //Landing page image
 import LandingPageServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Landing_Page_Design_64x64px.svg";
 
@@ -26,120 +42,533 @@ import BrandIdentityServiceImage from "../../../public/images/services/BitLyte_S
 import LogoDesignServiceImage from "../../../public/images/services/BitLyte_Studios_ikona_Logo_Design_64x64px.svg";
 
 // Service benefits icons
-import { ClientSatisfaction, HighBrandAwareness, RecognizedVisualIdentity } from "./BenefitsSection";
 
 export const allServicesArray = [
-    {
-      id: 1,
-      name: "Landing Page",
-      serviceImage: LandingPageServiceImage,
-      heroSectionHeading: "Landing Page For Maximized Lead Generation",
-      heroSectionSubheading:
-        "jebote jebote Our landing pages will help generate your business new leads and drive your sales exponentially by helping you maximize every visitor's potential and making them engage with your product.",
-      benefits: [
-        {
-          id: 1,
-        //   icon: <HighBrandAwareness />,
-          title: "High Brand Awareness",
-          description:
-            "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
-        },
-        {
-          id: 2,
-        //   icon: <ClientSatisfaction />,
-          title: "Enhanced User Experience",
-          description:
-            "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
-        },
-        {
-          id: 3,
-        //   icon: <RecognizedVisualIdentity />,
-          title: "Recognized Visual Identity",
-          description:
-            "A recognized visual identity on landing pages builds brand familiarity and trust. Aligning the landing page with your brand strengthens emotional connections, enhancing lead generation and securing you long-term partnerships.",
-        },
-      ],
-      projectPhases: [
-        {
-          phaseId: 1,
-          phaseName: "Discovery",
-          phaseSteps: [
-            {
-              id: 1,
-              stepName: "Planning",
-              stepDescription: "Planning is the first step in the procces",
-            },
-            {
-              id: 2,
-              stepName: "Wireframing",
-              stepDescription:
-                "Wireframing is the fisecond rst step in the procces",
-            },
-          ],
-        },
-      ],
-      faq: [
-        {
-          id: 1,
-          question: "Does my business needs a landing page?",
-          answer: "Need of a landing page depends on many factors, including your niche and the rest."
-        }
-      ]
-    },
-    {
+  // Web development
+  {
+    id: 1,
+    name: "Landing Page",
+    serviceImage: LandingPageServiceImage,
+    heroSectionHeading: "Landing Page For Maximized Lead Generation",
+    heroSectionSubheading:
+      "Our landing pages will help generate your business new leads and drive your sales exponentially by helping you maximize every visitor's potential and making them engage with your product.",
+    benefits: [
+      {
+        id: 1,
+        title: "High Brand Awareness",
+        description:
+          "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
+        icon: RecognizedVisualIdentity,
+      },
+      {
         id: 2,
-        name: "Frontend Development",
-        serviceImage: FrontendDevelopmentServiceImage,
-        heroSectionHeading: "Modern and Responsive Frontend Development",
-        heroSectionSubheading:
-          "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
-        benefits: [
+        title: "Enhanced User Experience",
+        description:
+          "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
+        icon: BoostedEngagement,
+      },
+      {
+        id: 3,
+        title: "Recognized Visual Identity",
+        description:
+          "A recognized visual identity on landing pages builds brand familiarity and trust. Aligning the landing page with your brand strengthens emotional connections, enhancing lead generation and securing you long-term partnerships.",
+        icon: IncomeGrowth,
+      },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Discovery",
+        phaseSteps: [
           {
             id: 1,
-            title: "Optimized Performance",
-            description:
-              "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+            stepName: "Planning",
+            stepDescription: "Planning is the first step in the process",
           },
           {
             id: 2,
-            title: "Cross-Browser Compatibility",
-            description:
-              "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
-          },
-          {
-            id: 3,
-            title: "Scalability and Maintainability",
-            description:
-              "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
-          },
-        ],
-        projectPhases: [
-          {
-            phaseId: 1,
-            phaseName: "Planning & Design",
-            phaseSteps: [
-              {
-                id: 1,
-                stepName: "Requirement Analysis",
-                stepDescription: "Understanding client needs and project goals.",
-              },
-              {
-                id: 2,
-                stepName: "UI/UX Design",
-                stepDescription:
-                  "Creating wireframes and high-fidelity designs for a seamless user experience.",
-              },
-            ],
-          },
-        ],
-        faq: [
-          {
-            id: 1,
-            question: "What technologies do you use for frontend development?",
-            answer:
-              "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+            stepName: "Wireframing",
+            stepDescription:
+              "Wireframing is the first step in the design process",
           },
         ],
       },
-  ];
-  
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "Does my business need a landing page?",
+        answer:
+          "The need for a landing page depends on many factors, including your niche and target audience.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Frontend Development",
+    serviceImage: FrontendDevelopmentServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: StrongDigitalPresence
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: IncomeGrowth
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: CustomerRetention
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Website Development",
+    serviceImage: WebsiteDevelopmentServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: ClientSatisfaction
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: ResponsiveAndAdaptive
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: IncreasedSEO
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+
+  // Digital Marketing
+  {
+    id: 4,
+    name: "Copywriting",
+    serviceImage: CopywritingServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: HighBrandAwareness
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: ClientSatisfaction
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: BetterCustomerInsight
+      },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Social Media Management",
+    serviceImage: SocialMediaManagementServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: IncreasedTrafficAndLeads
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: IncreasedSEO
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: BetterCustomerInsight
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Meta Hiring Campaigns",
+    serviceImage: MetaHiringCampaignsServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: BetterCustomerInsight
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: CustomerRetention
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: CostEfficiency
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+
+  // Digital Design
+  {
+    id: 7,
+    name: "UI/UX Design",
+    serviceImage: UIUXServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: CostEfficiency
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: CompetitiveAdvantage
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: BetterCustomerInsight
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: "Brand Identity",
+    serviceImage: BrandIdentityServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: CompetitiveAdvantage
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: IncreasedSEO
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: IncreasedTrafficAndLeads
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "Logo Design",
+    serviceImage: LogoDesignServiceImage,
+    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionSubheading:
+      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+    benefits: [
+      {
+        id: 1,
+        title: "Optimized Performance",
+        description:
+          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
+        icon: CompetitiveAdvantage
+        },
+      {
+        id: 2,
+        title: "Cross-Browser Compatibility",
+        description:
+          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+        icon: HighBrandAwareness
+        },
+      {
+        id: 3,
+        title: "Scalability and Maintainability",
+        description:
+          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+        icon: CompetitiveAdvantage
+        },
+    ],
+    projectPhases: [
+      {
+        phaseId: 1,
+        phaseName: "Planning & Design",
+        phaseSteps: [
+          {
+            id: 1,
+            stepName: "Requirement Analysis",
+            stepDescription: "Understanding client needs and project goals.",
+          },
+          {
+            id: 2,
+            stepName: "UI/UX Design",
+            stepDescription:
+              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        id: 1,
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+      },
+    ],
+  },
+];
