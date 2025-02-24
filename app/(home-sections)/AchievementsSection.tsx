@@ -1,10 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import "../../public/test.css";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
-import Link from "next/link";
-import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 
 export default function AchievementsSection() {
   return (
