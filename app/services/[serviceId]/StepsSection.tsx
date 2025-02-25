@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import { div } from "framer-motion/client";
 import { formatString } from "./HeroSection";
-import { allServicesArray } from './AllServicesData';
+import { allServicesArray } from "./AllServicesData";
 
 export default function StepsSection({ serviceName }: { serviceName: string }) {
   const selectedService = allServicesArray.find(
@@ -26,7 +26,7 @@ export default function StepsSection({ serviceName }: { serviceName: string }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:hidden items-start justify-start gap-6 pt-16">
         {steps.map((step) => (
-          <StepCardMobile
+          <StepsCardMobile
             id={1}
             description="Description"
             title="Discovery And Retribution"
@@ -36,14 +36,9 @@ export default function StepsSection({ serviceName }: { serviceName: string }) {
       </div>
 
       <div className="hidden xl:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
-        {steps.map((step) => (
-          <StepCard
-            id={1}
-            description="Description"
-            title="hey"
-            key={step.id}
-          />
-        ))}
+        <Test />
+        <Test />
+        <Test />
       </div>
     </SectionWrapper>
   );
@@ -58,7 +53,7 @@ export const StepCard = ({
   return (
     <div className="w-full flex flex-col md:flex-col lg:flex-row items-center gap-6">
       {/* Logo and title with id */}
-      <div className="relative flex flex-col gap-4 text-base text-[#eeeeee] font-normal py-8 text-start px-5 rounded-lg z-20">
+      <div className="relative flex flex-col gap-8 text-base text-[#eeeeee] font-normal py-8 text-start px-5 rounded-lg z-20">
         <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] pl-2 z-20 text-center">
           <span className="custom-text font-black">{1}. </span>
           Discovery
@@ -112,7 +107,86 @@ export const StepCard = ({
   );
 };
 
-export const StepCardMobile = ({
+export const Test = () => {
+  return (
+    <div className="flex flex-col">
+      {/* First line */}
+      <div className="grid grid-cols-3 gap-">
+        <div className="relative flex flex-row items-center justify-between gap-4 text-base text-[#eeeeee] font-normal text-start rounded-lg z-20">
+          <div className="w-full flex items-center gap-4">
+            <span className="w-4 h-4 rounded-full bg-primary-blue"></span>
+            <span className="w-10 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+          </div>
+          <div className="relative flex gap-2 items-start justify-center z-20 text-center">
+            <span className="custom-text font-black text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] z-20">
+              1.
+            </span>
+            <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] z-20">
+              Discovery
+            </span>
+            <div className="absolute -top-10 flex items-center justify-center z-10">
+              <Logo />
+            </div>
+          </div>
+          <div className="w-full relative lg:flex flex-col gap-4">
+            <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+          </div>
+          <div className="w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+        </div>
+
+        <div className="flex items-center justify-center gap-2">
+          <div className="w-full relative flex flex-col gap-2">
+            <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
+              <span className="">Planning</span>
+            </div>
+          </div>
+          <div className="hidden relative lg:flex flex-col gap-4">
+            <span className="w-5 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center gap-2">
+          <div className="hidden relative lg:flex flex-col gap-4">
+            <span className="w-5 h-0.5 border-[0.5px] border-[#0a2030]"></span>
+          </div>
+          <div className="w-full relative flex flex-col gap-2">
+            <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
+              <span className="">Planning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Second line */}
+      <div className="grid grid-cols-3 gap-6 ">
+        <span className="invisible flex items-start justify-center text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] pl-2 z-20 text-center">
+          Discovery
+        </span>
+        <div className="flex flex-row items-start">
+          <div className="flex flex-col gap-2">
+            <p className="text-base xs:text-lg font-light text-[#ffffff] text-center py-2 z-20">
+              <span className="custom-text">&#x2022;</span> Planning phase is
+              when we discover your product and research the market when we
+              discover your product and research the market
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row items-start">
+          <div className="flex flex-col gap-2">
+            <p className="text-base xs:text-lg font-light text-[#ffffff] text-center py-2 z-20">
+              <span className="custom-text">&#x2022;</span> Planning phase is
+              when we discover your product and research the market when we
+              discover your product and research the market when we discover
+              your product and research the market
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const StepsCardMobile = ({
   id = 1,
   title = "Discovery",
   description = "Some description",
@@ -206,8 +280,8 @@ export type StepsCardType = {
 };
 
 export const Logo = ({
-  width = 50,
-  height = 50,
+  width = 130,
+  height = 130,
 }: {
   width?: number;
   height?: number;
