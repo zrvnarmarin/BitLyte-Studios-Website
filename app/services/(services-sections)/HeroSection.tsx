@@ -3,7 +3,7 @@ import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import "../../../public/test.css";
 import Image from "next/image";
 import { LogoForButtonRotated } from "../[serviceId]/HeroSection";
-import TestHero from "../../../public/images/services/pussy-01.svg";
+import TestHero from "../../../public/images/services/BitLyte_Studios_ikona_Services_Hero_section.svg";
 import Link from "next/link";
 
 export default function HeroSection() {

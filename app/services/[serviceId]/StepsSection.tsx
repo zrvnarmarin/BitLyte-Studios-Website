@@ -1,6 +1,5 @@
 import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
-import { div } from "framer-motion/client";
 import { formatString } from "./HeroSection";
 import { allServicesArray } from "./AllServicesData";
 
@@ -35,79 +34,32 @@ export default function StepsSection({ serviceName }: { serviceName: string }) {
         ))}
       </div>
 
-      <div className="hidden xl:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-20 pt-16">
-        <Test />
-        <Test />
-        <Test />
+      <div className="hidden xl:flex lg:flex-col items-start justify-start gap-24 xs:gap-28 sm:gap-24 lg:gap-16 pt-16">
+        {selectedService?.steps?.map((step) => (
+          <Step
+            key={step.id}
+            id={step.id}
+            name={step.name}
+            goals={step.goals}
+            outcome={step.outcome}
+          />
+        ))}
       </div>
     </SectionWrapper>
   );
 }
 
-export const StepCard = ({
+export const Step = ({
   id,
-  title,
-  description,
-  blurBackground,
-}: StepsCardType) => {
-  return (
-    <div className="w-full flex flex-col md:flex-col lg:flex-row items-center gap-6">
-      {/* Logo and title with id */}
-      <div className="relative flex flex-col gap-8 text-base text-[#eeeeee] font-normal py-8 text-start px-5 rounded-lg z-20">
-        <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] pl-2 z-20 text-center">
-          <span className="custom-text font-black">{1}. </span>
-          Discovery
-        </span>
-        <div className="w-16 h-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <Logo />
-        </div>
-      </div>
-
-      {/* Horizontal line */}
-      <div className="hidden relative lg:flex flex-col gap-4">
-        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
-      </div>
-
-      {/* Vertical line */}
-      <div className="relative lg:hidden flex flex-col gap-4 pt-8">
-        <span className="w-0.5 h-20 border-[0.5px] border-[#0a2030]"></span>
-      </div>
-
-      <div className="relative flex flex-col gap-2">
-        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
-          <span className="">Planning</span>
-        </div>
-        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
-          <span className="custom-text">&#x2022;</span> Planning phase is when
-          we discover your product and research the market
-        </p>
-      </div>
-
-      {/* Horizontal line */}
-      <div className="hidden relative lg:flex flex-col gap-4">
-        <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
-      </div>
-
-      {/* Vertical line */}
-      <div className="relative lg:hidden flex flex-col gap-4">
-        <span className="w-0.5 h-20 border-[0.5px] border-[#0a2030]"></span>
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
-          <span className="">Planning</span>
-        </div>
-        <p className="text-base xs:text-lg font-light text-[#ffffff] text-center px-4 py-2 z-20">
-          <span className="custom-text">&#x2022;</span> Planning phase is when
-          we discover your product and research the market
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export const Test = () => {
+  name,
+  goals,
+  outcome,
+}: {
+  id: number;
+  name: string;
+  goals: { id: number, name: string }[];
+  outcome: string;
+}) => {
   return (
     <div className="flex flex-col">
       {/* First line */}
@@ -119,10 +71,10 @@ export const Test = () => {
           </div>
           <div className="relative flex gap-2 items-start justify-center z-20 text-center">
             <span className="custom-text font-black text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] z-20">
-              1.
+              {id}.
             </span>
             <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] z-20">
-              Discovery
+              {name}
             </span>
             <div className="absolute -top-10 flex items-center justify-center z-10">
               <Logo />
@@ -137,7 +89,7 @@ export const Test = () => {
         <div className="flex items-center justify-center gap-2">
           <div className="w-full relative flex flex-col gap-2">
             <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
-              <span className="">Planning</span>
+              <span className="">Goals</span>
             </div>
           </div>
           <div className="hidden relative lg:flex flex-col gap-4">
@@ -151,7 +103,7 @@ export const Test = () => {
           </div>
           <div className="w-full relative flex flex-col gap-2">
             <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full  px-4 py-2">
-              <span className="">Planning</span>
+              <span className="">Outcome</span>
             </div>
           </div>
         </div>
@@ -162,25 +114,24 @@ export const Test = () => {
         <span className="invisible flex items-start justify-center text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] pl-2 z-20 text-center">
           Discovery
         </span>
-        <div className="flex flex-row items-start">
-          <div className="flex flex-col gap-2">
-            <p className="text-base xs:text-lg font-light text-[#ffffff] text-center py-2 z-20">
-              <span className="custom-text">&#x2022;</span> Planning phase is
-              when we discover your product and research the market when we
-              discover your product and research the market
-            </p>
-          </div>
+        {/* Goals  */}
+        <div className="flex flex-wrap justify-center items-start pr-4 gap-2 pt-2">
+          {goals.map((goal) => (
+            <div key={goal.id} className="flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#1d263f] z-20 rounded-full px-6 py-2">
+              <span className="text-base xs:text-lg font-light text-[#ffffff] text-center">
+                {goal.name} 
+              </span>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-row items-start">
-          <div className="flex flex-col gap-2">
-            <p className="text-base xs:text-lg font-light text-[#ffffff] text-center py-2 z-20">
-              <span className="custom-text">&#x2022;</span> Planning phase is
-              when we discover your product and research the market when we
-              discover your product and research the market when we discover
-              your product and research the market
-            </p>
-          </div>
+        {/* Outcome */}
+        <div className="flex flex-row items-start gap-2 px-8 py-2">
+          <span className="custom-text">&#x2022;</span>
+          <span className="text-base xs:text-lg font-light text-[#ffffff] text-start">
+            {outcome}
+          </span>
         </div>
+        div
       </div>
     </div>
   );

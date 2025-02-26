@@ -75,23 +75,29 @@ export const allServicesArray = [
         icon: IncomeGrowth,
       },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Discovery",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Planning",
-            stepDescription: "Planning is the first step in the process",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "Wireframing",
-            stepDescription:
-              "Wireframing is the first step in the design process",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -133,23 +139,29 @@ export const allServicesArray = [
         icon: CustomerRetention
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -191,23 +203,29 @@ export const allServicesArray = [
         icon: IncreasedSEO
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -251,23 +269,29 @@ export const allServicesArray = [
         icon: BetterCustomerInsight
       },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -309,23 +333,29 @@ export const allServicesArray = [
         icon: BetterCustomerInsight
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -367,23 +397,29 @@ export const allServicesArray = [
         icon: CostEfficiency
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -427,23 +463,29 @@ export const allServicesArray = [
         icon: BetterCustomerInsight
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -485,23 +527,29 @@ export const allServicesArray = [
         icon: IncreasedTrafficAndLeads
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
@@ -543,23 +591,29 @@ export const allServicesArray = [
         icon: CompetitiveAdvantage
         },
     ],
-    projectPhases: [
+    steps: [
       {
-        phaseId: 1,
-        phaseName: "Planning & Design",
-        phaseSteps: [
+        id: 1,
+        name: "Discovery",
+        goals: [
           {
             id: 1,
-            stepName: "Requirement Analysis",
-            stepDescription: "Understanding client needs and project goals.",
+            name: "Market Research And UI/UX Design",
           },
           {
             id: 2,
-            stepName: "UI/UX Design",
-            stepDescription:
-              "Creating wireframes and high-fidelity designs for a seamless user experience.",
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
           },
         ],
+        outcome: "Client`s approval and green light to be able to continue on the project"
       },
     ],
     faq: [
