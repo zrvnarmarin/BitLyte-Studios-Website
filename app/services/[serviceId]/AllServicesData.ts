@@ -369,7 +369,7 @@ export const allServicesArray = [
   },
   {
     id: 6,
-    name: "Meta Hiring Campaigns",
+    name: "Ad Campaigns",
     serviceImage: MetaHiringCampaignsServiceImage,
     heroSectionHeading: "Modern and Responsive Frontend Development",
     heroSectionSubheading:

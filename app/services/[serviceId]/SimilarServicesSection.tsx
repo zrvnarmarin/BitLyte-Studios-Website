@@ -3,6 +3,8 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 import { serviceCategories } from "../(services-sections)/ServiceCategoriesSection";
 import { RightArrow } from "@/app/(home-sections)/ServicesSection";
 import Link from "next/link";
+import Image from "next/image";
+import BrandIdentity from "../../../public/images/services/BitLyte_Studios_ikona_Brand_Identity_64x64px.svg";
 
 export default function SimilarServicesSection() {
   return (
@@ -15,7 +17,7 @@ export default function SimilarServicesSection() {
         <OtherServiceCard CTAText="Design your high converting landing page" />
         <OtherServiceMiddleCard />
         <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" />
-        <OtherServiceCard CTAText="Elevate your brand with gradphic ilustrations" />
+        <OtherServiceCard CTAText="Elevate your brand with graphic ilustrations and concepts" />
         <OtherServiceCard CTAText="Change your brand awareness and get more recognition" />
       </div>
     </SectionWrapper>
@@ -57,10 +59,10 @@ export const OtherServiceMiddleCard = () => {
       <h3 className="w-full text-[#ffffff] font-semibold text-2xl xs:text-3xl text-center z-20">
         Advance your brand visuals and conversion
       </h3>
+      <div className="hidden md:block">
+        <Image height={240} width={240} alt="img" src={BrandIdentity} />
+      </div>
       <div className="flex flex-col gap-6 z-20">
-        <div className="hidden sm:flex items-center justify-center">
-          <HighBrandAwareness />
-        </div>
         <div className="w-full flex items-center justify-center">
           <button className="w-fit flex gap-4 items-center justify-center text-[#cccccc] font-medium text-xl xs:text-2xl z-20">
             Learn More

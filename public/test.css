@@ -55,3 +55,14 @@
 .carousel:active {
   cursor: grabbing;
 }
+
+.custom-text-yellow {
+  color: transparent; /* Transparent text */
+  background-clip: text; /* Background clip to text */
+  -webkit-background-clip: text; /* WebKit-specific property */
+  background-image: linear-gradient(
+    to right,
+    #ffe54f,
+    #ffd700
+  );
+}

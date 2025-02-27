@@ -16,7 +16,7 @@ export const InfiniteCarousel = () => {
   }, []);
 
   return (
-    <div className="carousel">
+    <div className="carousel pt-4 sm:pt-6 md:pt-10">
       <div
         className="carousel-wrapper"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

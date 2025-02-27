@@ -126,7 +126,7 @@ export const serviceCategories = [
       {
         id: 3,
         imageSrc: MetaHiringCampaignsIcon,
-        categoryTitle: "Meta Hiring Campaigns",
+        categoryTitle: "Ad Campaigns",
         categoryDescription:
           "Reach the right audience at the right time to maximize ROI through tailored advertising campaigns.",
       },
