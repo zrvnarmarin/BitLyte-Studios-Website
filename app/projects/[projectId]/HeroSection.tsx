@@ -3,7 +3,7 @@ import "../../../public/test.css";
 import Image from "next/image";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import Link from "next/link";
-import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png"
+import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png"
 
 export default function HeroSection() {
   return (
