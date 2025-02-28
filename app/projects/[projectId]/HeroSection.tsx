@@ -3,7 +3,8 @@ import "../../../public/test.css";
 import Image from "next/image";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import Link from "next/link";
-import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png"
+import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png";
+import { ClientFactCard, clientFacts } from "./ClientFacts";
 
 export default function HeroSection() {
   return (
@@ -52,19 +53,25 @@ export default function HeroSection() {
 
       {/* Main image */}
       <div className="pt-4 sm:pt-8 md:pt-16 lg:pt-24 z-20">
-        <Image src={HeroSectionImage} alt="Tekst" width={0} height={0} className="rounded-lg" />
+        <Image
+          src={HeroSectionImage}
+          alt="Tekst"
+          width={0}
+          height={0}
+          className="rounded-lg"
+        />
       </div>
 
-
-      {/* CTA button */}
-      {/* <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
-        <Link href={`/contact`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-normal text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            Start Your Project
-          </button>
-        </Link>
-      </div> */}
+      <div className="relative grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 items-center justify-between gap-6 rounded-lg">
+        {clientFacts.map((fact) => (
+          <ClientFactCard
+            key={fact.id}
+            id={fact.id}
+            title={fact.title}
+            description={fact.description}
+          />
+        ))}
+      </div>
 
       {/* Blur background effects */}
       <div className="md:w-48 md:h-48 absolute right-0 bg-gradient-to-r from-[#ffe54f] to-[#ffd700] z-10 blur-[230px] pointer-events-none"></div>

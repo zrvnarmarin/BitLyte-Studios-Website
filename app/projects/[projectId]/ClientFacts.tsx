@@ -1,20 +1,11 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import ClientLogoTestImage from "../../../public/images/projects/1_dj_david_mash/client_logo_test_image.png";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 
 export default function ClientFacts() {
   return (
     <SectionWrapper>
-      {/* <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-        Why Choose Us
-      </h2> */}
       <div className="relative grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
-        {/* Blur background */}
-        {/* <div className="w-64 h-64 absolute inset-0 bg-gradient-to-r from-[#1A9FFF] to-[#0083E0] z-10 blur-[930px]"></div> */}
-
-        {/* Card container */}
         {clientFacts.map((fact) => (
           <ClientFactCard
             key={fact.id}
@@ -39,9 +30,6 @@ export const ClientFactCard = ({
         <p className="text-lg sm:text-xl custom-text-yellow font-semibold uppercase text-start">
           {title}
         </p>
-        {/* <div className="flex items-center z-30 pt-6">
-          <Image src={imgSrc} alt="text" width={0} height={0} />
-          </div> */}
         <p className="text-xl font-light text-[#ffffff] text-center pt-4 z-40">
           {description}
         </p>
@@ -57,7 +45,7 @@ export type ClientFactCardProps = {
   description: string;
 };
 
-const clientFacts = [
+export const clientFacts = [
   {
     id: 1,
     title: "Client",
