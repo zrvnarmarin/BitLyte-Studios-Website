@@ -38,7 +38,7 @@ export const ValueCard = ({
       <div className="w-64 h-64 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
       <div className="w-full flex items-center justify-center">{icon()}</div>
       <h2 className="text-[#ffffff] text-3xl xs:text-4xl sm:text-5xl font-medium xs:font-normal mb-8 z-20">
-        <span className="text-primary-">{title}</span>
+        <span className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight ">{title}</span>
       </h2>
       <p className="text-center text-lg xs:text-xl font-light text-[#ffffff] z-20">
         {description}
@@ -48,7 +48,7 @@ export const ValueCard = ({
 };
 
 export const MissionIcon = () => (
-  <svg viewBox="0 0 32 32" fill="#55b8ff" width={70} height={70}>
+  <svg viewBox="0 0 32 32" fill="#55b8ff" width={90} height={90}>
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
@@ -74,7 +74,7 @@ export const MissionIcon = () => (
 );
 
 export const VisionIcon = () => (
-  <svg fill="#55b8ff" height={70} width={70} viewBox="0 0 512 512">
+  <svg fill="#55b8ff" height={90} width={90} viewBox="0 0 512 512">
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
