@@ -7,11 +7,11 @@ import AboutProjectImage from "../../../public/images/projects/1_dj_david_mash/t
 export default function AboutProject() {
   return (
     <SectionWrapper>
-      <div className="flex items-center justify-between gap-6">
+      <div className="flex flex-col xl:flex-row items-center xl:items-center justify-between gap-6">
         <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
           About Project
         </h2>
-        <div className="w-full flex justify-end items-start gap-2">
+        <div className="w-full flex flex-wrap justify-start xl:justify-end gap-2">
           {servicesDummy.map((service) => (
             <div
               key={service.id}
@@ -25,7 +25,7 @@ export default function AboutProject() {
         </div>
       </div>
 
-      <div className="relative grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
+      <div className="relative grid grid-cols-1 xl:grid-cols-2 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
         {/* Project image  */}
         <div className="z-20">
           <Image

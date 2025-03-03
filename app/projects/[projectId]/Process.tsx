@@ -14,7 +14,7 @@ export default function StepsSection() {
       </p>
 
       {/* Steps goals and outcome mobile */}
-      <div className="grid grid-cols-1 md:grid-cols-4 items-start justify-start gap-12 pt-4 sm:pt-8 md:pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-start justify-start gap-12 pt-4 sm:pt-8 md:pt-12">
         {steps.map((step) => (
           <ProcessCard
             key={step.id}
@@ -50,7 +50,7 @@ export const ProcessCard = ({
         <div className="absolute flex items-center justify-center z-10">
           {/* <Logo /> */}
         </div>
-        <span className="custom-text-yellow font-black text-7xl mr-4 z-20">{id}.</span>
+        <span className="custom-text-yellow font-black text-7xl  z-20">{id}.</span>
         <span className="text-[#ffffff] font-semibold text-3xl text-center x z-20">
           {name}
         </span>

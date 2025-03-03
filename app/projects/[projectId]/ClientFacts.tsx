@@ -5,7 +5,7 @@ import "../../../public/test.css";
 export default function ClientFacts() {
   return (
     <SectionWrapper>
-      <div className="relative grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
         {clientFacts.map((fact) => (
           <ClientFactCard
             key={fact.id}
