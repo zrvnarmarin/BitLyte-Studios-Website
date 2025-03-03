@@ -1,16 +1,138 @@
-export const allProjectsArray = [
+export const allProjectsData = [
   {
     id: 1,
-    title: "Dj David Mash",
-    subheading: 'Instagram management for a professional DJ from Croatia',
-    year: 2024,
-    clientCountry: 'Croatia',
-    services: ['Social Media Management'],
-    timeframe: '2 months',
-    description: 'DJ David is a dynamic DJ and music producer known for his electrifying sets and genre-blending sound. With a passion for deep basslines, infectious melodies, and high-energy beats, he has built a reputation for creating unforgettable experiences on the dancefloor. From underground clubs to massive festival stages, DJ David seamlessly mixes house, techno, and electronic anthems, keeping crowds engaged from start to finish.',
-    problem: 'The goal of managing DJ David’s Instagram profile is to amplify his brand, engage his audience, and grow his fan base through strategic content creation and targeted promotions. By curating a visually cohesive feed with high-quality images, behind-the-scenes footage, and engaging reels, the profile will reflect his unique sound and personality. Consistent posting schedules, interactive stories, and community engagement will keep followers active and invested in his journey. Additionally, paid ad campaigns will be optimized to increase reach, targeting electronic music enthusiasts, festival-goers, and potential new fans.',
-    solution: 'To enhance DJ David’s Instagram presence, we’ll optimize his profile with a compelling bio, branded aesthetics, and a streamlined link hub. A structured content strategy will include high-quality reels, carousels, and stories, ensuring consistent engagement. Paid ad campaigns will target electronic music fans, leveraging video and story ads with strategic audience segmentation and retargeting. Community interaction, collaborations, and user-generated content will boost organic reach. Performance will be tracked through Instagram Insights, refining content and ad strategies for maximum impact. This approach will strengthen DJ David’s brand, grow his fanbase, and drive more streams and bookings.',
-    process: 'For DJ David’s online presence, we first optimized his Instagram profile by refining his bio, ensuring brand consistency, and setting up an effective link hub for easy access to music and events. Next, I developed a content strategy, incorporating high-quality reels, carousels, and stories to maintain audience engagement while establishing a consistent posting schedule.',
-    
+    title: "DJ David Mash",
+    subtitle: {
+      bold: "Mash Up Your Event",
+      normal: "Like A Star",
+    },
+    services: ["Social Media Management", "Ad Campaign"],
+    heroImgSrc: "Import hero Image here in this file and copy src here",
+    projectFacts: {
+      client: "DJ David Mash",
+      timeframe: "2 months",
+      year: 2024,
+      Something: "Something",
+    },
+    aboutSectionImgSrc:
+      "Import about Image here in this file and copy src here",
+    fullProjectDescription:
+      "Astra Capital is a forex platform providing instant cryptocurrency withdrawals, excellent trading conditions, and 24/7 live support. It is developed for traders of all levels to offer a trustworthy trading Web3 experience. It is developed for traders of all levels to offer a trustworthy trading Web3 experience.",
+    problem:
+      "Astra Capital is a forex platform providing instant cryptocurrency withdrawals, excellent trading conditions, and 24/7 live support. It is developed for traders of all levels to offer a trustworthy trading Web3 experience.",
+    solution:
+      "Astra Capital is a forex platform providing instant cryptocurrency withdrawals, excellent trading conditions, and 24/7 live support. It is developed for traders of all levels to offer a trustworthy trading Web3 experience.",
+    process: [
+      {
+        id: 1,
+        name: "Discovery",
+        goals: [
+          {
+            id: 1,
+            name: "Market Research And UI/UX Design",
+          },
+          {
+            id: 2,
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "Design",
+        goals: [
+          {
+            id: 1,
+            name: "Market Research And UI/UX Design",
+          },
+          {
+            id: 2,
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "Optimization",
+        goals: [
+          {
+            id: 1,
+            name: "Market Research And UI/UX Design",
+          },
+          {
+            id: 2,
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
+          },
+        ],
+      },
+      {
+        id: 4,
+        name: "Tracking Results",
+        goals: [
+          {
+            id: 1,
+            name: "Market Research And UI/UX Design",
+          },
+          {
+            id: 2,
+            name: "Brand Identity Of Design",
+          },
+          {
+            id: 3,
+            name: "Market Research",
+          },
+          {
+            id: 4,
+            name: "Market Research",
+          },
+        ],
+      },
+    ],
+    results: [
+      {
+        id: 1,
+        stat: '125%',
+        fact: 'More gigs via Instagram profile'
+      },
+      {
+        id: 2,
+        stat: '34%',
+        fact: 'Enlarged user activity'
+      },
+      {
+        id: 13,
+        stat: '4X',
+        fact: 'Better standing out in the market'
+      },
+      {
+        id: 1,
+        stat: '12.56',
+        fact: 'Minutes per average spent more on the profile'
+      }
+    ]
   },
 ];

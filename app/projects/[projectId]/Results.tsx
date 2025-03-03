@@ -2,9 +2,8 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
-import AboutProjectImage from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
 
-export default function Results() {
+export default function Results({ projectName }: { projectName: string }) {
   return (
     <SectionWrapper>
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">

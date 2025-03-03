@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 
-export default function ProblemAndSolution() {
+export default function ProblemAndSolution({ projectName }: { projectName: string }) {
   return (
     <SectionWrapper>
       <div className="relative grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">

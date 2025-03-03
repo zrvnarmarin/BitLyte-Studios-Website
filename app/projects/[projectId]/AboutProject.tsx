@@ -4,7 +4,7 @@ import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import AboutProjectImage from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
 
-export default function AboutProject() {
+export default function AboutProject({ projectName }: { projectName: string }) {
   return (
     <SectionWrapper>
       <div className="flex flex-col xl:flex-row items-center xl:items-center justify-between gap-6">

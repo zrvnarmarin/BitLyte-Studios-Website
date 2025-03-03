@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../../public/test.css";
 
-export default function StepsSection() {
+export default function StepsSection({ projectName }: { projectName: string }) {
   return (
     <SectionWrapper>
       {/* <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#ffe54f] to-[#ffd700] z-10 blur-[230px] pointer-events-none"></div> */}
