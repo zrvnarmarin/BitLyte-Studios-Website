@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { UseScrollPosition } from "../utils/hooks/UseScrollPosition";
-import TransitionLink from "./TransitionLink";
-import { LogoArrowRight } from "../(home-sections)/ProjectsSection";
 import { navbarLinks } from "./NavigationFullScreen";
 
 export default function Navbar({
@@ -34,39 +32,23 @@ export default function Navbar({
 
       <div className="hidden lg:flex flex-row items-center gap-12">
         {navbarLinks.map((navbarLink) => (
-          <TransitionLink
-            key={navbarLink.name}
-            style={`font-medium text-lg text-[#ffffff] hover:text-[#1a9fff]`}
-            href={navbarLink.link}
-            label={navbarLink.name}
-          />
-        ))}
-
-        {/* <div className="text-3xl text-red-300 z-40">
           <Link
-            href={`/contact`}
-            className="w-fit hover:bg-[#ffffff] flex gap-2 items-center justify-center text-[#ffffff] hover:text-[#252525] font-normal text-lg z-20 rounded-full py-2 px-6"
+            key={navbarLink.name}
+            className={`font-medium text-lg text-[#ffffff] hover:text-[#1a9fff]`}
+            href={navbarLink.link}
           >
-            <LogoArrowRight fillColor="#ffffff" />
-            Contact Us
+            {navbarLink.name}
           </Link>
-        </div>
-        <div
-          onClick={() => onOpenSidebar()}
-          className="flex items-center justify-center z-40"
-        >
-          <button className="cursor-pointer">
-            <MenuButton />
-          </button>
-        </div> */}
+        ))}
       </div>
 
       <div className="flex items-center gap-6">
-        <TransitionLink
+        <Link
           href={`/contact`}
-          label={`Contact Us`}
-          style={`hidden relative overflow-hidden w-fit sm:flex items-center gap-2 py-3  px-8 text-[#000000] bg-[#ffffff] hover:text-[#ffffff] hover:bg-[#0b0b0b] border-[0.5px] border-[#ffffff] duration-300 rounded-full font-medium text-lg`}
-        />
+          className={`hidden relative overflow-hidden w-fit sm:flex items-center gap-2 py-3  px-8 text-[#000000] bg-[#ffffff] hover:text-[#ffffff] hover:bg-[#0b0b0b] border-[0.5px] border-[#ffffff] duration-300 rounded-full font-medium text-lg`}
+        >
+          Contact Us
+        </Link>
         <div
           onClick={() => onOpenSidebar()}
           className="lg:hidden flex items-center justify-center z-40"

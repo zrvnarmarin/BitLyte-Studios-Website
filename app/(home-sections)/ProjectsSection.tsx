@@ -124,28 +124,3 @@ export const projects = [
     imageSrc: TestImage,
   },
 ];
-
-export const LogoArrowRight = ({
-  fillColor = "#ffffff",
-  width = 12,
-  height = 18,
-}: {
-  fillColor?: string;
-  width?: number;
-  height?: number;
-}) => {
-  return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 12 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0 18H2.49225L12 9L6.08756 2.23762e-07L3.51694 0L0 18Z"
-        fill={fillColor}
-      />
-    </svg>
-  );
-};

@@ -3,7 +3,7 @@
 import React from "react";
 import SectionWrapper from "../components/SectionWrapper";
 import "../../public/test.css";
-import TransitionLink from "../components/TransitionLink";
+import Link from "next/link";
 
 export default function ServicesSection() {
   return (
@@ -56,13 +56,13 @@ export const ServiceCategoryCard = ({
       {/* Category services */}
       <div className="flex flex-col md:flex-row items-center justify-center">
         {services.map((service: string) => (
-          <TransitionLink
+          <Link
             key={service}
             href={`/services/${service
               .trim()
               .replace(/[\s\/]+/g, "-")
               .toLowerCase()}`}
-            style="group h-full w-full flex items-center justify-center gap-6 relative overflow-hidden border-[0.5px] border-l-[#0a2030] md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] duration-200"
+            className="group h-full w-full flex items-center justify-center gap-6 relative overflow-hidden border-[0.5px] border-l-[#0a2030] md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] duration-200"
           >
             {/* Blur background */}
             <div className="w-24 h-24 absolute left-0 bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
@@ -72,7 +72,7 @@ export const ServiceCategoryCard = ({
                 <RightArrow width={20} height={20} />
               </span>
             </div>
-          </TransitionLink>
+          </Link>
         ))}
       </div>
     </div>
