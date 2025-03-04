@@ -13,9 +13,6 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
         <div className="order-2 lg:order-1 flex flex-col gap-6">
           {/* <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div> */}
-          <p className="text-base md:text-xl 3xl:text-2xl text-start xs:text-center md:text-center lg:text-start font-bold text-[#ffffff] uppercase pb-2 z-30">
-            Explore our services
-          </p>
           <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-start xs:text-center lg:text-start z-30">
             Transform
             <span className="custom-text font-black"> Your Vision </span>

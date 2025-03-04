@@ -5,7 +5,7 @@ export const projectsThumbnailData: ProjectThumbnailDataProps[] = [
   {
     id: 1,
     href: '/dj-david-mash',
-    title: "DJ David Mash",
+    title: "Rework Of The Instagram Page For Famous Croatian DJ",
     year: 2024,
     clientCountry: 'Croatia',
     description:
@@ -14,8 +14,8 @@ export const projectsThumbnailData: ProjectThumbnailDataProps[] = [
   },
   {
     id: 2,
-    href: '/rentalio',
-    title: "Rentalio",
+    href: '/perina-kulic',
+    title: "Website Design And Development For A Copywriter",
     year: 2024,
     clientCountry: 'Croatia',
     description:

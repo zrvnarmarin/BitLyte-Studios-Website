@@ -80,7 +80,7 @@ export const ProjectCardDesktop = ({
       </div>
 
       {/* Project info */}
-      <div className="relative overflow-hidden flex flex-col gap-6 w-full z-20 py-6 px-4 xs:px-6 sm:px-8 md:py-8 md:px-8 lg:px-12 lg:py-10 xl:py-12">
+      <div className="relative overflow-hidden flex flex-col gap-6 w-full z-20 py-8 px-4 xs:px-6 sm:px-8 md:py-8 md:px-8 lg:px-12 lg:py-10 xl:py-12">
         {/* Blur gradients */}
         <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
         <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
@@ -88,7 +88,7 @@ export const ProjectCardDesktop = ({
         <h3 className="w-full text-3xl sm:text-[28px] md:text-3xl leading-tight text-start font-semibold text-[#ffffff] z-20">
           {title}
         </h3>
-        <p className="text-lg xs:text-xl font-light text-[#ffffff] text-start z-20">
+        <p className="text-xl font-light text-[#ffffff] text-start z-20">
           {description}
         </p>
         <div className="flex flex-col gap-2 pb-2">

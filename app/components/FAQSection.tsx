@@ -7,7 +7,7 @@ import "../../public/test.css";
 export default function FAQSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center sm:text-start z-20">
         Frequently Asked Questions
       </h2>
       <Accordion faqArray={homePageFAQ} />
@@ -62,7 +62,7 @@ function Panel({
       <div className="flex items-center justify-between gap-6 py-2">
         <div className="w-full flex items-center gap-4">
           <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold">0{id}</span>
-          <p className="text-[#ffffff] font-semibold text-2xl md:text-3xl">{title}</p>
+          <p className="text-[#ffffff] font-medium text-xl md:text-3xl">{title}</p>
         </div>
         {isActive ? (
           <span className="rotate-90 duration-300">
@@ -75,7 +75,7 @@ function Panel({
         )}
       </div>
       {isActive ? (
-        <p className="sm:pl-2 py-4 text-xl font-light text-[#ffffff]">
+        <p className="sm:pl-2 py-4 text-lg font-light text-[#ffffff]">
           {answer}
         </p>
       ) : null}
@@ -126,8 +126,8 @@ const homePageFAQ = [
 export const BlueArrowRight = () => {
   return (
     <svg
-      width="23"
-      height="30"
+      width="13"
+      height="20"
       viewBox="0 0 13 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

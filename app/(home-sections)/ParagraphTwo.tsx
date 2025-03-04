@@ -13,8 +13,10 @@ export default function ParagraphTwo() {
       <div className="w-24 h-36 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="px-5 sm:px-16 flex items-center justify-center bg-[#0b0b0b] border-[#1d263f]">
         {/* Blur gradients */}
-        <div className="w-48 h-48 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-        <div className="w-48 h-48 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+        {/* Blur gradients */}
+        <div className="lg:w-48 lg:h-48 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+        <div className="lg:w-48 lg:h-48 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+        <div className="w-32 h-32 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
         <p className="text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] text-center xs:font-normal z-20 lg:px-24">
           Brands with{" "}
