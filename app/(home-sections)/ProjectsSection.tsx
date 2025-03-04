@@ -154,11 +154,11 @@ export const ProjectCard = ({
   return (
     <Link
       href={`/projects${href}`}
-      className="relative overflow-hidden flex flex-col rounded-lg border-[0.5px] border-[#0a2030]"
+      className="relative overflow-hidden flex flex-col rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
     >
       {/* Blur gradients */}
-      <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-        <div className="w-96 h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="w-96 h-96 absolute top-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+        <div className="w-96 h-96 absolute left-0 right-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       {/* Project image */}
       <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[400px] flex items-center z-20 overflow-hidden">
         <Image
