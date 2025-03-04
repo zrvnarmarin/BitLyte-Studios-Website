@@ -45,7 +45,7 @@ export const ServiceCategoryCard = ({
             <span className="custom-text font-black text-3xl xs:text-4xl z-20">
               0{id}
             </span>
-            <span className="text-[#ffffff] font-semibold text-2xl xs:text-3xl">
+            <span className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight">
               {title}
             </span>
             <span className="group-hover:scale-105 group-hover:duration-900"></span>
