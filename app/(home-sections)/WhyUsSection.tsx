@@ -153,7 +153,7 @@ export const whyUsData = [
   },
   {
     id: 2,
-    title: "Collaborative Approach",
+    title: "Collaboration And Creativity",
     description:
       "Working together to bring your brand to life with your ideas and our expertise",
     icon: CollaborativeApproachIcon,

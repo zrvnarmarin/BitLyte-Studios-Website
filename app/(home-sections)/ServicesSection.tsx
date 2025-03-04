@@ -44,7 +44,7 @@ export const ServiceCategoryCard = ({
           <div className="w-40 h-40 xl:w-28 xl:h-28 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
           <div className="hidden md:block md:w-40 md:h-40 xl:hidden  absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
-          <h3 className="w-full flex sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-16 z-20 text-center">
+          <h3 className="w-full flex sm:flex-row items-center justify-center xl:justify-start xl:pl-8 gap-3 sm:gap-4 z-20 text-center">
             <span className="custom-text font-black text-3xl xs:text-4xl z-20">
               {id}
             </span>
@@ -68,7 +68,7 @@ export const ServiceCategoryCard = ({
             className="group h-full w-full flex items-center justify-center gap-6 relative overflow-hidden border-[0.5px] border-l-[#0a2030] md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] duration-200"
           >
             {/* Blur background */}
-            <div className="w-48 h-48 xl:w-28 xl:h-28 absolute left-0 right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
+            <div className="w-32 h-32 md:w-20 md:h-20 xl:w-28 xl:h-2 absolute left-0 right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
             <div className="h-full hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-6 items-center justify-between md:justify-center w-full text-[#ffffff] font-light hover:font-normal text-xl text-center z-20 px-8 py-6 lg:py-8">
               <span className="text-start md:text-center">{service}</span>
               <span className="md:hidden">
