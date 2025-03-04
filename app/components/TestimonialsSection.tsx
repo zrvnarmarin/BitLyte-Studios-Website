@@ -29,8 +29,10 @@ export const TestimonialCard = ({
   return (
     <div className="relative overflow-hidden bg-[#0b0b0b] rounded-lg flex flex-row items-center px-6 py-6 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
       {/* Blur background */}
-      <div className="w-32 h-32 sm:w-96 sm:h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-      <div className="w-96 h-96 sm:w-96 sm:h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="w-32 h-32 xs:hidden absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+      {/* Blur background */}
+      <div className="hidden xs:block w-32 h-32 sm:w-96 sm:h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="hidden xs:block w-96 h-96 sm:w-96 sm:h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
       {/* Testimonial */}
       <div className="flex flex-col z-20">

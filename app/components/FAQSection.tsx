@@ -57,12 +57,11 @@ function Panel({
     <div
       onClick={onShow}
       // TO DO: decide if border is necesary here - border-b-[0.5px] border-[#0a2030]
-      className={`cursor-pointer rounded-lg sm:pl-6 pr-4 py-6 sm:hover:shadow-[0_0_15px_0_rgba(10,32,78,1)] ${isActive ? 'bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b] pl-6 sm:hover:shadow-none border-[0.5px] border-[#0a2030]' : ''}`}
+      className={`cursor-pointer rounded-lg px-4 py-4 sm:hover:shadow-[0_0_15px_0_rgba(10,32,78,1)] ${isActive ? 'shadow-[0_0_15px_0_rgba(10,32,78,1)] ' : ''}`}
     >
       <div className="flex items-center justify-between gap-6 py-2">
         <div className="w-full flex items-center gap-4">
-          <span className="hidden lg:block text-lg sm:text-xl custom-text font-semibold">0{id}</span>
-          <p className="text-[#ffffff] font-normal text-xl md:text-3xl">{title}</p>
+          <p className="text-[#ffffff] font-medium text-xl md:text-3xl">{title}</p>
         </div>
         {isActive ? (
           <span className="rotate-90 duration-300">
@@ -75,7 +74,7 @@ function Panel({
         )}
       </div>
       {isActive ? (
-        <p className="sm:pl-2 py-4 text-lg font-light text-[#ffffff]">
+        <p className=" py-4 text-lg font-light text-[#ffffff]">
           {answer}
         </p>
       ) : null}

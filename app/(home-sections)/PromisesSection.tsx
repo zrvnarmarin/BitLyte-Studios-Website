@@ -6,7 +6,7 @@ import "../../public/test.css";
 export default function PromisesSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center sm:text-start z-20">
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
         What we promise 
       </h2>
 
@@ -38,7 +38,7 @@ export type PromiseCardType = {
 export const TimeIcon = () => (
   <svg
     fill="#179af9"
-    className="w-[75px] h-[75px] sm:w-[90px] sm:h-[90px]"
+    className="w-[95px] h-[95px] sm:w-[120px] sm:h-[120px]"
     viewBox="0 0 100 100"
     stroke="#55b8ff"
   >
@@ -120,7 +120,7 @@ export const PromiseCard = ({
         <div className="w-96 h-96 absolute left-0 bottom-0 bg-gradient-to-l from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
 
         <div className=" overflow-hidden relative flex flex-col items-center gap-0 justify-start z-20 lg:pl-6">
-          <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-8 md:pt-8 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
+          <div className="col-span-2 flex flex-col gap-2 items-start z-20 px-6 pt-6 md:pt-6 pb-6 md:pb-8 lg:pt-10 lg:pb-10">
             <div className="w-full flex justify-center">{icon}</div>
 
             <div className="w-full text-lg sm:text-xl custom-text font-bold uppercase pt-2 text-center">

@@ -43,7 +43,7 @@ export default function ProjectsSection() {
         ))}
       </div> */}
 
-      <div className="w-full flex flex-col md:flex-row gap-12 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
+      <div className="w-full flex flex-col md:flex-row gap-6 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
         {projectsThumbnailData.map((project) => (
           <ProjectCard
             key={project.id}
