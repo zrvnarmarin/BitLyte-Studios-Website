@@ -43,7 +43,7 @@ export const ServiceCategoryCard = ({
         <div className="flex flex-row items-center justify-start w-full">
           <h3 className="w-full flex  sm:flex-row items-center gap-3 sm:gap-4 md:gap-16 z-20 text-center">
             <span className="custom-text font-black text-3xl xs:text-4xl z-20">
-              0{id}
+              {id}
             </span>
             <span className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight">
               {title}
