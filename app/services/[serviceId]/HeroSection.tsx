@@ -49,7 +49,7 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
         <div className="md:w-48 md:h-48 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
         <div className="md:w-32 md:h-32 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
-        <div className="order-1 lg:order-2 relative flex items-center justify-start xs:justify-center">
+        <div className="order-1 lg:order-2 relative flex items-center justify-start xs:justify-center lg:justify-end">
           {/* Blur color effect behind the image */}
           <div className="w-80 h-80 lg:w-[10rem] lg:h-[10rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image

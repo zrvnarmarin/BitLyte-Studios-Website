@@ -302,7 +302,7 @@ export const quickLinkRoutes = [
   {
     id: 2,
     title: "About",
-    href: "/about",
+    href: "/about-us",
   },
   {
     id: 3,
