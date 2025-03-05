@@ -4,8 +4,14 @@ import Image from "next/image";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import Link from "next/link";
 import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png";
+import { allProjectsData } from "./allProjectsData";
+import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
 export default function HeroSection({ projectName }: { projectName: string }) {
+  const selectedProject = allProjectsData.find(
+    (project) => formatString(projectName) === project.name
+  );
+
   return (
     <HeroSectionWrapper>
       <div className="flex flex-col items-start gap-10">
@@ -22,29 +28,29 @@ export default function HeroSection({ projectName }: { projectName: string }) {
           </Link>
           <span className="custom-text-yellow">&#x2022;</span>{" "}
           <span className="text-lg xs:text-xl font-bold text-[#ffffff] uppercase">
-            DJ David Mash
+            {selectedProject?.name}
           </span>
         </div>
 
         {/* Title */}
         <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-start z-30">
-          DJ David Mash -{" "}
+          {selectedProject?.name} -{" "}
           <span className="custom-text-yellow font-black">
-            Mash Up Your Event{" "}
+            {selectedProject?.subtitle.bold}{" "}
           </span>{" "}
-          Like A Star
+          {selectedProject?.subtitle.normal}
         </h1>
       </div>
 
       {/* Services */}
       <div className="flex flex-wrap justify-start items-start gap-2">
-        {servicesDummy.map((service) => (
+        {selectedProject?.services.map((service) => (
           <div
-            key={service.id}
+            key={service}
             className="flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full px-6 py-2"
           >
             <span className="text-base xs:text-lg font-light text-[#ffffff] text-center">
-              {service.name}
+              {service}
             </span>
           </div>
         ))}
@@ -53,7 +59,7 @@ export default function HeroSection({ projectName }: { projectName: string }) {
       {/* Main image */}
       <div className="pt-4 sm:pt-8 md:pt-16 lg:pt-24 z-20">
         <Image
-          src={HeroSectionImage}
+          src={selectedProject?.heroImgSrc}
           alt="Tekst"
           width={0}
           height={0}
@@ -61,8 +67,9 @@ export default function HeroSection({ projectName }: { projectName: string }) {
         />
       </div>
 
+      {/* Client facts */}
       <div className="relative grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 items-center justify-between gap-6 rounded-lg">
-        {clientFacts.map((fact) => (
+        {selectedProject?.projectFacts.map((fact: ClientFactCardProps) => (
           <ClientFactCard
             key={fact.id}
             id={fact.id}
@@ -78,17 +85,6 @@ export default function HeroSection({ projectName }: { projectName: string }) {
     </HeroSectionWrapper>
   );
 }
-
-const servicesDummy = [
-  {
-    id: 1,
-    name: "Social Media Management",
-  },
-  {
-    id: 2,
-    name: "Ad Campaigns",
-  },
-];
 
 export const ClientFactCard = ({
   id,
@@ -115,26 +111,3 @@ export type ClientFactCardProps = {
   title: string;
   description: string;
 };
-
-export const clientFacts = [
-  {
-    id: 1,
-    title: "Client",
-    description: "DJ David Mash",
-  },
-  {
-    id: 2,
-    title: "Timeframe",
-    description: "2 months",
-  },
-  {
-    id: 3,
-    title: "Year",
-    description: "2024",
-  },
-  {
-    id: 4,
-    title: "Client",
-    description: "Something",
-  },
-];

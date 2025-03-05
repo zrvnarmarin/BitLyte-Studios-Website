@@ -1,9 +1,14 @@
 import React from "react";
-import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
+import { allProjectsData } from "./allProjectsData";
+import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
 export default function Results({ projectName }: { projectName: string }) {
+  const selectedProject = allProjectsData.find(
+    (project) => formatString(projectName) === project.name
+  );
+  
   return (
     <SectionWrapper>
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
@@ -12,13 +17,12 @@ export default function Results({ projectName }: { projectName: string }) {
 
       {/* Process steps cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 pt-4 sm:pt-8 md:pt-12 z-40">
-        {results.map((result) => (
+        {selectedProject?.results.map((result) => (
           <ResultCard
             key={result.id}
             id={result.id}
             stat={result.stat}
-            title={result.title}
-            description={result.description}
+            fact={result.fact}
           />
         ))}
       </div>
@@ -29,8 +33,7 @@ export default function Results({ projectName }: { projectName: string }) {
 export const ResultCard = ({
   id,
   stat,
-  title,
-  description,
+  fact,
 }: ProcessessStepType) => {
   return (
     <div
@@ -50,42 +53,14 @@ export const ResultCard = ({
       {/* <span className="text-lg sm:text-xl text-[#ffffff] font-semibold uppercase">{title}</span> */}
 
       <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center pt-6 z-20">
-        {description}
+        {fact}
       </p>
     </div>
   );
 };
 
-const results: ProcessessStepType[] = [
-  {
-    id: 1,
-    stat: "125%",
-    title: "More Instagram followers",
-    description: `More gigs via Instagram profile`,
-  },
-  {
-    id: 2,
-    stat: "34%",
-    title: "More Instagram followers",
-    description: `Enlarged user activity`,
-  },
-  {
-    id: 3,
-    stat: "4X",
-    title: "More Instagram followers",
-    description: `Better standing out on the market`,
-  },
-  {
-    id: 4,
-    stat: "12.56",
-    title: "More Instagram followers",
-    description: `Minutes per average spent more on the profile`,
-  },
-];
-
 export type ProcessessStepType = {
   id: number;
   stat: string;
-  title: string;
-  description: string;
+  fact: string;
 };

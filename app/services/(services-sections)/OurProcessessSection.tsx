@@ -44,7 +44,7 @@ export const ProcessStepCard = ({
         </span>
       </div>
 
-      <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center xs:text-start lg:text-center xl:text-start pt-6 z-20">
+      <p className="text-xl font-light text-[#ffffff] text-center xs:text-start lg:text-center xl:text-start pt-6 z-20">
         {description}
       </p>
     </div>

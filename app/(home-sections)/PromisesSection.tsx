@@ -38,7 +38,7 @@ export type PromiseCardType = {
 export const TimeIcon = () => (
   <svg
     fill="#179af9"
-    className="w-[95px] h-[95px] sm:w-[120px] sm:h-[120px]"
+    className="w-[95px] h-[95px] sm:w-[90px] sm:h-[90px]"
     viewBox="0 0 100 100"
     stroke="#55b8ff"
   >
@@ -131,7 +131,7 @@ export const PromiseCard = ({
               {promise}
             </p>
             <div className="flex flex-row text-center items-center gap-4 pt-4 lg:pt-4">
-              <p className="text-lg xs:text-xl font-light text-[#ffffff] text-center z-20">
+              <p className="text-xl font-light text-[#ffffff] text-center z-20">
                 {description}
               </p>
             </div>

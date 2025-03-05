@@ -61,7 +61,7 @@ function Panel({
     >
       <div className="flex items-center justify-between gap-6 py-2">
         <div className="w-full flex items-center gap-4">
-          <p className="text-[#ffffff] font-medium text-xl md:text-3xl">{title}</p>
+          <p className="text-[#ffffff] font-medium text-xl md:text-2xl">{title}</p>
         </div>
         {isActive ? (
           <span className="rotate-90 duration-300">

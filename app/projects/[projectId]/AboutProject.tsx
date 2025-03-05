@@ -2,9 +2,14 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
-import AboutProjectImage from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
+import { allProjectsData } from "./allProjectsData";
+import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
 export default function AboutProject({ projectName }: { projectName: string }) {
+  const selectedProject = allProjectsData.find(
+    (project) => formatString(projectName) === project.name
+  );
+
   return (
     <SectionWrapper>
       <div className="flex flex-col xl:flex-row items-center xl:items-center justify-between gap-6">
@@ -12,13 +17,13 @@ export default function AboutProject({ projectName }: { projectName: string }) {
           About Project
         </h2>
         <div className="w-full flex flex-wrap justify-start xl:justify-end gap-2">
-          {servicesDummy.map((service) => (
+          {selectedProject?.services.map((service) => (
             <div
-              key={service.id}
+              key={service}
               className="flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full px-6 py-2"
             >
               <span className="text-base xs:text-lg font-light text-[#ffffff] text-center">
-                {service.name}
+                {service}
               </span>
             </div>
           ))}
@@ -29,7 +34,7 @@ export default function AboutProject({ projectName }: { projectName: string }) {
         {/* Project image  */}
         <div className="z-20">
           <Image
-            src={AboutProjectImage}
+            src={selectedProject?.aboutSectionImgSrc}
             alt="Tekst"
             width={0}
             height={0}
@@ -38,24 +43,9 @@ export default function AboutProject({ projectName }: { projectName: string }) {
         </div>
 
         <p className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-start z-20">
-          Astra Capital is a forex platform providing instant cryptocurrency
-          withdrawals, excellent trading conditions, and 24/7 live support. It
-          is developed for traders of all levels to offer a trustworthy trading
-          Web3 experience. It is developed for traders of all levels to offer a
-          trustworthy trading Web3 experience.
+          {selectedProject?.fullProjectDescription}
         </p>
       </div>
     </SectionWrapper>
   );
 }
-
-const servicesDummy = [
-  {
-    id: 1,
-    name: "Social Media Management",
-  },
-  {
-    id: 2,
-    name: "Ad Campaigns",
-  },
-];

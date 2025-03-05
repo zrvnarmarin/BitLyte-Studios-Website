@@ -39,7 +39,7 @@ export const TestimonialCard = ({
         <div className="w-full flex items-center justify-start sm:justify-center pb-6">
           <QuotesIcon />
         </div>
-        <p className="w-full text-lg xs:text-xl font-light sm:text-2xl lg:text-3xl 3xl:text-4xl text-[#ffffff] leading-snug text-start sm:text-center z-20">
+        <p className="w-full text-xl font-light sm:text-2xl lg:text-3xl 3xl:text-4xl text-[#ffffff] leading-snug text-start sm:text-center z-20">
           {testimonialText}
         </p>
         <div className="flex flex-row sm:flex-row items-center xs:justify-start sm:justify-center gap-4 pt-10 3xl:pt-14">
