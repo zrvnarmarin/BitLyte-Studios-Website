@@ -37,10 +37,11 @@ export const ProcessStepCard = ({
       className={`relative overflow-hidden flex flex-col px-6 py-6 rounded-lg border-[0.5px] border-[#0a2030]`}
     >
       {/* Blur background */}
-      <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+      <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+      <div className="w-16 h-16 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
       <div className="w-full flex flex-col items-start justify-start lg:justify-start gap-2 z-20">
-        <span className="custom-text font-black text-4xl z-20">{id}</span>
+        <span className="custom-text font-black text-7xl z-20">{id}.</span>
         <span className="text-[#ffffff] font-semibold text-3xl text-start md:text-start x z-20">
           {title}
         </span>
