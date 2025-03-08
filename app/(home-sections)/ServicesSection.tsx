@@ -38,7 +38,7 @@ export const ServiceCategoryCard = ({
     <div className="group relative overflow-hidden w-full grid grid-cols-1 xl:grid-cols- bg-[#0b0b0b] justify-between rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)] z-20">
       {/* Blur background */}
       {/* <div className="w-48 h-48 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
-      <div className="w-40 h-40 xl:w-28 xl:h-28 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
+      <div className="w-28 h-28 xl:w-28 xl:h-28 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
 
       <div
         className={`overflow-hidden relative w-full flex flex-col items-center justify-center p-6 py-8 border-b-[0.5px] border-[#0a2030]`}
@@ -49,9 +49,6 @@ export const ServiceCategoryCard = ({
             {icon()}
           </span>
           <h3 className="w-full flex sm:flex-row items-center justify-start gap-3 sm:gap-4 z-20 text-start">
-            {/* <span className="custom-text font-black text-3xl xs:text-4xl z-20">
-              {id}
-            </span> */}
             <span className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight">
               {title}
             </span>
@@ -69,11 +66,11 @@ export const ServiceCategoryCard = ({
               .trim()
               .replace(/[\s\/]+/g, "-")
               .toLowerCase()}`}
-            className="group h-full w-full flex items-start justify-start gap-2 relative overflow-hidden duration-200" // md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b]
+            className="group h-full w-full flex items-start justify-start gap-2 relative overflow-hidden" // md:bg-gradient-to-t from-[#0b0b0b] to-[#27a5ff2b]
           >
             {/* Blur background */}
             <div className="w-32 h-32 md:w-20 md:h-20 xl:w-28 xl:h-2 absolute left-0 right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px]"></div>
-            <div className=" hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-2 items-center justify-between md:justify-start w-full text-[#ffffff] font-light hover:font-normal text-xl text-center z-20 px-6 py-6 lg:py-6">
+            <div className=" hover:bg-[#e3e3e3] hover:text-[#000000] duration-300 flex gap-2 items-center md:justify-start w-full text-[#ffffff] font-light hover:font-normal text-xl text-center z-20 px-6 py-6 lg:py-6">
               <ArrowRightIcon />
               <span className="text-start md:text-center">{service}</span>
             </div>

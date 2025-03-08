@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../public/test.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import Link from "next/link";
 import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png";
@@ -59,7 +59,7 @@ export default function HeroSection({ projectName }: { projectName: string }) {
       {/* Main image */}
       <div className="pt-4 sm:pt-8 md:pt-16 lg:pt-24 z-20">
         <Image
-          src={selectedProject?.heroImgSrc}
+          src={selectedProject?.heroImgSrc as StaticImageData}
           alt="Tekst"
           width={0}
           height={0}

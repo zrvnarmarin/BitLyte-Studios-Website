@@ -7,7 +7,7 @@ import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
 export default function CTASection() {
   return (
     <SectionWrapper>
-      <div className="relative overflow-hidden flex items-center justify-center border-[#1d263f] border-[0.5px] rounded-lg ">
+      <div className="relative overflow-hidden flex items-center justify-center border-[#1d263f] border-[0.5px] rounded-lg hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]">
         {/* Blur gradients */}
         <div className="w-64 h-64 sm:w-96 sm:h-96 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
         <div className="w-64 h-64 sm:w-96 sm:h-96 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>

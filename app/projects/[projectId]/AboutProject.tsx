@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import { allProjectsData } from "./allProjectsData";
@@ -34,7 +34,7 @@ export default function AboutProject({ projectName }: { projectName: string }) {
         {/* Project image  */}
         <div className="z-20">
           <Image
-            src={selectedProject?.aboutSectionImgSrc}
+            src={selectedProject?.aboutSectionImgSrc as StaticImageData}
             alt="Tekst"
             width={0}
             height={0}

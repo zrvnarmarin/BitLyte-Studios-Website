@@ -1,7 +1,51 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import DJDavidMashHeroSectionImg from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png"
 import AboutSectionProjectImg from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
 
-export const allProjectsData = [
+import type { StaticImageData } from "next/image";
+
+export type ProjectFact = {
+  id: number;
+  title: string;
+  description: string;
+};
+
+export type Goal = {
+  id: number;
+  name: string;
+};
+
+export type ProcessStep = {
+  id: number;
+  name: string;
+  goals: Goal[];
+};
+
+export type Result = {
+  id: number;
+  stat: string;
+  fact: string;
+};
+
+export type Project = {
+  id: number;
+  name: string;
+  subtitle: {
+    bold: string;
+    normal: string;
+  };
+  services: string[];
+  heroImgSrc: string | StaticImport;
+  aboutSectionImgSrc?: string | StaticImport;
+  projectFacts: ProjectFact[];
+  fullProjectDescription: string;
+  problem: string;
+  solution: string;
+  process: ProcessStep[];
+  results: Result[];
+};
+
+export const allProjectsData: Project[] = [
   {
     id: 1,
     name: "Dj David Mash",
