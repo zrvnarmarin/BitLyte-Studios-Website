@@ -8,6 +8,7 @@ import {
 } from "@/app/components/Footer";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { LogoIcon } from "@/app/components/Navbar";
 
 export default function HeroSection() {
   return (
@@ -25,56 +26,70 @@ export default function HeroSection() {
         </p>
 
         <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl leading-tight lg:leading-none  text-[#ffffff] font-medium text-center z-30">
-          Turn Your
-          <span className="custom-text font-black"> Best Ideas </span>
-          Into A True Reality And
-          <span className="custom-text font-black"> Stand Out </span>
+          Tell Us About
+          <span className="custom-text font-black"> Your Project </span>
         </h1>
+
+        <p className="text-xl font-light text-[#ffffff] text-start xs:text-center  xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 z-20">
+          As a web agency, we build digital products that meet both user needs
+          and business goals. Our human-centered design
+        </p>
       </div>
 
       {/* Adress, email and qoute text section*/}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 items-start sm:pt-8 md:pt-12 z-30">
-        <div className="relative">
-          {/* Company`s promises */}
-          <div className="relative overflow-hidden bg-[#0b0b0b] border-[0.5px] border-[#0d293d] rounded-lg px-4 py-6 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 z-20">
-            {/* Gradients */}
-            <div className="w-80 h-80 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
-            <div className="w-80 h-80 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 pt-4 sm:pt-8 md:pt-12 z-30">
+        <div className="flex z-30 flex-col gap-8 justify-start overflow-hidden relative px-4 py-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030]">
+          {/* Blur effect background */}
+          <div className="w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[830px]"></div>
 
-            <div className="relative z-20 flex items-center justify-center pb-4 rounded-full">
-              {/* <Image src={DifferenceImage} width={100} height={100} alt="jj" /> */}
-              <TrophyIcon />
-            </div>
-            <div className="relative z-20 flex flex-col items-center gap-4">
-              <p className="w-full text-[#ffffff] font-semibold  text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
-                BitLyte Studios is here to make your dream project come to life.
+          <div className="flex flex-col items-start gap-2 lg:gap-4">
+            <LogoIcon />
+            <div className="flex flex-col gap-2">
+              <span className="text-[#ffffff] text-xl lg:text-2xl font-bold z-20">
+                BitLyte Studios
+              </span>
+              <p className="text-xl font-light text-[#ffffff] z-20">
+                Business focused web design that solidifies your Brand Image and
+                establishes constant revenue
               </p>
-              <br />
-              <div className="flex flex-col gap-2 relative overflow-hidden">
-                <p className="w-full text-xl font-light text-[#ffffff] text-center z-20">
-                  We want to make a positive difference for your business or
-                  your life and accelerate it together with you and leave a
-                  better mark in the world.
-                </p>
-                <br />
-                <p className="w-full text-xl font-light text-[#ffffff] text-center z-20">
-                  Together with us, let`s make sure that you leave your digital
-                  footprint in the right way.
-                </p>
-              </div>
             </div>
           </div>
 
-          {/* Contact info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 items-center gap-6 pt-12">
-            {contactInfoData.map((contactInfo) => (
-              <ContactInfoCard
-                key={contactInfo.title}
-                description={contactInfo.description}
-                title={contactInfo.title}
-                icon={contactInfo.icon}
-              />
-            ))}
+          <div className="flex items-center gap-4">
+            <MailIcon />
+            <div className="flex flex-col justify-start">
+              <p className="text-xl text-[#ffffff] text-start font-bold ">
+                Email Us
+              </p>
+              <p className="text-xl text-[#ffffff] text-start font-light ">
+                bitlyte-studios@admin.com
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <MapPinIcon />
+            <div className="flex flex-col justify-start">
+              <p className="text-xl text-[#ffffff] text-start font-bold ">
+                Visit Us
+              </p>
+              <p className="text-xl text-[#ffffff] text-start font-light ">
+                Assington, Sudbury, UK
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <ClockIcon />
+            <div className="flex flex-col justify-start gap-2">
+              <p className="text-xl text-[#ffffff] text-start font-bold ">
+                Working Hours
+              </p>
+              <p className="text-xl text-[#ffffff] text-start font-light ">
+                Monday - Friday: 9am - 6pm <br />
+                Weekend: By appointment
+              </p>
+            </div>
           </div>
 
           {/* Social media icons */}
@@ -99,83 +114,97 @@ export default function HeroSection() {
   );
 }
 
-export const ContactInfoCard = ({
-  icon,
-  title,
-  description,
-}: ContactInfoType) => {
+export const MailIcon = () => {
   return (
-    <div className="overflow-hidden relative flex flex-col gap-2 rounded-lg p-6 border-[0.5px] border-[#0d293d] z-20">
-      {/* Blur background */}
-      <div className="w-40 h-40 absolute left-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
-      <div className="w-40 h-40 absolute right-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[130px]"></div>
-
-      <div className="relative flex flex-col items-start justify-start gap-2 z-20">
-        {/* Blur background */}
-        <div className="flex flex-row items-center justify-between gap-6">
-          <div className="flex items-center z-30">
-            {React.createElement(icon)}
-          </div>
-          <div className="flex flex-col  gap-2">
-            <h3 className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-start z-20">
-              {title}
-            </h3>
-            <p className="text-md 2xl:text-lg font-light text-[#ffffff] text-start z-20">
-              {description}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
   );
 };
 
-export type ContactInfoType = {
-  title: string;
-  description: string;
-  icon: ({
-    width,
-    height,
-  }: {
-    width: number;
-    height: number;
-  }) => React.JSX.Element;
-};
-
-export const contactInfoData: ContactInfoType[] = [
-  {
-    title: "Email",
-    description: "76marin76@gmail.com",
-    icon: EmailIcon,
-  },
-  {
-    title: "Phone",
-    description: "+385015896878",
-    icon: ContactIcon,
-  },
-];
-
-export const TrophyIcon = () => {
+const MapPinIcon = () => {
   return (
     <svg
-      fill="#55b8ff"
-      viewBox="0 0 50 50"
-      xmlns="http://www.w3.org/2000/svg"
-      stroke="#55b8ff"
-      stroke-width="0.4"
-      className="w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-      <g
-        id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></g>
-      <g id="SVGRepo_iconCarrier">
-        <path d="M28.6 29.4c3-2.3 7.4-5.7 7.4-18.4v-1H14v1c0 12.7 4.5 16.1 7.4 18.4 1.7 1.3 2.6 2 2.6 3.6v3c-1.6.2-3.2.8-3.8 2H18c-1.1 0-2 .9-2 2h18c0-1.1-.9-2-2-2h-2.2c-.6-1.2-2.1-1.8-3.8-2v-3c0-1.6.8-2.3 2.6-3.6zm-3.6.5c-.6-.8-1.5-1.5-2.3-2.1-2.7-2.1-6.4-4.9-6.6-15.8h18c-.2 10.8-3.9 13.7-6.6 15.8-1 .7-1.9 1.3-2.5 2.1z"></path>
-        <path d="M18.8 27C18.7 27 8 24.7 8 13v-1h7v2h-5c.6 9.2 9.1 11 9.2 11l-.4 2z"></path>
-        <path d="M31.2 27l-.4-2c.4-.1 8.6-1.9 9.2-11h-5v-2h7v1c0 11.7-10.7 14-10.8 14z"></path>
-      </g>
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
     </svg>
+  );
+};
+
+const ClockIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  );
+};
+
+export const UserIcon = () => {
+  return (
+    // <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-[#1A9FFF]">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-user text-white"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+    // </div>
+  );
+};
+
+export const MessageSquareIcon = () => {
+  return (
+    // <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-[#1A9FFF]">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#1A9FFF"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-message-square text-white"
+      >
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    // </div>
   );
 };

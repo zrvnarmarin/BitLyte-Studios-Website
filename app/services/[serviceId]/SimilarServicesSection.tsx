@@ -14,7 +14,7 @@ export default function SimilarServicesSection() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
-        <OtherServiceCard CTAText="Design your high converting landing page" />
+        <OtherServiceCard CTAText="Design your high converting landing page which sells" />
         <OtherServiceMiddleCard />
         <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" />
         <OtherServiceCard CTAText="Elevate your brand with graphic ilustrations and concepts" />

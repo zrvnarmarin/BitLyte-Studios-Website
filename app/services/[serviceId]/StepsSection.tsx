@@ -10,8 +10,8 @@ export default function StepsSection({ serviceName }: { serviceName: string }) {
 
   return (
     <SectionWrapper>
-      <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-      <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
+      {/* <div className="w-4 md:w-8 h-full absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
+      {/* <div className="w-4 md:w-8 h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
       {/* Subheading */}
       <p className="relative w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center leading-none z-20 py-2 sm:py-6 md:py-4 xl:px-36">
@@ -76,9 +76,9 @@ export const Step = ({
             <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] z-20">
               {name}
             </span>
-            <div className="absolute -top-10 flex items-center justify-center z-10">
+            {/* <div className="absolute -top-10 flex items-center justify-center z-10">
               <Logo />
-            </div>
+            </div> */}
           </div>
           <div className="w-full relative lg:flex flex-col gap-4">
             <span className="w-20 h-0.5 border-[0.5px] border-[#0a2030]"></span>
@@ -153,7 +153,7 @@ export const StepsCardMobile = ({
   return (
     <div
       key={id}
-      className={`relative overflow-hidden flex-1 px-6 py-10 rounded-lg border-[0.5px] border-[#0a2030]`}
+      className={`relative overflow-hidden flex-1 `}
     >
       {/* Blur background */}
       {/* <div className="w-32 h-32 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div> */}
@@ -163,7 +163,7 @@ export const StepsCardMobile = ({
         <div className="absolute flex items-center justify-center z-10">
           <Logo />
         </div>
-        <span className="custom-text font-black text-7xl mr-4 z-20">{id}.</span>
+        <span className="custom-text font-black text-7xl z-20">{id}.</span>
         <span className="text-[#ffffff] font-semibold text-3xl text-center x z-20">
           {name}
         </span>

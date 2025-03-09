@@ -2,8 +2,6 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import DJDavidMashHeroSectionImg from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png"
 import AboutSectionProjectImg from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
 
-import type { StaticImageData } from "next/image";
-
 export type ProjectFact = {
   id: number;
   title: string;

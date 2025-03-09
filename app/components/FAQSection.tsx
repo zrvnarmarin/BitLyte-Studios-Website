@@ -58,7 +58,7 @@ function Panel({
     <div
       className={`group relative overflow-hidden rounded-xl transition-all duration-300 ${
         isActive
-          ? "bg-gradient-to-r from-[#0A1A2A]/90 to-[#0D2237]/90 shadow-lg hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
+          ? "bg-gradient-to-r from-[#0A1A2A]/90 to-[#0D2237]/90 shadow-lg"
           : "bg-[#0A1A2A]/60 hover:bg-[#0A1A2A]/80 border-[#1d263f] border-[0.5px] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
       }`}
     >
