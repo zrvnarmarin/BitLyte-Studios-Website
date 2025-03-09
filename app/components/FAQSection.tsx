@@ -15,19 +15,19 @@ export default function FAQSection() {
   );
 }
 
-export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
-  const [activeIndex, setActiveIndex] = useState(-1); // Initialize with -1 to have no active accordion initially
+function Accordion({ faqArray }: { faqArray: FAQType[] }) {
+  const [activeIndex, setActiveIndex] = useState(-1)
 
   const handleShow = (index: number) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? -1 : index));
-  };
+    setActiveIndex((prevIndex) => (prevIndex === index ? -1 : index))
+  }
 
   return (
-    <div className="w-full flex flex-col z-20 pt-4 sm:pt-8 md:pt-12">
+    <div className="w-full flex flex-col gap-4 z-20 pt-4 sm:pt-8 md:pt-12">
       {faqArray.map((accordion, index) => (
         <Panel
-          id={accordion.id}
           key={accordion.id}
+          id={accordion.id}
           index={index}
           title={accordion.title}
           answer={accordion.answer}
@@ -36,50 +36,57 @@ export function Accordion({ faqArray }: { faqArray: FAQType[] }) {
         />
       ))}
     </div>
-  );
+  )
 }
 
 function Panel({
   id,
+  index,
   title,
   answer,
   isActive,
   onShow,
 }: {
-  id: number;
-  title: string;
-  answer: string;
-  isActive: boolean;
-  onShow: () => void;
-  index: number;
+  id: number
+  index: number
+  title: string
+  answer: string
+  isActive: boolean
+  onShow: () => void
 }) {
   return (
     <div
-      onClick={onShow}
-      // TO DO: decide if border is necesary here - border-b-[0.5px] border-[#0a2030]
-      className={`cursor-pointer rounded-lg px-4 py-4 sm:hover:shadow-[0_0_15px_0_rgba(10,32,78,1)] ${isActive ? 'shadow-[0_0_15px_0_rgba(10,32,78,1)] ' : ''}`}
+      className={`group relative overflow-hidden rounded-xl transition-all duration-300 ${
+        isActive
+          ? "bg-gradient-to-r from-[#0A1A2A]/90 to-[#0D2237]/90 shadow-lg hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
+          : "bg-[#0A1A2A]/60 hover:bg-[#0A1A2A]/80 border-[#1d263f] border-[0.5px] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
+      }`}
     >
-      <div className="flex items-center justify-between gap-6 py-2">
-        <div className="w-full flex items-center gap-4">
-          <p className="text-[#ffffff] font-medium text-xl md:text-2xl">{title}</p>
+      {/* Gradient borders */}
+      {/* <div
+        className={`absolute inset-0 bg-gradient-to-r from-[#1A9FFF]/20 to-[#0086E6]/20 rounded-xl blur-md opacity-0 ${isActive ? "opacity-100" : "group-hover:opacity-50"} transition-opacity duration-300`}
+      ></div>
+      <div
+        className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#1A9FFF] to-transparent opacity-0 ${isActive ? "opacity-100" : "group-hover:opacity-50"} transition-opacity duration-300`}
+      ></div> */}
+
+      <div onClick={onShow} className="relative cursor-pointer backdrop-blur-sm p-6">
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="hidden sm:flex items-center justify-center w-8 h-8 text-[#ffffff] rounded-full bg-gradient-to-br from-[#1A9FFF] to-[#0086E6] text-white font-bold text-sm">
+              {id}
+            </div>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#ffffff]">{title}</h3>
+          </div>
+          <div className="text-[#1A9FFF]">{isActive ? <BlueArrowRight /> : <BlueArrowRight />}</div>
         </div>
-        {isActive ? (
-          <span className="rotate-90 duration-300">
-            <BlueArrowRight />
-          </span>
-        ) : (
-          <span className="rotate-0 duration-300">
-            <BlueArrowRight />
-          </span>
-        )}
+
+        <div className={`overflow-hidden transition-all duration-300 ${isActive ? "max-h-96 mt-4" : "max-h-0"}`}>
+          <div className="sm:pl-12 sm:pr-4 text-[#ffffff] text-xl font-light">{answer}</div> 
+        </div>
       </div>
-      {isActive ? (
-        <p className=" py-4 text-xl font-light text-[#ffffff]">
-          {answer}
-        </p>
-      ) : null}
     </div>
-  );
+  )
 }
 
 export type FAQType = {

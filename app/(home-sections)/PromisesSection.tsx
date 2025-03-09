@@ -13,7 +13,7 @@ export default function PromisesSection() {
       </h2>
 
       {/* Cards and CTA section */}
-      <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-6">
+      <div className="w-full relative grid grid-cols-1 xl:grid-cols-2 items-start gap-6 pt-4 sm:pt-8 md:pt-12">
         {promiseCardsData.map((promiseCard) => (
           <PromiseCard
             id={promiseCard.id}
@@ -75,15 +75,15 @@ export const promiseCardsData: PromiseCardType[] = [
   {
     id: 1,
     icon: <LightingIcon />,
-    title: "Built exclusively for you",
-    promise: `We promise that every project we deliver is tailored to your specific needs. No one-size-fits-all solutions - everything we build is unique to your business.`,
+    title: "Custom built for you",
+    promise: `We promise that every project we deliver is tailored to your business.`,
     description: `By thoroughly understanding your goals, industry, and audience, we create personalized strategies and designs that are perfectly suited to drive your success.`,
   },
   {
     id: 2,
     icon: <TimeIcon />,
-    title: "On time, every time",
-    promise: `We guarantee your project will be delivered on time, without sacrificing the level of quality. We understand deadlines matter and commit to staying on track.`,
+    title: "Timely and trusted",
+    promise: `We guarantee on-time delivery without compromising quality.`,
     description: `With dedicated project management and clear milestones, we keep the process streamlined and efficient, ensuring every deadline is met.`,
   },
 ];
