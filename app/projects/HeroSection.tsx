@@ -8,6 +8,7 @@ import {
 } from "../services/[serviceId]/HeroSection";
 import HeroSectionImage from "../../public/images/services/BitLyte_Studios_ikona_Services_Hero_section.svg";
 import Link from "next/link";
+import ProjectsHeroSectionImg from "../../public/icons/BitLyte_Studios_ikona_Web_Services_64x64px.svg"
 
 export default function HeroSection() {
   return (
@@ -52,7 +53,7 @@ export default function HeroSection() {
         <div className="order-1 lg:order-2 relative flex items-center justify-center">
           <div className="w-80 h-80 lg:w-[20rem] lg:h-[20rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
-            src={HeroSectionImage}
+            src={ProjectsHeroSectionImg}
             alt="t"
             className="w-full h-full max-w-[254px] xs:max-w-[274px] sm:max-w-[314px] lg:max-w-[444px] 2xl:max-w-[474px] z-20"
           />

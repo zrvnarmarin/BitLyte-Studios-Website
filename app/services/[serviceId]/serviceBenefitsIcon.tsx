@@ -119,8 +119,7 @@ export const RecognizedVisualIdentity = () => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
-      width={150}
-      height={150}
+      className="w-[110px] h-[110px] sm:w-[150px] sm:h-[150px]"
     >
       <defs>
         <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
