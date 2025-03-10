@@ -16,11 +16,11 @@ export default function FAQSection() {
 }
 
 function Accordion({ faqArray }: { faqArray: FAQType[] }) {
-  const [activeIndex, setActiveIndex] = useState(-1)
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleShow = (index: number) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? -1 : index))
-  }
+    setActiveIndex((prevIndex) => (prevIndex === index ? -1 : index));
+  };
 
   return (
     <div className="w-full flex flex-col gap-4 z-20 pt-4 sm:pt-8 md:pt-12">
@@ -36,7 +36,7 @@ function Accordion({ faqArray }: { faqArray: FAQType[] }) {
         />
       ))}
     </div>
-  )
+  );
 }
 
 function Panel({
@@ -47,12 +47,12 @@ function Panel({
   isActive,
   onShow,
 }: {
-  id: number
-  index: number
-  title: string
-  answer: string
-  isActive: boolean
-  onShow: () => void
+  id: number;
+  index: number;
+  title: string;
+  answer: string;
+  isActive: boolean;
+  onShow: () => void;
 }) {
   return (
     <div
@@ -62,31 +62,39 @@ function Panel({
           : "bg-[#0A1A2A]/60 hover:bg-[#0A1A2A]/80 border-[#1d263f] border-[0.5px] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
       }`}
     >
-      {/* Gradient borders */}
-      {/* <div
-        className={`absolute inset-0 bg-gradient-to-r from-[#1A9FFF]/20 to-[#0086E6]/20 rounded-xl blur-md opacity-0 ${isActive ? "opacity-100" : "group-hover:opacity-50"} transition-opacity duration-300`}
-      ></div>
-      <div
-        className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#1A9FFF] to-transparent opacity-0 ${isActive ? "opacity-100" : "group-hover:opacity-50"} transition-opacity duration-300`}
-      ></div> */}
-
       <div onClick={onShow} className="relative cursor-pointer backdrop-blur-sm p-6">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="hidden sm:flex items-center justify-center w-8 h-8 text-[#ffffff] rounded-full bg-gradient-to-br from-[#1A9FFF] to-[#0086E6] text-white font-bold text-sm">
               {id}
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold text-[#ffffff]">{title}</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#ffffff]">
+              {title}
+            </h3>
           </div>
-          <div className="text-[#1A9FFF]">{isActive ? <BlueArrowRight /> : <BlueArrowRight />}</div>
+
+          {/* BlueArrowRight with rotation effect */}
+          <div
+            className={`text-[#1A9FFF] transform transition-transform duration-300 ${
+              isActive ? "rotate-90" : ""
+            }`}
+          >
+            <BlueArrowRight />
+          </div>
         </div>
 
-        <div className={`overflow-hidden transition-all duration-300 ${isActive ? "max-h-96 mt-4" : "max-h-0"}`}>
-          <div className="sm:pl-12 sm:pr-4 text-[#ffffff] text-xl font-light">{answer}</div> 
+        <div
+          className={`overflow-hidden transition-all duration-300 ${
+            isActive ? "max-h-96 mt-4" : "max-h-0"
+          }`}
+        >
+          <div className="sm:pl-12 sm:pr-4 text-[#ffffff] text-xl font-light">
+            {answer}
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export type FAQType = {
@@ -99,35 +107,40 @@ const homePageFAQ = [
   {
     id: 1,
     title: "How long does it take to develop a custom website?",
-    answer: "The timeline for developing a custom website varies based on complexity. Generally, it takes between 6 to 12 weeks to design, develop, and launch a fully functional website.",
+    answer:
+      "The timeline for developing a custom website varies based on complexity. Generally, it takes between 6 to 12 weeks to design, develop, and launch a fully functional website.",
   },
   {
     id: 2,
     title: "What services are included in your frontend development package?",
-    answer: "Our frontend development package includes services such as responsive design, cross-browser compatibility, performance optimization, and implementation of interactive elements to enhance user experience.",
+    answer:
+      "Our frontend development package includes services such as responsive design, cross-browser compatibility, performance optimization, and implementation of interactive elements to enhance user experience.",
   },
   {
     id: 3,
     title: "How do you measure the success of an ad campaign?",
-    answer: "We measure the success of an ad campaign through key metrics such as click-through rates (CTR), conversion rates, return on ad spend (ROAS), and overall engagement. We provide detailed reports to track the effectiveness of each campaign.",
+    answer:
+      "We measure the success of an ad campaign through key metrics such as click-through rates (CTR), conversion rates, return on ad spend (ROAS), and overall engagement. We provide detailed reports to track the effectiveness of each campaign.",
   },
   {
     id: 4,
     title: "Can you integrate e-commerce functionality into our website?",
-    answer: "Yes, we specialize in integrating e-commerce functionality into websites. This includes setting up online stores, payment gateways, product catalogs, and inventory management systems tailored to your business needs.",
+    answer:
+      "Yes, we specialize in integrating e-commerce functionality into websites. This includes setting up online stores, payment gateways, product catalogs, and inventory management systems tailored to your business needs.",
   },
   {
     id: 5,
     title: "Do you offer ongoing support and maintenance for websites?",
-    answer: "Yes, we offer ongoing support and maintenance services to ensure your website remains updated, secure, and performs optimally. Our support includes regular updates, bug fixes, and technical assistance.",
+    answer:
+      "Yes, we offer ongoing support and maintenance services to ensure your website remains updated, secure, and performs optimally. Our support includes regular updates, bug fixes, and technical assistance.",
   },
   {
     id: 6,
     title: "What is your process for starting a new project?",
-    answer: "Our process begins with an initial consultation to understand your goals and requirements. We then move on to planning and design, followed by development and testing. Finally, we launch the project and provide post-launch support to ensure everything runs smoothly.",
+    answer:
+      "Our process begins with an initial consultation to understand your goals and requirements. We then move on to planning and design, followed by development and testing. Finally, we launch the project and provide post-launch support to ensure everything runs smoothly.",
   },
 ];
-
 
 export const BlueArrowRight = () => {
   return (
