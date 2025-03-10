@@ -1,17 +1,15 @@
 import React from "react";
 import "../../../public/test.css";
 import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
-import { MessageSquareIcon, UserIcon } from "./HeroSection";
-import { MailIcon } from "./HeroSection";
 
 export default function ContactForm() {
   return (
-    // Form container
-    <div className="flex z-30 flex-col gap-8 justify-start overflow-hidden relative px-4 py-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]">
+    <div className="flex z-30 flex-col gap-8 justify-start overflow-hidden relative p-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:p-10 xl:p-12 rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]">
+      
       {/* Blur effect background */}
       <div className="w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[830px]"></div>
 
-      {/* Form section */}
+      {/* Form */}
       <form className="flex flex-col gap-6 z-20">
         {/* Full name input field */}
         <div className="flex flex-col gap-3">
@@ -47,7 +45,7 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* About textarea */}
+        {/* About project textarea field */}
         <div className="flex flex-col gap-3">
           <label
             htmlFor="project-message"
@@ -78,3 +76,62 @@ export default function ContactForm() {
     </div>
   );
 }
+
+export const MailIcon = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+};
+
+export const UserIcon = () => {
+  return (
+    // <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-[#1A9FFF]">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-user text-white"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+    // </div>
+  );
+};
+
+export const MessageSquareIcon = () => {
+  return (
+    // <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-[#1A9FFF]">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-message-square text-white"
+    >
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
+    // </div>
+  );
+};

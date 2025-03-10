@@ -6,7 +6,7 @@ export default function AfterProposalSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-        What are the next steps?
+        Next steps
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
@@ -21,8 +21,6 @@ export default function AfterProposalSection() {
         ))}
       </div>
 
-      {/* Divider line */}
-      {/* <div className="w-full h-[0.5px] bg-[#252525] mt-4 sm:mt-8 md:mt-12" /> */}
     </SectionWrapper>
   );
 }

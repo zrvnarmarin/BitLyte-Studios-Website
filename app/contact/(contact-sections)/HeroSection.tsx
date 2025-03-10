@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import ContactForm from "./ContactForm";
 import { LogoIcon } from "@/app/components/Navbar";
+import ContactInfo from "./ContactInfo";
 
 export default function HeroSection() {
   return (
@@ -30,86 +31,17 @@ export default function HeroSection() {
           <span className="custom-text font-black"> Your Project </span>
         </h1>
 
-        <p className="text-xl font-light text-[#ffffff] text-start xs:text-center  xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 z-20">
-          As a web agency, we build digital products that meet both user needs
-          and business goals. Our human-centered design
+        <p className="text-xl font-light text-[#ffffff] text-center xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 z-20">
+          Send us your project requirements or drop an email at
+          bitlyte-studios@admin.com, and we'll get back to you within 12 hours.
         </p>
       </div>
 
       {/* Adress, email and qoute text section*/}
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 pt-4 sm:pt-8 md:pt-12 z-30">
-        <div className="flex z-30 flex-col gap-8 justify-start overflow-hidden relative px-4 py-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:px-6 lg:py-10 xl:px-12 xl:py-12 rounded-lg border-[0.5px] border-[#0a2030]">
-          {/* Blur effect background */}
-          <div className="w-96 h-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[830px]"></div>
-
-          <div className="flex flex-col items-start gap-2 lg:gap-4">
-            <LogoIcon />
-            <div className="flex flex-col gap-2">
-              <span className="text-[#ffffff] text-xl lg:text-2xl font-bold z-20">
-                BitLyte Studios
-              </span>
-              <p className="text-xl font-light text-[#ffffff] z-20">
-                Business focused web design that solidifies your Brand Image and
-                establishes constant revenue
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <MailIcon />
-            <div className="flex flex-col justify-start">
-              <p className="text-xl text-[#ffffff] text-start font-bold ">
-                Email Us
-              </p>
-              <p className="text-xl text-[#ffffff] text-start font-light ">
-                bitlyte-studios@admin.com
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <MapPinIcon />
-            <div className="flex flex-col justify-start">
-              <p className="text-xl text-[#ffffff] text-start font-bold ">
-                Visit Us
-              </p>
-              <p className="text-xl text-[#ffffff] text-start font-light ">
-                Assington, Sudbury, UK
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <ClockIcon />
-            <div className="flex flex-col justify-start gap-2">
-              <p className="text-xl text-[#ffffff] text-start font-bold ">
-                Working Hours
-              </p>
-              <p className="text-xl text-[#ffffff] text-start font-light ">
-                Monday - Friday: 9am - 6pm <br />
-                Weekend: By appointment
-              </p>
-            </div>
-          </div>
-
-          {/* Social media icons */}
-          <div className="flex flex-col pt-6 gap-2 relative overflow-hidden">
-            <div className="w-full flex items-center justify-center gap-8 ">
-              <div className="w-full bg-[#0d293d] h-[0.5px]"></div>
-              {socialMediaIcons.map((socialMediaIcon) => (
-                <React.Fragment key={socialMediaIcon.id}>
-                  <Link href={socialMediaIcon.href}>
-                    {socialMediaIcon.icon()}
-                  </Link>
-                </React.Fragment>
-              ))}
-              <div className="w-full bg-[#0d293d] h-[0.5px]"></div>
-            </div>
-          </div>
-        </div>
-
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 pt-4 sm:pt-8 md:pt-12 z-30">
+        <ContactInfo />
         <ContactForm />
-      </div>
+      </div> */}
     </HeroSectionWrapper>
   );
 }
@@ -192,19 +124,19 @@ export const UserIcon = () => {
 export const MessageSquareIcon = () => {
   return (
     // <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-[#1A9FFF]">
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#1A9FFF"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="lucide lucide-message-square text-white"
-      >
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      </svg>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#1A9FFF"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-message-square text-white"
+    >
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
     // </div>
   );
 };
