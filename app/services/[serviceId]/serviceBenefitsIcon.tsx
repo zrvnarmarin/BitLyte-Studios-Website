@@ -1,8 +1,8 @@
 export const BoostedEngagement = () => {
   return (
     <svg
-      width="150"
-      height="150"
+      width="130"
+      height="130"
       style={{
         shapeRendering: "geometricPrecision",
         textRendering: "geometricPrecision",
@@ -119,8 +119,8 @@ export const RecognizedVisualIdentity = () => {
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
-      width={150}
-      height={150}
+      width={130}
+      height={130}
     >
       <defs>
         <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -231,8 +231,8 @@ export const ClientSatisfaction = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     version="1.1"
     style={{
       shapeRendering: "geometricPrecision",
@@ -291,8 +291,8 @@ export const IncomeGrowth = () => (
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 64 64"
-    width="150"
-    height="150"
+    width="130"
+    height="130"
   >
     <defs>
       <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -375,7 +375,7 @@ export const IncomeGrowth = () => (
 );
 
 export const ResponsiveAndAdaptive = () => (
-  <svg viewBox="0 0 64 64" width="150" height="150">
+  <svg viewBox="0 0 64 64" width="130" height="130">
     <defs>
       <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="#00ECD1">
@@ -454,8 +454,8 @@ export const ResponsiveAndAdaptive = () => (
 
 export const StrongDigitalPresence = () => (
   <svg
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     viewBox="0 0 512 512"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -538,11 +538,9 @@ export const StrongDigitalPresence = () => (
 
 export const CostEfficiency = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 1707 1707"
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     style={{
       shapeRendering: "geometricPrecision",
       textRendering: "geometricPrecision",
@@ -667,9 +665,8 @@ export const CostEfficiency = () => (
 
 export const CustomerRetention = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     version="1.1"
     style={{
       shapeRendering: "geometricPrecision",
@@ -722,8 +719,8 @@ export const CustomerRetention = () => (
 
 export const BetterCustomerInsight = () => (
   <svg
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     viewBox="0 0 64 64"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -790,8 +787,8 @@ export const BetterCustomerInsight = () => (
 
 export const IncreasedTrafficAndLeads = () => (
   <svg
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     viewBox="0 0 1707 1707"
     style={{
       shapeRendering: "geometricPrecision",
@@ -842,9 +839,8 @@ export const IncreasedTrafficAndLeads = () => (
 
 export const CompetitiveAdvantage = () => (
   <svg
-    xmlSpace="preserve"
-    width="150"
-    height="150"
+    width="130"
+    height="130"
     version="1.1"
     style={{
       shapeRendering: "geometricPrecision",
@@ -899,8 +895,8 @@ export const CompetitiveAdvantage = () => (
 
 export const IncreasedSEO = () => (
   <svg
-    width={150}
-    height={150}
+    width={130}
+    height={130}
     version="1.1"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -956,16 +952,13 @@ export const IncreasedSEO = () => (
 
 export const HighBrandAwareness = () => (
   <svg
-    version="1.1"
     id="Layer_1_1_"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
     viewBox="0 0 64 64"
     xmlSpace="preserve"
-    width={150}
-    height={150}
+    width={130}
+    height={130}
   >
     <defs>
       <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
