@@ -2,9 +2,10 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 // import "../../public/test.css";
-import TestimonialExampleImage from "../../public/Rectangle 1 (3).svg";
+import TestimonialExampleImage from "../../public/Untitled design (2) (1).png";
 import InfiniteCarousel from "./InfiniteCarousel";
 import { TestimonialCardProps } from "./InfiniteCarousel";
+import '../../public/test.css'
 
 export default function TestimonialsSection() {
   return (
@@ -23,8 +24,7 @@ export const TestimonialCard = ({
   name,
   companyName,
   testimonialText,
-  // imageSrc, 
-  rating,
+  imageSrc
 }: any) => {
   return (
     <div className="relative overflow-hidden bg-[#0b0b0b] rounded-lg flex flex-row items-center px-6 py-6 xs:px-8 xs:py-10 sm:px-20 sm:py-16 md:py-[72px] lg:py-20 border-[0.5px] border-[#0a2030]">
@@ -44,10 +44,10 @@ export const TestimonialCard = ({
         </p>
         <div className="flex flex-row sm:flex-row items-center xs:justify-start sm:justify-center gap-4 pt-10 3xl:pt-14">
           <Image
-            src={TestimonialExampleImage}
+            src={imageSrc}
             // src={imageSrc} 
             alt="testimonial image"
-            className="w-16 h-16"
+            className="w-16 h-16 testimonial-image-shape"
             // width={70}
             // height={70}
           />
@@ -87,19 +87,3 @@ export const QuotesIcon = () => (
   </svg>
 );
 
-export const BlueArrowRight = () => {
-  return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 22 33"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0 33H4.56913L22 16.5L11.1605 4.10231e-07L6.44771 0L0 33Z"
-        fill="#ffffff"
-      />
-    </svg>
-  );
-};

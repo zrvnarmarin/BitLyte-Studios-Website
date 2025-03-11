@@ -3,6 +3,10 @@
 import React, { useEffect, useState } from "react";
 import "../../public/styles/infiniteCarousel.css";
 import { TestimonialCard } from "./TestimonialsSection";
+import DjDavidMashTestimonialThumbnail from '../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Testimonial_Thumbnail.png'
+import PerinaKulicTestimonialThumbnail from '../../public/images/projects/2_perina_kulic/Perina_Kulic_Testimonial_Thumbnail.png'
+import BitXTinTestimonialThumbnail from '../../public/images/projects/Bit_X_Tin.png'
+import { StaticImageData } from "next/image";
 
 export const InfiniteCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,7 +14,7 @@ export const InfiniteCarousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Change every 3 seconds
+    }, 3000); // Change every 3 seconds
 
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);
@@ -28,8 +32,7 @@ export const InfiniteCarousel = () => {
               name={testimonial.name}
               companyName={testimonial.companyName}
               testimonialText={testimonial.testimonialText}
-              // imageSrc={testimonial.imageSrc}
-              rating={testimonial.rating}
+              imageSrc={testimonial.imageSrc}
             />
           </div>
         ))}
@@ -51,21 +54,24 @@ export default InfiniteCarousel;
 export const testimonials: TestimonialCardProps[] = [
   {
     id: 1,
-    name: "Nickita Hrischev Forest",
-    companyName: "CEO Of WordPress",
-    testimonialText:
-      "One of the standout features of web development is its intuitive and user-friendly interface. The platform is designed with the end user in mind.",
-    // imageSrc: TestimonialExampleImage, 
-    rating: 5,
+    name: "Perina Kulić",
+    companyName: "CEO Of Spell Prijevodi",
+    testimonialText: "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly! I will definetely work with them again.",
+    imageSrc: PerinaKulicTestimonialThumbnail, 
   },
   {
     id: 2,
-    name: "John Doe",
-    companyName: "CEO Of Apartmenify",
-    testimonialText:
-      "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly!",
-    
-    rating: 5,
+    name: "DJ David Mash",
+    companyName: "DJ David Mash",
+    testimonialText: "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly! I will definetely work with them again.",
+    imageSrc: DjDavidMashTestimonialThumbnail, 
+  },
+  {
+    id: 3,
+    name: "Bit X Tin",
+    companyName: "CEO of BitX",
+    testimonialText: "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly! I will definetely work with them again.",
+    imageSrc: BitXTinTestimonialThumbnail, 
   },
 ];
 
@@ -74,6 +80,5 @@ export type TestimonialCardProps = {
   name: string;
   companyName: string;
   testimonialText: string;
-  // imageSrc: StaticImageData; 
-  rating: number;
+  imageSrc: StaticImageData; 
 };
