@@ -88,7 +88,7 @@ export type ServiceCardType = {
   icon: () => React.JSX.Element;
 };
 
-const CodeIcon = () => {
+export const CodeIcon = () => {
   return (
     <svg
       width="24"
@@ -108,7 +108,7 @@ const CodeIcon = () => {
   );
 };
 
-const PaletteIcon = () => {
+export const PaletteIcon = () => {
   return (
     <svg
       width="24"
@@ -131,7 +131,7 @@ const PaletteIcon = () => {
   );
 };
 
-const LayersIcon = () => {
+export const LayersIcon = () => {
   return (
     <svg
       width="24"

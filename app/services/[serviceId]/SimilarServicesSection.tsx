@@ -14,20 +14,20 @@ export default function SimilarServicesSection() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 sm:pt-8 md:pt-12">
-        <OtherServiceCard CTAText="Design your high converting landing page which sells" />
+        <OtherServiceCard CTAText="Design your high converting landing page which sells" href='landing-page' />
         <OtherServiceMiddleCard />
-        <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" />
-        <OtherServiceCard CTAText="Elevate your brand with graphic ilustrations and concepts" />
-        <OtherServiceCard CTAText="Change your brand awareness and get more recognition" />
+        <OtherServiceCard CTAText="Extend your reach with high conversion copywriting" href='copywriting' />
+        <OtherServiceCard CTAText="Elevate your brand with graphic ilustrations and concepts" href='ui-ux-design' />
+        <OtherServiceCard CTAText="Change your brand awareness and get more recognition" href='logo-design' />
       </div>
     </SectionWrapper>
   );
 }
 
-export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
+export const OtherServiceCard = ({ CTAText, href }: { CTAText: string, href: string }) => {
   return (
     <Link
-      href={`/services/visual-identity`}
+      href={`/services/${href}`}
       className="flex flex-col gap-8 relative overflow-hidden  text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1d263f] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
     >
       <div className="w-36 h-36 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
@@ -50,7 +50,7 @@ export const OtherServiceCard = ({ CTAText }: { CTAText: string }) => {
 export const OtherServiceMiddleCard = () => {
   return (
     <Link
-      href={`/services/visual-identity`}
+      href={`/services/brand-identity`}
       className="flex flex-col items-center justify-between row-span-2 gap-6 relative overflow-hidden text-[#ffffff] py-10 px-8 rounded-lg border-[0.5px] border-[#1d263f] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
     >
       {/* Blur background */}
