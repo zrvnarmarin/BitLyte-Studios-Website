@@ -2,9 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionWrapper from "@/app/components/SectionWrapper";
 // import "../../public/test.css";
-import TestimonialExampleImage from "../../public/Untitled design (2) (1).png";
 import InfiniteCarousel from "./InfiniteCarousel";
-import { TestimonialCardProps } from "./InfiniteCarousel";
 import '../../public/test.css'
 
 export default function TestimonialsSection() {

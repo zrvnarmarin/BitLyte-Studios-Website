@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import { LogoIcon, MenuButton } from "./Navbar";
 import { ContactIcon, EmailIcon, socialMediaIcons } from "./Footer";
 
@@ -12,19 +12,10 @@ export default function NavigationMenuFullScreen({
   isSideBarOpen: boolean;
   toggleNavigation: () => void;
 }) {
-
-  useEffect(() => {
-    if (isSideBarOpen) {
-      document.body.classList.add("overflow-y-hidden");
-    } else {
-      document.body.classList.remove("overflow-y-hidden");
-    }
-  }, [isSideBarOpen]);
-
   return (
     <>
       {isSideBarOpen && (
-        <div className="flex flex-col top-0 left-0 bottom-0 bg-[#000000] w-full h-screen sticky z-40 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6">
+        <div className="fixed top-0 left-0 w-full h-screen bg-[#000000] z-[9999] px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 py-6 overflow-y-auto">
           <div className="flex items-center justify-between gap-2">
             <Link href={`/`} className="flex items-center gap-2 lg:gap-4">
               <LogoIcon />
@@ -33,13 +24,14 @@ export default function NavigationMenuFullScreen({
               </span>
             </Link>
             <button onClick={() => toggleNavigation()}>
-              <MenuButton />
+              {isSideBarOpen ? <XButton /> : <MenuButton />} 
             </button>
           </div>
-        <div className="flex flex-col">
-          <NavbarLinksSection onCloseSidebar={toggleNavigation} />
-          <ContactInfoSection />
-        </div>
+
+          <div className="flex flex-col">
+            <NavbarLinksSection onCloseSidebar={toggleNavigation} />
+            <ContactInfoSection />
+          </div>
         </div>
       )}
     </>
@@ -60,9 +52,6 @@ const NavbarLink = ({
         onClick={() => onCloseSidebar()}
         className="w-full group flex items-center justify-start gap-4 text-5xl text-[#ffffff] font-semibold text-start"
       >
-        {/* <span className="group-hover:visible invisible">
-          <BlueArrowRight />
-        </span> */}
         {navbarLink.name}
       </Link>
     </li>
@@ -91,22 +80,24 @@ export const ContactInfoSection = () => {
   return (
     <div className="flex flex-col pt-6 gap-8">
       <div className="w-full flex items-center gap-8 pt-6">
-        {socialMediaIcons.map(socialMediaIcon =>
+        {socialMediaIcons.map((socialMediaIcon) => (
           <React.Fragment key={socialMediaIcon.id}>
-            <Link href={socialMediaIcon.href}>
-                {socialMediaIcon.icon()}
-            </Link>
+            <Link href={socialMediaIcon.href}>{socialMediaIcon.icon()}</Link>
           </React.Fragment>
-        )}
+        ))}
       </div>
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <ContactIcon />
-          <span className="text-base text-[#ffffff] font-normal">+385015896878</span>
+          <span className="text-base text-[#ffffff] font-normal">
+            +385015896878
+          </span>
         </div>
         <div className="flex items-center gap-2">
           <EmailIcon />
-          <span className="text-base text-[#ffffff] font-normal">bitlyte-studios@gmail.om</span>
+          <span className="text-base text-[#ffffff] font-normal">
+            bitlyte-studios@gmail.com
+          </span>
         </div>
       </div>
     </div>
@@ -140,9 +131,16 @@ export const LogoImage = ({
 
 export const XButton = () => {
   return (
-    <button>
-      Open/Close
-    </button>
+    <svg
+      width="45"
+      height="45"
+      viewBox="0 0 45 45"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M12 12L33 33" stroke="white" strokeWidth="2" />
+      <path d="M33 12L12 33" stroke="white" strokeWidth="2" />
+    </svg>
   );
 };
 
@@ -153,7 +151,7 @@ export const navbarLinks = [
   },
   {
     name: "Projects",
-    link: "/projects"
+    link: "/projects",
   },
   {
     name: "About",
@@ -162,11 +160,10 @@ export const navbarLinks = [
   {
     name: "Contact",
     link: "/contact",
-  }
+  },
 ];
 
 export type NavbarLink = {
   name: string;
   link: string;
 };
-

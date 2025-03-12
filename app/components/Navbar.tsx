@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { UseScrollPosition } from "../utils/hooks/UseScrollPosition";
-import { navbarLinks } from "./NavigationFullScreen";
 
 export default function Navbar({
+  isSideBarOpen,
   onOpenSidebar,
 }: {
   isSideBarOpen: boolean;
@@ -137,3 +137,18 @@ export const MenuButton = () => {
     </svg>
   );
 };
+
+export const navbarLinks = [
+  {
+    name: "Services",
+    link: "/services",
+  },
+  {
+    name: "Projects",
+    link: "/projects",
+  },
+  {
+    name: "About",
+    link: "/about-us",
+  },
+];
