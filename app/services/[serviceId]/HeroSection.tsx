@@ -22,12 +22,10 @@ export default function HeroSection({ serviceName }: { serviceName: string }) {
             <span className="custom-text font-black">
               {selectedService?.name}
             </span>{" "}
-            For Maximized Lead Generation
+            {selectedService?.heroSectionHeading}
           </h1>
           <p className="text-xl font-light text-[#ffffff] text-start xs:text-center lg:text-left z-20">
-            Our landing pages will help generate your business new leads and
-            drive your sales exponentially by helping you maximize every
-            visitor`s potential and making them engage with your product.
+          {selectedService?.heroSectionSubheading}
           </p>
 
           {/* CTA button */}
