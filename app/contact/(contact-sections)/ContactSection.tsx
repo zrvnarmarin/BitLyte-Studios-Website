@@ -3,6 +3,7 @@ import "../../../public/test.css";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import SectionWrapper from "@/app/components/SectionWrapper";
+import { submitContactForm } from "@/app/actions";
 
 export default function ContactSection() {
   return (
@@ -12,7 +13,7 @@ export default function ContactSection() {
           <ContactInfo />
         </div>
         <div className="order-1 lg:order-2">
-          <ContactForm />
+          <ContactForm submitContactForm={submitContactForm} />
         </div>
       </div>
     </SectionWrapper>
