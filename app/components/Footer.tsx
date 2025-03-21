@@ -39,7 +39,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <EmailIcon />
               <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                bitlyte-studios@gmail.om
+                info@bitlyte-studios.com
               </span>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <AddressIcon />
               <span className="text-sm md:text-base text-[#ffffff] font-normal md:font-light text-left">
-                Assington, Sudbury, UK
+                Colchester, Essex, UK
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -104,7 +104,7 @@ export default function Footer() {
         <div className="w-full flex flex-col items-start lg:items-center justify-between pb-0 lg:pb-2 pt-12">
           <div className="flex flex-col items-start lg:items-center justify-center gap-2">
             <p className="text-xs text-[#dddddd] font-light">
-              ©2024 BitLyte Studios. All rights reserved.
+              ©2025 BitLyte Studios. All rights reserved.
             </p>
             <p className="text-xs text-[#dddddd] font-light">
               Developed by Marin Zrvnar
@@ -267,11 +267,11 @@ export const quickLinkRoutes = [
     title: "Services",
     href: "/services",
   },
-  {
-    id: 4,
-    title: "Projects",
-    href: "/projects",
-  },
+  // {
+  //   id: 4,
+  //   title: "Projects",
+  //   href: "/projects",
+  // },
   {
     id: 5,
     title: "Contact",

@@ -48,7 +48,7 @@ export const testimonials: TestimonialCardProps[] = [
     id: 1,
     name: "Perina Kulić",
     companyName: "CEO Of Spell Prijevodi",
-    testimonialText: "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly! I will definetely work with them again.",
+    testimonialText: "I was amazed by the innovative solutions and suggestions of the BitLyte agency. All hands were on deck, proving that they're all in each step of the way, which is a really refreshing approach. They truly are masters of visually striking and effective design, as well as constructive communication and support.",
     imageSrc: PerinaKulicTestimonialThumbnail, 
   },
   {

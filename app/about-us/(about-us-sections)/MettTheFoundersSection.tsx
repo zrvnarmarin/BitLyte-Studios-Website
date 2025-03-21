@@ -20,10 +20,9 @@ export default function MeetTheFoundersSection() {
         Meet The Founders
       </h2>
       <p className="text-xl font-light text-[#ffffff] text-center z-20 xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-40 2xl:px-64">
-        Our founders came together with a shared passion for innovation and a
-        strong drive to reshape the digital space. Guided by their vision for
-        the future, they aimed to build a dynamic agency that would push the
-        limits of what’s possible.
+        Our founders teamed up with a shared goal: to create practical and
+        creative solutions that actually work. They wanted to build something
+        that makes a real difference for businesses.
       </p>
 
       {/* Smaller screen cards */}
@@ -39,6 +38,9 @@ export default function MeetTheFoundersSection() {
             id={founderInfo.id}
             name={founderInfo.name}
             imgSrc={founderInfo.imgSrc}
+            occupationOne={founderInfo.occupationOne}
+            occupationTwo={founderInfo.occupationTwo}
+            linkedinHref={founderInfo.linkedinHref}
           />
         ))}
       </div>
@@ -46,7 +48,7 @@ export default function MeetTheFoundersSection() {
   );
 }
 
-export const FounderCard = ({ id, name, imgSrc }: FounderDataType) => {
+export const FounderCard = ({ id, name, imgSrc, occupationOne, occupationTwo, linkedinHref }: FounderDataType) => {
   return (
     <div className="w-full relative overflow-hidden flex flex-col z-20 rounded-lg">
       <div className="w-full relative z-20 rounded-lg py-6 px-6">
@@ -63,12 +65,10 @@ export const FounderCard = ({ id, name, imgSrc }: FounderDataType) => {
       <div className="relative flex flex-col justify-between items-start pb-4 pt-2 px-6">
         {/* Centered Content */}
         <div className="flex flex-col gap-2 justify-center items-start z-20 my-auto">
-          <h2 className="text-[#ffffff] font-semibold text-3xl">
-            {name}
-          </h2>
+          <h2 className="text-[#ffffff] font-semibold text-3xl">{name}</h2>
           <p className="text-lg xs:text-xl font-light text-[#ffffff]">
-            Co-Founder <br />
-            Web Developer/Designer
+            {occupationOne} <br />
+            {occupationTwo}
           </p>
         </div>
 
@@ -76,15 +76,15 @@ export const FounderCard = ({ id, name, imgSrc }: FounderDataType) => {
         <div className="flex flex-col gap-2 relative overflow-hidden z-20 mt-6">
           <div className="w-full flex items-center justify-end gap-8">
             <React.Fragment key={socialMediaIcons[2].id}>
-              <Link href={socialMediaIcons[2].href}>
+              <Link href={linkedinHref}>
                 {socialMediaIcons[2].icon()}
               </Link>
             </React.Fragment>
-            <React.Fragment key={socialMediaIcons[0].id}>
+            {/* <React.Fragment key={socialMediaIcons[0].id}>
               <Link href={socialMediaIcons[0].href}>
                 {socialMediaIcons[0].icon()}
               </Link>
-            </React.Fragment>
+            </React.Fragment> */}
           </div>
         </div>
       </div>
@@ -97,11 +97,17 @@ export const foundersData: FounderDataType[] = [
     id: 1,
     name: "Marin Zrvnar",
     imgSrc: MarinRemovedBgImage,
+    occupationOne: 'Co-Founder',
+    occupationTwo: 'Web Developer/Designer',
+    linkedinHref: 'https://www.linkedin.com/in/marinzrvnar/'
   },
   {
     id: 2,
     name: "Igor Ozmec",
     imgSrc: IgorImage,
+    occupationOne: 'Co-Founder',
+    occupationTwo: 'Client Acquisition/Marketing',
+    linkedinHref: 'https://www.linkedin.com/in/igor-ozmec/'
   },
 ];
 
@@ -109,4 +115,7 @@ export type FounderDataType = {
   id: number;
   name: string;
   imgSrc: StaticImageData;
+  occupationOne: string;
+  occupationTwo: string;
+  linkedinHref: string;
 };

@@ -29,7 +29,7 @@ export default function ContactInfo() {
                 Email Us
               </p>
               <p className="text-lg text-[#ffffff] text-start font-light ">
-                bitlyte-studios@admin.com
+                info@bitlyte-studios.com
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function ContactInfo() {
                 Visit Us
               </p>
               <p className="text-lg text-[#ffffff] text-start font-light ">
-                Assington, Sudbury, UK
+                Colchester, Essex, UK
               </p>
             </div>
           </div>

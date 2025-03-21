@@ -143,10 +143,10 @@ export const navbarLinks = [
     name: "Services",
     link: "/services",
   },
-  {
-    name: "Projects",
-    link: "/projects",
-  },
+  // {
+  //   name: "Projects",
+  //   link: "/projects",
+  // },
   {
     name: "About",
     link: "/about-us",

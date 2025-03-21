@@ -107,14 +107,14 @@ export const valueCardData = [
     id: 1,
     title: "Mission",
     description:
-      "To create digital experiences that inspire growth and generate revenue for our clients by combining our team`s efforts.",
+      "To craft digital experiences that drive growth and boost revenue for our clients through collaboration and innovation.",
     icon: MissionIcon,
   },
   {
     id: 2,
     title: "Vision",
     description:
-      "To create a user-centered landscape where all our clients stand out, leading with unforgettable brand experiences.",
+      "To build a user-focused space where our clients stand out, creating memorable brand experiences that last.",
     icon: VisionIcon,
   },
 ];

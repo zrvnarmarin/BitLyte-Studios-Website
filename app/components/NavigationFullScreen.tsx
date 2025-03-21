@@ -96,7 +96,7 @@ export const ContactInfoSection = () => {
         <div className="flex items-center gap-2">
           <EmailIcon />
           <span className="text-base text-[#ffffff] font-normal">
-            bitlyte-studios@gmail.com
+            info@bitlyte-studios.com
           </span>
         </div>
       </div>
@@ -149,10 +149,10 @@ export const navbarLinks = [
     name: "Services",
     link: "/services",
   },
-  {
-    name: "Projects",
-    link: "/projects",
-  },
+  // {
+  //   name: "Projects",
+  //   link: "/projects",
+  // },
   {
     name: "About",
     link: "/about-us",
