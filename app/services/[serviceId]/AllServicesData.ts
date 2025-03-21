@@ -49,55 +49,89 @@ export const allServicesArray = [
     id: 1,
     name: "Landing Page",
     serviceImage: LandingPageServiceImage,
-    heroSectionHeading: "Landing Page For Maximized Lead Generation",
+    heroSectionHeading: "For Maximum Impact",
     heroSectionSubheading:
-      "Our landing pages will help generate your business new leads and drive your sales exponentially by helping you maximize every visitor's potential and making them engage with your product.",
+      "Landing page that engage visitors, drive conversions, and support your marketing goals with compelling visuals.",
     benefits: [
       {
         id: 1,
-        title: "High Brand Awareness",
+        title: "Responsive Design",
         description:
-          "A service landing page is crafted with a clear focus on converting visitors into leads or customers. By highlighting key benefits, using compelling calls to action (CTAs), and providing an easy-to-navigate layout, these pages can greatly enhance conversion rates.",
-        icon: RecognizedVisualIdentity,
+          "We ensure your website is optimized for all devices, providing users with a seamless experience on any screen.",
+        icon: ResponsiveAndAdaptive,
       },
       {
         id: 2,
-        title: "Enhanced User Experience",
+        title: "Higher Traffic And Leads",
         description:
-          "A thoughtfully designed landing page offers a smooth and intuitive user experience. This can lead to longer visits and lower bounce rates, which are both positive indicators for search engines and can improve overall engagement.",
-        icon: BoostedEngagement,
+          "We implement strategies to drive more visitors to your site and convert them into quality leads for your business.",
+        icon: IncreasedTrafficAndLeads,
       },
       {
         id: 3,
-        title: "Recognized Visual Identity",
+        title: "Increased Revenue",
         description:
-          "A recognized visual identity on landing pages builds brand familiarity and trust. Aligning the landing page with your brand strengthens emotional connections, enhancing lead generation and securing you long-term partnerships.",
+          "Our strategies are designed to drive sales and improve conversion rates, leading to a measurable increase in your revenue.",
         icon: IncomeGrowth,
       },
     ],
     steps: [
       {
         id: 1,
-        name: "Discovery",
+        name: "Discover",
         goals: [
           {
             id: 1,
-            name: "Market Research And UI/UX Design",
+            name: "Understand business objectives and target audience",
           },
           {
             id: 2,
-            name: "Brand Identity Of Design",
+            name: "Research competitors and market trends",
           },
           {
             id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
+            name: "Define key messaging and conversion goals",
           },
         ],
-        outcome: "Client`s approval and green light to be able to continue on the project"
+        outcome: "A data-driven strategy aligning business goals, market insights, and clear messaging to drive conversions."
+      },
+      {
+        id: 2,
+        name: "Develop",
+        goals: [
+          {
+            id: 1,
+            name: "Create wireframes and design mockups",
+          },
+          {
+            id: 2,
+            name: "Craft compelling copy and engaging visuals",
+          },
+          {
+            id: 3,
+            name: "Optimize layout for user experience and conversions",
+          },
+        ],
+        outcome: "We design visually appealing, user-friendly landing pages with clear messaging to boost conversions and an optimized structure for fast, seamless navigation."
+      },
+      {
+        id: 3,
+        name: "Deliver",
+        goals: [
+          {
+            id: 1,
+            name: "Develop and test the landing page for performance and responsiveness",
+          },
+          {
+            id: 2,
+            name: "Implement SEO best practices and tracking tools",
+          },
+          {
+            id: 3,
+            name: "Launch the page and monitor performance",
+          },
+        ],
+        outcome: "We deliver a fully optimized, high-performing landing page with a seamless user experience across devices and data-driven insights for continuous improvement.."
       },
     ],
     faq: [
@@ -113,55 +147,89 @@ export const allServicesArray = [
     id: 2,
     name: "Frontend Development",
     serviceImage: FrontendDevelopmentServiceImage,
-    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionHeading: "For Seamless User Experience",
     heroSectionSubheading:
-      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+      "Frontend experiences that ensure smooth interaction and engagement across all devices.",
     benefits: [
       {
         id: 1,
-        title: "Optimized Performance",
+        title: "Boosted Engagement",
         description:
           "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
-        icon: StrongDigitalPresence
+        icon: BoostedEngagement
         },
       {
         id: 2,
-        title: "Cross-Browser Compatibility",
+        title: "Responsive Design",
         description:
-          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
-        icon: IncomeGrowth
+          "We ensure your website is optimized for all devices, providing users with a seamless experience on any screen.",
+        icon: ResponsiveAndAdaptive
         },
       {
         id: 3,
-        title: "Scalability and Maintainability",
+        title: "Increased Revenue",
         description:
-          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
-        icon: CustomerRetention
+          "Our strategies are designed to drive sales and improve conversion rates, leading to a measurable increase in your revenue.",
+        icon: IncreasedTrafficAndLeads
         },
     ],
     steps: [
       {
         id: 1,
-        name: "Discovery",
+        name: "Discover",
         goals: [
           {
             id: 1,
-            name: "Market Research And UI/UX Design",
+            name: "Understand user needs and business objectives",
           },
           {
             id: 2,
-            name: "Brand Identity Of Design",
+            name: "Research market trends and competitors",
           },
           {
             id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
+            name: "Define website structure and key features",
           },
         ],
-        outcome: "Client`s approval and green light to be able to continue on the project"
+        outcome: "We understand your business goals and user needs, analyze market trends and competitors, and create a well-structured website plan."
+      },
+      {
+        id: 2,
+        name: "Develop",
+        goals: [
+          {
+            id: 1,
+            name: "Build responsive, accessible, and user-friendly frontend code",
+          },
+          {
+            id: 2,
+            name: "Integrate smooth animations and transitions",
+          },
+          {
+            id: 3,
+            name: "Optimize code for performance and security",
+          },
+        ],
+        outcome: "We deliver a fully responsive, visually engaging website with smooth animations and interactions, while optimizing frontend code for speed and security."
+      },
+      {
+        id: 3,
+        name: "Deliver",
+        goals: [
+          {
+            id: 1,
+            name: "Test frontend across devices and browsers",
+          },
+          {
+            id: 2,
+            name: "Integrate analytics and tracking tools",
+          },
+          {
+            id: 3,
+            name: "Launch the website with optimized frontend performance",
+          },
+        ],
+        outcome: "We deliver an optimized, high-performing website with a seamless experience across all devices, backed by data-driven insights for continuous improvements."
       },
     ],
     faq: [
@@ -177,55 +245,89 @@ export const allServicesArray = [
     id: 3,
     name: "Website Development",
     serviceImage: WebsiteDevelopmentServiceImage,
-    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionHeading: "For High Conversion Rates",
     heroSectionSubheading:
-      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+      "Websites that offer a seamless user experience, helping you establish a strong digital presence and achieve your business goals.",
     benefits: [
       {
         id: 1,
-        title: "Optimized Performance",
+        title: "Responsive Design",
         description:
-          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
-        icon: ClientSatisfaction
-        },
-      {
-        id: 2,
-        title: "Cross-Browser Compatibility",
-        description:
-          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
+          "We ensure your website is optimized for all devices, providing users with a seamless experience on any screen.",
         icon: ResponsiveAndAdaptive
         },
       {
-        id: 3,
-        title: "Scalability and Maintainability",
+        id: 2,
+        title: "Strong Digital Presence",
         description:
-          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
-        icon: IncreasedSEO
+          "We enhance your online visibility, making sure your brand is easily discoverable across all platforms.",
+        icon: StrongDigitalPresence
+        },
+      {
+        id: 3,
+        title: "Increased Revenue",
+        description:
+          "Our strategies are designed to drive sales and improve conversion rates, leading to a measurable increase in your revenue.",
+        icon: IncreasedTrafficAndLeads
         },
     ],
     steps: [
       {
         id: 1,
-        name: "Discovery",
+        name: "Discover",
         goals: [
           {
             id: 1,
-            name: "Market Research And UI/UX Design",
+            name: "Understand business objectived",
           },
           {
             id: 2,
-            name: "Brand Identity Of Design",
+            name: "Conduct competitor and market research",
           },
           {
             id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
+            name: "Define website structure and key features",
           },
         ],
-        outcome: "Client`s approval and green light to be able to continue on the project"
+        outcome: "We understand your business goals, analyze market trends, and define a clear website structure."
+      },
+      {
+        id: 2,
+        name: "Develop",
+        goals: [
+          {
+            id: 1,
+            name: "Design wireframes and develop website prototypes",
+          },
+          {
+            id: 2,
+            name: "Implement clean, efficient, and scalable code",
+          },
+          {
+            id: 3,
+            name: "Optimize for performance, security, and SEO",
+          },
+        ],
+        outcome: "We create a visually engaging website with optimized performance for speed, security, and SEO-friendly features for better rankings."
+      },
+      {
+        id: 3,
+        name: "Deliver",
+        goals: [
+          {
+            id: 1,
+            name: "Test and refine website across devices and browsers",
+          },
+          {
+            id: 2,
+            name: "Integrate analytics and tracking tools",
+          },
+          {
+            id: 3,
+            name: "Launch the website and ensure smooth operation",
+          },
+        ],
+        outcome: "We deliver a fully optimized, high-performing website with a seamless user experience across all devices and data-driven insights for ongoing improvement."
       },
     ],
     faq: [
@@ -547,55 +649,89 @@ export const allServicesArray = [
     id: 7,
     name: "UI/UX Design",
     serviceImage: UIUXServiceImage,
-    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionHeading: "For a Enjoyable and user-friendly experience ",
     heroSectionSubheading:
-      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+      "Creating intuitive, user-friendly designs that enhance engagement and deliver a seamless experience.",
     benefits: [
       {
         id: 1,
         title: "Optimized Performance",
         description:
-          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
-        icon: CostEfficiency
+          "We ensure your website/app is optimized for all devices, providing users with a seamless experience on any screen.",
+        icon: ResponsiveAndAdaptive
         },
       {
         id: 2,
-        title: "Cross-Browser Compatibility",
+        title: "Customer Satisfaction",
         description:
-          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
-        icon: CompetitiveAdvantage
+          "We focus on delivering high-quality services and experiences that keep your customers happy and loyal.",
+        icon: CustomerRetention
         },
       {
         id: 3,
-        title: "Scalability and Maintainability",
+        title: "Enhanced Customer Insights",
         description:
-          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+          "We gather valuable data to help you understand customer behavior and preferences, guiding better decision-making.",
         icon: BetterCustomerInsight
         },
     ],
     steps: [
       {
         id: 1,
-        name: "Discovery",
+        name: "Discover",
         goals: [
           {
             id: 1,
-            name: "Market Research And UI/UX Design",
+            name: "Understand user needs, business goals, and industry trends",
           },
           {
             id: 2,
-            name: "Brand Identity Of Design",
+            name: "Conduct competitor analysis and user research",
           },
           {
             id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
+            name: "Identify pain points and opportunities for improvement",
           },
         ],
-        outcome: "Client`s approval and green light to be able to continue on the project"
+        outcome: "We understand user and business needs, analyze market trends and competitors, and set clear user experience goals."
+      },
+      {
+        id: 2,
+        name: "Develop",
+        goals: [
+          {
+            id: 1,
+            name: "Design wireframes, prototypes, and interactive mockups",
+          },
+          {
+            id: 2,
+            name: "Ensure smooth navigation and engaging user interactions",
+          },
+          {
+            id: 3,
+            name: "Prioritize accessibility and user-centered design principles",
+          },
+        ],
+        outcome: "We understand user and business needs, analyze market trends and competitors, and set clear user experience goals."
+      },
+      {
+        id: 3,
+        name: "Deliver",
+        goals: [
+          {
+            id: 1,
+            name: "Finalize UI/UX design for development handoff",
+          },
+          {
+            id: 2,
+            name: "Provide design assets and style guides for consistency",
+          },
+          {
+            id: 3,
+            name: "Conduct usability testing and refine based on feedback",
+          },
+        ],
+        outcome: "We deliver high-quality, ready-to-implement UI/UX designs with consistent guidelines and an optimized user experience for better engagement."
       },
     ],
     faq: [
@@ -611,55 +747,89 @@ export const allServicesArray = [
     id: 8,
     name: "Brand Identity",
     serviceImage: BrandIdentityServiceImage,
-    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionHeading: "For A Lasting Impression",
     heroSectionSubheading:
-      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+      "Identities that reflect your values, connect with your audience, and set you apart from the competition.",
     benefits: [
       {
         id: 1,
-        title: "Optimized Performance",
+        title: "Boosted Engagement",
         description:
-          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
-        icon: CompetitiveAdvantage
+          "We create strategies that attract attention and encourage users to interact more with your brand, leading to higher engagement.",
+        icon: IncreasedTrafficAndLeads
         },
       {
         id: 2,
-        title: "Cross-Browser Compatibility",
+        title: "Competitive Advantage",
         description:
-          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
-        icon: IncreasedSEO
+          "We help you stay ahead of the competition by identifying unique opportunities and crafting strategies that set you apart.",
+        icon: CompetitiveAdvantage
         },
       {
         id: 3,
-        title: "Scalability and Maintainability",
+        title: "Strong Digital Presence",
         description:
-          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
-        icon: IncreasedTrafficAndLeads
+          "We enhance your online visibility, making sure your brand is easily discoverable across all platforms.",
+        icon: StrongDigitalPresence
         },
     ],
     steps: [
       {
         id: 1,
-        name: "Discovery",
+        name: "Discover",
         goals: [
           {
             id: 1,
-            name: "Market Research And UI/UX Design",
+            name: "Understand brand values, mission, and target audience",
           },
           {
             id: 2,
-            name: "Brand Identity Of Design",
+            name: "Analyze market trends and competitors",
           },
           {
             id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
+            name: "Define core brand messaging and positioning",
           },
         ],
-        outcome: "Client`s approval and green light to be able to continue on the project"
+        outcome: "We develop a clear understanding of your brand values, gain insights into market trends and competitors, and define a strong brand personality and identity."
+      },
+      {
+        id: 2,
+        name: "Develop",
+        goals: [
+          {
+            id: 1,
+            name: "Design logo, color palette, typography, and visual elements",
+          },
+          {
+            id: 2,
+            name: "Create brand messaging, tone of voice, and storytelling",
+          },
+          {
+            id: 3,
+            name: "Develop brand guidelines for consistency",
+          },
+        ],
+        outcome: "We create a unique and cohesive brand identity with clear, consistent messaging and comprehensive guidelines for long-term brand success."
+      },
+      {
+        id: 3,
+        name: "Deliver",
+        goals: [
+          {
+            id: 1,
+            name: "Finalize all brand assets and design elements",
+          },
+          {
+            id: 2,
+            name: "Provide brand guidelines for consistent usage",
+          },
+          {
+            id: 3,
+            name: "Ensure seamless implementation across all platforms",
+          },
+        ],
+        outcome: "We deliver high-quality, versatile brand assets with clear guidelines to ensure consistency and a fully developed, recognizable brand identity."
       },
     ],
     faq: [
@@ -675,56 +845,90 @@ export const allServicesArray = [
     id: 9,
     name: "Logo Design",
     serviceImage: LogoDesignServiceImage,
-    heroSectionHeading: "Modern and Responsive Frontend Development",
+    heroSectionHeading: "For A Stronger Company Image",
     heroSectionSubheading:
-      "Our frontend development services ensure that your website or application is built with performance, scalability, and user experience in mind.",
+      "Unique and memorable logos that capture the essence of your brand, helping you make a lasting impression on your audience.",
     benefits: [
       {
         id: 1,
-        title: "Optimized Performance",
+        title: "Strong Brand Identity",
         description:
-          "We ensure that your frontend code is optimized for performance, providing fast load times and smooth interactions.",
-        icon: CompetitiveAdvantage
+          "We create consistent and memorable visuals that help your brand stand out and resonate with your audience.",
+        icon: RecognizedVisualIdentity
         },
       {
         id: 2,
-        title: "Cross-Browser Compatibility",
+        title: "Customer Satisfaction",
         description:
-          "Your web application will work seamlessly across different browsers and devices, ensuring a consistent experience for all users.",
-        icon: HighBrandAwareness
+          "We focus on delivering high-quality services and experiences that keep your customers happy and loyal.",
+        icon: CustomerRetention
         },
       {
         id: 3,
-        title: "Scalability and Maintainability",
+        title: "Competitive Advantage",
         description:
-          "Our frontend development follows best practices, making it easy to scale and maintain as your business grows.",
+          "We help you stay ahead of the competition by identifying unique opportunities and crafting strategies that set you apart.",
         icon: CompetitiveAdvantage
         },
     ],
     steps: [
       {
         id: 1,
-        name: "Discovery",
+        name: "Discover",
         goals: [
           {
             id: 1,
-            name: "Market Research And UI/UX Design",
+            name: "Understand your brand values, vision, and goals",
           },
           {
             id: 2,
-            name: "Brand Identity Of Design",
+            name: "Research your target audience and competitors",
           },
           {
             id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
+            name: "Identify your brand’s unique attributes",
           },
         ],
-        outcome: "Client`s approval and green light to be able to continue on the project"
+        outcome: "We develop a clear understanding of your brand values, gain insights into market trends and competitors, and define a strong brand personality and identity."
       },
+      {
+        id: 2,
+        name: "Develop",
+        goals: [
+          {
+            id: 1,
+            name: "Create initial logo concepts and sketches",
+          },
+          {
+            id: 2,
+            name: "Experiment with fonts, colors, and styles",
+          },
+          {
+            id: 3,
+            name: "Refine the design based on client feedback",
+          },
+        ],
+        outcome: "We create initial logo concepts and sketches, experiment with fonts, colors, and styles, and refine the design based on client feedback."
+      },
+      {
+        id: 3,
+        name: "Deliver",
+        goals: [
+          {
+            id: 1,
+            name: "Finalize and perfect the chosen logo design",
+          },
+          {
+            id: 2,
+            name: "Deliver all neccessary logo files and variations",
+          },
+          {
+            id: 3,
+            name: "Provide guidelines for logo usage",
+          },
+        ],
+        outcome: "We deliver high-quality, versatile logo files with consistent brand guidelines, ensuring your logo is ready for use across all platforms.s"
+      }
     ],
     faq: [
       {
