@@ -4,18 +4,18 @@ import React, { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
 import "../../public/test.css";
 
-export default function FAQSection() {
+export default function FAQSection({ faqData }: { faqData: FAQType[] }) {
   return (
     <SectionWrapper>
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center sm:text-start z-20">
         Frequently Asked Questions
       </h2>
-      <Accordion faqArray={homePageFAQ} />
+      <Accordion faqData={faqData} />
     </SectionWrapper>
   );
 }
 
-function Accordion({ faqArray }: { faqArray: FAQType[] }) {
+function Accordion({ faqData }: { faqData: FAQType[] }) {
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const handleShow = (index: number) => {
@@ -24,7 +24,7 @@ function Accordion({ faqArray }: { faqArray: FAQType[] }) {
 
   return (
     <div className="w-full flex flex-col gap-4 z-20 pt-4 sm:pt-8 md:pt-12">
-      {faqArray.map((accordion, index) => (
+      {faqData.map((accordion, index) => (
         <Panel
           key={accordion.id}
           id={accordion.id}

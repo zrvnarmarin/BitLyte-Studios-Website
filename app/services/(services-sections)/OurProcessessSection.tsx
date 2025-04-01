@@ -47,11 +47,11 @@ export const ProcessStepCard = ({
         </span>
       </div>
 
-      <p className="text-xl font-light text-[#ffffff] text-start py-6 z-20">
+      <p className="text-xl font-light text-[#ffffff] text-start pt-6 z-20">
         {description}
       </p>
 
-      <div className="mt-auto pt-6 border-t border-[#1A3050]/50">
+      {/* <div className="mt-auto pt-6 border-t border-[#1A3050]/50">
         <ul className="flex flex-col gap-2">
           {steps.map((feature, i) => (
             <li key={i} className="flex items-start gap-2">
@@ -60,7 +60,7 @@ export const ProcessStepCard = ({
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

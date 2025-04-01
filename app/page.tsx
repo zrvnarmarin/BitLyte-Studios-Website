@@ -9,6 +9,7 @@ import PromisesSection from "./(home-sections)/PromisesSection";
 import ParagraphTwo from "./(home-sections)/ParagraphTwo";
 import ParagraphSectionThree from "./(home-sections)/ParagraphSectionThree";
 import OurProcessessSection from "./services/(services-sections)/OurProcessessSection";
+import { data } from "./(home-sections)/FAQData";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       {/* <ParagraphTwo /> */}
       <PromisesSection />
       <TestimonialsSection />
-      <FAQSection />
+      <FAQSection faqData={data} />
       <CTASection />
     </main>
   );
