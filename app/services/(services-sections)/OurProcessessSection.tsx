@@ -75,19 +75,19 @@ const processesSteps: ProcessessStepType[] = [
   {
     id: 2,
     title: "Planning & Strategy",
-    description: `We create a strategic blueprint that aligns design, marketing, and technology to move your brand forward.`,
+    description: `We create a strategic blueprint that aligns design, development, and marketing to move your brand forward.`,
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
   {
     id: 3,
-    title: "Tehnical Execution",
-    description: `We bring the strategy to life through focused execution—whether that’s design, development, content creation, or campaign deployment.`,
+    title: "Execution & Testing",
+    description: "We design and develop your project, followed by rigorous testing to ensure it performs flawlessly across all devices.",
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
   {
     id: 4,
-    title: "Testing & Launching",
-    description: `After launching, we provide and track results long-term success.`,
+    title: "Launching & Support",
+    description: `We launch your project with ongoing support, analyze performance post-launch and optimize the project to further drive the results.`,
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
 ];
