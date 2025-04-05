@@ -68,25 +68,25 @@ export const ProcessStepCard = ({
 const processesSteps: ProcessessStepType[] = [
   {
     id: 1,
-    title: "Discovery & Talking",
-    description: `We start by learning about your meetings and research to shape the right approach.`,
+    title: "Discovery & Insight",
+    description: `We start by learning about the processes of your business, gaining insight into your goals and target audience.`,
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
   {
     id: 2,
-    title: "Design & Development",
-    description: `Using our insights, showcase brand and engage your audience.`,
+    title: "Planning & Strategy",
+    description: `We create a strategic blueprint that aligns design, marketing, and technology to move your brand forward.`,
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
   {
     id: 3,
-    title: "Testing & Answering",
-    description: `We bring the plan to high-quality, functional user and business needs.`,
+    title: "Tehnical Execution",
+    description: `We bring the strategy to life through focused execution—whether that’s design, development, content creation, or campaign deployment.`,
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
   {
     id: 4,
-    title: "Launching & Learning",
+    title: "Testing & Launching",
     description: `After launching, we provide and track results long-term success.`,
     steps: ["Frontend development", "Backend integration", "Quality assurance"],
   },
