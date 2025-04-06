@@ -15,7 +15,7 @@ export default function FAQSection({ serviceName }: { serviceName: string }) {
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-center sm:text-start z-20">
         Frequently Asked Questions
       </h2>
-      <Accordion faqData={selectedService?.faq} />
+      <Accordion faqData={selectedService?.faq ?? []} />
     </SectionWrapper>
   );
 }

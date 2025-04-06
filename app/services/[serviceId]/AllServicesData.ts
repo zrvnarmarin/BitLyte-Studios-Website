@@ -137,10 +137,41 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        title: "Does my business need a landing page?",
+        title: "What makes your landing pages different and why should I choose you?",
         answer:
-          "The need for a landing page depends on many factors, including your niche and target audience.",
+          "Most of the landing pages are just templates without clear messaging to the final user what does your business do. Today, where tools like Chat GPT are widely used, anyone can type the prompt and generate you a generic messaging for your business. The trouble is, that type of landing pages rarely resonates with your targeted audience and your conversion rates suffer. We combine strategic thinking, custom design, targeted copy and marketing expertise to create landing pages that not only look great, but most importantly, they serve as a powerful sales tool that connects your products with your target audience."
       },
+      {
+        id: 2,
+        title: "How long will take you to complete a landing page?",
+        answer: "Most landing pages are completed within 2–4 weeks, depending on complexity and client feedback speed. For more detailed, answer, please contact us and we will give you a more precise time estimate."
+      },
+      {
+        id: 3,
+        title: "How much will I pay for a landing page?",
+        answer: "Pricing depends on the scope — copywriting, design complexity, integrations, etc. However, our minimum engagement price is $500."
+      },
+      {
+        id: 4,
+        title: "Can I provide you with the copy for my landing page?",
+        answer: "Of course! You can send us the fully written copy and we will design your landing page accordingly. Copy is one of the very earliest steps in crafting a good landing page, so if you are confident with it, absolutely. However, you can still fully rely on our guidance, because we are taking the holistic approach to crafting the landing page, and our in-house team can manage all of the aspects of this service, so that you have the best possible outcome."
+      },
+      {
+        id: 5,
+        title: 'Will my landing page be fully responsive on all the devices?',
+        answer: "Absolutely. Your landing page will be fully responsive, mobile-friendly and tested across various devices for seamless user experience."
+      },
+      {
+        id: 6,
+        title: "What technologies will be used?",
+        answer: "Our tools of creation are WebFlow, and in some cases (if the client has specific request) we use Next.js framework. However, we can always develop it with purely HTML, CSS and JavaScript and provide you with all of the exported code."
+      },
+      {
+        id: 7,
+        title: " Can I update the landing page myself after it’s live?",
+        answer: "Yes! All of the content that you see on your landing page can be changed (copy, images, videos, other assets) by you at any time and you will have full control of your page. If built in WebFlow, you have a CMS which you can update, and if built with Next.js, you can always change everything in the GitHub repo which we will provide you with. We will train you with our recorded video, so that you can learn how to fully manage your landing page post-launch."
+      },
+
     ],
   },
   {
