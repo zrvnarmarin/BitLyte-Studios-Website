@@ -267,11 +267,11 @@ export const quickLinkRoutes = [
     title: "Services",
     href: "/services",
   },
-  // {
-  //   id: 4,
-  //   title: "Projects",
-  //   href: "/projects",
-  // },
+  {
+    id: 4,
+    title: "Projects",
+    href: "/projects",
+  },
   {
     id: 5,
     title: "Contact",

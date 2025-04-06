@@ -137,7 +137,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "Does my business need a landing page?",
+        title: "Does my business need a landing page?",
         answer:
           "The need for a landing page depends on many factors, including your niche and target audience.",
       },
@@ -235,7 +235,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -333,7 +333,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -433,7 +433,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -531,7 +531,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -637,7 +637,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -737,7 +737,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -835,7 +835,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },
@@ -933,7 +933,7 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        question: "What technologies do you use for frontend development?",
+        title: "What technologies do you use for frontend development?",
         answer:
           "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
       },

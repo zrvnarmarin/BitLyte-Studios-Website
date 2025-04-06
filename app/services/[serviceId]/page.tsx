@@ -1,7 +1,7 @@
 import HeroSection from "./HeroSection";
 import BenefitsSection from "./BenefitsSection";
 import StepsSection from "./StepsSection";
-import FAQSection from "@/app/components/FAQSection";
+import FAQSection from "./FAQSection";
 import TestimonialsSection from "@/app/components/TestimonialsSection";
 import SimilarServicesSection from "./SimilarServicesSection";
 import CTASection from "@/app/components/CTASection";
@@ -14,7 +14,7 @@ export default function Home({ params }: { params: { serviceId: string } }) {
       <StepsSection serviceName={params.serviceId} />
       <TestimonialsSection />
       <SimilarServicesSection />
-      <FAQSection />
+      <FAQSection serviceName={params.serviceId} />
       <CTASection />
     </main>
   );
