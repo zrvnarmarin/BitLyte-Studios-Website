@@ -164,7 +164,7 @@ export const allServicesArray = [
       {
         id: 6,
         title: "What technologies will be used?",
-        answer: "Our tools of creation are WebFlow, and in some cases (if the client has specific request) we use Next.js framework. However, we can always develop it with purely HTML, CSS and JavaScript and provide you with all of the exported code."
+        answer: "Our tools of creation are WebFlow and Framer, and in some cases (if the client has specific request) we use Next.js framework. However, we can always develop it with purely HTML, CSS and JavaScript and provide you with all of the exported code."
       },
       {
         id: 7,
@@ -266,9 +266,9 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        title: "What technologies do you use for frontend development?",
+        title: "What make your website development better than others and why should I choose you?",
         answer:
-          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+          "Most of the websites are just a prettyatfirst design with generic content which does not resonate with your ideal customer profile. The second largest problem we identified are the long loading times before anything shows on the screen. The rest of the problems are bad SEO, which is hurtiny our business in the end, because you are not positioned high enough on search engines, rip-off maintaining costs, and Most of the landing pages are just templates without clear messaging to the final user what does your business do. Today, where tools like Chat GPT are widely used, anyone can type the prompt and generate you a generic messaging for your business. The trouble is, that type of landing pages rarely resonates with your targeted audience and your conversion rates suffer. We combine strategic thinking, custom design, targeted copy and marketing expertise to create landing pages that not only look great, but most importantly, they serve as a powerful sales tool that connects your products with your target audience",
       },
     ],
   },
@@ -364,10 +364,45 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        title: "What technologies do you use for frontend development?",
+        title: "What make your website development better than others and why should I choose you?",
         answer:
-          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+        "Most of the websites are just a pretty-at-first design with generic content which does not resonate with your ideal customer profile. The second largest problem we identified are the long loading times before anything shows on the screen. The rest of the common problems are bad SEO, which is hurting your business in the end, because you are not positioned high enough on search engines, rip-off maintaining costs, and security vulnerabilities. We will make sure that we have a clear branding strategy in place before any design or devleopment occurs, develop you a fast performing and high ranked website, with transparent maintain costs from the beginning, which you can see on the official websites of the platforms on which your website will be built.",
       },
+      {
+        id: 2,
+        title: 'What does this service include?',
+        answer: "We offer full-service development: planning, UX/UI design, front-end and back-end development, responsive optimization, SEO setup, final deployment, and support thorugh all the post-launch steps."
+      },
+      {
+        id: 3,
+        title: "How long will take you to complete website?",
+        answer: "Most of the websites are completed within 5-10 weeks, depending on the complexity and client`s feedback speed. For more detailed answer, please contact us and we will give you a more precise time estimate."
+      },
+      {
+        id: 4,
+        title: "How much will I pay for the website?",
+        answer: "Pricing depends on the scope of your project - copywriting, design complexity, CMS integrations etc. However, our minimal engagement rate is $500. For more detailes answer, please contact us and we will give you more precise pricing numbers."
+      },
+      {
+        id: 5,
+        title: "Can I provide you with the copy for my website?",
+        answer: "Of course! You can send us the fully written copy and we will design your landing page accordingly. Copy is one of the very earliest steps in crafting a good landing page, so if you are confident with it, absolutely. However, you can still fully rely on our guidance, because we are taking the holistic approach to crafting the landing page, and our in-house team can manage all of the aspects of this service, so that you have the best possible outcome."
+      },
+      {
+        id: 6,
+        title: "Will my website be fully responsiveon all the devices?",
+        answer: "Absolutely. Your landing page will be fully responsive, mobile-friendly and tested across various devices for seamless user experience."
+      },
+      {
+        id: 7,
+        title: "What technologies will be used?",
+        answer: "Our tools of creation are WebFlow, Framer and Next.js. WebFlow, in most of the cases, covers all of the needs for you to have a professional, well designed and targeted website, with it`s powerful CMS features and if needed, complex animations libraray. We choose WebFlow in most of the cases, Framer for smaller CMS integrations and Next.js for a very complex full stack experience, with almost unlimited integrationsintegrations."
+      },
+      {
+        id: 8,
+        title: "Can I update the website  myself after it’s live?",
+        answer: "Absolutely! You have a FULL OWNERSHIP over your website. All of the content that you see on your landing page can be changed (copy, images, videos, other assets) by you at any time and you will have full control of your page. If built in WebFlow or Framer, you have a CMS which you can update in any time, and if built with Next.js, you can always change everything in the GitHub repo which we will provide you with. We will train you with our recorded video, so that you can learn how to fully manage your landing page post-launch."
+      }
     ],
   },
 
