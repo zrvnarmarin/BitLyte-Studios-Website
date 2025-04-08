@@ -1075,14 +1075,29 @@ export const allServicesArray = [
         id: 2,
         title: "What does the brand identity service include?",
         answer:
-          "We offer a range of brand identity service tailored to different needs, timelines, and budgets. Our starter package includes essentials like a logo, color palette, and typography, while our full-service options guide you from concept to launch. Please contact us here, and we’ll walk you through the process step by step.",
+          "We offer a range of brand identity service tailored to different needs, timelines, and budgets. Our starter package includes essentials like a logo, color palette and typography, while our full-service options includes all the previous things with the full guide from just a concept idea to launch, with everything you need to to have a pleasant, distinctive and long-lasting brand identity. Please contact us here, and we’ll walk you through the process step by step.",
+      },
+      {
+        id: 8,
+        title: "How long does it take to create a brand identity?",
+        answer: "The timeline depends on the scope of the project and how many deliverables are included, but typically, a full brand identity project takes between 2 to 4 weeks. We'll give you a clear schedule after our discovery session, so you know what to expect at every step."
       },
       {
         id: 3,
         title: "How much will I pay for the brand identity service?",
-        answer: "",
+        answer: "We provide custom estimates based on your unique needs and project scope, as timelines and complexity can vary. However, our minimum engagement rate is $850. Since the duration directly affects the final cost, please contact us to get more precise time estimate and pricing.",
       },
-    ],
+      {
+        id: 4,
+        title: "Do you offer brand guidelines?",
+        answer: "Yes, our full brand identity packages include a comprehensive brand guidelines document. It outlines how to use your logo, colors, fonts, tone of voice, and imagery consistently — making it easy to stay on-brand as your business grows."
+      },
+      {
+        id: 5,
+        title: "Can I request revisions during the process?",
+        answer: "Yes, absolutely! We include multiple revision rounds in all of our brand identity packages. Your feedback is crucial to getting everything just right, and we make sure you're fully involved in shaping the final outcome."
+      },
+    ]
   },
   {
     id: 9,
@@ -1179,10 +1194,39 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        title: "What technologies do you use for frontend development?",
-        answer:
-          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+        title: "Why is a logo important, and why should I choose you for designing my logo?",
+        answer: "A logo is the face of your brand — it sets the tone, creates recognition, and builds trust from the very first impression. But not all logos are created equal. Our approach is strategic and personalized: we don’t just design something that looks good, we craft a visual identity that connects with your audience and aligns with your brand’s mission. You’ll get custom concepts, a smooth process, and a logo built to grow with your business — not just a trendy design, but a lasting brand asset."
       },
+      {
+        id: 2,
+        title: "What`s included in your logo design service?",
+        answer: "Our logo design service includes multiple initial concepts, refinement rounds based on your feedback, and final delivery in multiple file formats (SVG, PNG, JPG, PDF). You’ll also receive variations for different use cases like social media, print, and dark/light backgrounds if needed."
+      },
+      {
+        id: 3,
+        title: "How much does logo design cost?",
+        answer: "Pricing depends on the number of concepts, revision rounds, and whether it’s a standalone service or part of a larger branding package. We’ll give you a clear, custom quote after understanding your goals and brand vision."
+      },
+      {
+        id: 4,
+        title: "How long does it take for you to design a logo?",
+        answer: "Most logo design projects take 2-4 weeks. This includes time for concept development, revisions, and final delivery. We want to deliver extraordinary design, which will be memorable and will put your brand to the rightful spot in your industry. Please contact us and we will give you precise time estimate."
+      },
+      {
+        id: 5,
+        title: "Can you redesign my existing logo?",
+        answer: "We DON`T do redesigning of somebody else`s assets. We do everything ourselves, custom-fitted for your business, as we take a big pride in our own work and we can guarantee that you will be 100% satisfied with our design, as you will see it soon in higher client conversions."
+      },
+      {
+        id: 6,
+        title: "Will I own the logo once it’s complete?",
+        answer: "Yes, you’ll receive full ownership and usage rights for the final logo. You’re free to use it across digital, print, and merchandise with no restrictions."
+      },
+      {
+        id: 7,
+        title: "Do you provide logo files in different formats?",
+        answer: "Yes, you’ll receive your final logo in high-resolution formats suitable for web and print — including vector files (SVG, PDF), raster files (PNG, JPG), and any other formats you request."
+      }
     ],
   },
 ];
