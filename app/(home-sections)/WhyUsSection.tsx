@@ -40,14 +40,14 @@ export const WhyUsCard = ({ index, title, description, icon }: WhyUsCardType) =>
       className="overflow-hidden relative flex flex-col gap-2 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20"
     >
       <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
-      <div className="relative flex flex-col items-center justify-center gap-2 z-20">
+      <div className="relative flex flex-col items-start sm:items-center justify-center gap-2 z-20">
         <div className="flex items-center z-30">
           {React.createElement(icon)}
         </div>
-        <h3 className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-center z-20">
+        <h3 className="w-full text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight text-start sm:text-center z-20">
           {title}
         </h3>
-        <p className="text-xl font-light text-[#ffffff] text-center pt-6 z-40">
+        <p className="text-xl font-light text-[#ffffff] text-start sm:text-center pt-4 sm:pt-6 z-40">
           {description}
         </p>
       </div>
