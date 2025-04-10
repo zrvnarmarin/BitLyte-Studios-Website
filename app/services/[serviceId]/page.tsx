@@ -13,7 +13,7 @@ export default function Home({ params }: { params: { serviceId: string } }) {
       <BenefitsSection serviceName={params.serviceId} />
       <StepsSection serviceName={params.serviceId} />
       <TestimonialsSection />
-      <SimilarServicesSection />
+      {/* <SimilarServicesSection /> */}
       <FAQSection serviceName={params.serviceId} />
       <CTASection />
     </main>

@@ -20,7 +20,7 @@ export default function Home() {
       <div className="hidden md:flex">
         <ParagraphSectionThree />
       </div>
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       {/* <AchievementsSection /> */}
       <OurProcessessSection />
       {/* <ParagraphTwo /> */}

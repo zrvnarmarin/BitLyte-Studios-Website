@@ -13,20 +13,20 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
         <div className="order-2 lg:order-1 flex flex-col gap-6">
           {/* <div className="w-64 h-64 md:w-96 md:h-96 absolute left-0 bg-gradient-to-r from-[#0b0b0b] to-[#4F65A9] z-10 blur-[230px]"></div> */}
-          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-start xs:text-center lg:text-start z-30">
+          <h1 className="text-[2.5rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-tight lg:leading-none  text-[#ffffff] font-medium text-center xs:text-center lg:text-start z-30">
             Transform
             <span className="custom-text font-black"> Your Vision </span>
             To Seamless Reality
           </h1>
 
-          <p className="text-xl font-light text-[#ffffff] text-start xs:text-center lg:text-left z-20">
+          <p className="text-xl font-light text-[#ffffff] text-center xs:text-center lg:text-left z-20">
             As a web agency, we build digital products that meet both user needs
             and business goals. Our human-centered design approach ensures
             intuitive and effective results that boost your business.
           </p>
 
           {/* CTA button */}
-          <div className="relative w-full flex justify-start xs:justify-center lg:justify-start pt-4 md:pt-8 z-30">
+          <div className="relative w-full flex justify-center xs:justify-center lg:justify-start pt-4 md:pt-8 z-30">
             <Link href={`/contact`}>
               <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-medium text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
                 <LogoForButtonRotated
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2 relative flex items-center justify-start xs:justify-center">
+        <div className="order-1 lg:order-2 relative flex items-center justify-center xs:justify-center">
           {/* Blur color effect behind the image */}
           <div className="w-64 h-64 lg:w-[18rem] lg:h-[18rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
           <Image
