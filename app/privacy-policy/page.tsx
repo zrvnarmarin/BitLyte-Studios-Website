@@ -17,7 +17,7 @@ export default function PrivacyPolicySection() {
         <div className="overflow-hidden relative rounded-lg p-6 border-[0.5px] border-[#0a2030] z-20 mb-6">
           <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
           <p className="text-xl font-light text-[#ffffff] text-start z-40">
-            BitLyte Studios LTD ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy
+            BitLyte Studios LTD (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy
             explains how we collect, use, and safeguard your personal data when you interact with our website.
           </p>
         </div>

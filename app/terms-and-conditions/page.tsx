@@ -17,8 +17,8 @@ export default function TermsConditionsSection() {
         <div className="overflow-hidden relative rounded-lg p-6 border-[0.5px] border-[#0a2030] z-20 mb-6">
           <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div>
           <p className="text-xl font-light text-[#ffffff] text-start z-40">
-            Welcome to the website of BitLyte Studios LTD ("Company", "we", "our", or "us"). These Terms and Conditions
-            ("Terms") govern your use of our website and services. By accessing or using our services, you agree to
+            Welcome to the website of BitLyte Studios LTD (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). These Terms and Conditions
+            (&quot;Terms&quot;) govern your use of our website and services. By accessing or using our services, you agree to
             these Terms. If you do not agree, please do not use our services.
           </p>
         </div>
@@ -97,7 +97,7 @@ const termsData = [
         Not to reproduce, duplicate, copy, sell, or exploit any part of the website without express written consent.
         <br />
         <br />
-        Not to engage in any activity that disrupts or interferes with the site's security or functionality.
+        Not to engage in any activity that disrupts or interferes with the site&quot;s security or functionality.
       </>
     ),
   },
