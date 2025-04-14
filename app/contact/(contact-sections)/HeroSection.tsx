@@ -33,7 +33,7 @@ export default function HeroSection() {
 
         <p className="text-xl font-light text-[#ffffff] text-center xs:px-4 sm:px-16 md:px-24 lg:px-32 xl:px-72 z-20">
           Send us your project requirements or drop an email at
-          bitlyte-studios@admin.com, and we`&apos;ll get back to you within 12 hours.
+          info@bitlyte-studios.com, and we&apos;ll get back to you within 12 hours.
         </p>
       </div>
 

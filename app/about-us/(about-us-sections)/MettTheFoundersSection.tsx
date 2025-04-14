@@ -48,7 +48,14 @@ export default function MeetTheFoundersSection() {
   );
 }
 
-export const FounderCard = ({ id, name, imgSrc, occupationOne, occupationTwo, linkedinHref }: FounderDataType) => {
+export const FounderCard = ({
+  id,
+  name,
+  imgSrc,
+  occupationOne,
+  occupationTwo,
+  linkedinHref,
+}: FounderDataType) => {
   return (
     <div className="w-full relative overflow-hidden flex flex-col z-20 rounded-lg">
       <div className="w-full relative z-20 rounded-lg py-6 px-6">
@@ -75,16 +82,13 @@ export const FounderCard = ({ id, name, imgSrc, occupationOne, occupationTwo, li
         {/* Social Media Icons and Divider */}
         <div className="flex flex-col gap-2 relative overflow-hidden z-20 mt-6">
           <div className="w-full flex items-center justify-end gap-8">
-            <React.Fragment key={socialMediaIcons[2].id}>
-              <Link href={linkedinHref}>
-                {socialMediaIcons[2].icon()}
-              </Link>
-            </React.Fragment>
-            {/* <React.Fragment key={socialMediaIcons[0].id}>
-              <Link href={socialMediaIcons[0].href}>
-                {socialMediaIcons[0].icon()}
-              </Link>
-            </React.Fragment> */}
+            {socialMediaIcons.map((socialMediaIcon) => (
+              <React.Fragment key={socialMediaIcon.id}>
+                <Link href={socialMediaIcon.href} target="_blank">
+                  {socialMediaIcon.icon()}
+                </Link>
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>
@@ -97,17 +101,17 @@ export const foundersData: FounderDataType[] = [
     id: 1,
     name: "Marin Zrvnar",
     imgSrc: MarinRemovedBgImage,
-    occupationOne: 'Co-Founder',
-    occupationTwo: 'Web Developer/Designer',
-    linkedinHref: 'https://www.linkedin.com/in/marinzrvnar/'
+    occupationOne: "Co-Founder",
+    occupationTwo: "Web Developer/Designer",
+    linkedinHref: "https://www.linkedin.com/in/marinzrvnar/",
   },
   {
     id: 2,
     name: "Igor Ozmec",
     imgSrc: IgorImage,
-    occupationOne: 'Co-Founder',
-    occupationTwo: 'Client Acquisition/Marketing',
-    linkedinHref: 'https://www.linkedin.com/in/igor-ozmec/'
+    occupationOne: "Co-Founder",
+    occupationTwo: "Client Acquisition/Marketing",
+    linkedinHref: "https://www.linkedin.com/in/igor-ozmec/",
   },
 ];
 

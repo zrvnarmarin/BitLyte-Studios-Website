@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="relative w-full mt-20 md:mt-24 pt-16 pb-6 px-8 md:px-14 lg:px-24 xl:px-28 2xl:px-32 3xl:px-72 border-t-[0.] border-[#0a2030] overflow-hidden">
-
       {/* Background gradients */}
       <div className="w-48 h-48 absolute bottom-0 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
       <div className="w-48 h-48 absolute right-32 bg-gradient-to-r from-[#1A9FFF] to-[#1A9FFF] z-10 blur-[230px]"></div>
@@ -33,7 +32,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <ContactIcon />
               <span className="text-sm md:text-lg text-[#ffffff] font-normal md:font-light">
-                +385015896878
+                +385994589030
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -92,9 +91,9 @@ export default function Footer() {
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <EmailIcon />
+              {/* <EmailIcon /> */}
               <span className="text-sm md:text-base text-[#ffffff] font-normal md:font-light text-left">
-                Assington, Sudbury
+                Company Number: 15529598
               </span>
             </div>
           </div>
@@ -107,20 +106,19 @@ export default function Footer() {
               ©2025 BitLyte Studios. All rights reserved.
             </p>
             <p className="text-xs text-[#dddddd] font-light">
-              Developed by Marin Zrvnar
+              Developed by BitLyte Studios
             </p>
           </div>
-          
         </div>
 
         {/* Terms and privacy */}
         <div className="w-full flex flex-col items-start lg:items-center justify-between pt-2 lg:pt-4 border-t-[0.5px] border-[#0a2030]">
           <div className="flex items-center justify-start gap-2 ">
-            <p className="text-xs text-[#dddddd] font-light">
+            <Link href={`/terms-and-conditions`} className="text-xs text-[#dddddd] font-light">
               Terms And Conditions
-            </p>
+            </Link>
             <span className="text-xs text-[#dddddd] font-light">|</span>
-            <p className="text-xs text-[#dddddd] font-light">Privacy Policy</p>
+            <Link href={`/privacy-policy`} className="text-xs text-[#dddddd] font-light">Privacy Policy</Link>
           </div>
         </div>
       </div>
@@ -234,16 +232,16 @@ export const EmailIcon = ({
 };
 
 export const socialMediaIcons = [
-  {
-    id: 1,
-    icon: XIcon,
-    href: "https://www.x.com",
-  },
-  {
-    id: 2,
-    icon: InstagramIcon,
-    href: "https://www.instagram.com",
-  },
+  // {
+  //   id: 1,
+  //   icon: XIcon,
+  //   href: "https://www.x.com",
+  // },
+  // {
+  //   id: 2,
+  //   icon: InstagramIcon,
+  //   href: "https://www.instagram.com",
+  // },
   {
     id: 3,
     icon: LinkedinIcon,

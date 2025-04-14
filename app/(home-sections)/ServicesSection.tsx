@@ -49,7 +49,7 @@ export const ServiceCategoryCard = ({
             {icon()}
           </span>
           <h3 className="w-full flex sm:flex-row items-center justify-start gap-3 sm:gap-4 z-20 text-start">
-            <span className="text-[#ffffff] font-semibold text-3xl sm:text-[28px] md:text-3xl leading-tight">
+            <span className=" text-[32px] leading-[36px] xl:text-[3.3rem] text-start xl:text-center capitalize text-gray-900">
               {title}
             </span>
             <span className="group-hover:scale-105 group-hover:duration-900"></span>

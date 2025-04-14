@@ -51,7 +51,7 @@ export const allServicesArray = [
     serviceImage: LandingPageServiceImage,
     heroSectionHeading: "For Maximum Impact",
     heroSectionSubheading:
-      "Landing page that engage visitors, drive conversions, and support your marketing goals with compelling visuals.",
+      "Landing pages that engage visitors, drive conversions, and support your marketing goals with compelling visuals.",
     benefits: [
       {
         id: 1,
@@ -143,25 +143,25 @@ export const allServicesArray = [
         title:
           "What makes your landing pages different and why should I choose you?",
         answer:
-          "Most of the landing pages are just templates without clear messaging to the final user what does your business do. Today, where tools like Chat GPT are widely used, anyone can type the prompt and generate you a generic messaging for your business. The trouble is, that type of landing pages rarely resonates with your targeted audience and your conversion rates suffer. We combine strategic thinking, custom design, targeted copy and marketing expertise to create landing pages that not only look great, but most importantly, they serve as a powerful sales tool that connects your products with your target audience.",
+          "Most of the landing pages are just templates without clear messaging to the final user what your business does. Today, where tools like Chat GPT are widely used, anyone can type the prompt and generate you a generic messaging for your business. The trouble is, that type of landing pages rarely resonates with your targeted audience and your conversion rates suffer. We combine strategic thinking, custom design, targeted copy and marketing expertise to create landing pages that not only look great, but most importantly, they serve as a powerful sales tool that connects your products with your target audience.",
       },
       {
         id: 2,
-        title: "How long will take you to complete a landing page?",
+        title: "How long will it take you to complete a landing page?",
         answer:
-          "Most landing pages are completed within 2–4 weeks, depending on complexity and client feedback speed. For more detailed, answer, please contact us and we will give you a more precise time estimate.",
+          "Most landing pages are completed within 2–4 weeks, depending on complexity and client feedback speed. For more detailed answer, please contact us and we will give you a more precise time estimate.",
       },
       {
         id: 3,
         title: "How much will I pay for a landing page?",
         answer:
-          "Pricing depends on the scope — copywriting, design complexity, integrations, etc. However, our minimum engagement price is $500.",
+          "Pricing depends on the scope — copywriting, design complexity, integrations, etc. However, our minimum engagement price is $750.",
       },
       {
         id: 4,
         title: "Can I provide you with the copy for my landing page?",
         answer:
-          "Of course! You can send us the fully written copy and we will design your landing page accordingly. Copy is one of the very earliest steps in crafting a good landing page, so if you are confident with it, absolutely. However, you can still fully rely on our guidance, because we are taking the holistic approach to crafting the landing page, and our in-house team can manage all of the aspects of this service, so that you have the best possible outcome.",
+          "Of course! You can send us the fully written copy and we will design your landing page accordingly. Copy is one of the very earliest steps in crafting a good landing page, so if you are confident with it, absolutely. However, you can still fully rely on our guidance, because we are taking the holistic approach to crafting a landing page, and our in-house team can manage all of the aspects of this service, so that you have the best possible outcome.",
       },
       {
         id: 5,
@@ -531,10 +531,10 @@ export const allServicesArray = [
           "We provide strategic copy tailored to your brand, tone of voice, and goals. This can include landing pages, website copy, product descriptions, email sequences, ad copy, and more — depending on your needs.",
       },
       {
-        id: 10,
+        id: 2,
         title: "How much do you charge for the copywriting service?",
         answer:
-          "Price depends on the scope of your needs and complexity. However, our minimum engagement orice is $500.",
+          "Price depends on the scope of your needs and complexity. However, our minimum engagement price is $750.",
       },
       {
         id: 3,
