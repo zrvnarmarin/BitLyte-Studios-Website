@@ -9,8 +9,8 @@ export default function ServicesSection() {
   return (
     <SectionWrapper>
       <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-        Our Services
-      </h2>
+          Our Services
+        </h2>
 
       {/* Service categories cards */}
       <div className="relative w-full grid gric-cols-1 lg:grid-cols-3 items-center gap-6 pt-4 sm:pt-8 md:pt-12">

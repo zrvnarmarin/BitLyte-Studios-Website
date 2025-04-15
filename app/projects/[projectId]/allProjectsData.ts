@@ -17,6 +17,7 @@ export type ProcessStep = {
   id: number;
   name: string;
   goals: Goal[];
+  colorGradient: string;
 };
 
 export type Result = {
@@ -34,8 +35,17 @@ export type Project = {
   };
   services: string[];
   heroImgSrc: string | StaticImport;
+  heroSectionGradient: string;
+  generalGradientStyle: {
+    background: string,
+    WebkitBackgroundClip: string,
+    backgroundClip: string,
+    color: string,
+  },
+  borderColor: string,
   aboutSectionImgSrc?: string | StaticImport;
   projectFacts: ProjectFact[];
+  solutionCardBgColor: string;
   fullProjectDescription: string;
   problem: string;
   solution: string;
@@ -53,8 +63,17 @@ export const allProjectsData: Project[] = [
     },
     services: ["Social Media Management", "Ad Campaign"],
     heroImgSrc: DJDavidMashHeroSectionImg,
+    heroSectionGradient: "bg-gradient-to-r from-[#ffe54f] to-[#ffd700]",
+    generalGradientStyle: {
+      background: "linear-gradient(to right, #ffe54f, #ffd700)",
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      color: "transparent",
+    },
+    borderColor: "#4b4d1e",
     projectFacts: [
       {
+
         id: 1,
         title: "Client",
         description: "DJ David Mash",
@@ -75,17 +94,19 @@ export const allProjectsData: Project[] = [
         description: "Something",
       },
     ],
+    solutionCardBgColor: "#fed702",
     aboutSectionImgSrc: AboutSectionProjectImg,
     fullProjectDescription:
-      "Astra Capital is a forex platform providing instant cryptocurrency withdrawals, excellent trading conditions, and 24/7 live support. It is developed for traders of all levels to offer a trustworthy trading Web3 experience. It is developed for traders of all levels to offer a trustworthy trading Web3 experience.",
+      "David Mash is a rising DJ known for his high-energy sets and genre-blending sound. With his ehnanced digital presence, his brand now matches his talent—captivating audiences, growing his fanbase, and securing more bookings through strategic online storytelling and targeted promotion.",
     problem:
-      "Astra Capital is a forex platform providing instant cryptocurrency withdrawals, excellent trading conditions, and 24/7 live support. It is developed for traders of all levels to offer a trustworthy trading Web3 experience.",
+      "David Mash had the talent but lacked digital visibility. Limited online engagement and unclear branding made it harder to attract new fans and consistent bookings.",
     solution:
-      "Astra Capital is a forex platform providing instant cryptocurrency withdrawals, excellent trading conditions, and 24/7 live support. It is developed for traders of all levels to offer a trustworthy trading Web3 experience.",
+      "We revamped his branding, optimized social content, and launched targeted campaigns—boosting engagement, increasing bookings, and growing his follower base.",
     process: [
       {
         id: 1,
         name: "Discovery",
+        colorGradient: "edff272b",
         goals: [
           {
             id: 1,
@@ -108,6 +129,7 @@ export const allProjectsData: Project[] = [
       {
         id: 2,
         name: "Design",
+        colorGradient: "edff272b",
         goals: [
           {
             id: 1,
@@ -130,6 +152,7 @@ export const allProjectsData: Project[] = [
       {
         id: 3,
         name: "Optimization",
+        colorGradient: "edff272b",
         goals: [
           {
             id: 1,
@@ -151,6 +174,7 @@ export const allProjectsData: Project[] = [
       },
       {
         id: 4,
+        colorGradient: "edff272b",
         name: "Tracking Results",
         goals: [
           {
@@ -206,6 +230,14 @@ export const allProjectsData: Project[] = [
       "Website Development", "UX/UI Design"
     ],
     heroImgSrc: DJDavidMashHeroSectionImg, // Example image file path
+    heroSectionGradient: "bg-gradient-to-r from-[#f5f5f5] to-[#ffffff]",
+    generalGradientStyle: {
+      background: "linear-gradient(to right, #f5f5f5, #ffffff)",
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      color: "transparent",
+    },
+    borderColor: "#f7f7f2",
     projectFacts: [
       {
         id: 1,
@@ -228,6 +260,7 @@ export const allProjectsData: Project[] = [
         description: "Something",
       },
     ],
+    solutionCardBgColor: "#f5f5f5",
     aboutSectionImgSrc: AboutSectionProjectImg, // Example image file path
     fullProjectDescription:
       "Perina Kulic is a seasoned web copywriter specializing in crafting compelling and conversion-focused content. She has successfully helped brands improve their digital presence with carefully tailored website copy, SEO strategies, and social media content that resonates with their target audience. Perina's expertise spans across diverse industries, creating narratives that not only inform but also engage customers to take action.",
@@ -239,6 +272,7 @@ export const allProjectsData: Project[] = [
       {
         id: 1,
         name: "Research & Discovery",
+        colorGradient: "#fcffd72b",
         goals: [
           { id: 1, name: "Brand Analysis and Audience Insights" },
           { id: 2, name: "Competitive Content Review" },
@@ -249,6 +283,7 @@ export const allProjectsData: Project[] = [
       {
         id: 2,
         name: "Content Strategy & Thinking",
+        colorGradient: "#fcffd72b",
         goals: [
           { id: 1, name: "Message Framework Creation" },
           { id: 2, name: "SEO Strategy Implementation" },
@@ -259,6 +294,7 @@ export const allProjectsData: Project[] = [
       {
         id: 3,
         name: "Copywriting & Content Creation",
+        colorGradient: "#fcffd72b",
         goals: [
           { id: 1, name: "Website Copy (Homepage, About, Services)" },
           { id: 2, name: "Blog Posts and Articles" },
@@ -269,6 +305,7 @@ export const allProjectsData: Project[] = [
       {
         id: 4,
         name: "Optimization & Analytics",
+        colorGradient: "#fcffd72b",
         goals: [
           { id: 1, name: "A/B Testing for Copy" },
           { id: 2, name: "Continuous SEO Optimization" },

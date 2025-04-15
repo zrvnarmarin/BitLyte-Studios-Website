@@ -114,11 +114,11 @@ export default function Footer() {
         {/* Terms and privacy */}
         <div className="w-full flex flex-col items-start lg:items-center justify-between pt-2 lg:pt-4 border-t-[0.5px] border-[#0a2030]">
           <div className="flex items-center justify-start gap-2 ">
-            <Link href={`/terms-and-conditions`} className="text-xs text-[#dddddd] font-light">
+            <Link href={`/terms-and-conditions`} className="text-xs text-[#dddddd] font-light hover:text-[#1a9fff]">
               Terms And Conditions
             </Link>
             <span className="text-xs text-[#dddddd] font-light">|</span>
-            <Link href={`/privacy-policy`} className="text-xs text-[#dddddd] font-light">Privacy Policy</Link>
+            <Link href={`/privacy-policy`} className="text-xs text-[#dddddd] font-light hover:text-[#1a9fff]">Privacy Policy</Link>
           </div>
         </div>
       </div>

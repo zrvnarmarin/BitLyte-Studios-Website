@@ -20,7 +20,7 @@ export default function AboutProject({ projectName }: { projectName: string }) {
           {selectedProject?.services.map((service) => (
             <div
               key={service}
-              className="flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full px-6 py-2"
+              className={`flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[${selectedProject?.borderColor}] z-20 rounded-full px-6 py-2`}
             >
               <span className="text-base xs:text-lg font-light text-[#ffffff] text-center">
                 {service}

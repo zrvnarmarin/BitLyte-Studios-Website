@@ -22,6 +22,10 @@ export default function StepsSection({ projectName }: { projectName: string }) {
             id={step.id}
             name={step.name}
             goals={step.goals}
+            colorGradient={step.colorGradient}
+            test={selectedProject?.name}
+            generalGradientStyle={selectedProject?.generalGradientStyle}
+            borderColor={selectedProject?.borderColor}
           />
         ))}
       </div>
@@ -33,10 +37,24 @@ export const ProcessCard = ({
   id,
   name,
   goals,
+  test,
+  generalGradientStyle,
+  borderColor,
+  colorGradient
+
 }: {
   id?: number;
   name?: string;
   goals: { id: number; name: string }[];
+  test: string;
+  generalGradientStyle: {
+    background: string,
+    WebkitBackgroundClip: string,
+    backgroundClip: string,
+    color: string,
+  },
+  borderColor: string;
+  colorGradient: string;
 }) => {
   return (
     <div key={id} className={`relative overflow-hidden`}>
@@ -45,12 +63,13 @@ export const ProcessCard = ({
       {/* <div className="w-32 h-32 absolute bottom-0 top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[130px] pointer-events-none"></div> */}
 
       <div className="relative w-full flex flex-col items-center justify-start lg:justify-center z-20">
-        <span className="custom-text-yellow font-black text-7xl  z-20">
+        <span style={generalGradientStyle} className="font-black text-7xl  z-20">
           {id}.
         </span>
         <span className="text-[#ffffff] font-semibold text-3xl text-center x z-20">
           {name}
         </span>
+        <p className="text-3xl text-[#ffffff]">{test} TEST TEST</p>
       </div>
 
       {/* Vertical line */}
@@ -60,7 +79,7 @@ export const ProcessCard = ({
 
       {/* Goals heading */}
       <div className="w-full relative flex flex-col gap-2">
-        <div className="w-full bg-gradient-to-t from-[#0b0b0b] to-[#edff272b] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full  px-4 py-2">
+        <div className={`w-full bg-gradient-to-t from-[#0b0b0b] to-[${colorGradient}] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full px-4 py-2`}>
           <span className="">Leading Step</span>
         </div>
       </div>
