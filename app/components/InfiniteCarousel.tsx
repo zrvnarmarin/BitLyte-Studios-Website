@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import "../../public/styles/infiniteCarousel.css";
 import { TestimonialCard } from "./TestimonialsSection";
 import DjDavidMashTestimonialThumbnail from '../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Testimonial_Thumbnail.png'
-import PerinaKulicTestimonialThumbnail from '../../public/images/projects/2_perina_kulic/Perina_Kulic_Testimonial_Thumbnail.png'
+import PerinaKulicTestimonialThumbnail from '../../public/images/projects/2_perina_kulic/Perina_Kulic_Thumbnail_Image.png'
 import BitXTinTestimonialThumbnail from '../../public/images/projects/Bit_X_Tin.png'
+import JaneMcKellenTestimonialThumbnail from "../../public/images/projects/2_perina_kulic/Jane_McKellen_Testimonial_Thumbnail.png"
 import { StaticImageData } from "next/image";
 
 export const InfiniteCarousel = () => {
@@ -47,24 +48,31 @@ export const testimonials: TestimonialCardProps[] = [
   {
     id: 1,
     name: "Perina Kulić",
-    companyName: "CEO Of Spell Prijevodi",
+    companyName: "Freelance Copywriter",
     testimonialText: "I was amazed by the innovative solutions and suggestions of the BitLyte agency. All hands were on deck, proving that they're all in each step of the way, which is a really refreshing approach. They truly are masters of visually striking and effective design, as well as constructive communication and support.",
     imageSrc: PerinaKulicTestimonialThumbnail, 
   },
   {
     id: 2,
-    name: "DJ David Mash",
-    companyName: "DJ David Mash",
-    testimonialText: "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly! I will definetely work with them again.",
+    name: "David Mašić",
+    companyName: "DJ",
+    testimonialText: "Before working with BitLyte Studios, my Instagram was not growing as much as I expected it to. They completely turned it around. My follower count grew with real fans, my posts actually reached the right audience, and I started getting DMs from promoters. Now, my page isn’t just for show — it’s bringing me bookings. Highly recommend!",
     imageSrc: DjDavidMashTestimonialThumbnail, 
   },
   {
     id: 3,
-    name: "Bit X Tin",
+    name: "Tin Šarić",
     companyName: "CEO of BitX",
-    testimonialText: "I was shockingly surprised by the delivery of BitLyte agency. They were super correct and did the job just perfectly! I will definetely work with them again.",
+    testimonialText: "We use BitLyte Studios all the time at BitX, and they never disappoint. Their commitment to making sure we’re happy with the end result is impressive, and they’ve got the skills to back it up. It’s always a great experience working with them!",
     imageSrc: BitXTinTestimonialThumbnail, 
   },
+  {
+    id: 4,
+    name: "Jane McKellen",
+    companyName: "Writer And Translator",
+    testimonialText: "Working with this team was exactly what I needed. They truly understood my vision and brought it to life with a website that feels like me. I’ve already seen more interest in my services, and clients constantly compliment the site. I couldn't be happier.",
+    imageSrc: JaneMcKellenTestimonialThumbnail
+  }
 ];
 
 export type TestimonialCardProps = {

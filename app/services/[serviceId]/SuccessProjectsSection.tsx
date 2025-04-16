@@ -3,13 +3,26 @@ import Image from "next/image";
 import "../../../public/test.css";
 import SectionWrapper from "../../components/SectionWrapper";
 import Link from "next/link";
-import { formatString, LogoForButtonRotated } from '@/app/services/[serviceId]/HeroSection';
-import { projectsThumbnailData, ProjectThumbnailDataProps } from './../../projects/projectsThumbnailData';
+import {
+  formatString
+} from "@/app/services/[serviceId]/HeroSection";
+import {
+  projectsThumbnailData,
+  ProjectThumbnailDataProps,
+} from "./../../projects/projectsThumbnailData";
 
-export default function SuccessProjectsSection({ serviceName }: { serviceName: string }) {
-  // website-development
-  const successfullProjects = projectsThumbnailData.filter(project => project.services.includes(formatString(serviceName)))
- console.log(successfullProjects)
+export default function SuccessProjectsSection({
+  serviceName,
+}: {
+  serviceName: string;
+}) {
+  const successfullProjects = projectsThumbnailData.filter((project) =>
+    project.services.includes(formatString(serviceName))
+  );
+
+  // Check if successfull projects array is empty - if is: dont show section, if it isn`t, show the section
+  if (successfullProjects.length === 0) return null;
+
   return (
     <SectionWrapper>
       <div className="w-full flex items-center justify-between">

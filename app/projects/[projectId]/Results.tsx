@@ -24,6 +24,7 @@ export default function Results({ projectName }: { projectName: string }) {
             fact={result.fact}
             heroSectionGradient={selectedProject?.heroSectionGradient}
             generalGradientStyle={selectedProject?.generalGradientStyle}
+            borderColor={selectedProject?.borderColor}
           />
         ))}
       </div>
@@ -36,11 +37,13 @@ export const ResultCard = ({
   stat,
   fact,
   heroSectionGradient,
-  generalGradientStyle
+  generalGradientStyle,
+  borderColor
 }: ProcessessStepType) => {
   return (
     <div
       key={id}
+      style={{ borderColor: borderColor }}
       className={`relative overflow-hidden flex-1 px-6 py-8 rounded-lg border-[0.5px] border-[#4b4d1e]`}
     >
       {/* Blur background */}
@@ -72,5 +75,6 @@ export type ProcessessStepType = {
     WebkitBackgroundClip: string,
     backgroundClip: string,
     color: string,
-  }
+  };
+  borderColor: string;
 };

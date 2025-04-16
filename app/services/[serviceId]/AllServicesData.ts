@@ -681,9 +681,39 @@ export const allServicesArray = [
     faq: [
       {
         id: 1,
-        title: "What technologies do you use for frontend development?",
+        title: "How long will it take to see results from social media marketing?",
         answer:
-          "We use modern technologies like React, Vue.js, and Angular to build high-performance frontend applications.",
+          "Results vary depending on your goals, audience, and platform, but most clients start seeing meaningful engagement improvements within 4–8 weeks. For faster traction, we can explore paid promotion strategies.",
+      },
+      {
+        id: 2,
+        title: "How much will I pay for social media marketing?",
+        answer:
+          "Pricing depends on your needs—platforms managed, content volume, ad spend, and strategy depth. Our minimum monthly engagement starts at $300. Contact us for a tailored quote.",
+      },
+      {
+        id: 3,
+        title: "Will you handle everything, or do I need to provide content?",
+        answer:
+          "We offer full-service management, including content creation, scheduling, and analytics. However, if you prefer to stay involved or have brand assets to share, we’re happy to collaborate.",
+      },
+      {
+        id: 4,
+        title: "Which platforms do you manage?",
+        answer:
+          "We work with all major platforms including Instagram, Facebook, LinkedIn and X(formerly Twitter). We’ll recommend the best ones based on your audience and business goals.",
+      },
+      {
+        id: 5,
+        title: "Do you run paid ad campaigns too?",
+        answer:
+          'Yes! We create and manage paid ad campaigns tailored to your objectives—whether it`s brand awareness, lead generation, or conversions. You can see our other service named "Ad Campaigns" to see more info about it.',
+      },
+      {
+        id: 6,
+        title: "Will I get reports on performance?",
+        answer:
+          "Definitely. We provide regular performance reports with clear insights on reach, engagement, and growth so you always know how your brand is doing online.",
       },
     ],
   },

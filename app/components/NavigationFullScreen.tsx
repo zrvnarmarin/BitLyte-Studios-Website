@@ -90,7 +90,7 @@ export const ContactInfoSection = () => {
         <div className="flex items-center gap-2">
           <ContactIcon />
           <span className="text-base text-[#ffffff] font-normal">
-            +385015896878
+            +385994589030
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -149,10 +149,10 @@ export const navbarLinks = [
     name: "Services",
     link: "/services",
   },
-  // {
-  //   name: "Projects",
-  //   link: "/projects",
-  // },
+  {
+    name: "Projects",
+    link: "/projects",
+  },
   {
     name: "About",
     link: "/about-us",

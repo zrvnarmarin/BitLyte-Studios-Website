@@ -242,7 +242,7 @@ export const allProjectsData: Project[] = [
       backgroundClip: "text",
       color: "transparent",
     },
-    borderColor: "#f7f7f2",
+    borderColor: "#eaeae8",
     projectFacts: [
       {
         id: 1,
@@ -277,7 +277,7 @@ export const allProjectsData: Project[] = [
       {
         id: 1,
         name: "Research & Discovery",
-        colorGradient: "#fcffd72b",
+        colorGradient: "#f5f5f5",
         goals: [
           { id: 1, name: "Brand Analysis and Audience Insights" },
           { id: 2, name: "Competitive Content Review" },
@@ -288,7 +288,7 @@ export const allProjectsData: Project[] = [
       {
         id: 2,
         name: "Content Strategy & Thinking",
-        colorGradient: "#fcffd72b",
+        colorGradient: "#f5f5f5",
         goals: [
           { id: 1, name: "Message Framework Creation" },
           { id: 2, name: "SEO Strategy Implementation" },
@@ -299,7 +299,7 @@ export const allProjectsData: Project[] = [
       {
         id: 3,
         name: "Copywriting & Content Creation",
-        colorGradient: "#fcffd72b",
+        colorGradient: "#f5f5f5",
         goals: [
           { id: 1, name: "Website Copy (Homepage, About, Services)" },
           { id: 2, name: "Blog Posts and Articles" },
@@ -310,7 +310,7 @@ export const allProjectsData: Project[] = [
       {
         id: 4,
         name: "Optimization & Analytics",
-        colorGradient: "#fcffd72b",
+        colorGradient: "#f5f5f5",
         goals: [
           { id: 1, name: "A/B Testing for Copy" },
           { id: 2, name: "Continuous SEO Optimization" },

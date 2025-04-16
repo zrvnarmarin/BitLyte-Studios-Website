@@ -3,19 +3,23 @@ import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import { allProjectsData } from "./allProjectsData";
 
-export default function ProblemAndSolution({ projectName }: { projectName: string; }) {
+export default function ProblemAndSolution({
+  projectName,
+}: {
+  projectName: string;
+}) {
   const selectedProject = allProjectsData.find(
     (project) => projectName === project.href
   );
 
   const solutionCardBgClass = selectedProject?.solutionCardBgColor
-  ? `bg-[${selectedProject.solutionCardBgColor}]`
-  : '';
+    ? `bg-[${selectedProject.solutionCardBgColor}]`
+    : "";
 
   return (
     <SectionWrapper>
       <div className="relative grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-6 rounded-lg pt-4 sm:pt-8 md:pt-12">
-        <div className="flex flex-col bg-[#0b0c0c] px-4 rounded-lg">
+        <div className="w-full h-full border-[0.5px] border-[#ffffff] flex flex-col bg-[#0b0c0c] px-4 py-8 rounded-lg">
           <div className="relative flex flex-row items-center justify-between gap-4 text-base text-[#eeeeee] font-normal text-start rounded-lg z-20">
             <div className="relative flex gap-2 items-center z-20 text-center">
               <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#ffffff] text-start z-20">
@@ -32,7 +36,10 @@ export default function ProblemAndSolution({ projectName }: { projectName: strin
           </p>
         </div>
 
-        <div className={`flex flex-col bg-[${selectedProject?.solutionCardBgColor}] px-4 py-8 rounded-lg`}>
+        <div
+          style={{ backgroundColor: selectedProject?.solutionCardBgColor }}
+          className={`flex flex-col bg-red-400  px-4 py-8 rounded-lg`}
+        >
           <div className="relative flex flex-row items-center justify-between gap-4 text-base text-[#eeeeee] font-normal text-start rounded-lg z-20">
             <div className="relative flex gap-2 items-center z-20 text-center">
               <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#000000] text-start z-20">

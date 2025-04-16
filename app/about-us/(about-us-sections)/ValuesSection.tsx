@@ -13,7 +13,7 @@ export default function WhyUsSection() {
 
       <div className="w-32 h-32 absolute top-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
 
-      {/* Values section */}
+      {/* Values cards section */}
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 sm:pt-8 md:pt-12">
         {/* <div className="w-24 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div> */}
 
@@ -27,36 +27,13 @@ export default function WhyUsSection() {
           />
         ))}
       </div>
-
-      {/* CTA section */}
-      {/* <div className="relative w-full flex justify-center pt-4 md:pt-12 z-30">
-        <Link href={`/services`}>
-          <button className="relative overflow-hidden w-fit flex items-center gap-2 py-3 sm:py-4 px-10 sm:px-12 3xl:py-5 3xl:px-16 text-[#000000] bg-[#ffffff]  rounded-full font-normal text-lg sm:text-2xl md:text-2xl 3xl:text-3xl shadow-[0_0_15px_0_rgba(255,255,255,1)] hover:shadow-[0_0_25px_0_rgba(255,255,255,1)] duration-300">
-            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            See Our Services
-          </button>
-        </Link>
-      </div> */}
-
-      {/* Paragraph section*/}
-      {/* <div className="relative w-full z-20 py-4 sm:py-8 md:py-6 xl:px-36 pt-16 md:pt-16 lg:py-24 pb-8 md:pb-8 lg:pb-2">
-        <h3 className="text-3xl xs:text-4xl sm:text-5xl text-[#ffffff] font-medium text-center xs:font-normal z-20 relative">
-          At the end of the day, we&apos;re more than just an agency -{" "}
-          <span className="custom-text">we&apos;re your partner</span>, dedicated to{" "}
-          <span className="custom-text">bringing your vision to life.</span>
-        </h3>
-        Blur background effects
-        <div className="w-48 h-24 absolute right-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        <div className="w-48 h-24 absolute left-0 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-        <div className="w-96 h-24 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#1A9FFF] to-[#0086E6] z-10 blur-[230px] pointer-events-none"></div>
-      </div> */}
     </SectionWrapper>
   );
 }
 
 export const ValueCard = ({ title, description, icon }: ValueType) => {
   return (
-    <div className="relative overflow-hidden flex flex-col xl:flex-row gap-6 rounded-lg p-4 py-8 border-[0.5px] border-[#0a2030] z-20">
+    <div className="relative overflow-hidden flex flex-col xl:flex-row gap-6 rounded-lg px-6 py-8 border-[0.5px] border-[#0a2030] z-20">
       <div className="flex items-center justify-center xs:justify-start sm:justify-center">
         {icon()}
       </div>

@@ -106,7 +106,7 @@ export const ClientFactCard = ({
   borderColor
 }: ClientFactCardProps) => {
   return (
-    <div
+    <div style={{ borderColor: borderColor}}
       className={`overflow-hidden relative flex flex-col gap-2 rounded-lg p-6 border-[0.5px] border-[${borderColor}] z-20`}
     >
       <div className="relative flex flex-col items-start justify-center z-20">

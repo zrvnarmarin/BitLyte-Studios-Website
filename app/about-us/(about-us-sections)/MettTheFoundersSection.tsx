@@ -7,8 +7,6 @@ import "../../../public/test.css";
 import { socialMediaIcons } from "@/app/components/Footer";
 import Link from "next/link";
 
-// image enchancer: https://letsenhance.io/boost for team images i ovaj:https://pixlr.com/express/
-
 export default function MeetTheFoundersSection() {
   return (
     <SectionWrapper>
