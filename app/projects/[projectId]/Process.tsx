@@ -2,11 +2,10 @@ import React from "react";
 import SectionWrapper from "@/app/components/SectionWrapper";
 import "../../../public/test.css";
 import { allProjectsData } from "./allProjectsData";
-import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
 export default function StepsSection({ projectName }: { projectName: string }) {
   const selectedProject = allProjectsData.find(
-    (project) => formatString(projectName) === project.name
+    (project) => projectName === project.href
   );
   return (
     <SectionWrapper>
@@ -69,7 +68,7 @@ export const ProcessCard = ({
         <span className="text-[#ffffff] font-semibold text-3xl text-center x z-20">
           {name}
         </span>
-        <p className="text-3xl text-[#ffffff]">{test} TEST TEST</p>
+        <p className="text-3xl text-[#ffffff]"></p>
       </div>
 
       {/* Vertical line */}
@@ -79,7 +78,7 @@ export const ProcessCard = ({
 
       {/* Goals heading */}
       <div className="w-full relative flex flex-col gap-2">
-        <div className={`w-full bg-gradient-to-t from-[#0b0b0b] to-[${colorGradient}] flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full px-4 py-2`}>
+        <div className={`w-full ${colorGradient} flex gap-2 items-center justify-center text-[#ffffff] font-medium text-xl lg:text-xl border-[0.5px] border-[#4b4d1e] z-20 rounded-full px-4 py-2`}>
           <span className="">Leading Step</span>
         </div>
       </div>

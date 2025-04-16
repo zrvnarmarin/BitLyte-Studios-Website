@@ -3,11 +3,10 @@ import Image, { StaticImageData } from "next/image";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import { allProjectsData } from "./allProjectsData";
-import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
 export default function AboutProject({ projectName }: { projectName: string }) {
   const selectedProject = allProjectsData.find(
-    (project) => formatString(projectName) === project.name
+    (project) => projectName === project.href
   );
 
   return (

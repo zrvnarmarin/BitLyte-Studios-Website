@@ -5,6 +5,7 @@ import FAQSection from "./FAQSection";
 import TestimonialsSection from "@/app/components/TestimonialsSection";
 import SimilarServicesSection from "./SimilarServicesSection";
 import CTASection from "@/app/components/CTASection";
+import SuccessProjectsSection from "./SuccessProjectsSection";
 
 export default function Home({ params }: { params: { serviceId: string } }) {
   return (
@@ -12,6 +13,7 @@ export default function Home({ params }: { params: { serviceId: string } }) {
       <HeroSection serviceName={params.serviceId} />
       <BenefitsSection serviceName={params.serviceId} />
       <StepsSection serviceName={params.serviceId} />
+      <SuccessProjectsSection serviceName={params.serviceId} />
       <TestimonialsSection />
       {/* <SimilarServicesSection /> */}
       <FAQSection serviceName={params.serviceId} />

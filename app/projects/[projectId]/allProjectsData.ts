@@ -1,6 +1,8 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import DJDavidMashHeroSectionImg from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png"
 import AboutSectionProjectImg from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
+import JaneMcKellenThumbnailImage from "../../../public/images/projects/2_perina_kulic/Jane_McKellen_Thumbnail_Image.png"
+import JaneMcKellenHeroSectionImage from "../../../public/images/projects/2_perina_kulic/janemckellenherosectionimage.png"
 
 export type ProjectFact = {
   id: number;
@@ -28,6 +30,7 @@ export type Result = {
 
 export type Project = {
   id: number;
+  href: string;
   name: string;
   subtitle: {
     bold: string;
@@ -56,6 +59,7 @@ export type Project = {
 export const allProjectsData: Project[] = [
   {
     id: 1,
+    href: 'dj-david-mash',
     name: "Dj David Mash",
     subtitle: {
       bold: "Mash Up Your Event",
@@ -221,7 +225,8 @@ export const allProjectsData: Project[] = [
   },
   {
     id: 2,
-    name: "Perina Kulic",
+    href: 'jane-mckellen',
+    name: "Jane McKellen",
     subtitle: {
       bold: "Crafting Words for the Web",
       normal: "Your Brand, Your Voice",
@@ -229,7 +234,7 @@ export const allProjectsData: Project[] = [
     services: [
       "Website Development", "UX/UI Design"
     ],
-    heroImgSrc: DJDavidMashHeroSectionImg, // Example image file path
+    heroImgSrc: JaneMcKellenHeroSectionImage, // Example image file path
     heroSectionGradient: "bg-gradient-to-r from-[#f5f5f5] to-[#ffffff]",
     generalGradientStyle: {
       background: "linear-gradient(to right, #f5f5f5, #ffffff)",
@@ -242,7 +247,7 @@ export const allProjectsData: Project[] = [
       {
         id: 1,
         title: "Client",
-        description: "Perina Kulic",
+        description: "Jane McKellen",
       },
       {
         id: 2,
@@ -261,13 +266,13 @@ export const allProjectsData: Project[] = [
       },
     ],
     solutionCardBgColor: "#f5f5f5",
-    aboutSectionImgSrc: AboutSectionProjectImg, // Example image file path
+    aboutSectionImgSrc: JaneMcKellenThumbnailImage, 
     fullProjectDescription:
-      "Perina Kulic is a seasoned web copywriter specializing in crafting compelling and conversion-focused content. She has successfully helped brands improve their digital presence with carefully tailored website copy, SEO strategies, and social media content that resonates with their target audience. Perina's expertise spans across diverse industries, creating narratives that not only inform but also engage customers to take action.",
+      "Jane McKellen is renowned for her skillful narrative, elegant vocabulary, and versatility in a variety of areas. Jane has improved her web presence and now presents her brand with the same professionalism that she applies to every job, which has increased visibility, drawn in high-caliber clients, and strengthened her standing as a leading provider of writing services.",
     problem:
-      "The client, a tech startup, lacked a clear brand voice and consistent messaging across their website, social media channels, and digital ads, which resulted in low user engagement and conversion rates.",
+      "Jane suffered with limited online traction despite her talent and varied portfolio. Missed chances and fewer high-value client inquiries resulted from her inconsistent brand and website, which did not adequately represent the range of her capabilities.",
     solution:
-      "Through a comprehensive audit of the client's existing content and a deep understanding of their target market, Perina developed a unique brand voice and optimized their website content for both SEO and user engagement. By aligning messaging with the startup's core values and focusing on customer pain points, the solution led to a significant increase in organic traffic and user interaction.",
+      "We transformed her online presence into a powerful business tool by redefining her brand identity, developing a modern, content-driven website, and putting in place a multi-channel strategy centered on boosting client conversion, SEO optimization, and trust-building.",
     process: [
       {
         id: 1,

@@ -2,16 +2,15 @@ import React from "react";
 import SectionWrapper from "../../components/SectionWrapper";
 import "../../../public/test.css";
 import { allProjectsData } from "./allProjectsData";
-import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
-export default function ProblemAndSolution({
-  projectName,
-}: {
-  projectName: string;
-}) {
+export default function ProblemAndSolution({ projectName }: { projectName: string; }) {
   const selectedProject = allProjectsData.find(
-    (project) => formatString(projectName) === project.name
+    (project) => projectName === project.href
   );
+
+  const solutionCardBgClass = selectedProject?.solutionCardBgColor
+  ? `bg-[${selectedProject.solutionCardBgColor}]`
+  : '';
 
   return (
     <SectionWrapper>
@@ -33,7 +32,7 @@ export default function ProblemAndSolution({
           </p>
         </div>
 
-        <div className={`flex flex-col bg-[${selectedProject?.solutionCardBgColor}] px-4 py-8 rounded-lg border-[0.5px] border-[#ffffff]`}>
+        <div className={`flex flex-col bg-[${selectedProject?.solutionCardBgColor}] px-4 py-8 rounded-lg`}>
           <div className="relative flex flex-row items-center justify-between gap-4 text-base text-[#eeeeee] font-normal text-start rounded-lg z-20">
             <div className="relative flex gap-2 items-center z-20 text-center">
               <span className="text-3xl xs:text-4xl md:text-3xl lg:text-4xl text-[#000000] text-start z-20">

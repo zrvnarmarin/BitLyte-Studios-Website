@@ -1,35 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import "../../public/test.css";
-import SectionWrapper from "../components/SectionWrapper";
+import "../../../public/test.css";
+import SectionWrapper from "../../components/SectionWrapper";
 import Link from "next/link";
-import { LogoForButtonRotated } from "../services/[serviceId]/HeroSection";
-import {
-  projectsThumbnailData,
-  ProjectThumbnailDataProps,
-} from "../projects/projectsThumbnailData";
+import { formatString, LogoForButtonRotated } from '@/app/services/[serviceId]/HeroSection';
+import { projectsThumbnailData, ProjectThumbnailDataProps } from './../../projects/projectsThumbnailData';
 
-export default function ProjectsSection() {
+export default function SuccessProjectsSection({ serviceName }: { serviceName: string }) {
+  // website-development
+  const successfullProjects = projectsThumbnailData.filter(project => project.services.includes(formatString(serviceName)))
+ console.log(successfullProjects)
   return (
     <SectionWrapper>
       <div className="w-full flex items-center justify-between">
         <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
-          Our Latest Work
+          See Relevant Projects
         </h2>
-
-        <div className="hidden relative w-full xl:flex justify-end z-30">
-          <Link
-            href={`/projects`}
-            className="relative overflow-hidden w-fit flex items-center gap-2 py-4 px-12 text-[#000000] bg-[#ffffff] rounded-full font-normal text-2xl xs:text-2xl sm:text-2xl md:text-2xl shadow-[0_0_10px_0_rgba(255,255,255,1)] hover:shadow-[0_0_20px_0_rgba(255,255,255,1)] duration-300"
-          >
-            <LogoForButtonRotated fillColor="#000000" width={18} height={20} />
-            More Projects
-          </Link>
-        </div>
       </div>
 
-      <div className="w-full flex flex-col md:flex-row gap-6 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
-        {projectsThumbnailData.map((project) => (
+      <div className="w-full flex flex-col lg:flex-row gap-6 bg-[#0b0b0b] pt-4 sm:pt-8 md:pt-12">
+        {successfullProjects.map((project) => (
           <ProjectCard
             key={project.id}
             id={project.id}
@@ -60,8 +50,7 @@ export const ProjectCard = ({
     <Link
       href={`/projects${href}`}
       className="w-full relative overflow-hidden flex flex-col rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]"
-    > 
-      <p className="text-2xl text-[#ffffff]">{`/projects${href}`}</p>
+    >
       {/* Blur gradients */}
       <div className="w-48 h-48 lg:w-96 lg:h-96 absolute top-0 bottom-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>
       <div className="w-96 h-96 absolute left-0 right-0 bg-gradient-to-r from-[#1a4869] to-[#002139] z-10 blur-[230px]"></div>

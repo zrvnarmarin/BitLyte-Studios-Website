@@ -3,13 +3,12 @@ import "../../../public/test.css";
 import Image, { StaticImageData } from "next/image";
 import HeroSectionWrapper from "../../components/HeroSectionWrapper";
 import Link from "next/link";
-import HeroSectionImage from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png";
 import { allProjectsData } from "./allProjectsData";
-import { formatString } from "@/app/services/[serviceId]/HeroSection";
 
 export default function HeroSection({ projectName }: { projectName: string }) {
+  console.log(projectName)
   const selectedProject = allProjectsData.find(
-    (project) => formatString(projectName) === project.name
+    (project) => projectName === project.href
   );
 
   return (
@@ -81,7 +80,8 @@ export default function HeroSection({ projectName }: { projectName: string }) {
             title={fact.title}
             description={fact.description}
             heroSectionGradient={selectedProject?.heroSectionGradient}
-            generalGradientStyle={selectedProject.generalGradientStyle}
+            generalGradientStyle={selectedProject?.generalGradientStyle}
+            borderColor={selectedProject?.borderColor}
           />
         ))}
       </div>
@@ -103,10 +103,11 @@ export const ClientFactCard = ({
   description,
   heroSectionGradient,
   generalGradientStyle,
+  borderColor
 }: ClientFactCardProps) => {
   return (
     <div
-      className={`overflow-hidden relative flex flex-col gap-2 rounded-lg p-6 border-[0.5px] border-[#4b4d1e] z-20`}
+      className={`overflow-hidden relative flex flex-col gap-2 rounded-lg p-6 border-[0.5px] border-[${borderColor}] z-20`}
     >
       <div className="relative flex flex-col items-start justify-center z-20">
         <p
@@ -135,4 +136,5 @@ export type ClientFactCardProps = {
     backgroundClip: string;
     color: string;
   };
+  borderColor: string;
 };
