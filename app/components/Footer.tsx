@@ -70,7 +70,7 @@ export default function Footer() {
               <div className="w-full flex lg:items-center lg:justify-center gap-8">
                 {socialMediaIcons.map((socialMediaIcon) => (
                   <React.Fragment key={socialMediaIcon.id}>
-                    <Link href={socialMediaIcon.href}>
+                    <Link href={socialMediaIcon.href} target="_blank">
                       {socialMediaIcon.icon()}
                     </Link>
                   </React.Fragment>
@@ -245,7 +245,7 @@ export const socialMediaIcons = [
   {
     id: 3,
     icon: LinkedinIcon,
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/company/bitlytestudios/",
   },
 ];
 

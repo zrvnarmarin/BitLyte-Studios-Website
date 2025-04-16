@@ -5,7 +5,7 @@ import SectionWrapper from "@/app/components/SectionWrapper";
 export default function AfterProposalSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+      <h2 className="w-full text-[40px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal capitalize text-start z-20">
         Next steps
       </h2>
 

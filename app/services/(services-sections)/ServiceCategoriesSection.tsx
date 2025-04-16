@@ -80,7 +80,7 @@ export type ServiceType = {
 export const serviceCategories = [
   {
     id: 1,
-    serviceCategoryTitle: "Web development",
+    serviceCategoryTitle: "Web Development",
     services: [
       {
         id: 1,

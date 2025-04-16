@@ -8,7 +8,7 @@ import "../../public/test.css";
 export default function PromisesSection() {
   return (
     <SectionWrapper>
-      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal text-start z-20">
+      <h2 className="w-full text-[35px] sm:text-[44px] lg:text-5xl text-[#ffffff] font-medium xs:font-normal capitalize text-start z-20">
         What we promise
       </h2>
 

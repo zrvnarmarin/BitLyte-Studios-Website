@@ -12,7 +12,7 @@ export default function HeroSection() {
         Success starts here
       </p>
 
-      <h1 className="pt-4 text-[2.43rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-[2.6rem] lg:leading-none  text-[#ffffff] font-medium text-center z-30">
+      <h1 className="pt-4 text-[2.43rem] xs:text-5xl sm:text-6xl xl:text-7xl 3xl:text-[80px] leading-[2.6rem] lg:leading-none text-[#ffffff] font-medium text-center z-30">
         Business focused
         <span className="custom-text font-black capitalize">
           {" "}

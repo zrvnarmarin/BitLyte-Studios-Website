@@ -1,8 +1,8 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import DJDavidMashHeroSectionImg from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png"
+import DJDavidMashHeroSectionImg from "../../../public/images/projects/1_dj_david_mash/DJ_David_Mash_Hero_Section_Image.png";
 import AboutSectionProjectImg from "../../../public/images/projects/1_dj_david_mash/thumbnail_DJ_David_Mash.png";
-import JaneMcKellenThumbnailImage from "../../../public/images/projects/2_perina_kulic/Jane_McKellen_Thumbnail_Image.png"
-import JaneMcKellenHeroSectionImage from "../../../public/images/projects/2_perina_kulic/janemckellenherosectionimage.png"
+import JaneMcKellenThumbnailImage from "../../../public/images/projects/2_perina_kulic/Jane_McKellen_Thumbnail_Image.png";
+import JaneMcKellenHeroSectionImage from "../../../public/images/projects/2_perina_kulic/janemckellenherosectionimage.png";
 
 export type ProjectFact = {
   id: number;
@@ -40,12 +40,12 @@ export type Project = {
   heroImgSrc: string | StaticImport;
   heroSectionGradient: string;
   generalGradientStyle: {
-    background: string,
-    WebkitBackgroundClip: string,
-    backgroundClip: string,
-    color: string,
-  },
-  borderColor: string,
+    background: string;
+    WebkitBackgroundClip: string;
+    backgroundClip: string;
+    color: string;
+  };
+  borderColor: string;
   aboutSectionImgSrc?: string | StaticImport;
   projectFacts: ProjectFact[];
   solutionCardBgColor: string;
@@ -59,13 +59,13 @@ export type Project = {
 export const allProjectsData: Project[] = [
   {
     id: 1,
-    href: 'dj-david-mash',
+    href: "dj-david-mash",
     name: "Dj David Mash",
     subtitle: {
       bold: "Mash Up Your Event",
       normal: "Like A Star",
     },
-    services: ["Social Media Management", "Ad Campaign"],
+    services: ["Social Media Management"],
     heroImgSrc: DJDavidMashHeroSectionImg,
     heroSectionGradient: "bg-gradient-to-r from-[#ffe54f] to-[#ffd700]",
     generalGradientStyle: {
@@ -77,7 +77,6 @@ export const allProjectsData: Project[] = [
     borderColor: "#4b4d1e",
     projectFacts: [
       {
-
         id: 1,
         title: "Client",
         description: "DJ David Mash",
@@ -94,8 +93,8 @@ export const allProjectsData: Project[] = [
       },
       {
         id: 4,
-        title: "Client",
-        description: "Something",
+        title: "Industry",
+        description: "Music",
       },
     ],
     solutionCardBgColor: "#fed702",
@@ -112,22 +111,10 @@ export const allProjectsData: Project[] = [
         name: "Discovery",
         colorGradient: "edff272b",
         goals: [
-          {
-            id: 1,
-            name: "Market Research And UI/UX Design",
-          },
-          {
-            id: 2,
-            name: "Brand Identity Of Design",
-          },
-          {
-            id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
-          },
+          { id: 1, name: "Brand & Audience Analysis" },
+          { id: 2, name: "Digital Presence Audit" },
+          { id: 3, name: "Competitor Benchmarking" },
+          { id: 4, name: "Goal Setting" },
         ],
       },
       {
@@ -135,22 +122,10 @@ export const allProjectsData: Project[] = [
         name: "Design",
         colorGradient: "edff272b",
         goals: [
-          {
-            id: 1,
-            name: "Market Research And UI/UX Design",
-          },
-          {
-            id: 2,
-            name: "Brand Identity Of Design",
-          },
-          {
-            id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
-          },
+          { id: 1, name: "Visual Identity & Branding" },
+          { id: 2, name: "Social Media Content Strategy" },
+          { id: 3, name: "Profile Revamp" },
+          { id: 4, name: "Engaging Content Creation" },
         ],
       },
       {
@@ -158,82 +133,56 @@ export const allProjectsData: Project[] = [
         name: "Optimization",
         colorGradient: "edff272b",
         goals: [
-          {
-            id: 1,
-            name: "Market Research And UI/UX Design",
-          },
-          {
-            id: 2,
-            name: "Brand Identity Of Design",
-          },
-          {
-            id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
-          },
+          { id: 1, name: "Content Scheduling & Management" },
+          { id: 2, name: "Targeted Ad Campaigns" },
+          { id: 3, name: "SEO & Hashtag Strategy" },
+          { id: 4, name: "Platform-Specific Enhancements" },
         ],
       },
       {
         id: 4,
-        colorGradient: "edff272b",
         name: "Tracking Results",
+        colorGradient: "edff272b",
         goals: [
-          {
-            id: 1,
-            name: "Market Research And UI/UX Design",
-          },
-          {
-            id: 2,
-            name: "Brand Identity Of Design",
-          },
-          {
-            id: 3,
-            name: "Market Research",
-          },
-          {
-            id: 4,
-            name: "Market Research",
-          },
+          { id: 1, name: "Performance Monitoring" },
+          { id: 2, name: "Engagement & Reach Analytics" },
+          { id: 3, name: "Campaign Adjustments" },
+          { id: 4, name: "Growth Reporting" },
         ],
       },
     ],
     results: [
       {
         id: 1,
-        stat: '125%',
-        fact: 'More gigs via Instagram profile'
+        stat: "+40%",
+        fact: "Engagement growth in 3 months",
       },
       {
         id: 2,
-        stat: '34%',
-        fact: 'Enlarged user activity'
+        stat: "+274",
+        fact: "New organic followers gained",
       },
       {
-        id: 13,
-        stat: '4X',
-        fact: 'Better standing out in the market'
+        id: 3,
+        stat: "1.7×",
+        fact: "More monthly booking inquiries",
       },
       {
-        id: 1,
-        stat: '12.56',
-        fact: 'Minutes per average spent more on the profile'
+        id: 4,
+        stat: "+60%",
+        fact: "Profile reach through campaigns",
       }
-    ]
+    ],
   },
   {
     id: 2,
-    href: 'jane-mckellen',
+    href: "jane-mckellen",
     name: "Jane McKellen",
     subtitle: {
-      bold: "Crafting Words for the Web",
-      normal: "Your Brand, Your Voice",
+      bold: "Meaningful Words",
+      normal: "Into Powerful Storytelling",
     },
-    services: [
-      "Website Development", "UX/UI Design"
-    ],
+    services: ["Website Development", "UX/UI Design"],
     heroImgSrc: JaneMcKellenHeroSectionImage, // Example image file path
     heroSectionGradient: "bg-gradient-to-r from-[#f5f5f5] to-[#ffffff]",
     generalGradientStyle: {
@@ -261,12 +210,12 @@ export const allProjectsData: Project[] = [
       },
       {
         id: 4,
-        title: "Client",
-        description: "Something",
+        title: "Industry",
+        description: "Creative",
       },
     ],
     solutionCardBgColor: "#f5f5f5",
-    aboutSectionImgSrc: JaneMcKellenThumbnailImage, 
+    aboutSectionImgSrc: JaneMcKellenThumbnailImage,
     fullProjectDescription:
       "Jane McKellen is renowned for her skillful narrative, elegant vocabulary, and versatility in a variety of areas. Jane has improved her web presence and now presents her brand with the same professionalism that she applies to every job, which has increased visibility, drawn in high-caliber clients, and strengthened her standing as a leading provider of writing services.",
     problem:
@@ -322,25 +271,24 @@ export const allProjectsData: Project[] = [
     results: [
       {
         id: 1,
-        stat: '150%',
-        fact: 'Increase in organic search traffic within 2 months'
+        stat: "150%",
+        fact: "Increase in organic search traffic within 2 months",
       },
       {
         id: 2,
-        stat: '25%',
-        fact: 'Boost in social media engagement from new ad copy'
+        stat: "25%",
+        fact: "Boost in social media engagement from new ad copy",
       },
       {
         id: 3,
-        stat: '4X',
-        fact: 'Improved conversion rate from website visitors'
+        stat: "4X",
+        fact: "Improved conversion rate from website visitors",
       },
       {
         id: 4,
-        stat: '30%',
-        fact: 'Increased average time spent on site'
-      }
-    ]
-  }
-  
+        stat: "30%",
+        fact: "Increased average time spent on site",
+      },
+    ],
+  },
 ];

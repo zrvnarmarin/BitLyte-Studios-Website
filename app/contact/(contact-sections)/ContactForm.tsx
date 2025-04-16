@@ -44,7 +44,7 @@ export default function ContactForm() {
           </label>
           <input
             id="email"
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter your email address"
             className="focus:outline-none focus:ring focus:ring-violet-400 opacity-80 pl-4 py-3 bg-[#061a28]/50 border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"

@@ -82,7 +82,7 @@ export const FounderCard = ({
           <div className="w-full flex items-center justify-end gap-8">
             {socialMediaIcons.map((socialMediaIcon) => (
               <React.Fragment key={socialMediaIcon.id}>
-                <Link href={socialMediaIcon.href} target="_blank">
+                <Link href={linkedinHref} target="_blank">
                   {socialMediaIcon.icon()}
                 </Link>
               </React.Fragment>

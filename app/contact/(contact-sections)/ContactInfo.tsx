@@ -65,7 +65,7 @@ export default function ContactInfo() {
               <div className="w-full bg-[#0d293d] h-[0.5px]"></div>
               {socialMediaIcons.map((socialMediaIcon) => (
                 <React.Fragment key={socialMediaIcon.id}>
-                  <Link href={socialMediaIcon.href}>
+                  <Link href={socialMediaIcon.href} target="_blank">
                     {socialMediaIcon.icon()}
                   </Link>
                 </React.Fragment>
