@@ -65,7 +65,7 @@ export default function ContactForm() {
             name="project-message"
             placeholder="Tell us about your project, goals and timeline.."
             rows={5}
-            className="focus:outline-none focus:ring focus:ring-violet-400 pl-4 py-3 opacity-95 bg-[#061a28]/50 border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"
+            className="focus:outline-none focus:ring focus:ring-violet-400 px-4 py-3 opacity-95 bg-[#061a28]/50 border-2 border-[#225c86] rounded-lg text-base text-[#eeeeee] font-normal"
           />
         </div>
 
