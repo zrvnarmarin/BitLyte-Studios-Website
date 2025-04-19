@@ -1,9 +1,18 @@
 "use client";
 import React from "react";
+import { useFormState } from "react-dom";
+import { serverFunction } from "@/app/action";
 import "../../../public/test.css";
 import { LogoForButtonRotated } from "@/app/services/[serviceId]/HeroSection";
 
+const initialState = {
+  fullName: null,
+  email: null,
+  message: null,
+};
+
 export default function ContactForm() {
+  // const [state, formAction] = useFormState(serverFunction, initialState);
   return (
     <div className="flex z-30 flex-col gap-8 justify-start overflow-hidden relative p-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:p-10 xl:p-12 rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]">
       {/* Blur effect background */}
@@ -12,8 +21,7 @@ export default function ContactForm() {
       {/* Form */}
       <form
         className="flex flex-col gap-6 z-20"
-        method="POST"
-        action="https://usebasin.com/f/ba68da363bf3"
+        action={formAction}
       >
         {/* Full name input field */}
         <div className="flex flex-col gap-3">
