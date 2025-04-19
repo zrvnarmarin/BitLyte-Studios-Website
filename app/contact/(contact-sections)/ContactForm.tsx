@@ -12,7 +12,8 @@ const initialState = {
 };
 
 export default function ContactForm() {
-  // const [state, formAction] = useFormState(serverFunction, initialState);
+  const [state, formAction] = useFormState(serverFunction, initialState);
+  
   return (
     <div className="flex z-30 flex-col gap-8 justify-start overflow-hidden relative p-8 md:px-10 sm:px-8 sm:py-10 md:py-14 lg:p-10 xl:p-12 rounded-lg border-[0.5px] border-[#0a2030] hover:shadow-[0_0_15px_0_rgba(10,32,78,1)]">
       {/* Blur effect background */}

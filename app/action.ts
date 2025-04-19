@@ -1,10 +1,8 @@
-"use server";
-
 import { z } from "zod";
 
 // Define the server function with both `prevState` and `formData` arguments
 export async function serverFunction(
-  prevState: { fullName: string | null; email: string | null; message: string | null },
+  prevState: { fullName: string | null; email: string | null; message: string | null }, // The state is the object here
   formData: FormData
 ) {
   const schema = z.object({
@@ -44,11 +42,11 @@ export async function serverFunction(
       throw new Error(`Error: ${response.statusText}`);
     }
 
-    // Return success message
-    return "hej sve je dobro!"; // Success message
+    // Return the data object instead of just a success message
+    return { fullName: data.fullName, email: data.email, message: data.message };
   } catch (error) {
     // If an error occurs (either validation or submission), return error message
     console.error("Error submitting form:", error);
-    return "nesto ne valja!"; // Error message
+    return { fullName: null, email: null, message: null }; // Return a model object indicating failure
   }
 }
